@@ -49,7 +49,9 @@
           "focusCentering": 0.5,
           "rotationSpeed": 90.0,
           "minVerticalAngle": -90.0,
-          "maxVerticalAngle": 60.0
+          "maxVerticalAngle": 60.0,
+          "alignDelay": 5.0,
+          "alignSmoothRange": 45.0
         }
       }
     ],
@@ -84,7 +86,7 @@
         "data": {
           "motionType": "Dynamic",
           "freezeRotationX": true,
-          "freezeRotationY": false,
+          "freezeRotationY": true,
           "freezeRotationZ": true,
           "is2DPlane": false,
           "gravityFactor": 1.0,
@@ -112,6 +114,12 @@
             "z": 0.0,
             "w": 0.0
           }
+        }
+      },
+      {
+        "type": "Platformer.PlayerMovement",
+        "data": {
+          "movementSpeed": 5.0
         }
       }
     ],

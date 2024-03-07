@@ -155,49 +155,6 @@ class OrbitCameraSystem : IEntitySystem
 
             transform.LocalPosition = position;
             transform.LocalRotation = rotation;
-
-            var playerRigidBody = Physics.GetBody3D(camera.focus.entity);
-
-            if (playerRigidBody != null)
-            {
-                var forward = transform.Forward;
-
-                forward.Y = 0.0f;
-
-                forward = Vector3.Normalize(forward);
-
-                var right = transform.Right;
-
-                right.Y = 0.0f;
-                
-                right = Vector3.Normalize(right);
-
-                var movement = Vector2.Zero;
-
-                if(Input.GetKey(KeyCode.W))
-                {
-                    movement.Y = 1;
-                }
-
-                if(Input.GetKey(KeyCode.S))
-                {
-                    movement.Y = -1;
-                }
-
-                if(Input.GetKey(KeyCode.A))
-                {
-                    movement.X = -1;
-                }
-
-                if(Input.GetKey(KeyCode.D))
-                {
-                    movement.X = 1;
-                }
-
-                Log.Debug($"Movement: {movement}; forward: {forward}; right: {right}");
-
-                //playerRigidBody.Velocity = (forward * movement.Y + right * movement.X);
-            }
         });
     }
 
@@ -207,12 +164,5 @@ class OrbitCameraSystem : IEntitySystem
 
     public void Startup()
     {
-        World.AddComponentAddedCallback(typeof(OrbitCamera), (World world, Entity entity, Transform transform, ref IComponent component) =>
-        {
-            if(component is not OrbitCamera orbitCamera)
-            {
-                return;
-            }
-        });
     }
 }
