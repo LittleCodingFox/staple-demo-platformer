@@ -3,17 +3,20 @@ using System.Numerics;
 
 namespace Platformer;
 
+//Based on https://catlikecoding.com/unity/tutorials/movement/orbit-camera/
 class OrbitCameraSystem : IEntitySystem
 {
     public SubsystemType UpdateType => SubsystemType.Update;
 
-    private void UpdateFocusPoint(Transform transform, OrbitCamera camera)
+    private void UpdateFocusPoint(OrbitCamera camera)
     {
+        camera.previousFocusPoint = camera.focusPoint;
+
         var target = camera.focus.Position;
 
         if (camera.focusRadius > 0)
         {
-            var distance = Vector3.Distance(target, camera.focusPosition);
+            var distance = Vector3.Distance(target, camera.focusPoint);
 
             var t = 1.0f;
 
@@ -27,15 +30,15 @@ class OrbitCameraSystem : IEntitySystem
                 t = Math.Min(t, camera.focusRadius / distance);
             }
 
-            camera.focusPosition = Vector3.Lerp(target, camera.focusPosition, t);
+            camera.focusPoint = Vector3.Lerp(target, camera.focusPoint, t);
         }
         else
         {
-            camera.focusPosition = target;
+            camera.focusPoint = target;
         }
     }
 
-    private bool UpdateRotation(OrbitCamera camera)
+    private bool ManualRotation(OrbitCamera camera)
     {
         var input = new Vector2(Input.MouseRelativePosition.Y, Input.MouseRelativePosition.X);
 
@@ -44,11 +47,55 @@ class OrbitCameraSystem : IEntitySystem
         if(input.X < -e || input.X > e || input.Y < -e || input.Y > e)
         {
             camera.orbitAngles += input * camera.rotationSpeed * Time.deltaTime;
+            camera.lastManualRotationTime = Time.time;
 
             return true;
         }
 
         return false;
+    }
+
+    private bool AutomaticRotation(OrbitCamera camera)
+    {
+        if (Time.time - camera.lastManualRotationTime < camera.alignDelay)
+        {
+            return false;
+        }
+
+        var movement = new Vector2(camera.focusPoint.X - camera.previousFocusPoint.X,
+            camera.focusPoint.Z - camera.previousFocusPoint.Z);
+
+        var deltaSqr = movement.LengthSquared();
+
+        if(deltaSqr < 0.0001f)
+        {
+            return false;
+        }
+
+        var headingAngle = GetAngle(movement / Math.Sqrt(deltaSqr));
+
+        var deltaAbs = Math.Abs(Math.Min(camera.orbitAngles.Y, headingAngle));
+        var rotationChange = camera.rotationSpeed * Math.Min(Time.deltaTime, deltaSqr);
+
+        if(deltaAbs < camera.alignSmoothRange)
+        {
+            rotationChange *= deltaAbs / camera.alignSmoothRange;
+        }
+        else if(180.0f - deltaAbs < camera.alignSmoothRange)
+        {
+            rotationChange *= (180.0f - deltaAbs) / camera.alignSmoothRange;
+        }
+
+        camera.orbitAngles.Y = Math.MoveTowards(camera.orbitAngles.Y, headingAngle, rotationChange);
+
+        return true;
+    }
+
+    private float GetAngle(Vector2 direction)
+    {
+        var angle = Math.Rad2Deg(Math.Acos(direction.Y));
+
+        return direction.X < 0 ? 360.0f - angle : angle;
     }
 
     private void ConstrainAngles(OrbitCamera camera)
@@ -83,15 +130,15 @@ class OrbitCameraSystem : IEntitySystem
                     return;
                 }
 
-                camera.focusPosition = camera.focus.Position;
+                camera.focusPoint = camera.focus.Position;
                 transform.LocalRotation = Math.FromEulerAngles(new Vector3(camera.orbitAngles.X, camera.orbitAngles.Y, 0));
             }
 
-            UpdateFocusPoint(transform, camera);
+            UpdateFocusPoint(camera);
 
             Quaternion rotation;
 
-            if(UpdateRotation(camera))
+            if(ManualRotation(camera) || AutomaticRotation(camera))
             {
                 ConstrainAngles(camera);
 
@@ -104,10 +151,53 @@ class OrbitCameraSystem : IEntitySystem
 
             var direction = Vector3.Transform(new Vector3(0, 0, -1), rotation);
 
-            var position = camera.focusPosition - direction * camera.distance;
+            var position = camera.focusPoint - direction * camera.distance;
 
             transform.LocalPosition = position;
             transform.LocalRotation = rotation;
+
+            var playerRigidBody = Physics.GetBody3D(camera.focus.entity);
+
+            if (playerRigidBody != null)
+            {
+                var forward = transform.Forward;
+
+                forward.Y = 0.0f;
+
+                forward = Vector3.Normalize(forward);
+
+                var right = transform.Right;
+
+                right.Y = 0.0f;
+                
+                right = Vector3.Normalize(right);
+
+                var movement = Vector2.Zero;
+
+                if(Input.GetKey(KeyCode.W))
+                {
+                    movement.Y = 1;
+                }
+
+                if(Input.GetKey(KeyCode.S))
+                {
+                    movement.Y = -1;
+                }
+
+                if(Input.GetKey(KeyCode.A))
+                {
+                    movement.X = -1;
+                }
+
+                if(Input.GetKey(KeyCode.D))
+                {
+                    movement.X = 1;
+                }
+
+                Log.Debug($"Movement: {movement}; forward: {forward}; right: {right}");
+
+                //playerRigidBody.Velocity = (forward * movement.Y + right * movement.X);
+            }
         });
     }
 
