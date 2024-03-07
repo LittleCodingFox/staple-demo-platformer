@@ -1,7 +1,7 @@
 [
   {
     "kind": "Entity",
-    "name": "Camera",
+    "name": "Orbit Camera",
     "ID": 1,
     "parent": 0,
     "transform": {
@@ -46,7 +46,10 @@
         "data": {
           "distance": 5.0,
           "focusRadius": 1.0,
-          "focusCentering": 0.5
+          "focusCentering": 0.5,
+          "rotationSpeed": 90.0,
+          "minVerticalAngle": -90.0,
+          "maxVerticalAngle": 60.0
         }
       }
     ],
