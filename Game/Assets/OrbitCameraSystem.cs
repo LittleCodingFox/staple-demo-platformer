@@ -37,7 +37,7 @@ class OrbitCameraSystem : IEntitySystem
 
     private bool UpdateRotation(OrbitCamera camera)
     {
-        var input = new Vector2(-Input.MouseRelativePosition.Y, -Input.MouseRelativePosition.X);
+        var input = new Vector2(Input.MouseRelativePosition.Y, Input.MouseRelativePosition.X);
 
         var e = 0.001f;
 
