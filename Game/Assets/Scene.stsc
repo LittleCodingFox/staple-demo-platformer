@@ -3,7 +3,7 @@
     "kind": "Entity",
     "name": "Camera",
     "ID": 1,
-    "parent": -1,
+    "parent": 0,
     "transform": {
       "position": {
         "x": 0.0,
@@ -39,6 +39,193 @@
           },
           "clearColor": "#007FFFFF",
           "cullingLayers": 4294967295
+        }
+      },
+      {
+        "type": "Platformer.OrbitCamera",
+        "data": {
+          "distance": 5.0,
+          "focusRadius": 1.0,
+          "focusCentering": 0.5
+        }
+      }
+    ],
+    "layer": "Default",
+    "enabled": true
+  },
+  {
+    "kind": "Entity",
+    "name": "Player",
+    "ID": 2,
+    "parent": 0,
+    "transform": {
+      "position": {
+        "x": 0.0,
+        "y": 1.0,
+        "z": 0.0
+      },
+      "rotation": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      },
+      "scale": {
+        "x": 1.0,
+        "y": 1.0,
+        "z": 1.0
+      }
+    },
+    "components": [
+      {
+        "type": "Staple.RigidBody3D",
+        "data": {
+          "motionType": "Dynamic",
+          "freezeRotationX": true,
+          "freezeRotationY": false,
+          "freezeRotationZ": true,
+          "is2DPlane": false,
+          "gravityFactor": 1.0,
+          "isTrigger": false,
+          "friction": 0.0,
+          "restitution": 0.0
+        }
+      },
+      {
+        "type": "Staple.BoxCollider3D",
+        "data": {
+          "size": {
+            "x": 1.0,
+            "y": 1.0,
+            "z": 1.0
+          },
+          "position": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "rotation": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0,
+            "w": 0.0
+          }
+        }
+      }
+    ],
+    "layer": "Default",
+    "enabled": true
+  },
+  {
+    "kind": "Entity",
+    "name": "Cube",
+    "ID": 3,
+    "parent": 0,
+    "transform": {
+      "position": {
+        "x": 0.0,
+        "y": -1.0,
+        "z": 0.0
+      },
+      "rotation": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      },
+      "scale": {
+        "x": 10.0,
+        "y": 1.0,
+        "z": 10.0
+      }
+    },
+    "components": [
+      {
+        "type": "Staple.MeshRenderer",
+        "data": {
+          "mesh": "Internal/Cube",
+          "materials": [
+            "db3c6e30-0fce-4b1b-a9e7-9bf7dcbfec30"
+          ],
+          "enabled": true,
+          "forceRenderingOff": false,
+          "receiveShadows": true,
+          "sortingLayer": 0,
+          "sortingOrder": 0
+        }
+      },
+      {
+        "type": "Staple.BoxCollider3D",
+        "data": {
+          "size": {
+            "x": 1.0,
+            "y": 1.0,
+            "z": 1.0
+          },
+          "position": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "rotation": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0,
+            "w": 0.0
+          }
+        }
+      },
+      {
+        "type": "Staple.RigidBody3D",
+        "data": {
+          "motionType": "Static",
+          "freezeRotationX": false,
+          "freezeRotationY": false,
+          "freezeRotationZ": false,
+          "is2DPlane": false,
+          "gravityFactor": 1.0,
+          "isTrigger": false,
+          "friction": 0.0,
+          "restitution": 0.0
+        }
+      }
+    ],
+    "layer": "Default",
+    "enabled": true
+  },
+  {
+    "kind": "Entity",
+    "name": "Cube",
+    "ID": 4,
+    "parent": 2,
+    "transform": {
+      "position": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      },
+      "rotation": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      },
+      "scale": {
+        "x": 1.0,
+        "y": 1.0,
+        "z": 1.0
+      }
+    },
+    "components": [
+      {
+        "type": "Staple.MeshRenderer",
+        "data": {
+          "mesh": "Internal/Cube",
+          "materials": [
+            "db3c6e30-0fce-4b1b-a9e7-9bf7dcbfec30"
+          ],
+          "enabled": true,
+          "forceRenderingOff": false,
+          "receiveShadows": true,
+          "sortingLayer": 0,
+          "sortingOrder": 0
         }
       }
     ],
