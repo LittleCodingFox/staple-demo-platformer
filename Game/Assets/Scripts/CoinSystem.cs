@@ -62,6 +62,10 @@ class CoinSystem : IEntitySystem, IPhysicsReceiver3D
     {
     }
 
+    public void OnContactRemoved(IBody3D A, IBody3D B)
+    {
+    }
+
     public bool OnContactValidate(IBody3D self, IBody3D other)
     {
         return true;

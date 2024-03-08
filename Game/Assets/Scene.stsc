@@ -50,7 +50,7 @@
           "rotationSpeed": 90.0,
           "minVerticalAngle": -90.0,
           "maxVerticalAngle": 60.0,
-          "alignDelay": 5.0,
+          "alignDelay": 2.0,
           "alignSmoothRange": 45.0
         }
       }
@@ -130,82 +130,6 @@
     "kind": "Entity",
     "name": "Cube",
     "ID": 3,
-    "parent": 0,
-    "transform": {
-      "position": {
-        "x": 0.0,
-        "y": -1.0,
-        "z": 0.0
-      },
-      "rotation": {
-        "x": 0.0,
-        "y": 0.0,
-        "z": 0.0
-      },
-      "scale": {
-        "x": 10.0,
-        "y": 1.0,
-        "z": 10.0
-      }
-    },
-    "components": [
-      {
-        "type": "Staple.MeshRenderer",
-        "data": {
-          "mesh": "Internal/Cube",
-          "materials": [
-            "db3c6e30-0fce-4b1b-a9e7-9bf7dcbfec30"
-          ],
-          "enabled": true,
-          "forceRenderingOff": false,
-          "receiveShadows": true,
-          "sortingLayer": 0,
-          "sortingOrder": 0
-        }
-      },
-      {
-        "type": "Staple.BoxCollider3D",
-        "data": {
-          "size": {
-            "x": 1.0,
-            "y": 1.0,
-            "z": 1.0
-          },
-          "position": {
-            "x": 0.0,
-            "y": 0.0,
-            "z": 0.0
-          },
-          "rotation": {
-            "x": 0.0,
-            "y": 0.0,
-            "z": 0.0,
-            "w": 0.0
-          }
-        }
-      },
-      {
-        "type": "Staple.RigidBody3D",
-        "data": {
-          "motionType": "Static",
-          "freezeRotationX": false,
-          "freezeRotationY": false,
-          "freezeRotationZ": false,
-          "is2DPlane": false,
-          "gravityFactor": 1.0,
-          "isTrigger": false,
-          "friction": 0.0,
-          "restitution": 0.0
-        }
-      }
-    ],
-    "layer": "Default",
-    "enabled": true
-  },
-  {
-    "kind": "Entity",
-    "name": "Cube",
-    "ID": 4,
     "parent": 2,
     "transform": {
       "position": {
@@ -237,6 +161,325 @@
           "receiveShadows": true,
           "sortingLayer": 0,
           "sortingOrder": 0
+        }
+      }
+    ],
+    "layer": "Default",
+    "enabled": true
+  },
+  {
+    "kind": "Entity",
+    "name": "coinGold",
+    "ID": 4,
+    "parent": 0,
+    "transform": {
+      "position": {
+        "x": 2.0,
+        "y": 0.0,
+        "z": 0.0
+      },
+      "rotation": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      },
+      "scale": {
+        "x": 1.0,
+        "y": 1.0,
+        "z": 1.0
+      }
+    },
+    "components": [
+      {
+        "type": "Staple.BoxCollider3D",
+        "data": {
+          "size": {
+            "x": 1.0,
+            "y": 1.0,
+            "z": 1.0
+          },
+          "position": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "rotation": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0,
+            "w": 1.0
+          }
+        }
+      },
+      {
+        "type": "Staple.RigidBody3D",
+        "data": {
+          "motionType": "Static",
+          "freezeRotationX": false,
+          "freezeRotationY": false,
+          "freezeRotationZ": false,
+          "is2DPlane": false,
+          "gravityFactor": 0.0,
+          "isTrigger": true,
+          "friction": 0.0,
+          "restitution": 0.0
+        }
+      },
+      {
+        "type": "Staple.AudioSource",
+        "data": {
+          "volume": 1.0,
+          "pitch": 1.0,
+          "loop": false,
+          "spatial": false,
+          "autoplay": false
+        }
+      },
+      {
+        "type": "Platformer.CoinComponent",
+        "data": {}
+      }
+    ],
+    "layer": "Default",
+    "enabled": true
+  },
+  {
+    "kind": "Entity",
+    "name": "coinGold",
+    "ID": 5,
+    "parent": 9,
+    "transform": {
+      "position": {
+        "x": -1.0,
+        "y": 0.0,
+        "z": 0.5
+      },
+      "rotation": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      },
+      "scale": {
+        "x": 1.0,
+        "y": 1.0,
+        "z": 1.0
+      }
+    },
+    "components": [],
+    "layer": "Default",
+    "enabled": true
+  },
+  {
+    "kind": "Entity",
+    "name": "coinGold",
+    "ID": 6,
+    "parent": 9,
+    "transform": {
+      "position": {
+        "x": 1.0,
+        "y": 0.0,
+        "z": -0.5
+      },
+      "rotation": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      },
+      "scale": {
+        "x": 1.0,
+        "y": 1.0,
+        "z": 1.0
+      }
+    },
+    "components": [],
+    "layer": "Default",
+    "enabled": true
+  },
+  {
+    "kind": "Entity",
+    "name": "Mesh coinGold-0",
+    "ID": 7,
+    "parent": 6,
+    "transform": {
+      "position": {
+        "x": -1.0,
+        "y": 0.0,
+        "z": 0.5
+      },
+      "rotation": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      },
+      "scale": {
+        "x": 1.0,
+        "y": 1.0,
+        "z": 1.0
+      }
+    },
+    "components": [
+      {
+        "type": "Staple.MeshRenderer",
+        "data": {
+          "mesh": "13157a96-b6b4-42ca-ae2e-8e6db001547c:0",
+          "materials": [
+            "6e9dfe7d-0fa8-4f0f-8766-797ff794d7de"
+          ],
+          "enabled": true,
+          "forceRenderingOff": false,
+          "receiveShadows": true,
+          "sortingLayer": 0,
+          "sortingOrder": 0
+        }
+      }
+    ],
+    "layer": "Default",
+    "enabled": true
+  },
+  {
+    "kind": "Entity",
+    "name": "Mesh coinGold-1",
+    "ID": 8,
+    "parent": 6,
+    "transform": {
+      "position": {
+        "x": -1.0,
+        "y": 0.0,
+        "z": 0.5
+      },
+      "rotation": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      },
+      "scale": {
+        "x": 1.0,
+        "y": 1.0,
+        "z": 1.0
+      }
+    },
+    "components": [
+      {
+        "type": "Staple.MeshRenderer",
+        "data": {
+          "mesh": "13157a96-b6b4-42ca-ae2e-8e6db001547c:1",
+          "materials": [
+            "f19eac74-c1ea-4112-8c69-d505f3bb5d29"
+          ],
+          "enabled": true,
+          "forceRenderingOff": false,
+          "receiveShadows": true,
+          "sortingLayer": 0,
+          "sortingOrder": 0
+        }
+      }
+    ],
+    "layer": "Default",
+    "enabled": true
+  },
+  {
+    "kind": "Entity",
+    "name": "Container",
+    "ID": 9,
+    "parent": 4,
+    "transform": {
+      "position": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      },
+      "rotation": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      },
+      "scale": {
+        "x": 1.0,
+        "y": 1.0,
+        "z": 1.0
+      }
+    },
+    "components": [
+      {
+        "type": "Platformer.SpinnerComponent",
+        "data": {
+          "speed": 360.0
+        }
+      }
+    ],
+    "layer": "Default",
+    "enabled": true
+  },
+  {
+    "kind": "Entity",
+    "name": "Cube",
+    "ID": 10,
+    "parent": 0,
+    "transform": {
+      "position": {
+        "x": 0.0,
+        "y": -1.0,
+        "z": 0.0
+      },
+      "rotation": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      },
+      "scale": {
+        "x": 10.0,
+        "y": 1.0,
+        "z": 10.0
+      }
+    },
+    "components": [
+      {
+        "type": "Staple.MeshRenderer",
+        "data": {
+          "mesh": "Internal/Cube",
+          "materials": [
+            "88428bcf-6adb-49e1-ace8-fb2cf71a2959"
+          ],
+          "enabled": true,
+          "forceRenderingOff": false,
+          "receiveShadows": true,
+          "sortingLayer": 0,
+          "sortingOrder": 0
+        }
+      },
+      {
+        "type": "Staple.BoxCollider3D",
+        "data": {
+          "size": {
+            "x": 1.0,
+            "y": 1.0,
+            "z": 1.0
+          },
+          "position": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "rotation": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0,
+            "w": 1.0
+          }
+        }
+      },
+      {
+        "type": "Staple.RigidBody3D",
+        "data": {
+          "motionType": "Static",
+          "freezeRotationX": false,
+          "freezeRotationY": false,
+          "freezeRotationZ": false,
+          "is2DPlane": false,
+          "gravityFactor": 1.0,
+          "isTrigger": false,
+          "friction": 0.0,
+          "restitution": 0.0
         }
       }
     ],
