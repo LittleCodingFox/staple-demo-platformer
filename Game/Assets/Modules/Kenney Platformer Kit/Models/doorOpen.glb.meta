@@ -1,0 +1,15 @@
+{
+  "guid": "7c554c51-5880-44e9-9143-3b86c446aa30",
+  "makeLeftHanded": false,
+  "splitLargeMeshes": false,
+  "preTransformVertices": false,
+  "limitBoneWeights": false,
+  "flipUVs": true,
+  "flipWindingOrder": true,
+  "splitByBoneCount": false,
+  "debone": false,
+  "typeName": "Staple.Mesh",
+  "convertUnits": true,
+  "rotation": "None",
+  "scale": 1.0
+}

@@ -9,9 +9,9 @@ class PlayerMovementSystem : IEntitySystem
 
     public void Process(float deltaTime)
     {
-        Scene.ForEach((Entity entity, bool enabled, ref Transform transform, ref OrbitCamera camera) =>
+        Scene.ForEach((Entity entity, ref Transform transform, ref OrbitCamera camera) =>
         {
-            if(enabled == false || camera.focus == null ||
+            if(camera.focus == null ||
                 camera.focus.entity.TryGetComponent<PlayerMovement>(out var playerMovement) == false)
             {
                 return;
