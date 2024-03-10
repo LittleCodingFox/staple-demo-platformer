@@ -6,7 +6,7 @@ namespace Platformer;
 //Based on https://catlikecoding.com/unity/tutorials/movement/orbit-camera/
 class OrbitCameraSystem : IEntitySystem
 {
-    public SubsystemType UpdateType => SubsystemType.Update;
+    public EntitySubsystemType UpdateType => EntitySubsystemType.Update;
 
     private void UpdateFocusPoint(OrbitCamera camera)
     {
@@ -112,7 +112,11 @@ class OrbitCameraSystem : IEntitySystem
         }
     }
 
-    public void Process(float deltaTime)
+    public void FixedUpdate(float deltaTime)
+    {
+    }
+
+    public void Update(float deltaTime)
     {
         Scene.ForEach((Entity entity, ref Transform transform, ref OrbitCamera camera) =>
         {

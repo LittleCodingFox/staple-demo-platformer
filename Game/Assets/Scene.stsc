@@ -89,7 +89,7 @@
           "freezeRotationY": true,
           "freezeRotationZ": true,
           "is2DPlane": false,
-          "gravityFactor": 1.0,
+          "gravityFactor": 3.0,
           "isTrigger": false,
           "friction": 0.0,
           "restitution": 0.0
@@ -119,7 +119,8 @@
       {
         "type": "Platformer.PlayerMovement",
         "data": {
-          "movementSpeed": 5.0
+          "movementSpeed": 5.0,
+          "jumpStrength": 10.0
         }
       }
     ],

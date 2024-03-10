@@ -4,15 +4,15 @@ namespace Platformer;
 
 class SpinnerSystem : IEntitySystem
 {
-    public SubsystemType UpdateType => SubsystemType.Update;
+    public EntitySubsystemType UpdateType => EntitySubsystemType.Update;
 
-    public void Process(float deltaTime)
+    public void Update(float deltaTime)
     {
         Scene.ForEach((Entity entity, ref Transform transform, ref SpinnerComponent spinner) =>
         {
             var eulerAngles = Math.ToEulerAngles(transform.LocalRotation);
 
-            eulerAngles.Y += Time.deltaTime * spinner.speed;
+            eulerAngles.Y += deltaTime * spinner.speed;
 
             if(eulerAngles.Y >= 360)
             {
@@ -21,6 +21,10 @@ class SpinnerSystem : IEntitySystem
 
             transform.LocalRotation = Math.FromEulerAngles(eulerAngles);
         });
+    }
+
+    public void FixedUpdate(float deltaTime)
+    {
     }
 
     public void Shutdown()

@@ -5,13 +5,19 @@ namespace Platformer;
 
 class PlayerMovementSystem : IEntitySystem
 {
-    public SubsystemType UpdateType => SubsystemType.Update;
+    public EntitySubsystemType UpdateType => EntitySubsystemType.Both;
 
-    public void Process(float deltaTime)
+    private bool leftPress = false;
+    private bool rightPress = false;
+    private bool upPress = false;
+    private bool downPress = false;
+    private bool spacePress = false;
+
+    public void FixedUpdate(float deltaTime)
     {
         Scene.ForEach((Entity entity, ref Transform transform, ref OrbitCamera camera) =>
         {
-            if(camera.focus == null ||
+            if (camera.focus == null ||
                 camera.focus.entity.TryGetComponent<PlayerMovement>(out var playerMovement) == false)
             {
                 return;
@@ -19,7 +25,7 @@ class PlayerMovementSystem : IEntitySystem
 
             var rigidBody = Physics.GetBody3D(camera.focus.entity);
 
-            if(rigidBody == null)
+            if (rigidBody == null)
             {
                 return;
             }
@@ -38,33 +44,53 @@ class PlayerMovementSystem : IEntitySystem
 
             var movement = Vector2.Zero;
 
-            if (Input.GetKey(KeyCode.W))
+            if (upPress)
             {
                 movement.Y = 1;
             }
 
-            if (Input.GetKey(KeyCode.S))
+            if (downPress)
             {
                 movement.Y = -1;
             }
 
-            if (Input.GetKey(KeyCode.A))
+            if (leftPress)
             {
                 movement.X = -1;
             }
 
-            if (Input.GetKey(KeyCode.D))
+            if (rightPress)
             {
                 movement.X = 1;
             }
 
-            var velocity = (forward * movement.Y + right * movement.X);
+            var velocity = (forward * movement.Y + right * movement.X) * playerMovement.movementSpeed;
+
+            var yVelocity = rigidBody.Velocity.Y;
+
+            if (spacePress)
+            {
+                yVelocity = playerMovement.jumpStrength;
+            }
+
+            velocity.Y = yVelocity;
 
             if (velocity.X != float.NaN && velocity.Y != float.NaN && velocity.Z != float.NaN)
             {
-                rigidBody.Velocity = velocity * playerMovement.movementSpeed;
+                rigidBody.Velocity = velocity;
             }
         });
+
+        leftPress = rightPress = upPress = downPress = spacePress = false;
+    }
+
+    public void Update(float deltaTime)
+    {
+        leftPress |= Input.GetKey(KeyCode.A);
+        rightPress |= Input.GetKey(KeyCode.D);
+        upPress |= Input.GetKey(KeyCode.W);
+        downPress |= Input.GetKey(KeyCode.S);
+        spacePress |= Input.GetKeyDown(KeyCode.Space);
     }
 
     public void Shutdown()

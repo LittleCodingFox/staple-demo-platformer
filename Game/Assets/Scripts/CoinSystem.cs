@@ -4,17 +4,13 @@ namespace Platformer;
 
 class CoinSystem : IEntitySystem, IPhysicsReceiver3D
 {
-    public SubsystemType UpdateType => SubsystemType.FixedUpdate;
+    public EntitySubsystemType UpdateType => EntitySubsystemType.FixedUpdate;
 
-    private void ContactAddedCallback(IBody3D self, IBody3D other)
+    public void FixedUpdate(float deltaTime)
     {
-        if(other.Entity.TryGetComponent<CoinComponent>(out var coin))
-        {
-            other.Entity.Destroy();
-        }
     }
 
-    public void Process(float deltaTime)
+    public void Update(float deltaTime)
     {
     }
 
@@ -52,7 +48,7 @@ class CoinSystem : IEntitySystem, IPhysicsReceiver3D
         {
             Handle(self.Entity, coin);
         }
-        else if(other.Entity.TryGetComponent<CoinComponent>(out coin))
+        else if(other.Entity.TryGetComponent(out coin))
         {
             Handle(other.Entity, coin);
         }

@@ -33,6 +33,6 @@ class OrbitCamera : IComponent
 
     internal Vector3 focusPoint;
     internal Vector3 previousFocusPoint;
-    internal Vector2 orbitAngles = new Vector2(45, 0);
+    internal Vector2 orbitAngles = new Vector2(-45, 0);
     internal float lastManualRotationTime;
 }
