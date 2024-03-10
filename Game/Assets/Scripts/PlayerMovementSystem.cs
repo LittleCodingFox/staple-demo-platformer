@@ -74,7 +74,9 @@ class PlayerMovementSystem : IEntitySystem
 
             var yVelocity = rigidBody.Velocity.Y;
 
-            if (spacePress)
+            playerMovement.grounded = Physics.RayCast3D(new Ray(rigidBody.Position + new Vector3(0, -1, 0), new Vector3(0, -1, 0)), out _, out _, playerMovement.collisionMask);
+
+            if (spacePress && playerMovement.grounded)
             {
                 yVelocity = playerMovement.jumpStrength;
             }
