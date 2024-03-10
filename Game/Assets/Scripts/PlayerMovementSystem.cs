@@ -34,13 +34,19 @@ class PlayerMovementSystem : IEntitySystem
 
             forward.Y = 0.0f;
 
-            forward = Vector3.Normalize(forward);
+            if(forward != Vector3.Zero)
+            {
+                forward = Vector3.Normalize(forward);
+            }
 
             var right = transform.Right;
 
             right.Y = 0.0f;
 
-            right = Vector3.Normalize(right);
+            if(right != Vector3.Zero)
+            {
+                right = Vector3.Normalize(right);
+            }
 
             var movement = Vector2.Zero;
 
@@ -75,10 +81,7 @@ class PlayerMovementSystem : IEntitySystem
 
             velocity.Y = yVelocity;
 
-            if (velocity.X != float.NaN && velocity.Y != float.NaN && velocity.Z != float.NaN)
-            {
-                rigidBody.Velocity = velocity;
-            }
+            rigidBody.Velocity = velocity;
         });
 
         leftPress = rightPress = upPress = downPress = spacePress = false;
