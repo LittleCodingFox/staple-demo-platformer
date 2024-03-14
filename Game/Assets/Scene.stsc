@@ -157,7 +157,9 @@
         "type": "Staple.SkinnedMeshAnimator",
         "data": {
           "mesh": "Modules/KayKit Adventurers 1.0 FREE/Characters/Barbarian.glb",
-          "animation": "Idle"
+          "animation": "Hit_A",
+          "repeat": true,
+          "stateMachine": "c2348cab-69ff-4ffb-a4a1-d0e2f2359942"
         }
       }
     ],
