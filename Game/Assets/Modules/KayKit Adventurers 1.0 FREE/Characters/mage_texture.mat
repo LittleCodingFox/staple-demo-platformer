@@ -1,0 +1,257 @@
+{
+  "shader": "1ca9a72c-161e-44db-ad76-bf0ae432f78b",
+  "parameters": {
+    "ambientColor": {
+      "type": "Color",
+      "colorValue": {
+        "r": 255,
+        "g": 255,
+        "b": 255,
+        "a": 255,
+        "HexValue": "FFFFFFFF"
+      }
+    },
+    "diffuseColor": {
+      "type": "Color",
+      "colorValue": {
+        "r": 255,
+        "g": 255,
+        "b": 255,
+        "a": 255,
+        "HexValue": "FFFFFFFF"
+      }
+    },
+    "emissiveColor": {
+      "type": "Color",
+      "colorValue": {
+        "r": 0,
+        "g": 0,
+        "b": 0,
+        "a": 255,
+        "HexValue": "000000FF"
+      }
+    },
+    "reflectiveColor": {
+      "type": "Color",
+      "colorValue": {
+        "r": 255,
+        "g": 255,
+        "b": 255,
+        "a": 255,
+        "HexValue": "FFFFFFFF"
+      }
+    },
+    "specularColor": {
+      "type": "Color",
+      "colorValue": {
+        "r": 255,
+        "g": 255,
+        "b": 255,
+        "a": 255,
+        "HexValue": "FFFFFFFF"
+      }
+    },
+    "transparentColor": {
+      "type": "Color",
+      "colorValue": {
+        "r": 255,
+        "g": 255,
+        "b": 255,
+        "a": 255,
+        "HexValue": "FFFFFFFF"
+      }
+    },
+    "ambientTexture_UMapping": {
+      "type": "TextureWrap",
+      "textureWrapValue": "Clamp"
+    },
+    "ambientTexture_VMapping": {
+      "type": "TextureWrap",
+      "textureWrapValue": "Clamp"
+    },
+    "ambientTexture": {
+      "type": "Texture",
+      "textureValue": ""
+    },
+    "ambientOcclusionTexture_UMapping": {
+      "type": "TextureWrap",
+      "textureWrapValue": "Clamp"
+    },
+    "ambientOcclusionTexture_VMapping": {
+      "type": "TextureWrap",
+      "textureWrapValue": "Clamp"
+    },
+    "ambientOcclusionTexture": {
+      "type": "Texture",
+      "textureValue": ""
+    },
+    "diffuseTexture_UMapping": {
+      "type": "TextureWrap",
+      "textureWrapValue": "Repeat"
+    },
+    "diffuseTexture_VMapping": {
+      "type": "TextureWrap",
+      "textureWrapValue": "Repeat"
+    },
+    "diffuseTexture": {
+      "type": "Texture",
+      "textureValue": "7d89428c-c604-4630-b19a-ec2552c36d8e"
+    },
+    "displacementTexture_UMapping": {
+      "type": "TextureWrap",
+      "textureWrapValue": "Clamp"
+    },
+    "displacementTexture_VMapping": {
+      "type": "TextureWrap",
+      "textureWrapValue": "Clamp"
+    },
+    "displacementTexture": {
+      "type": "Texture",
+      "textureValue": ""
+    },
+    "emissiveTexture_UMapping": {
+      "type": "TextureWrap",
+      "textureWrapValue": "Clamp"
+    },
+    "emissiveTexture_VMapping": {
+      "type": "TextureWrap",
+      "textureWrapValue": "Clamp"
+    },
+    "emissiveTexture": {
+      "type": "Texture",
+      "textureValue": ""
+    },
+    "heightTexture_UMapping": {
+      "type": "TextureWrap",
+      "textureWrapValue": "Clamp"
+    },
+    "heightTexture_VMapping": {
+      "type": "TextureWrap",
+      "textureWrapValue": "Clamp"
+    },
+    "heightTexture": {
+      "type": "Texture",
+      "textureValue": ""
+    },
+    "lightmapTexture_UMapping": {
+      "type": "TextureWrap",
+      "textureWrapValue": "Clamp"
+    },
+    "lightmapTexture_VMapping": {
+      "type": "TextureWrap",
+      "textureWrapValue": "Clamp"
+    },
+    "lightmapTexture": {
+      "type": "Texture",
+      "textureValue": ""
+    },
+    "normalTexture_UMapping": {
+      "type": "TextureWrap",
+      "textureWrapValue": "Clamp"
+    },
+    "normalTexture_VMapping": {
+      "type": "TextureWrap",
+      "textureWrapValue": "Clamp"
+    },
+    "normalTexture": {
+      "type": "Texture",
+      "textureValue": ""
+    },
+    "opacityTexture_UMapping": {
+      "type": "TextureWrap",
+      "textureWrapValue": "Clamp"
+    },
+    "opacityTexture_VMapping": {
+      "type": "TextureWrap",
+      "textureWrapValue": "Clamp"
+    },
+    "opacityTexture": {
+      "type": "Texture",
+      "textureValue": ""
+    },
+    "reflectionTexture_UMapping": {
+      "type": "TextureWrap",
+      "textureWrapValue": "Clamp"
+    },
+    "reflectionTexture_VMapping": {
+      "type": "TextureWrap",
+      "textureWrapValue": "Clamp"
+    },
+    "reflectionTexture": {
+      "type": "Texture",
+      "textureValue": ""
+    },
+    "specularTexture_UMapping": {
+      "type": "TextureWrap",
+      "textureWrapValue": "Clamp"
+    },
+    "specularTexture_VMapping": {
+      "type": "TextureWrap",
+      "textureWrapValue": "Clamp"
+    },
+    "specularTexture": {
+      "type": "Texture",
+      "textureValue": ""
+    },
+    "baseColorTexture_UMapping": {
+      "type": "TextureWrap",
+      "textureWrapValue": "Repeat"
+    },
+    "baseColorTexture_VMapping": {
+      "type": "TextureWrap",
+      "textureWrapValue": "Repeat"
+    },
+    "baseColorTexture": {
+      "type": "Texture",
+      "textureValue": ""
+    },
+    "roughnessTexture_UMapping": {
+      "type": "TextureWrap",
+      "textureWrapValue": "Clamp"
+    },
+    "roughnessTexture_VMapping": {
+      "type": "TextureWrap",
+      "textureWrapValue": "Clamp"
+    },
+    "roughnessTexture": {
+      "type": "Texture",
+      "textureValue": ""
+    },
+    "metalnessTexture_UMapping": {
+      "type": "TextureWrap",
+      "textureWrapValue": "Clamp"
+    },
+    "metalnessTexture_VMapping": {
+      "type": "TextureWrap",
+      "textureWrapValue": "Clamp"
+    },
+    "metalnessTexture": {
+      "type": "Texture",
+      "textureValue": ""
+    },
+    "normalCameraTexture_UMapping": {
+      "type": "TextureWrap",
+      "textureWrapValue": "Clamp"
+    },
+    "normalCameraTexture_VMapping": {
+      "type": "TextureWrap",
+      "textureWrapValue": "Clamp"
+    },
+    "normalCameraTexture": {
+      "type": "Texture",
+      "textureValue": ""
+    },
+    "emissionColorTexture_UMapping": {
+      "type": "TextureWrap",
+      "textureWrapValue": "Clamp"
+    },
+    "emissionColorTexture_VMapping": {
+      "type": "TextureWrap",
+      "textureWrapValue": "Clamp"
+    },
+    "emissionColorTexture": {
+      "type": "Texture",
+      "textureValue": ""
+    }
+  }
+}

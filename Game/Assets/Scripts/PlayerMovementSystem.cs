@@ -70,7 +70,9 @@ class PlayerMovementSystem : IEntitySystem
                 movement.X = 1;
             }
 
-            var velocity = (forward * movement.Y + right * movement.X) * playerMovement.movementSpeed;
+            var direction = (forward * movement.Y + right * movement.X);
+
+            var velocity = direction * playerMovement.movementSpeed;
 
             var yVelocity = rigidBody.Velocity.Y;
 
@@ -84,6 +86,18 @@ class PlayerMovementSystem : IEntitySystem
             velocity.Y = yVelocity;
 
             rigidBody.Velocity = velocity;
+
+            if(movement != Vector2.Zero)
+            {
+                var rotation = Math.LookAt(Vector3.Normalize(direction), new Vector3(0, 1, 0));
+
+                playerMovement.targetRotation = rotation;
+            }
+
+            if(rigidBody.Rotation != playerMovement.targetRotation)
+            {
+                rigidBody.Rotation = Quaternion.Slerp(rigidBody.Rotation, playerMovement.targetRotation, Time.fixedDeltaTime * playerMovement.turnSpeed);
+            }
         });
 
         leftPress = rightPress = upPress = downPress = spacePress = false;
