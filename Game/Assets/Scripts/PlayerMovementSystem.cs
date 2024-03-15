@@ -18,7 +18,8 @@ class PlayerMovementSystem : IEntitySystem
         Scene.ForEach((Entity entity, ref Transform transform, ref OrbitCamera camera) =>
         {
             if (camera.focus == null ||
-                camera.focus.entity.TryGetComponent<PlayerMovement>(out var playerMovement) == false)
+                camera.focus.entity.TryGetComponent<PlayerMovement>(out var playerMovement) == false ||
+                (camera.focus.GetChild(0)?.entity.TryGetComponent<SkinnedMeshAnimator>(out var animator) ?? false) == false)
             {
                 return;
             }
@@ -98,6 +99,8 @@ class PlayerMovementSystem : IEntitySystem
             {
                 rigidBody.Rotation = Quaternion.Slerp(rigidBody.Rotation, playerMovement.targetRotation, Time.fixedDeltaTime * playerMovement.turnSpeed);
             }
+            
+            animator.animationController?.SetBoolParameter("Movement", movement != Vector2.Zero);
         });
 
         leftPress = rightPress = upPress = downPress = spacePress = false;

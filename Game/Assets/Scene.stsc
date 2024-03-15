@@ -159,7 +159,7 @@
           "mesh": "Modules/KayKit Adventurers 1.0 FREE/Characters/Barbarian.glb",
           "animation": "Hit_A",
           "repeat": true,
-          "stateMachine": "c2348cab-69ff-4ffb-a4a1-d0e2f2359942"
+          "stateMachine": "dd8767a6-62bc-440b-9d7a-d087211be124"
         }
       }
     ],
@@ -1928,7 +1928,7 @@
         "z": -1.1940561E-07
       },
       "rotation": {
-        "x": -1.8840721E-07,
+        "x": -1.8840747E-07,
         "y": -6.818627E-06,
         "z": -6.3384905
       },
