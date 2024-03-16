@@ -156,7 +156,7 @@
       {
         "type": "Staple.SkinnedMeshAnimator",
         "data": {
-          "mesh": "Modules/KayKit Adventurers 1.0 FREE/Characters/Barbarian.glb",
+          "mesh": "a0b56adb-c2b1-4f89-9ba2-06586936916f:0",
           "animation": "Hit_A",
           "repeat": true,
           "stateMachine": "dd8767a6-62bc-440b-9d7a-d087211be124"
@@ -1928,7 +1928,7 @@
         "z": -1.1940561E-07
       },
       "rotation": {
-        "x": -1.8840747E-07,
+        "x": -1.884077E-07,
         "y": -6.818627E-06,
         "z": -6.3384905
       },

@@ -77,7 +77,8 @@ class PlayerMovementSystem : IEntitySystem
 
             var yVelocity = rigidBody.Velocity.Y;
 
-            playerMovement.grounded = Physics.RayCast3D(new Ray(rigidBody.Position + new Vector3(0, -1, 0), new Vector3(0, -1, 0)), out _, out _, playerMovement.collisionMask);
+            playerMovement.grounded = Physics.RayCast3D(new Ray(rigidBody.Position + new Vector3(0, -1, 0), new Vector3(0, -1, 0)), out var hitBody, out _,
+                playerMovement.collisionMask);
 
             if (spacePress && playerMovement.grounded)
             {
@@ -99,8 +100,9 @@ class PlayerMovementSystem : IEntitySystem
             {
                 rigidBody.Rotation = Quaternion.Slerp(rigidBody.Rotation, playerMovement.targetRotation, Time.fixedDeltaTime * playerMovement.turnSpeed);
             }
-            
+
             animator.animationController?.SetBoolParameter("Movement", movement != Vector2.Zero);
+            animator.animationController?.SetBoolParameter("Jump", playerMovement.grounded == false);
         });
 
         leftPress = rightPress = upPress = downPress = spacePress = false;
