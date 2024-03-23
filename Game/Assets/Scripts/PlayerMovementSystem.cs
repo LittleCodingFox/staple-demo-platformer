@@ -79,14 +79,14 @@ class PlayerMovementSystem : IEntitySystem
             animator.animationController?.SetBoolParameter("Movement", movement != Vector2.Zero);
             animator.animationController?.SetBoolParameter("Jump", playerMovement.grounded == false);
         });
-
-        movement = Vector2.Zero;
-        jumpPress = false;
     }
 
     public void Update(float deltaTime)
     {
-        if(Input.GetGamepadCount() > 0)
+        movement = Vector2.Zero;
+        jumpPress = false;
+
+        if (Input.GetGamepadCount() > 0)
         {
             movement = Input.GetGamepadLeftAxis(0);
             jumpPress |= Input.GetGamepadButtonDown(0, GamepadButton.A);
