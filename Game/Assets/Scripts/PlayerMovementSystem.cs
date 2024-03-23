@@ -7,11 +7,8 @@ class PlayerMovementSystem : IEntitySystem
 {
     public EntitySubsystemType UpdateType => EntitySubsystemType.Both;
 
-    private bool leftPress = false;
-    private bool rightPress = false;
-    private bool upPress = false;
-    private bool downPress = false;
-    private bool spacePress = false;
+    private Vector2 movement;
+    private bool jumpPress = false;
 
     public void FixedUpdate(float deltaTime)
     {
@@ -49,38 +46,16 @@ class PlayerMovementSystem : IEntitySystem
                 right = Vector3.Normalize(right);
             }
 
-            var movement = Vector2.Zero;
-
-            if (upPress)
-            {
-                movement.Y = 1;
-            }
-
-            if (downPress)
-            {
-                movement.Y = -1;
-            }
-
-            if (leftPress)
-            {
-                movement.X = -1;
-            }
-
-            if (rightPress)
-            {
-                movement.X = 1;
-            }
-
             var direction = (forward * movement.Y + right * movement.X);
 
             var velocity = direction * playerMovement.movementSpeed;
 
             var yVelocity = rigidBody.Velocity.Y;
 
-            playerMovement.grounded = Physics.RayCast3D(new Ray(rigidBody.Position + new Vector3(0, -1, 0), new Vector3(0, -1, 0)), out var hitBody, out _,
+            playerMovement.grounded = Physics.RayCast3D(new Ray(rigidBody.Position, new Vector3(0, -1.0f, 0)), out var hitBody, out _,
                 playerMovement.collisionMask);
 
-            if (spacePress && playerMovement.grounded)
+            if (jumpPress && playerMovement.grounded)
             {
                 yVelocity = playerMovement.jumpStrength;
             }
@@ -105,16 +80,23 @@ class PlayerMovementSystem : IEntitySystem
             animator.animationController?.SetBoolParameter("Jump", playerMovement.grounded == false);
         });
 
-        leftPress = rightPress = upPress = downPress = spacePress = false;
+        movement = Vector2.Zero;
+        jumpPress = false;
     }
 
     public void Update(float deltaTime)
     {
-        leftPress |= Input.GetKey(KeyCode.A);
-        rightPress |= Input.GetKey(KeyCode.D);
-        upPress |= Input.GetKey(KeyCode.W);
-        downPress |= Input.GetKey(KeyCode.S);
-        spacePress |= Input.GetKeyDown(KeyCode.Space);
+        if(Input.GetGamepadCount() > 0)
+        {
+            movement = Input.GetGamepadLeftAxis(0);
+            jumpPress |= Input.GetGamepadButtonDown(0, GamepadButton.A);
+        }
+        else
+        {
+            movement.X = Input.GetKey(KeyCode.A) ? -1 : Input.GetKey(KeyCode.D) ? 1 : 0;
+            movement.Y = Input.GetKey(KeyCode.W) ? 1 : Input.GetKey(KeyCode.S) ? -1 : 0;
+            jumpPress |= Input.GetKeyDown(KeyCode.Space);
+        }
     }
 
     public void Shutdown()

@@ -42,6 +42,13 @@ class OrbitCameraSystem : IEntitySystem
     {
         var input = new Vector2(Input.MouseRelativePosition.Y, Input.MouseRelativePosition.X);
 
+        if(Input.GetGamepadCount() > 0)
+        {
+            input = Input.GetGamepadRightAxis(0);
+
+            (input.X, input.Y) = (-input.Y, -input.X);
+        }
+
         var e = 0.001f;
 
         if(input.X < -e || input.X > e || input.Y < -e || input.Y > e)
