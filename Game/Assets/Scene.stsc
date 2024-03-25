@@ -168,971 +168,8 @@
   },
   {
     "kind": "Entity",
-    "name": "coinGold",
-    "ID": 4,
-    "parent": 0,
-    "transform": {
-      "position": {
-        "x": 10.0,
-        "y": 2.0,
-        "z": 0.0
-      },
-      "rotation": {
-        "x": 0.0,
-        "y": 0.0,
-        "z": 0.0
-      },
-      "scale": {
-        "x": 1.0,
-        "y": 1.0,
-        "z": 1.0
-      }
-    },
-    "components": [
-      {
-        "type": "Staple.BoxCollider3D",
-        "data": {
-          "size": {
-            "x": 1.0,
-            "y": 1.0,
-            "z": 1.0
-          },
-          "position": {
-            "x": 0.0,
-            "y": 0.0,
-            "z": 0.0
-          },
-          "rotation": {
-            "x": 0.0,
-            "y": 0.0,
-            "z": 0.0,
-            "w": 1.0
-          }
-        }
-      },
-      {
-        "type": "Staple.RigidBody3D",
-        "data": {
-          "motionType": "Static",
-          "freezeRotationX": false,
-          "freezeRotationY": false,
-          "freezeRotationZ": false,
-          "is2DPlane": false,
-          "gravityFactor": 0.0,
-          "isTrigger": true,
-          "friction": 0.0,
-          "restitution": 0.0,
-          "mass": 1.0
-        }
-      },
-      {
-        "type": "Staple.AudioSource",
-        "data": {
-          "volume": 1.0,
-          "pitch": 1.0,
-          "loop": false,
-          "spatial": false,
-          "autoplay": false
-        }
-      },
-      {
-        "type": "Platformer.CoinComponent",
-        "data": {}
-      }
-    ],
-    "layer": "Default",
-    "enabled": true
-  },
-  {
-    "kind": "Entity",
-    "name": "coinGold",
-    "ID": 5,
-    "parent": 9,
-    "transform": {
-      "position": {
-        "x": -1.0,
-        "y": 0.0,
-        "z": 0.5
-      },
-      "rotation": {
-        "x": 0.0,
-        "y": 0.0,
-        "z": 0.0
-      },
-      "scale": {
-        "x": 1.0,
-        "y": 1.0,
-        "z": 1.0
-      }
-    },
-    "components": [],
-    "layer": "Default",
-    "enabled": true
-  },
-  {
-    "kind": "Entity",
-    "name": "coinGold",
-    "ID": 6,
-    "parent": 9,
-    "transform": {
-      "position": {
-        "x": 1.0,
-        "y": 0.0,
-        "z": -0.5
-      },
-      "rotation": {
-        "x": 0.0,
-        "y": 0.0,
-        "z": 0.0
-      },
-      "scale": {
-        "x": 1.0,
-        "y": 1.0,
-        "z": 1.0
-      }
-    },
-    "components": [],
-    "layer": "Default",
-    "enabled": true
-  },
-  {
-    "kind": "Entity",
-    "name": "Mesh coinGold-0",
-    "ID": 7,
-    "parent": 6,
-    "transform": {
-      "position": {
-        "x": -1.0,
-        "y": 0.0,
-        "z": 0.5
-      },
-      "rotation": {
-        "x": 0.0,
-        "y": 0.0,
-        "z": 0.0
-      },
-      "scale": {
-        "x": 1.0,
-        "y": 1.0,
-        "z": 1.0
-      }
-    },
-    "components": [
-      {
-        "type": "Staple.MeshRenderer",
-        "data": {
-          "mesh": "13157a96-b6b4-42ca-ae2e-8e6db001547c:0",
-          "materials": [
-            "6e9dfe7d-0fa8-4f0f-8766-797ff794d7de"
-          ],
-          "enabled": true,
-          "forceRenderingOff": false,
-          "receiveShadows": true,
-          "sortingLayer": 0,
-          "sortingOrder": 0
-        }
-      }
-    ],
-    "layer": "Default",
-    "enabled": true
-  },
-  {
-    "kind": "Entity",
-    "name": "Mesh coinGold-1",
-    "ID": 8,
-    "parent": 6,
-    "transform": {
-      "position": {
-        "x": -1.0,
-        "y": 0.0,
-        "z": 0.5
-      },
-      "rotation": {
-        "x": 0.0,
-        "y": 0.0,
-        "z": 0.0
-      },
-      "scale": {
-        "x": 1.0,
-        "y": 1.0,
-        "z": 1.0
-      }
-    },
-    "components": [
-      {
-        "type": "Staple.MeshRenderer",
-        "data": {
-          "mesh": "13157a96-b6b4-42ca-ae2e-8e6db001547c:1",
-          "materials": [
-            "f19eac74-c1ea-4112-8c69-d505f3bb5d29"
-          ],
-          "enabled": true,
-          "forceRenderingOff": false,
-          "receiveShadows": true,
-          "sortingLayer": 0,
-          "sortingOrder": 0
-        }
-      }
-    ],
-    "layer": "Default",
-    "enabled": true
-  },
-  {
-    "kind": "Entity",
-    "name": "Container",
-    "ID": 9,
-    "parent": 4,
-    "transform": {
-      "position": {
-        "x": 0.0,
-        "y": 0.0,
-        "z": 0.0
-      },
-      "rotation": {
-        "x": 0.0,
-        "y": 0.0,
-        "z": 0.0
-      },
-      "scale": {
-        "x": 1.0,
-        "y": 1.0,
-        "z": 1.0
-      }
-    },
-    "components": [
-      {
-        "type": "Platformer.SpinnerComponent",
-        "data": {
-          "speed": 360.0
-        }
-      }
-    ],
-    "layer": "Default",
-    "enabled": true
-  },
-  {
-    "kind": "Entity",
-    "name": "Cube",
-    "ID": 10,
-    "parent": 0,
-    "transform": {
-      "position": {
-        "x": 0.0,
-        "y": -1.0,
-        "z": 0.0
-      },
-      "rotation": {
-        "x": 0.0,
-        "y": 0.0,
-        "z": 0.0
-      },
-      "scale": {
-        "x": 10.0,
-        "y": 1.0,
-        "z": 10.0
-      }
-    },
-    "components": [
-      {
-        "type": "Staple.MeshRenderer",
-        "data": {
-          "mesh": "Internal/Cube",
-          "materials": [
-            "88428bcf-6adb-49e1-ace8-fb2cf71a2959"
-          ],
-          "enabled": true,
-          "forceRenderingOff": false,
-          "receiveShadows": true,
-          "sortingLayer": 0,
-          "sortingOrder": 0
-        }
-      },
-      {
-        "type": "Staple.BoxCollider3D",
-        "data": {
-          "size": {
-            "x": 1.0,
-            "y": 1.0,
-            "z": 1.0
-          },
-          "position": {
-            "x": 0.0,
-            "y": 0.0,
-            "z": 0.0
-          },
-          "rotation": {
-            "x": 0.0,
-            "y": 0.0,
-            "z": 0.0,
-            "w": 1.0
-          }
-        }
-      },
-      {
-        "type": "Staple.RigidBody3D",
-        "data": {
-          "motionType": "Static",
-          "freezeRotationX": false,
-          "freezeRotationY": false,
-          "freezeRotationZ": false,
-          "is2DPlane": false,
-          "gravityFactor": 1.0,
-          "isTrigger": false,
-          "friction": 0.0,
-          "restitution": 0.0,
-          "mass": 1.0
-        }
-      }
-    ],
-    "layer": "Level Geometry",
-    "enabled": true
-  },
-  {
-    "kind": "Entity",
-    "name": "Cube (Clone)",
-    "ID": 11,
-    "parent": 0,
-    "transform": {
-      "position": {
-        "x": 10.0,
-        "y": 1.0,
-        "z": 0.0
-      },
-      "rotation": {
-        "x": 0.0,
-        "y": 0.0,
-        "z": 0.0
-      },
-      "scale": {
-        "x": 5.0,
-        "y": 1.0,
-        "z": 5.0
-      }
-    },
-    "components": [
-      {
-        "type": "Staple.MeshRenderer",
-        "data": {
-          "mesh": "Internal/Cube",
-          "materials": [
-            "88428bcf-6adb-49e1-ace8-fb2cf71a2959"
-          ],
-          "enabled": true,
-          "forceRenderingOff": false,
-          "receiveShadows": true,
-          "sortingLayer": 0,
-          "sortingOrder": 0
-        }
-      },
-      {
-        "type": "Staple.BoxCollider3D",
-        "data": {
-          "size": {
-            "x": 1.0,
-            "y": 1.0,
-            "z": 1.0
-          },
-          "position": {
-            "x": 0.0,
-            "y": 0.0,
-            "z": 0.0
-          },
-          "rotation": {
-            "x": 0.0,
-            "y": 0.0,
-            "z": 0.0,
-            "w": 1.0
-          }
-        }
-      },
-      {
-        "type": "Staple.RigidBody3D",
-        "data": {
-          "motionType": "Static",
-          "freezeRotationX": false,
-          "freezeRotationY": false,
-          "freezeRotationZ": false,
-          "is2DPlane": false,
-          "gravityFactor": 1.0,
-          "isTrigger": false,
-          "friction": 0.0,
-          "restitution": 0.0,
-          "mass": 1.0
-        }
-      }
-    ],
-    "layer": "Level Geometry",
-    "enabled": true
-  },
-  {
-    "kind": "Entity",
-    "name": "Cube (Clone) (Clone)",
-    "ID": 12,
-    "parent": 0,
-    "transform": {
-      "position": {
-        "x": 15.0,
-        "y": 3.0,
-        "z": 2.0
-      },
-      "rotation": {
-        "x": 0.0,
-        "y": 0.0,
-        "z": 0.0
-      },
-      "scale": {
-        "x": 5.0,
-        "y": 1.0,
-        "z": 5.0
-      }
-    },
-    "components": [
-      {
-        "type": "Staple.MeshRenderer",
-        "data": {
-          "mesh": "Internal/Cube",
-          "materials": [
-            "88428bcf-6adb-49e1-ace8-fb2cf71a2959"
-          ],
-          "enabled": true,
-          "forceRenderingOff": false,
-          "receiveShadows": true,
-          "sortingLayer": 0,
-          "sortingOrder": 0
-        }
-      },
-      {
-        "type": "Staple.BoxCollider3D",
-        "data": {
-          "size": {
-            "x": 1.0,
-            "y": 1.0,
-            "z": 1.0
-          },
-          "position": {
-            "x": 0.0,
-            "y": 0.0,
-            "z": 0.0
-          },
-          "rotation": {
-            "x": 0.0,
-            "y": 0.0,
-            "z": 0.0,
-            "w": 1.0
-          }
-        }
-      },
-      {
-        "type": "Staple.RigidBody3D",
-        "data": {
-          "motionType": "Static",
-          "freezeRotationX": false,
-          "freezeRotationY": false,
-          "freezeRotationZ": false,
-          "is2DPlane": false,
-          "gravityFactor": 1.0,
-          "isTrigger": false,
-          "friction": 0.0,
-          "restitution": 0.0,
-          "mass": 1.0
-        }
-      }
-    ],
-    "layer": "Level Geometry",
-    "enabled": true
-  },
-  {
-    "kind": "Entity",
-    "name": "coinGold (Clone)",
-    "ID": 13,
-    "parent": 0,
-    "transform": {
-      "position": {
-        "x": 2.0,
-        "y": 0.0,
-        "z": 0.0
-      },
-      "rotation": {
-        "x": 0.0,
-        "y": 0.0,
-        "z": 0.0
-      },
-      "scale": {
-        "x": 1.0,
-        "y": 1.0,
-        "z": 1.0
-      }
-    },
-    "components": [
-      {
-        "type": "Staple.BoxCollider3D",
-        "data": {
-          "size": {
-            "x": 1.0,
-            "y": 1.0,
-            "z": 1.0
-          },
-          "position": {
-            "x": 0.0,
-            "y": 0.0,
-            "z": 0.0
-          },
-          "rotation": {
-            "x": 0.0,
-            "y": 0.0,
-            "z": 0.0,
-            "w": 1.0
-          }
-        }
-      },
-      {
-        "type": "Staple.RigidBody3D",
-        "data": {
-          "motionType": "Static",
-          "freezeRotationX": false,
-          "freezeRotationY": false,
-          "freezeRotationZ": false,
-          "is2DPlane": false,
-          "gravityFactor": 0.0,
-          "isTrigger": true,
-          "friction": 0.0,
-          "restitution": 0.0,
-          "mass": 1.0
-        }
-      },
-      {
-        "type": "Staple.AudioSource",
-        "data": {
-          "volume": 1.0,
-          "pitch": 1.0,
-          "loop": false,
-          "spatial": false,
-          "autoplay": false
-        }
-      },
-      {
-        "type": "Platformer.CoinComponent",
-        "data": {}
-      }
-    ],
-    "layer": "Default",
-    "enabled": true
-  },
-  {
-    "kind": "Entity",
-    "name": "Container (Clone)",
-    "ID": 14,
-    "parent": 13,
-    "transform": {
-      "position": {
-        "x": 0.0,
-        "y": 0.0,
-        "z": 0.0
-      },
-      "rotation": {
-        "x": 0.0,
-        "y": 0.0,
-        "z": 0.0
-      },
-      "scale": {
-        "x": 1.0,
-        "y": 1.0,
-        "z": 1.0
-      }
-    },
-    "components": [
-      {
-        "type": "Platformer.SpinnerComponent",
-        "data": {
-          "speed": 360.0
-        }
-      }
-    ],
-    "layer": "Default",
-    "enabled": true
-  },
-  {
-    "kind": "Entity",
-    "name": "coinGold (Clone)",
-    "ID": 15,
-    "parent": 14,
-    "transform": {
-      "position": {
-        "x": -1.0,
-        "y": 0.0,
-        "z": 0.5
-      },
-      "rotation": {
-        "x": 0.0,
-        "y": 0.0,
-        "z": 0.0
-      },
-      "scale": {
-        "x": 1.0,
-        "y": 1.0,
-        "z": 1.0
-      }
-    },
-    "components": [],
-    "layer": "Default",
-    "enabled": true
-  },
-  {
-    "kind": "Entity",
-    "name": "coinGold (Clone)",
-    "ID": 16,
-    "parent": 14,
-    "transform": {
-      "position": {
-        "x": 1.0,
-        "y": 0.0,
-        "z": -0.5
-      },
-      "rotation": {
-        "x": 0.0,
-        "y": 0.0,
-        "z": 0.0
-      },
-      "scale": {
-        "x": 1.0,
-        "y": 1.0,
-        "z": 1.0
-      }
-    },
-    "components": [],
-    "layer": "Default",
-    "enabled": true
-  },
-  {
-    "kind": "Entity",
-    "name": "Mesh coinGold-0 (Clone)",
-    "ID": 17,
-    "parent": 16,
-    "transform": {
-      "position": {
-        "x": -1.0,
-        "y": 0.0,
-        "z": 0.5
-      },
-      "rotation": {
-        "x": 0.0,
-        "y": 0.0,
-        "z": 0.0
-      },
-      "scale": {
-        "x": 1.0,
-        "y": 1.0,
-        "z": 1.0
-      }
-    },
-    "components": [
-      {
-        "type": "Staple.MeshRenderer",
-        "data": {
-          "mesh": "13157a96-b6b4-42ca-ae2e-8e6db001547c:0",
-          "materials": [
-            "6e9dfe7d-0fa8-4f0f-8766-797ff794d7de"
-          ],
-          "enabled": true,
-          "forceRenderingOff": false,
-          "receiveShadows": true,
-          "sortingLayer": 0,
-          "sortingOrder": 0
-        }
-      }
-    ],
-    "layer": "Default",
-    "enabled": true
-  },
-  {
-    "kind": "Entity",
-    "name": "Mesh coinGold-1 (Clone)",
-    "ID": 18,
-    "parent": 16,
-    "transform": {
-      "position": {
-        "x": -1.0,
-        "y": 0.0,
-        "z": 0.5
-      },
-      "rotation": {
-        "x": 0.0,
-        "y": 0.0,
-        "z": 0.0
-      },
-      "scale": {
-        "x": 1.0,
-        "y": 1.0,
-        "z": 1.0
-      }
-    },
-    "components": [
-      {
-        "type": "Staple.MeshRenderer",
-        "data": {
-          "mesh": "13157a96-b6b4-42ca-ae2e-8e6db001547c:1",
-          "materials": [
-            "f19eac74-c1ea-4112-8c69-d505f3bb5d29"
-          ],
-          "enabled": true,
-          "forceRenderingOff": false,
-          "receiveShadows": true,
-          "sortingLayer": 0,
-          "sortingOrder": 0
-        }
-      }
-    ],
-    "layer": "Default",
-    "enabled": true
-  },
-  {
-    "kind": "Entity",
-    "name": "coinGold (Clone) (Clone)",
-    "ID": 19,
-    "parent": 0,
-    "transform": {
-      "position": {
-        "x": 15.0,
-        "y": 4.0,
-        "z": 2.0
-      },
-      "rotation": {
-        "x": 0.0,
-        "y": 0.0,
-        "z": 0.0
-      },
-      "scale": {
-        "x": 1.0,
-        "y": 1.0,
-        "z": 1.0
-      }
-    },
-    "components": [
-      {
-        "type": "Staple.BoxCollider3D",
-        "data": {
-          "size": {
-            "x": 1.0,
-            "y": 1.0,
-            "z": 1.0
-          },
-          "position": {
-            "x": 0.0,
-            "y": 0.0,
-            "z": 0.0
-          },
-          "rotation": {
-            "x": 0.0,
-            "y": 0.0,
-            "z": 0.0,
-            "w": 1.0
-          }
-        }
-      },
-      {
-        "type": "Staple.RigidBody3D",
-        "data": {
-          "motionType": "Static",
-          "freezeRotationX": false,
-          "freezeRotationY": false,
-          "freezeRotationZ": false,
-          "is2DPlane": false,
-          "gravityFactor": 0.0,
-          "isTrigger": true,
-          "friction": 0.0,
-          "restitution": 0.0,
-          "mass": 1.0
-        }
-      },
-      {
-        "type": "Staple.AudioSource",
-        "data": {
-          "volume": 1.0,
-          "pitch": 1.0,
-          "loop": false,
-          "spatial": false,
-          "autoplay": false
-        }
-      },
-      {
-        "type": "Platformer.CoinComponent",
-        "data": {}
-      }
-    ],
-    "layer": "Default",
-    "enabled": true
-  },
-  {
-    "kind": "Entity",
-    "name": "Container (Clone) (Clone)",
-    "ID": 20,
-    "parent": 19,
-    "transform": {
-      "position": {
-        "x": 0.0,
-        "y": 0.0,
-        "z": 0.0
-      },
-      "rotation": {
-        "x": 0.0,
-        "y": 0.0,
-        "z": 0.0
-      },
-      "scale": {
-        "x": 1.0,
-        "y": 1.0,
-        "z": 1.0
-      }
-    },
-    "components": [
-      {
-        "type": "Platformer.SpinnerComponent",
-        "data": {
-          "speed": 360.0
-        }
-      }
-    ],
-    "layer": "Default",
-    "enabled": true
-  },
-  {
-    "kind": "Entity",
-    "name": "coinGold (Clone) (Clone)",
-    "ID": 21,
-    "parent": 20,
-    "transform": {
-      "position": {
-        "x": -1.0,
-        "y": 0.0,
-        "z": 0.5
-      },
-      "rotation": {
-        "x": 0.0,
-        "y": 0.0,
-        "z": 0.0
-      },
-      "scale": {
-        "x": 1.0,
-        "y": 1.0,
-        "z": 1.0
-      }
-    },
-    "components": [],
-    "layer": "Default",
-    "enabled": true
-  },
-  {
-    "kind": "Entity",
-    "name": "coinGold (Clone) (Clone)",
-    "ID": 22,
-    "parent": 20,
-    "transform": {
-      "position": {
-        "x": 1.0,
-        "y": 0.0,
-        "z": -0.5
-      },
-      "rotation": {
-        "x": 0.0,
-        "y": 0.0,
-        "z": 0.0
-      },
-      "scale": {
-        "x": 1.0,
-        "y": 1.0,
-        "z": 1.0
-      }
-    },
-    "components": [],
-    "layer": "Default",
-    "enabled": true
-  },
-  {
-    "kind": "Entity",
-    "name": "Mesh coinGold-0 (Clone) (Clone)",
-    "ID": 23,
-    "parent": 22,
-    "transform": {
-      "position": {
-        "x": -1.0,
-        "y": 0.0,
-        "z": 0.5
-      },
-      "rotation": {
-        "x": 0.0,
-        "y": 0.0,
-        "z": 0.0
-      },
-      "scale": {
-        "x": 1.0,
-        "y": 1.0,
-        "z": 1.0
-      }
-    },
-    "components": [
-      {
-        "type": "Staple.MeshRenderer",
-        "data": {
-          "mesh": "13157a96-b6b4-42ca-ae2e-8e6db001547c:0",
-          "materials": [
-            "6e9dfe7d-0fa8-4f0f-8766-797ff794d7de"
-          ],
-          "enabled": true,
-          "forceRenderingOff": false,
-          "receiveShadows": true,
-          "sortingLayer": 0,
-          "sortingOrder": 0
-        }
-      }
-    ],
-    "layer": "Default",
-    "enabled": true
-  },
-  {
-    "kind": "Entity",
-    "name": "Mesh coinGold-1 (Clone) (Clone)",
-    "ID": 24,
-    "parent": 22,
-    "transform": {
-      "position": {
-        "x": -1.0,
-        "y": 0.0,
-        "z": 0.5
-      },
-      "rotation": {
-        "x": 0.0,
-        "y": 0.0,
-        "z": 0.0
-      },
-      "scale": {
-        "x": 1.0,
-        "y": 1.0,
-        "z": 1.0
-      }
-    },
-    "components": [
-      {
-        "type": "Staple.MeshRenderer",
-        "data": {
-          "mesh": "13157a96-b6b4-42ca-ae2e-8e6db001547c:1",
-          "materials": [
-            "f19eac74-c1ea-4112-8c69-d505f3bb5d29"
-          ],
-          "enabled": true,
-          "forceRenderingOff": false,
-          "receiveShadows": true,
-          "sortingLayer": 0,
-          "sortingOrder": 0
-        }
-      }
-    ],
-    "layer": "Default",
-    "enabled": true
-  },
-  {
-    "kind": "Entity",
     "name": "Respawner",
-    "ID": 25,
+    "ID": 4,
     "parent": 0,
     "transform": {
       "position": {
@@ -1205,7 +242,7 @@
   {
     "kind": "Entity",
     "name": "Rig",
-    "ID": 26,
+    "ID": 5,
     "parent": 3,
     "transform": {
       "position": {
@@ -1231,8 +268,8 @@
   {
     "kind": "Entity",
     "name": "Barbarian_ArmLeft",
-    "ID": 27,
-    "parent": 26,
+    "ID": 6,
+    "parent": 5,
     "transform": {
       "position": {
         "x": 0.0,
@@ -1257,7 +294,7 @@
   {
     "kind": "Entity",
     "name": "Barbarian_ArmLeft",
-    "ID": 28,
+    "ID": 7,
     "parent": 3,
     "transform": {
       "position": {
@@ -1283,8 +320,8 @@
   {
     "kind": "Entity",
     "name": "Cube.160",
-    "ID": 29,
-    "parent": 28,
+    "ID": 8,
+    "parent": 7,
     "transform": {
       "position": {
         "x": 0.0,
@@ -1324,8 +361,8 @@
   {
     "kind": "Entity",
     "name": "Barbarian_ArmRight",
-    "ID": 30,
-    "parent": 26,
+    "ID": 9,
+    "parent": 5,
     "transform": {
       "position": {
         "x": 0.0,
@@ -1350,7 +387,7 @@
   {
     "kind": "Entity",
     "name": "Barbarian_ArmRight",
-    "ID": 31,
+    "ID": 10,
     "parent": 3,
     "transform": {
       "position": {
@@ -1376,8 +413,8 @@
   {
     "kind": "Entity",
     "name": "Cube.161",
-    "ID": 32,
-    "parent": 31,
+    "ID": 11,
+    "parent": 10,
     "transform": {
       "position": {
         "x": 0.0,
@@ -1417,8 +454,8 @@
   {
     "kind": "Entity",
     "name": "Barbarian_Body",
-    "ID": 33,
-    "parent": 26,
+    "ID": 12,
+    "parent": 5,
     "transform": {
       "position": {
         "x": 0.0,
@@ -1443,7 +480,7 @@
   {
     "kind": "Entity",
     "name": "Barbarian_Body",
-    "ID": 34,
+    "ID": 13,
     "parent": 3,
     "transform": {
       "position": {
@@ -1469,8 +506,8 @@
   {
     "kind": "Entity",
     "name": "PrototypePete_body.022",
-    "ID": 35,
-    "parent": 34,
+    "ID": 14,
+    "parent": 13,
     "transform": {
       "position": {
         "x": 0.0,
@@ -1510,8 +547,8 @@
   {
     "kind": "Entity",
     "name": "Barbarian_Head",
-    "ID": 36,
-    "parent": 26,
+    "ID": 15,
+    "parent": 5,
     "transform": {
       "position": {
         "x": 0.0,
@@ -1536,7 +573,7 @@
   {
     "kind": "Entity",
     "name": "Barbarian_Head",
-    "ID": 37,
+    "ID": 16,
     "parent": 3,
     "transform": {
       "position": {
@@ -1562,8 +599,8 @@
   {
     "kind": "Entity",
     "name": "Cube.167",
-    "ID": 38,
-    "parent": 37,
+    "ID": 17,
+    "parent": 16,
     "transform": {
       "position": {
         "x": 0.0,
@@ -1603,8 +640,8 @@
   {
     "kind": "Entity",
     "name": "Barbarian_LegLeft",
-    "ID": 39,
-    "parent": 26,
+    "ID": 18,
+    "parent": 5,
     "transform": {
       "position": {
         "x": 0.0,
@@ -1629,7 +666,7 @@
   {
     "kind": "Entity",
     "name": "Barbarian_LegLeft",
-    "ID": 40,
+    "ID": 19,
     "parent": 3,
     "transform": {
       "position": {
@@ -1655,8 +692,8 @@
   {
     "kind": "Entity",
     "name": "Cube.165",
-    "ID": 41,
-    "parent": 40,
+    "ID": 20,
+    "parent": 19,
     "transform": {
       "position": {
         "x": 0.0,
@@ -1696,8 +733,8 @@
   {
     "kind": "Entity",
     "name": "Barbarian_LegRight",
-    "ID": 42,
-    "parent": 26,
+    "ID": 21,
+    "parent": 5,
     "transform": {
       "position": {
         "x": 0.0,
@@ -1722,7 +759,7 @@
   {
     "kind": "Entity",
     "name": "Barbarian_LegRight",
-    "ID": 43,
+    "ID": 22,
     "parent": 3,
     "transform": {
       "position": {
@@ -1748,8 +785,8 @@
   {
     "kind": "Entity",
     "name": "Cube.163",
-    "ID": 44,
-    "parent": 43,
+    "ID": 23,
+    "parent": 22,
     "transform": {
       "position": {
         "x": 0.0,
@@ -1789,8 +826,8 @@
   {
     "kind": "Entity",
     "name": "root",
-    "ID": 45,
-    "parent": 26,
+    "ID": 24,
+    "parent": 5,
     "transform": {
       "position": {
         "x": 0.0,
@@ -1815,8 +852,8 @@
   {
     "kind": "Entity",
     "name": "hips",
-    "ID": 46,
-    "parent": 45,
+    "ID": 25,
+    "parent": 24,
     "transform": {
       "position": {
         "x": 0.0,
@@ -1841,8 +878,8 @@
   {
     "kind": "Entity",
     "name": "spine",
-    "ID": 47,
-    "parent": 46,
+    "ID": 26,
+    "parent": 25,
     "transform": {
       "position": {
         "x": 0.0,
@@ -1867,8 +904,8 @@
   {
     "kind": "Entity",
     "name": "chest",
-    "ID": 48,
-    "parent": 47,
+    "ID": 27,
+    "parent": 26,
     "transform": {
       "position": {
         "x": 0.0,
@@ -1893,8 +930,8 @@
   {
     "kind": "Entity",
     "name": "upperarm.l",
-    "ID": 49,
-    "parent": 48,
+    "ID": 28,
+    "parent": 27,
     "transform": {
       "position": {
         "x": 0.21200737,
@@ -1919,8 +956,8 @@
   {
     "kind": "Entity",
     "name": "lowerarm.l",
-    "ID": 50,
-    "parent": 49,
+    "ID": 29,
+    "parent": 28,
     "transform": {
       "position": {
         "x": -3.219665E-09,
@@ -1928,7 +965,7 @@
         "z": -1.1940561E-07
       },
       "rotation": {
-        "x": -1.884077E-07,
+        "x": -1.8840781E-07,
         "y": -6.818627E-06,
         "z": -6.3384905
       },
@@ -1945,8 +982,8 @@
   {
     "kind": "Entity",
     "name": "wrist.l",
-    "ID": 51,
-    "parent": 50,
+    "ID": 30,
+    "parent": 29,
     "transform": {
       "position": {
         "x": 8.719292E-09,
@@ -1971,8 +1008,8 @@
   {
     "kind": "Entity",
     "name": "hand.l",
-    "ID": 52,
-    "parent": 51,
+    "ID": 31,
+    "parent": 30,
     "transform": {
       "position": {
         "x": 9.0816243E-13,
@@ -1997,8 +1034,8 @@
   {
     "kind": "Entity",
     "name": "handslot.l",
-    "ID": 53,
-    "parent": 52,
+    "ID": 32,
+    "parent": 31,
     "transform": {
       "position": {
         "x": 8.348149E-10,
@@ -2023,8 +1060,8 @@
   {
     "kind": "Entity",
     "name": "1H_Axe_Offhand",
-    "ID": 54,
-    "parent": 53,
+    "ID": 33,
+    "parent": 32,
     "transform": {
       "position": {
         "x": 0.0,
@@ -2049,7 +1086,7 @@
   {
     "kind": "Entity",
     "name": "1H_Axe_Offhand",
-    "ID": 55,
+    "ID": 34,
     "parent": 3,
     "transform": {
       "position": {
@@ -2075,8 +1112,8 @@
   {
     "kind": "Entity",
     "name": "Cube.001",
-    "ID": 56,
-    "parent": 54,
+    "ID": 35,
+    "parent": 33,
     "transform": {
       "position": {
         "x": 0.0,
@@ -2116,8 +1153,8 @@
   {
     "kind": "Entity",
     "name": "Barbarian_Round_Shield",
-    "ID": 57,
-    "parent": 53,
+    "ID": 36,
+    "parent": 32,
     "transform": {
       "position": {
         "x": 0.0,
@@ -2142,7 +1179,7 @@
   {
     "kind": "Entity",
     "name": "Barbarian_Round_Shield",
-    "ID": 58,
+    "ID": 37,
     "parent": 3,
     "transform": {
       "position": {
@@ -2168,8 +1205,8 @@
   {
     "kind": "Entity",
     "name": "Cylinder.404",
-    "ID": 59,
-    "parent": 57,
+    "ID": 38,
+    "parent": 36,
     "transform": {
       "position": {
         "x": 0.0,
@@ -2209,8 +1246,8 @@
   {
     "kind": "Entity",
     "name": "upperarm.r",
-    "ID": 60,
-    "parent": 48,
+    "ID": 39,
+    "parent": 27,
     "transform": {
       "position": {
         "x": -0.21200737,
@@ -2235,8 +1272,8 @@
   {
     "kind": "Entity",
     "name": "lowerarm.r",
-    "ID": 61,
-    "parent": 60,
+    "ID": 40,
+    "parent": 39,
     "transform": {
       "position": {
         "x": -7.1218566E-11,
@@ -2261,8 +1298,8 @@
   {
     "kind": "Entity",
     "name": "wrist.r",
-    "ID": 62,
-    "parent": 61,
+    "ID": 41,
+    "parent": 40,
     "transform": {
       "position": {
         "x": -8.718383E-09,
@@ -2287,8 +1324,8 @@
   {
     "kind": "Entity",
     "name": "hand.r",
-    "ID": 63,
-    "parent": 62,
+    "ID": 42,
+    "parent": 41,
     "transform": {
       "position": {
         "x": 1.3322676E-15,
@@ -2313,8 +1350,8 @@
   {
     "kind": "Entity",
     "name": "handslot.r",
-    "ID": 64,
-    "parent": 63,
+    "ID": 43,
+    "parent": 42,
     "transform": {
       "position": {
         "x": -8.348149E-10,
@@ -2339,8 +1376,8 @@
   {
     "kind": "Entity",
     "name": "1H_Axe",
-    "ID": 65,
-    "parent": 64,
+    "ID": 44,
+    "parent": 43,
     "transform": {
       "position": {
         "x": 0.0,
@@ -2365,7 +1402,7 @@
   {
     "kind": "Entity",
     "name": "1H_Axe",
-    "ID": 66,
+    "ID": 45,
     "parent": 3,
     "transform": {
       "position": {
@@ -2391,8 +1428,8 @@
   {
     "kind": "Entity",
     "name": "Cube.12900",
-    "ID": 67,
-    "parent": 65,
+    "ID": 46,
+    "parent": 44,
     "transform": {
       "position": {
         "x": 0.0,
@@ -2432,8 +1469,8 @@
   {
     "kind": "Entity",
     "name": "2H_Axe",
-    "ID": 68,
-    "parent": 64,
+    "ID": 47,
+    "parent": 43,
     "transform": {
       "position": {
         "x": 0.0,
@@ -2458,7 +1495,7 @@
   {
     "kind": "Entity",
     "name": "2H_Axe",
-    "ID": 69,
+    "ID": 48,
     "parent": 3,
     "transform": {
       "position": {
@@ -2484,8 +1521,8 @@
   {
     "kind": "Entity",
     "name": "Cube.222",
-    "ID": 70,
-    "parent": 68,
+    "ID": 49,
+    "parent": 47,
     "transform": {
       "position": {
         "x": 0.0,
@@ -2525,8 +1562,8 @@
   {
     "kind": "Entity",
     "name": "Mug",
-    "ID": 71,
-    "parent": 64,
+    "ID": 50,
+    "parent": 43,
     "transform": {
       "position": {
         "x": 0.30056614,
@@ -2551,7 +1588,7 @@
   {
     "kind": "Entity",
     "name": "Mug",
-    "ID": 72,
+    "ID": 51,
     "parent": 3,
     "transform": {
       "position": {
@@ -2577,8 +1614,8 @@
   {
     "kind": "Entity",
     "name": "Cylinder.061",
-    "ID": 73,
-    "parent": 71,
+    "ID": 52,
+    "parent": 50,
     "transform": {
       "position": {
         "x": 0.0,
@@ -2618,8 +1655,8 @@
   {
     "kind": "Entity",
     "name": "head",
-    "ID": 74,
-    "parent": 48,
+    "ID": 53,
+    "parent": 27,
     "transform": {
       "position": {
         "x": 0.0,
@@ -2644,8 +1681,8 @@
   {
     "kind": "Entity",
     "name": "Barbarian_Hat",
-    "ID": 75,
-    "parent": 74,
+    "ID": 54,
+    "parent": 53,
     "transform": {
       "position": {
         "x": 1.9767114E-21,
@@ -2670,7 +1707,7 @@
   {
     "kind": "Entity",
     "name": "Barbarian_Hat",
-    "ID": 76,
+    "ID": 55,
     "parent": 3,
     "transform": {
       "position": {
@@ -2696,8 +1733,8 @@
   {
     "kind": "Entity",
     "name": "Cube.166",
-    "ID": 77,
-    "parent": 75,
+    "ID": 56,
+    "parent": 54,
     "transform": {
       "position": {
         "x": 0.0,
@@ -2737,8 +1774,8 @@
   {
     "kind": "Entity",
     "name": "Barbarian_Cape",
-    "ID": 78,
-    "parent": 48,
+    "ID": 57,
+    "parent": 27,
     "transform": {
       "position": {
         "x": -1.9073486E-06,
@@ -2763,7 +1800,7 @@
   {
     "kind": "Entity",
     "name": "Barbarian_Cape",
-    "ID": 79,
+    "ID": 58,
     "parent": 3,
     "transform": {
       "position": {
@@ -2789,8 +1826,8 @@
   {
     "kind": "Entity",
     "name": "Plane.006",
-    "ID": 80,
-    "parent": 78,
+    "ID": 59,
+    "parent": 57,
     "transform": {
       "position": {
         "x": 0.0,
@@ -2830,8 +1867,8 @@
   {
     "kind": "Entity",
     "name": "upperleg.l",
-    "ID": 81,
-    "parent": 46,
+    "ID": 60,
+    "parent": 25,
     "transform": {
       "position": {
         "x": 0.17094506,
@@ -2856,8 +1893,8 @@
   {
     "kind": "Entity",
     "name": "lowerleg.l",
-    "ID": 82,
-    "parent": 81,
+    "ID": 61,
+    "parent": 60,
     "transform": {
       "position": {
         "x": 3.5798182E-09,
@@ -2882,8 +1919,8 @@
   {
     "kind": "Entity",
     "name": "foot.l",
-    "ID": 83,
-    "parent": 82,
+    "ID": 62,
+    "parent": 61,
     "transform": {
       "position": {
         "x": 1.832223E-10,
@@ -2908,8 +1945,8 @@
   {
     "kind": "Entity",
     "name": "toes.l",
-    "ID": 84,
-    "parent": 83,
+    "ID": 63,
+    "parent": 62,
     "transform": {
       "position": {
         "x": -2.1305965E-10,
@@ -2934,8 +1971,8 @@
   {
     "kind": "Entity",
     "name": "upperleg.r",
-    "ID": 85,
-    "parent": 46,
+    "ID": 64,
+    "parent": 25,
     "transform": {
       "position": {
         "x": -0.17094506,
@@ -2960,8 +1997,8 @@
   {
     "kind": "Entity",
     "name": "lowerleg.r",
-    "ID": 86,
-    "parent": 85,
+    "ID": 65,
+    "parent": 64,
     "transform": {
       "position": {
         "x": -3.5798182E-09,
@@ -2986,8 +2023,8 @@
   {
     "kind": "Entity",
     "name": "foot.r",
-    "ID": 87,
-    "parent": 86,
+    "ID": 66,
+    "parent": 65,
     "transform": {
       "position": {
         "x": -1.8322102E-10,
@@ -3012,8 +2049,8 @@
   {
     "kind": "Entity",
     "name": "toes.r",
-    "ID": 88,
-    "parent": 87,
+    "ID": 67,
+    "parent": 66,
     "transform": {
       "position": {
         "x": 2.1305768E-10,
@@ -3038,8 +2075,8 @@
   {
     "kind": "Entity",
     "name": "kneeIK.l",
-    "ID": 89,
-    "parent": 45,
+    "ID": 68,
+    "parent": 24,
     "transform": {
       "position": {
         "x": 0.17094491,
@@ -3064,8 +2101,8 @@
   {
     "kind": "Entity",
     "name": "control-toe-roll.l",
-    "ID": 90,
-    "parent": 45,
+    "ID": 69,
+    "parent": 24,
     "transform": {
       "position": {
         "x": 0.17094497,
@@ -3090,8 +2127,8 @@
   {
     "kind": "Entity",
     "name": "control-heel-roll.l",
-    "ID": 91,
-    "parent": 90,
+    "ID": 70,
+    "parent": 69,
     "transform": {
       "position": {
         "x": 1.945811E-08,
@@ -3116,8 +2153,8 @@
   {
     "kind": "Entity",
     "name": "control-foot-roll.l",
-    "ID": 92,
-    "parent": 91,
+    "ID": 71,
+    "parent": 70,
     "transform": {
       "position": {
         "x": -1.1148217E-08,
@@ -3142,8 +2179,8 @@
   {
     "kind": "Entity",
     "name": "heelIK.l",
-    "ID": 93,
-    "parent": 92,
+    "ID": 72,
+    "parent": 71,
     "transform": {
       "position": {
         "x": 8.589882E-09,
@@ -3168,8 +2205,8 @@
   {
     "kind": "Entity",
     "name": "IK-foot.l",
-    "ID": 94,
-    "parent": 92,
+    "ID": 73,
+    "parent": 71,
     "transform": {
       "position": {
         "x": 8.589882E-09,
@@ -3194,8 +2231,8 @@
   {
     "kind": "Entity",
     "name": "IK-toe.l",
-    "ID": 95,
-    "parent": 91,
+    "ID": 74,
+    "parent": 70,
     "transform": {
       "position": {
         "x": -4.556949E-09,
@@ -3220,8 +2257,8 @@
   {
     "kind": "Entity",
     "name": "kneeIK.r",
-    "ID": 96,
-    "parent": 45,
+    "ID": 75,
+    "parent": 24,
     "transform": {
       "position": {
         "x": -0.17094518,
@@ -3246,8 +2283,8 @@
   {
     "kind": "Entity",
     "name": "control-toe-roll.r",
-    "ID": 97,
-    "parent": 45,
+    "ID": 76,
+    "parent": 24,
     "transform": {
       "position": {
         "x": -0.1709451,
@@ -3272,8 +2309,8 @@
   {
     "kind": "Entity",
     "name": "control-heel-roll.r",
-    "ID": 98,
-    "parent": 97,
+    "ID": 77,
+    "parent": 76,
     "transform": {
       "position": {
         "x": 1.9458106E-08,
@@ -3298,8 +2335,8 @@
   {
     "kind": "Entity",
     "name": "control-foot-roll.r",
-    "ID": 99,
-    "parent": 98,
+    "ID": 78,
+    "parent": 77,
     "transform": {
       "position": {
         "x": 3.7529415E-09,
@@ -3324,8 +2361,8 @@
   {
     "kind": "Entity",
     "name": "heelIK.r",
-    "ID": 100,
-    "parent": 99,
+    "ID": 79,
+    "parent": 78,
     "transform": {
       "position": {
         "x": -6.311275E-09,
@@ -3350,8 +2387,8 @@
   {
     "kind": "Entity",
     "name": "IK-foot.r",
-    "ID": 101,
-    "parent": 99,
+    "ID": 80,
+    "parent": 78,
     "transform": {
       "position": {
         "x": -2.1212436E-08,
@@ -3376,8 +2413,8 @@
   {
     "kind": "Entity",
     "name": "IK-toe.r",
-    "ID": 102,
-    "parent": 98,
+    "ID": 81,
+    "parent": 77,
     "transform": {
       "position": {
         "x": -4.5569455E-09,
@@ -3402,8 +2439,8 @@
   {
     "kind": "Entity",
     "name": "elbowIK.l",
-    "ID": 103,
-    "parent": 45,
+    "ID": 82,
+    "parent": 24,
     "transform": {
       "position": {
         "x": 0.45350748,
@@ -3428,8 +2465,8 @@
   {
     "kind": "Entity",
     "name": "handIK.l",
-    "ID": 104,
-    "parent": 45,
+    "ID": 83,
+    "parent": 24,
     "transform": {
       "position": {
         "x": 0.7131815,
@@ -3454,8 +2491,8 @@
   {
     "kind": "Entity",
     "name": "elbowIK.r",
-    "ID": 105,
-    "parent": 45,
+    "ID": 84,
+    "parent": 24,
     "transform": {
       "position": {
         "x": -0.45350718,
@@ -3480,8 +2517,8 @@
   {
     "kind": "Entity",
     "name": "handIK.r",
-    "ID": 106,
-    "parent": 45,
+    "ID": 85,
+    "parent": 24,
     "transform": {
       "position": {
         "x": -0.71318156,
@@ -3500,6 +2537,162 @@
       }
     },
     "components": [],
+    "layer": "Default",
+    "enabled": true
+  },
+  {
+    "kind": "Entity",
+    "name": "Cube_Prototype_Large_A",
+    "ID": 86,
+    "parent": 0,
+    "transform": {
+      "position": {
+        "x": 0.0,
+        "y": -3.0,
+        "z": 0.0
+      },
+      "rotation": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      },
+      "scale": {
+        "x": 1.0,
+        "y": 1.0,
+        "z": 1.0
+      }
+    },
+    "components": [
+      {
+        "type": "Staple.BoxCollider3D",
+        "data": {
+          "size": {
+            "x": 4.0,
+            "y": 4.0,
+            "z": 4.0
+          },
+          "position": {
+            "x": 0.0,
+            "y": 2.0,
+            "z": 0.0
+          },
+          "rotation": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0,
+            "w": 1.0
+          }
+        }
+      },
+      {
+        "type": "Staple.RigidBody3D",
+        "data": {
+          "motionType": "Static",
+          "freezeRotationX": false,
+          "freezeRotationY": false,
+          "freezeRotationZ": false,
+          "is2DPlane": false,
+          "gravityFactor": 1.0,
+          "isTrigger": false,
+          "friction": 0.0,
+          "restitution": 0.0,
+          "mass": 1.0
+        }
+      }
+    ],
+    "layer": "Level Geometry",
+    "enabled": true
+  },
+  {
+    "kind": "Entity",
+    "name": "Cube_Prototype_Large_A",
+    "ID": 87,
+    "parent": 86,
+    "transform": {
+      "position": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      },
+      "rotation": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      },
+      "scale": {
+        "x": 1.0,
+        "y": 1.0,
+        "z": 1.0
+      }
+    },
+    "components": [],
+    "layer": "Default",
+    "enabled": true
+  },
+  {
+    "kind": "Entity",
+    "name": "Cube_Prototype_Large_A",
+    "ID": 88,
+    "parent": 86,
+    "transform": {
+      "position": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      },
+      "rotation": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      },
+      "scale": {
+        "x": 1.0,
+        "y": 1.0,
+        "z": 1.0
+      }
+    },
+    "components": [],
+    "layer": "Default",
+    "enabled": true
+  },
+  {
+    "kind": "Entity",
+    "name": "Cube.16091",
+    "ID": 89,
+    "parent": 87,
+    "transform": {
+      "position": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      },
+      "rotation": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      },
+      "scale": {
+        "x": 1.0,
+        "y": 1.0,
+        "z": 1.0
+      }
+    },
+    "components": [
+      {
+        "type": "Staple.MeshRenderer",
+        "data": {
+          "mesh": "cac24a6e-ce3e-4b73-af69-d7c6decce076:0",
+          "materials": [
+            "41ea43b6-ce45-4931-8bd2-848e5f02bbb7"
+          ],
+          "enabled": true,
+          "forceRenderingOff": false,
+          "receiveShadows": true,
+          "sortingLayer": 0,
+          "sortingOrder": 0
+        }
+      }
+    ],
     "layer": "Default",
     "enabled": true
   }
