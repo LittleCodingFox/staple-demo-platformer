@@ -100,7 +100,7 @@ class OrbitCameraSystem : IEntitySystem
 
     private float GetAngle(Vector2 direction)
     {
-        var angle = Math.Rad2Deg(Math.Acos(direction.Y));
+        var angle = Math.Rad2Deg * Math.Acos(direction.Y);
 
         return direction.X < 0 ? 360.0f - angle : angle;
     }
