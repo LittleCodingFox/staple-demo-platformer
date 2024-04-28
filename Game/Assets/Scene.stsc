@@ -56,7 +56,9 @@
       }
     ],
     "layer": "Default",
-    "enabled": true
+    "enabled": true,
+    "prefabGuid": null,
+    "prefabLocalID": 0
   },
   {
     "kind": "Entity",
@@ -128,7 +130,9 @@
       }
     ],
     "layer": "Default",
-    "enabled": true
+    "enabled": true,
+    "prefabGuid": null,
+    "prefabLocalID": 0
   },
   {
     "kind": "Entity",
@@ -164,7 +168,9 @@
       }
     ],
     "layer": "Default",
-    "enabled": true
+    "enabled": true,
+    "prefabGuid": null,
+    "prefabLocalID": 0
   },
   {
     "kind": "Entity",
@@ -237,7 +243,9 @@
       }
     ],
     "layer": "Default",
-    "enabled": true
+    "enabled": true,
+    "prefabGuid": null,
+    "prefabLocalID": 0
   },
   {
     "kind": "Entity",
@@ -263,7 +271,9 @@
     },
     "components": [],
     "layer": "Default",
-    "enabled": true
+    "enabled": true,
+    "prefabGuid": null,
+    "prefabLocalID": 0
   },
   {
     "kind": "Entity",
@@ -289,7 +299,9 @@
     },
     "components": [],
     "layer": "Default",
-    "enabled": true
+    "enabled": true,
+    "prefabGuid": null,
+    "prefabLocalID": 0
   },
   {
     "kind": "Entity",
@@ -315,7 +327,9 @@
     },
     "components": [],
     "layer": "Default",
-    "enabled": true
+    "enabled": true,
+    "prefabGuid": null,
+    "prefabLocalID": 0
   },
   {
     "kind": "Entity",
@@ -356,7 +370,9 @@
       }
     ],
     "layer": "Default",
-    "enabled": true
+    "enabled": true,
+    "prefabGuid": null,
+    "prefabLocalID": 0
   },
   {
     "kind": "Entity",
@@ -382,7 +398,9 @@
     },
     "components": [],
     "layer": "Default",
-    "enabled": true
+    "enabled": true,
+    "prefabGuid": null,
+    "prefabLocalID": 0
   },
   {
     "kind": "Entity",
@@ -408,7 +426,9 @@
     },
     "components": [],
     "layer": "Default",
-    "enabled": true
+    "enabled": true,
+    "prefabGuid": null,
+    "prefabLocalID": 0
   },
   {
     "kind": "Entity",
@@ -449,7 +469,9 @@
       }
     ],
     "layer": "Default",
-    "enabled": true
+    "enabled": true,
+    "prefabGuid": null,
+    "prefabLocalID": 0
   },
   {
     "kind": "Entity",
@@ -475,7 +497,9 @@
     },
     "components": [],
     "layer": "Default",
-    "enabled": true
+    "enabled": true,
+    "prefabGuid": null,
+    "prefabLocalID": 0
   },
   {
     "kind": "Entity",
@@ -501,7 +525,9 @@
     },
     "components": [],
     "layer": "Default",
-    "enabled": true
+    "enabled": true,
+    "prefabGuid": null,
+    "prefabLocalID": 0
   },
   {
     "kind": "Entity",
@@ -542,7 +568,9 @@
       }
     ],
     "layer": "Default",
-    "enabled": true
+    "enabled": true,
+    "prefabGuid": null,
+    "prefabLocalID": 0
   },
   {
     "kind": "Entity",
@@ -568,7 +596,9 @@
     },
     "components": [],
     "layer": "Default",
-    "enabled": true
+    "enabled": true,
+    "prefabGuid": null,
+    "prefabLocalID": 0
   },
   {
     "kind": "Entity",
@@ -594,7 +624,9 @@
     },
     "components": [],
     "layer": "Default",
-    "enabled": true
+    "enabled": true,
+    "prefabGuid": null,
+    "prefabLocalID": 0
   },
   {
     "kind": "Entity",
@@ -635,7 +667,9 @@
       }
     ],
     "layer": "Default",
-    "enabled": true
+    "enabled": true,
+    "prefabGuid": null,
+    "prefabLocalID": 0
   },
   {
     "kind": "Entity",
@@ -661,7 +695,9 @@
     },
     "components": [],
     "layer": "Default",
-    "enabled": true
+    "enabled": true,
+    "prefabGuid": null,
+    "prefabLocalID": 0
   },
   {
     "kind": "Entity",
@@ -687,7 +723,9 @@
     },
     "components": [],
     "layer": "Default",
-    "enabled": true
+    "enabled": true,
+    "prefabGuid": null,
+    "prefabLocalID": 0
   },
   {
     "kind": "Entity",
@@ -728,7 +766,9 @@
       }
     ],
     "layer": "Default",
-    "enabled": true
+    "enabled": true,
+    "prefabGuid": null,
+    "prefabLocalID": 0
   },
   {
     "kind": "Entity",
@@ -754,7 +794,9 @@
     },
     "components": [],
     "layer": "Default",
-    "enabled": true
+    "enabled": true,
+    "prefabGuid": null,
+    "prefabLocalID": 0
   },
   {
     "kind": "Entity",
@@ -780,7 +822,9 @@
     },
     "components": [],
     "layer": "Default",
-    "enabled": true
+    "enabled": true,
+    "prefabGuid": null,
+    "prefabLocalID": 0
   },
   {
     "kind": "Entity",
@@ -821,7 +865,9 @@
       }
     ],
     "layer": "Default",
-    "enabled": true
+    "enabled": true,
+    "prefabGuid": null,
+    "prefabLocalID": 0
   },
   {
     "kind": "Entity",
@@ -836,7 +882,7 @@
       },
       "rotation": {
         "x": 0.0,
-        "y": 1.3660371E-05,
+        "y": 1.366037E-05,
         "z": 0.0
       },
       "scale": {
@@ -847,7 +893,9 @@
     },
     "components": [],
     "layer": "Default",
-    "enabled": true
+    "enabled": true,
+    "prefabGuid": null,
+    "prefabLocalID": 0
   },
   {
     "kind": "Entity",
@@ -862,7 +910,7 @@
       },
       "rotation": {
         "x": 0.0,
-        "y": -1.3660371E-05,
+        "y": -1.366037E-05,
         "z": 0.0
       },
       "scale": {
@@ -873,7 +921,9 @@
     },
     "components": [],
     "layer": "Default",
-    "enabled": true
+    "enabled": true,
+    "prefabGuid": null,
+    "prefabLocalID": 0
   },
   {
     "kind": "Entity",
@@ -888,7 +938,7 @@
       },
       "rotation": {
         "x": 0.0,
-        "y": 8.1422163E-13,
+        "y": 8.142216E-13,
         "z": 0.0
       },
       "scale": {
@@ -899,7 +949,9 @@
     },
     "components": [],
     "layer": "Default",
-    "enabled": true
+    "enabled": true,
+    "prefabGuid": null,
+    "prefabLocalID": 0
   },
   {
     "kind": "Entity",
@@ -925,7 +977,9 @@
     },
     "components": [],
     "layer": "Default",
-    "enabled": true
+    "enabled": true,
+    "prefabGuid": null,
+    "prefabLocalID": 0
   },
   {
     "kind": "Entity",
@@ -940,7 +994,7 @@
       },
       "rotation": {
         "x": -90.0,
-        "y": 273.28384,
+        "y": -86.71615,
         "z": 0.0
       },
       "scale": {
@@ -951,7 +1005,9 @@
     },
     "components": [],
     "layer": "Default",
-    "enabled": true
+    "enabled": true,
+    "prefabGuid": null,
+    "prefabLocalID": 0
   },
   {
     "kind": "Entity",
@@ -965,8 +1021,8 @@
         "z": -1.1940561E-07
       },
       "rotation": {
-        "x": -1.8840784E-07,
-        "y": -6.818624E-06,
+        "x": -1.8840785E-07,
+        "y": -6.8186237E-06,
         "z": -6.3384905
       },
       "scale": {
@@ -977,7 +1033,9 @@
     },
     "components": [],
     "layer": "Default",
-    "enabled": true
+    "enabled": true,
+    "prefabGuid": null,
+    "prefabLocalID": 0
   },
   {
     "kind": "Entity",
@@ -1003,7 +1061,9 @@
     },
     "components": [],
     "layer": "Default",
-    "enabled": true
+    "enabled": true,
+    "prefabGuid": null,
+    "prefabLocalID": 0
   },
   {
     "kind": "Entity",
@@ -1029,7 +1089,9 @@
     },
     "components": [],
     "layer": "Default",
-    "enabled": true
+    "enabled": true,
+    "prefabGuid": null,
+    "prefabLocalID": 0
   },
   {
     "kind": "Entity",
@@ -1055,7 +1117,9 @@
     },
     "components": [],
     "layer": "Default",
-    "enabled": true
+    "enabled": true,
+    "prefabGuid": null,
+    "prefabLocalID": 0
   },
   {
     "kind": "Entity",
@@ -1069,7 +1133,7 @@
         "z": -1.5062571E-09
       },
       "rotation": {
-        "x": 2.8135263E-12,
+        "x": 2.813526E-12,
         "y": -3.2590586E-05,
         "z": 1.6051232E-05
       },
@@ -1081,7 +1145,9 @@
     },
     "components": [],
     "layer": "Default",
-    "enabled": true
+    "enabled": true,
+    "prefabGuid": null,
+    "prefabLocalID": 0
   },
   {
     "kind": "Entity",
@@ -1107,7 +1173,9 @@
     },
     "components": [],
     "layer": "Default",
-    "enabled": true
+    "enabled": true,
+    "prefabGuid": null,
+    "prefabLocalID": 0
   },
   {
     "kind": "Entity",
@@ -1148,7 +1216,9 @@
       }
     ],
     "layer": "Default",
-    "enabled": true
+    "enabled": true,
+    "prefabGuid": null,
+    "prefabLocalID": 0
   },
   {
     "kind": "Entity",
@@ -1174,7 +1244,9 @@
     },
     "components": [],
     "layer": "Default",
-    "enabled": true
+    "enabled": true,
+    "prefabGuid": null,
+    "prefabLocalID": 0
   },
   {
     "kind": "Entity",
@@ -1200,7 +1272,9 @@
     },
     "components": [],
     "layer": "Default",
-    "enabled": true
+    "enabled": true,
+    "prefabGuid": null,
+    "prefabLocalID": 0
   },
   {
     "kind": "Entity",
@@ -1241,7 +1315,9 @@
       }
     ],
     "layer": "Default",
-    "enabled": true
+    "enabled": true,
+    "prefabGuid": null,
+    "prefabLocalID": 0
   },
   {
     "kind": "Entity",
@@ -1256,7 +1332,7 @@
       },
       "rotation": {
         "x": -90.0,
-        "y": -273.28384,
+        "y": 86.71615,
         "z": 0.0
       },
       "scale": {
@@ -1267,7 +1343,9 @@
     },
     "components": [],
     "layer": "Default",
-    "enabled": true
+    "enabled": true,
+    "prefabGuid": null,
+    "prefabLocalID": 0
   },
   {
     "kind": "Entity",
@@ -1281,8 +1359,8 @@
         "z": -1.1940561E-07
       },
       "rotation": {
-        "x": -1.884067E-07,
-        "y": 6.8186255E-06,
+        "x": -1.8840669E-07,
+        "y": 6.818625E-06,
         "z": 6.3384905
       },
       "scale": {
@@ -1293,7 +1371,9 @@
     },
     "components": [],
     "layer": "Default",
-    "enabled": true
+    "enabled": true,
+    "prefabGuid": null,
+    "prefabLocalID": 0
   },
   {
     "kind": "Entity",
@@ -1319,7 +1399,9 @@
     },
     "components": [],
     "layer": "Default",
-    "enabled": true
+    "enabled": true,
+    "prefabGuid": null,
+    "prefabLocalID": 0
   },
   {
     "kind": "Entity",
@@ -1345,7 +1427,9 @@
     },
     "components": [],
     "layer": "Default",
-    "enabled": true
+    "enabled": true,
+    "prefabGuid": null,
+    "prefabLocalID": 0
   },
   {
     "kind": "Entity",
@@ -1371,7 +1455,9 @@
     },
     "components": [],
     "layer": "Default",
-    "enabled": true
+    "enabled": true,
+    "prefabGuid": null,
+    "prefabLocalID": 0
   },
   {
     "kind": "Entity",
@@ -1397,7 +1483,9 @@
     },
     "components": [],
     "layer": "Default",
-    "enabled": true
+    "enabled": true,
+    "prefabGuid": null,
+    "prefabLocalID": 0
   },
   {
     "kind": "Entity",
@@ -1423,7 +1511,9 @@
     },
     "components": [],
     "layer": "Default",
-    "enabled": true
+    "enabled": true,
+    "prefabGuid": null,
+    "prefabLocalID": 0
   },
   {
     "kind": "Entity",
@@ -1464,7 +1554,9 @@
       }
     ],
     "layer": "Default",
-    "enabled": true
+    "enabled": true,
+    "prefabGuid": null,
+    "prefabLocalID": 0
   },
   {
     "kind": "Entity",
@@ -1490,7 +1582,9 @@
     },
     "components": [],
     "layer": "Default",
-    "enabled": true
+    "enabled": true,
+    "prefabGuid": null,
+    "prefabLocalID": 0
   },
   {
     "kind": "Entity",
@@ -1516,7 +1610,9 @@
     },
     "components": [],
     "layer": "Default",
-    "enabled": true
+    "enabled": true,
+    "prefabGuid": null,
+    "prefabLocalID": 0
   },
   {
     "kind": "Entity",
@@ -1557,7 +1653,9 @@
       }
     ],
     "layer": "Default",
-    "enabled": true
+    "enabled": true,
+    "prefabGuid": null,
+    "prefabLocalID": 0
   },
   {
     "kind": "Entity",
@@ -1583,7 +1681,9 @@
     },
     "components": [],
     "layer": "Default",
-    "enabled": true
+    "enabled": true,
+    "prefabGuid": null,
+    "prefabLocalID": 0
   },
   {
     "kind": "Entity",
@@ -1609,7 +1709,9 @@
     },
     "components": [],
     "layer": "Default",
-    "enabled": true
+    "enabled": true,
+    "prefabGuid": null,
+    "prefabLocalID": 0
   },
   {
     "kind": "Entity",
@@ -1650,7 +1752,9 @@
       }
     ],
     "layer": "Default",
-    "enabled": true
+    "enabled": true,
+    "prefabGuid": null,
+    "prefabLocalID": 0
   },
   {
     "kind": "Entity",
@@ -1676,7 +1780,9 @@
     },
     "components": [],
     "layer": "Default",
-    "enabled": true
+    "enabled": true,
+    "prefabGuid": null,
+    "prefabLocalID": 0
   },
   {
     "kind": "Entity",
@@ -1691,7 +1797,7 @@
       },
       "rotation": {
         "x": 0.0,
-        "y": -8.142216E-13,
+        "y": -8.142215E-13,
         "z": 1.2660365E-20
       },
       "scale": {
@@ -1702,7 +1808,9 @@
     },
     "components": [],
     "layer": "Default",
-    "enabled": true
+    "enabled": true,
+    "prefabGuid": null,
+    "prefabLocalID": 0
   },
   {
     "kind": "Entity",
@@ -1728,7 +1836,9 @@
     },
     "components": [],
     "layer": "Default",
-    "enabled": true
+    "enabled": true,
+    "prefabGuid": null,
+    "prefabLocalID": 0
   },
   {
     "kind": "Entity",
@@ -1769,7 +1879,9 @@
       }
     ],
     "layer": "Default",
-    "enabled": true
+    "enabled": true,
+    "prefabGuid": null,
+    "prefabLocalID": 0
   },
   {
     "kind": "Entity",
@@ -1784,7 +1896,7 @@
       },
       "rotation": {
         "x": 0.0,
-        "y": -8.1422163E-13,
+        "y": -8.142216E-13,
         "z": -7.174205E-20
       },
       "scale": {
@@ -1795,7 +1907,9 @@
     },
     "components": [],
     "layer": "Default",
-    "enabled": true
+    "enabled": true,
+    "prefabGuid": null,
+    "prefabLocalID": 0
   },
   {
     "kind": "Entity",
@@ -1821,7 +1935,9 @@
     },
     "components": [],
     "layer": "Default",
-    "enabled": true
+    "enabled": true,
+    "prefabGuid": null,
+    "prefabLocalID": 0
   },
   {
     "kind": "Entity",
@@ -1862,7 +1978,9 @@
       }
     ],
     "layer": "Default",
-    "enabled": true
+    "enabled": true,
+    "prefabGuid": null,
+    "prefabLocalID": 0
   },
   {
     "kind": "Entity",
@@ -1888,7 +2006,9 @@
     },
     "components": [],
     "layer": "Default",
-    "enabled": true
+    "enabled": true,
+    "prefabGuid": null,
+    "prefabLocalID": 0
   },
   {
     "kind": "Entity",
@@ -1914,7 +2034,9 @@
     },
     "components": [],
     "layer": "Default",
-    "enabled": true
+    "enabled": true,
+    "prefabGuid": null,
+    "prefabLocalID": 0
   },
   {
     "kind": "Entity",
@@ -1940,7 +2062,9 @@
     },
     "components": [],
     "layer": "Default",
-    "enabled": true
+    "enabled": true,
+    "prefabGuid": null,
+    "prefabLocalID": 0
   },
   {
     "kind": "Entity",
@@ -1956,7 +2080,7 @@
       "rotation": {
         "x": 46.04396,
         "y": 179.9999,
-        "z": -9.117388E-06
+        "z": -9.117384E-06
       },
       "scale": {
         "x": 1.0,
@@ -1966,7 +2090,9 @@
     },
     "components": [],
     "layer": "Default",
-    "enabled": true
+    "enabled": true,
+    "prefabGuid": null,
+    "prefabLocalID": 0
   },
   {
     "kind": "Entity",
@@ -1992,7 +2118,9 @@
     },
     "components": [],
     "layer": "Default",
-    "enabled": true
+    "enabled": true,
+    "prefabGuid": null,
+    "prefabLocalID": 0
   },
   {
     "kind": "Entity",
@@ -2018,7 +2146,9 @@
     },
     "components": [],
     "layer": "Default",
-    "enabled": true
+    "enabled": true,
+    "prefabGuid": null,
+    "prefabLocalID": 0
   },
   {
     "kind": "Entity",
@@ -2044,7 +2174,9 @@
     },
     "components": [],
     "layer": "Default",
-    "enabled": true
+    "enabled": true,
+    "prefabGuid": null,
+    "prefabLocalID": 0
   },
   {
     "kind": "Entity",
@@ -2060,7 +2192,7 @@
       "rotation": {
         "x": 46.04396,
         "y": -179.9999,
-        "z": 9.117388E-06
+        "z": 9.117384E-06
       },
       "scale": {
         "x": 1.0,
@@ -2070,7 +2202,9 @@
     },
     "components": [],
     "layer": "Default",
-    "enabled": true
+    "enabled": true,
+    "prefabGuid": null,
+    "prefabLocalID": 0
   },
   {
     "kind": "Entity",
@@ -2096,7 +2230,9 @@
     },
     "components": [],
     "layer": "Default",
-    "enabled": true
+    "enabled": true,
+    "prefabGuid": null,
+    "prefabLocalID": 0
   },
   {
     "kind": "Entity",
@@ -2111,7 +2247,7 @@
       },
       "rotation": {
         "x": -90.0,
-        "y": 359.99988,
+        "y": -0.00012658586,
         "z": 0.0
       },
       "scale": {
@@ -2122,7 +2258,9 @@
     },
     "components": [],
     "layer": "Default",
-    "enabled": true
+    "enabled": true,
+    "prefabGuid": null,
+    "prefabLocalID": 0
   },
   {
     "kind": "Entity",
@@ -2148,7 +2286,9 @@
     },
     "components": [],
     "layer": "Default",
-    "enabled": true
+    "enabled": true,
+    "prefabGuid": null,
+    "prefabLocalID": 0
   },
   {
     "kind": "Entity",
@@ -2163,7 +2303,7 @@
       },
       "rotation": {
         "x": -46.04396,
-        "y": -1.7713826E-05,
+        "y": -1.7713828E-05,
         "z": -179.9999
       },
       "scale": {
@@ -2174,7 +2314,9 @@
     },
     "components": [],
     "layer": "Default",
-    "enabled": true
+    "enabled": true,
+    "prefabGuid": null,
+    "prefabLocalID": 0
   },
   {
     "kind": "Entity",
@@ -2200,7 +2342,9 @@
     },
     "components": [],
     "layer": "Default",
-    "enabled": true
+    "enabled": true,
+    "prefabGuid": null,
+    "prefabLocalID": 0
   },
   {
     "kind": "Entity",
@@ -2226,7 +2370,9 @@
     },
     "components": [],
     "layer": "Default",
-    "enabled": true
+    "enabled": true,
+    "prefabGuid": null,
+    "prefabLocalID": 0
   },
   {
     "kind": "Entity",
@@ -2252,7 +2398,9 @@
     },
     "components": [],
     "layer": "Default",
-    "enabled": true
+    "enabled": true,
+    "prefabGuid": null,
+    "prefabLocalID": 0
   },
   {
     "kind": "Entity",
@@ -2278,7 +2426,9 @@
     },
     "components": [],
     "layer": "Default",
-    "enabled": true
+    "enabled": true,
+    "prefabGuid": null,
+    "prefabLocalID": 0
   },
   {
     "kind": "Entity",
@@ -2293,7 +2443,7 @@
       },
       "rotation": {
         "x": -90.0,
-        "y": 359.99988,
+        "y": -0.00012658586,
         "z": 0.0
       },
       "scale": {
@@ -2304,7 +2454,9 @@
     },
     "components": [],
     "layer": "Default",
-    "enabled": true
+    "enabled": true,
+    "prefabGuid": null,
+    "prefabLocalID": 0
   },
   {
     "kind": "Entity",
@@ -2330,7 +2482,9 @@
     },
     "components": [],
     "layer": "Default",
-    "enabled": true
+    "enabled": true,
+    "prefabGuid": null,
+    "prefabLocalID": 0
   },
   {
     "kind": "Entity",
@@ -2345,7 +2499,7 @@
       },
       "rotation": {
         "x": -46.04396,
-        "y": -1.7713806E-05,
+        "y": -1.7713804E-05,
         "z": -179.9999
       },
       "scale": {
@@ -2356,7 +2510,9 @@
     },
     "components": [],
     "layer": "Default",
-    "enabled": true
+    "enabled": true,
+    "prefabGuid": null,
+    "prefabLocalID": 0
   },
   {
     "kind": "Entity",
@@ -2382,7 +2538,9 @@
     },
     "components": [],
     "layer": "Default",
-    "enabled": true
+    "enabled": true,
+    "prefabGuid": null,
+    "prefabLocalID": 0
   },
   {
     "kind": "Entity",
@@ -2408,7 +2566,9 @@
     },
     "components": [],
     "layer": "Default",
-    "enabled": true
+    "enabled": true,
+    "prefabGuid": null,
+    "prefabLocalID": 0
   },
   {
     "kind": "Entity",
@@ -2434,7 +2594,9 @@
     },
     "components": [],
     "layer": "Default",
-    "enabled": true
+    "enabled": true,
+    "prefabGuid": null,
+    "prefabLocalID": 0
   },
   {
     "kind": "Entity",
@@ -2449,7 +2611,7 @@
       },
       "rotation": {
         "x": -90.0,
-        "y": 359.99988,
+        "y": -0.00012658586,
         "z": 0.0
       },
       "scale": {
@@ -2460,7 +2622,9 @@
     },
     "components": [],
     "layer": "Default",
-    "enabled": true
+    "enabled": true,
+    "prefabGuid": null,
+    "prefabLocalID": 0
   },
   {
     "kind": "Entity",
@@ -2475,7 +2639,7 @@
       },
       "rotation": {
         "x": -90.0,
-        "y": -90.0,
+        "y": 270.0,
         "z": 0.0
       },
       "scale": {
@@ -2486,7 +2650,9 @@
     },
     "components": [],
     "layer": "Default",
-    "enabled": true
+    "enabled": true,
+    "prefabGuid": null,
+    "prefabLocalID": 0
   },
   {
     "kind": "Entity",
@@ -2501,7 +2667,7 @@
       },
       "rotation": {
         "x": -90.0,
-        "y": 359.99988,
+        "y": -0.00012658586,
         "z": 0.0
       },
       "scale": {
@@ -2512,7 +2678,9 @@
     },
     "components": [],
     "layer": "Default",
-    "enabled": true
+    "enabled": true,
+    "prefabGuid": null,
+    "prefabLocalID": 0
   },
   {
     "kind": "Entity",
@@ -2527,7 +2695,7 @@
       },
       "rotation": {
         "x": -90.0,
-        "y": 90.0,
+        "y": -270.0,
         "z": 0.0
       },
       "scale": {
@@ -2538,324 +2706,14 @@
     },
     "components": [],
     "layer": "Default",
-    "enabled": true
-  },
-  {
-    "kind": "Entity",
-    "name": "Cube_Prototype_Large_A",
-    "ID": 86,
-    "parent": 0,
-    "transform": {
-      "position": {
-        "x": 0.0,
-        "y": -3.0,
-        "z": 0.0
-      },
-      "rotation": {
-        "x": 0.0,
-        "y": 0.0,
-        "z": 0.0
-      },
-      "scale": {
-        "x": 1.0,
-        "y": 1.0,
-        "z": 1.0
-      }
-    },
-    "components": [
-      {
-        "type": "Staple.BoxCollider3D",
-        "data": {
-          "size": {
-            "x": 4.0,
-            "y": 4.0,
-            "z": 4.0
-          },
-          "position": {
-            "x": 0.0,
-            "y": 2.0,
-            "z": 0.0
-          },
-          "rotation": {
-            "x": 0.0,
-            "y": 0.0,
-            "z": 0.0,
-            "w": 1.0
-          }
-        }
-      },
-      {
-        "type": "Staple.RigidBody3D",
-        "data": {
-          "motionType": "Static",
-          "freezeRotationX": false,
-          "freezeRotationY": false,
-          "freezeRotationZ": false,
-          "is2DPlane": false,
-          "gravityFactor": 1.0,
-          "isTrigger": false,
-          "friction": 0.0,
-          "restitution": 0.0,
-          "mass": 1.0
-        }
-      }
-    ],
-    "layer": "Level Geometry",
-    "enabled": true
-  },
-  {
-    "kind": "Entity",
-    "name": "Cube_Prototype_Large_A",
-    "ID": 87,
-    "parent": 86,
-    "transform": {
-      "position": {
-        "x": 0.0,
-        "y": 0.0,
-        "z": 0.0
-      },
-      "rotation": {
-        "x": 0.0,
-        "y": 0.0,
-        "z": 0.0
-      },
-      "scale": {
-        "x": 1.0,
-        "y": 1.0,
-        "z": 1.0
-      }
-    },
-    "components": [],
-    "layer": "Default",
-    "enabled": true
-  },
-  {
-    "kind": "Entity",
-    "name": "Cube_Prototype_Large_A",
-    "ID": 88,
-    "parent": 86,
-    "transform": {
-      "position": {
-        "x": 0.0,
-        "y": 0.0,
-        "z": 0.0
-      },
-      "rotation": {
-        "x": 0.0,
-        "y": 0.0,
-        "z": 0.0
-      },
-      "scale": {
-        "x": 1.0,
-        "y": 1.0,
-        "z": 1.0
-      }
-    },
-    "components": [],
-    "layer": "Default",
-    "enabled": true
-  },
-  {
-    "kind": "Entity",
-    "name": "Cube.16091",
-    "ID": 89,
-    "parent": 87,
-    "transform": {
-      "position": {
-        "x": 0.0,
-        "y": 0.0,
-        "z": 0.0
-      },
-      "rotation": {
-        "x": 0.0,
-        "y": 0.0,
-        "z": 0.0
-      },
-      "scale": {
-        "x": 1.0,
-        "y": 1.0,
-        "z": 1.0
-      }
-    },
-    "components": [
-      {
-        "type": "Staple.MeshRenderer",
-        "data": {
-          "mesh": "cac24a6e-ce3e-4b73-af69-d7c6decce076:0",
-          "materials": [
-            "41ea43b6-ce45-4931-8bd2-848e5f02bbb7"
-          ],
-          "enabled": true,
-          "forceRenderingOff": false,
-          "receiveShadows": true,
-          "sortingLayer": 0,
-          "sortingOrder": 0
-        }
-      }
-    ],
-    "layer": "Default",
-    "enabled": true
-  },
-  {
-    "kind": "Entity",
-    "name": "Cube_Prototype_Large_A (Clone)",
-    "ID": 90,
-    "parent": 0,
-    "transform": {
-      "position": {
-        "x": -5.9186854,
-        "y": -3.0,
-        "z": 2.3806853
-      },
-      "rotation": {
-        "x": 0.0,
-        "y": 0.0,
-        "z": 0.0
-      },
-      "scale": {
-        "x": 1.0,
-        "y": 1.0,
-        "z": 1.0
-      }
-    },
-    "components": [
-      {
-        "type": "Staple.BoxCollider3D",
-        "data": {
-          "size": {
-            "x": 4.0,
-            "y": 4.0,
-            "z": 4.0
-          },
-          "position": {
-            "x": 0.0,
-            "y": 2.0,
-            "z": 0.0
-          },
-          "rotation": {
-            "x": 0.0,
-            "y": 0.0,
-            "z": 0.0,
-            "w": 1.0
-          }
-        }
-      },
-      {
-        "type": "Staple.RigidBody3D",
-        "data": {
-          "motionType": "Static",
-          "freezeRotationX": false,
-          "freezeRotationY": false,
-          "freezeRotationZ": false,
-          "is2DPlane": false,
-          "gravityFactor": 1.0,
-          "isTrigger": false,
-          "friction": 0.0,
-          "restitution": 0.0,
-          "mass": 1.0
-        }
-      }
-    ],
-    "layer": "Level Geometry",
-    "enabled": true
-  },
-  {
-    "kind": "Entity",
-    "name": "Cube_Prototype_Large_A",
-    "ID": 91,
-    "parent": 90,
-    "transform": {
-      "position": {
-        "x": 0.0,
-        "y": 0.0,
-        "z": 0.0
-      },
-      "rotation": {
-        "x": 0.0,
-        "y": 0.0,
-        "z": 0.0
-      },
-      "scale": {
-        "x": 1.0,
-        "y": 1.0,
-        "z": 1.0
-      }
-    },
-    "components": [],
-    "layer": "Level Geometry",
-    "enabled": true
-  },
-  {
-    "kind": "Entity",
-    "name": "Cube.16091",
-    "ID": 92,
-    "parent": 91,
-    "transform": {
-      "position": {
-        "x": 0.0,
-        "y": 0.0,
-        "z": 0.0
-      },
-      "rotation": {
-        "x": 0.0,
-        "y": 0.0,
-        "z": 0.0
-      },
-      "scale": {
-        "x": 1.0,
-        "y": 1.0,
-        "z": 1.0
-      }
-    },
-    "components": [
-      {
-        "type": "Staple.MeshRenderer",
-        "data": {
-          "mesh": "cac24a6e-ce3e-4b73-af69-d7c6decce076:0",
-          "materials": [
-            "41ea43b6-ce45-4931-8bd2-848e5f02bbb7"
-          ],
-          "enabled": true,
-          "forceRenderingOff": false,
-          "receiveShadows": true,
-          "sortingLayer": 0,
-          "sortingOrder": 0
-        }
-      }
-    ],
-    "layer": "Level Geometry",
-    "enabled": true
-  },
-  {
-    "kind": "Entity",
-    "name": "Cube_Prototype_Large_A",
-    "ID": 93,
-    "parent": 90,
-    "transform": {
-      "position": {
-        "x": 0.0,
-        "y": 0.0,
-        "z": 0.0
-      },
-      "rotation": {
-        "x": 0.0,
-        "y": 0.0,
-        "z": 0.0
-      },
-      "scale": {
-        "x": 1.0,
-        "y": 1.0,
-        "z": 1.0
-      }
-    },
-    "components": [],
-    "layer": "Level Geometry",
-    "enabled": true
+    "enabled": true,
+    "prefabGuid": null,
+    "prefabLocalID": 0
   },
   {
     "kind": "Entity",
     "name": "Coin_A",
-    "ID": 94,
+    "ID": 86,
     "parent": 0,
     "transform": {
       "position": {
@@ -2917,13 +2775,15 @@
       }
     ],
     "layer": "Default",
-    "enabled": true
+    "enabled": true,
+    "prefabGuid": "a9292b17-2455-4c4b-a2f5-5764d617e407",
+    "prefabLocalID": 0
   },
   {
     "kind": "Entity",
     "name": "Coin_A",
-    "ID": 95,
-    "parent": 94,
+    "ID": 87,
+    "parent": 86,
     "transform": {
       "position": {
         "x": 0.0,
@@ -2950,39 +2810,15 @@
       }
     ],
     "layer": "Default",
-    "enabled": true
-  },
-  {
-    "kind": "Entity",
-    "name": "Coin_A",
-    "ID": 96,
-    "parent": 94,
-    "transform": {
-      "position": {
-        "x": 0.0,
-        "y": 0.0,
-        "z": 0.0
-      },
-      "rotation": {
-        "x": 0.0,
-        "y": 0.0,
-        "z": 0.0
-      },
-      "scale": {
-        "x": 1.0,
-        "y": 1.0,
-        "z": 1.0
-      }
-    },
-    "components": [],
-    "layer": "Default",
-    "enabled": true
+    "enabled": true,
+    "prefabGuid": "a9292b17-2455-4c4b-a2f5-5764d617e407",
+    "prefabLocalID": 1
   },
   {
     "kind": "Entity",
     "name": "Cylinder",
-    "ID": 97,
-    "parent": 95,
+    "ID": 88,
+    "parent": 87,
     "transform": {
       "position": {
         "x": 0.0,
@@ -3017,6 +2853,364 @@
       }
     ],
     "layer": "Default",
-    "enabled": true
+    "enabled": true,
+    "prefabGuid": "a9292b17-2455-4c4b-a2f5-5764d617e407",
+    "prefabLocalID": 2
+  },
+  {
+    "kind": "Entity",
+    "name": "Coin_A",
+    "ID": 89,
+    "parent": 86,
+    "transform": {
+      "position": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      },
+      "rotation": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      },
+      "scale": {
+        "x": 1.0,
+        "y": 1.0,
+        "z": 1.0
+      }
+    },
+    "components": [],
+    "layer": "Default",
+    "enabled": true,
+    "prefabGuid": "a9292b17-2455-4c4b-a2f5-5764d617e407",
+    "prefabLocalID": 3
+  },
+  {
+    "kind": "Entity",
+    "name": "Cube_Prototype_Large_A",
+    "ID": 94,
+    "parent": 0,
+    "transform": {
+      "position": {
+        "x": 0.0,
+        "y": -3.0,
+        "z": 0.0
+      },
+      "rotation": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      },
+      "scale": {
+        "x": 1.0,
+        "y": 1.0,
+        "z": 1.0
+      }
+    },
+    "components": [
+      {
+        "type": "Staple.BoxCollider3D",
+        "data": {
+          "size": {
+            "x": 4.0,
+            "y": 4.0,
+            "z": 4.0
+          },
+          "position": {
+            "x": 0.0,
+            "y": 2.0,
+            "z": 0.0
+          },
+          "rotation": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0,
+            "w": 1.0
+          }
+        }
+      },
+      {
+        "type": "Staple.RigidBody3D",
+        "data": {
+          "motionType": "Static",
+          "freezeRotationX": false,
+          "freezeRotationY": false,
+          "freezeRotationZ": false,
+          "is2DPlane": false,
+          "gravityFactor": 1.0,
+          "isTrigger": false,
+          "friction": 0.0,
+          "restitution": 0.0,
+          "mass": 1.0
+        }
+      }
+    ],
+    "layer": "Level Geometry",
+    "enabled": true,
+    "prefabGuid": "149c1f92-3d60-476e-83c8-bfb6109bc3df",
+    "prefabLocalID": 0
+  },
+  {
+    "kind": "Entity",
+    "name": "Cube_Prototype_Large_A",
+    "ID": 95,
+    "parent": 94,
+    "transform": {
+      "position": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      },
+      "rotation": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      },
+      "scale": {
+        "x": 1.0,
+        "y": 1.0,
+        "z": 1.0
+      }
+    },
+    "components": [],
+    "layer": "Default",
+    "enabled": true,
+    "prefabGuid": "149c1f92-3d60-476e-83c8-bfb6109bc3df",
+    "prefabLocalID": 1
+  },
+  {
+    "kind": "Entity",
+    "name": "Cube.16091",
+    "ID": 96,
+    "parent": 95,
+    "transform": {
+      "position": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      },
+      "rotation": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      },
+      "scale": {
+        "x": 1.0,
+        "y": 1.0,
+        "z": 1.0
+      }
+    },
+    "components": [
+      {
+        "type": "Staple.MeshRenderer",
+        "data": {
+          "mesh": "cac24a6e-ce3e-4b73-af69-d7c6decce076:0",
+          "materials": [
+            "41ea43b6-ce45-4931-8bd2-848e5f02bbb7"
+          ],
+          "enabled": true,
+          "forceRenderingOff": false,
+          "receiveShadows": true,
+          "sortingLayer": 0,
+          "sortingOrder": 0
+        }
+      }
+    ],
+    "layer": "Default",
+    "enabled": true,
+    "prefabGuid": "149c1f92-3d60-476e-83c8-bfb6109bc3df",
+    "prefabLocalID": 2
+  },
+  {
+    "kind": "Entity",
+    "name": "Cube_Prototype_Large_A",
+    "ID": 97,
+    "parent": 94,
+    "transform": {
+      "position": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      },
+      "rotation": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      },
+      "scale": {
+        "x": 1.0,
+        "y": 1.0,
+        "z": 1.0
+      }
+    },
+    "components": [],
+    "layer": "Default",
+    "enabled": true,
+    "prefabGuid": "149c1f92-3d60-476e-83c8-bfb6109bc3df",
+    "prefabLocalID": 3
+  },
+  {
+    "kind": "Entity",
+    "name": "Cube_Prototype_Large_A",
+    "ID": 98,
+    "parent": 0,
+    "transform": {
+      "position": {
+        "x": -5.519,
+        "y": -3.0,
+        "z": 2.381
+      },
+      "rotation": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      },
+      "scale": {
+        "x": 1.0,
+        "y": 1.0,
+        "z": 1.0
+      }
+    },
+    "components": [
+      {
+        "type": "Staple.BoxCollider3D",
+        "data": {
+          "size": {
+            "x": 4.0,
+            "y": 4.0,
+            "z": 4.0
+          },
+          "position": {
+            "x": 0.0,
+            "y": 2.0,
+            "z": 0.0
+          },
+          "rotation": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0,
+            "w": 1.0
+          }
+        }
+      },
+      {
+        "type": "Staple.RigidBody3D",
+        "data": {
+          "motionType": "Static",
+          "freezeRotationX": false,
+          "freezeRotationY": false,
+          "freezeRotationZ": false,
+          "is2DPlane": false,
+          "gravityFactor": 1.0,
+          "isTrigger": false,
+          "friction": 0.0,
+          "restitution": 0.0,
+          "mass": 1.0
+        }
+      }
+    ],
+    "layer": "Level Geometry",
+    "enabled": true,
+    "prefabGuid": "149c1f92-3d60-476e-83c8-bfb6109bc3df",
+    "prefabLocalID": 0
+  },
+  {
+    "kind": "Entity",
+    "name": "Cube_Prototype_Large_A",
+    "ID": 99,
+    "parent": 98,
+    "transform": {
+      "position": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      },
+      "rotation": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      },
+      "scale": {
+        "x": 1.0,
+        "y": 1.0,
+        "z": 1.0
+      }
+    },
+    "components": [],
+    "layer": "Default",
+    "enabled": true,
+    "prefabGuid": "149c1f92-3d60-476e-83c8-bfb6109bc3df",
+    "prefabLocalID": 1
+  },
+  {
+    "kind": "Entity",
+    "name": "Cube.16091",
+    "ID": 100,
+    "parent": 99,
+    "transform": {
+      "position": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      },
+      "rotation": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      },
+      "scale": {
+        "x": 1.0,
+        "y": 1.0,
+        "z": 1.0
+      }
+    },
+    "components": [
+      {
+        "type": "Staple.MeshRenderer",
+        "data": {
+          "mesh": "cac24a6e-ce3e-4b73-af69-d7c6decce076:0",
+          "materials": [
+            "41ea43b6-ce45-4931-8bd2-848e5f02bbb7"
+          ],
+          "enabled": true,
+          "forceRenderingOff": false,
+          "receiveShadows": true,
+          "sortingLayer": 0,
+          "sortingOrder": 0
+        }
+      }
+    ],
+    "layer": "Default",
+    "enabled": true,
+    "prefabGuid": "149c1f92-3d60-476e-83c8-bfb6109bc3df",
+    "prefabLocalID": 2
+  },
+  {
+    "kind": "Entity",
+    "name": "Cube_Prototype_Large_A",
+    "ID": 101,
+    "parent": 98,
+    "transform": {
+      "position": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      },
+      "rotation": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      },
+      "scale": {
+        "x": 1.0,
+        "y": 1.0,
+        "z": 1.0
+      }
+    },
+    "components": [],
+    "layer": "Default",
+    "enabled": true,
+    "prefabGuid": "149c1f92-3d60-476e-83c8-bfb6109bc3df",
+    "prefabLocalID": 3
   }
 ]
