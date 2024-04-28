@@ -1,0 +1,170 @@
+{
+  "guid": "149c1f92-3d60-476e-83c8-bfb6109bc3df",
+  "mainObject": {
+    "kind": "Entity",
+    "name": "Cube_Prototype_Large_A",
+    "ID": 0,
+    "parent": 0,
+    "transform": {
+      "position": {
+        "x": 0.0,
+        "y": -3.0,
+        "z": 0.0
+      },
+      "rotation": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      },
+      "scale": {
+        "x": 1.0,
+        "y": 1.0,
+        "z": 1.0
+      }
+    },
+    "components": [
+      {
+        "type": "Staple.BoxCollider3D",
+        "data": {
+          "size": {
+            "x": 4.0,
+            "y": 4.0,
+            "z": 4.0
+          },
+          "position": {
+            "x": 0.0,
+            "y": 2.0,
+            "z": 0.0
+          },
+          "rotation": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0,
+            "w": 1.0
+          }
+        }
+      },
+      {
+        "type": "Staple.RigidBody3D",
+        "data": {
+          "motionType": "Static",
+          "freezeRotationX": false,
+          "freezeRotationY": false,
+          "freezeRotationZ": false,
+          "is2DPlane": false,
+          "gravityFactor": 1.0,
+          "isTrigger": false,
+          "friction": 0.0,
+          "restitution": 0.0,
+          "mass": 1.0
+        }
+      }
+    ],
+    "layer": "Level Geometry",
+    "enabled": true,
+    "prefabGuid": null,
+    "prefabLocalID": 0
+  },
+  "children": [
+    {
+      "kind": "Entity",
+      "name": "Cube_Prototype_Large_A",
+      "ID": 1,
+      "parent": 0,
+      "transform": {
+        "position": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "rotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "scale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        }
+      },
+      "components": [],
+      "layer": "Default",
+      "enabled": true,
+      "prefabGuid": null,
+      "prefabLocalID": 0
+    },
+    {
+      "kind": "Entity",
+      "name": "Cube.16091",
+      "ID": 2,
+      "parent": 1,
+      "transform": {
+        "position": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "rotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "scale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        }
+      },
+      "components": [
+        {
+          "type": "Staple.MeshRenderer",
+          "data": {
+            "mesh": "cac24a6e-ce3e-4b73-af69-d7c6decce076:0",
+            "materials": [
+              "41ea43b6-ce45-4931-8bd2-848e5f02bbb7"
+            ],
+            "enabled": true,
+            "forceRenderingOff": false,
+            "receiveShadows": true,
+            "sortingLayer": 0,
+            "sortingOrder": 0
+          }
+        }
+      ],
+      "layer": "Default",
+      "enabled": true,
+      "prefabGuid": null,
+      "prefabLocalID": 0
+    },
+    {
+      "kind": "Entity",
+      "name": "Cube_Prototype_Large_A",
+      "ID": 3,
+      "parent": 0,
+      "transform": {
+        "position": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "rotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "scale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        }
+      },
+      "components": [],
+      "layer": "Default",
+      "enabled": true,
+      "prefabGuid": null,
+      "prefabLocalID": 0
+    }
+  ],
+  "typeName": "Staple.Prefab"
+}

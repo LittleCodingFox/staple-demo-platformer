@@ -1,0 +1,181 @@
+{
+  "guid": "a9292b17-2455-4c4b-a2f5-5764d617e407",
+  "mainObject": {
+    "kind": "Entity",
+    "name": "Coin_A",
+    "ID": 0,
+    "parent": 0,
+    "transform": {
+      "position": {
+        "x": -5.9264746,
+        "y": 1.9767007,
+        "z": 2.3159583
+      },
+      "rotation": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      },
+      "scale": {
+        "x": 1.0,
+        "y": 1.0,
+        "z": 1.0
+      }
+    },
+    "components": [
+      {
+        "type": "Staple.BoxCollider3D",
+        "data": {
+          "size": {
+            "x": 1.0,
+            "y": 1.0,
+            "z": 1.0
+          },
+          "position": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "rotation": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0,
+            "w": 1.0
+          }
+        }
+      },
+      {
+        "type": "Staple.RigidBody3D",
+        "data": {
+          "motionType": "Dynamic",
+          "freezeRotationX": false,
+          "freezeRotationY": false,
+          "freezeRotationZ": false,
+          "is2DPlane": false,
+          "gravityFactor": 0.0,
+          "isTrigger": true,
+          "friction": 0.0,
+          "restitution": 0.0,
+          "mass": 1.0
+        }
+      },
+      {
+        "type": "Platformer.CoinComponent",
+        "data": {}
+      }
+    ],
+    "layer": "Default",
+    "enabled": true,
+    "prefabGuid": null,
+    "prefabLocalID": 0
+  },
+  "children": [
+    {
+      "kind": "Entity",
+      "name": "Coin_A",
+      "ID": 1,
+      "parent": 0,
+      "transform": {
+        "position": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "rotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "scale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        }
+      },
+      "components": [
+        {
+          "type": "Platformer.SpinnerComponent",
+          "data": {
+            "speed": 5.0
+          }
+        }
+      ],
+      "layer": "Default",
+      "enabled": true,
+      "prefabGuid": null,
+      "prefabLocalID": 0
+    },
+    {
+      "kind": "Entity",
+      "name": "Cylinder",
+      "ID": 2,
+      "parent": 1,
+      "transform": {
+        "position": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "rotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "scale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        }
+      },
+      "components": [
+        {
+          "type": "Staple.MeshRenderer",
+          "data": {
+            "mesh": "70530ad2-ad0e-4781-939c-71066b51babc:0",
+            "materials": [
+              "41ea43b6-ce45-4931-8bd2-848e5f02bbb7"
+            ],
+            "enabled": true,
+            "forceRenderingOff": false,
+            "receiveShadows": true,
+            "sortingLayer": 0,
+            "sortingOrder": 0
+          }
+        }
+      ],
+      "layer": "Default",
+      "enabled": true,
+      "prefabGuid": null,
+      "prefabLocalID": 0
+    },
+    {
+      "kind": "Entity",
+      "name": "Coin_A",
+      "ID": 3,
+      "parent": 0,
+      "transform": {
+        "position": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "rotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "scale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        }
+      },
+      "components": [],
+      "layer": "Default",
+      "enabled": true,
+      "prefabGuid": null,
+      "prefabLocalID": 0
+    }
+  ],
+  "typeName": "Staple.Prefab"
+}
