@@ -1,1 +1,6 @@
 Cache
+.vs
+bin
+obj
+*.csproj
+*.sln
