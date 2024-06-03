@@ -1,4 +1,13 @@
 {
   "guid": "784583f8-7d9b-43a1-bd73-b9a410c863d9",
+  "expectedSizes": [
+    14,
+    16,
+    20,
+    32
+  ],
+  "includedCharacterSets": 2046,
+  "textureSize": 2048,
+  "useAntiAliasing": true,
   "typeName": "Staple.FontAsset"
 }

@@ -882,7 +882,7 @@
       },
       "rotation": {
         "x": 0.0,
-        "y": 1.3660357E-05,
+        "y": 1.3660343E-05,
         "z": 0.0
       },
       "scale": {
@@ -910,7 +910,7 @@
       },
       "rotation": {
         "x": 0.0,
-        "y": -1.3660357E-05,
+        "y": -1.3660343E-05,
         "z": 0.0
       },
       "scale": {
@@ -938,7 +938,7 @@
       },
       "rotation": {
         "x": 0.0,
-        "y": 8.1422076E-13,
+        "y": 8.142199E-13,
         "z": 0.0
       },
       "scale": {
@@ -994,7 +994,7 @@
       },
       "rotation": {
         "x": -90.0,
-        "y": 273.28384,
+        "y": -86.71615,
         "z": 0.0
       },
       "scale": {
@@ -1332,7 +1332,7 @@
       },
       "rotation": {
         "x": -90.0,
-        "y": -273.28384,
+        "y": 86.71615,
         "z": 0.0
       },
       "scale": {
@@ -1797,7 +1797,7 @@
       },
       "rotation": {
         "x": 0.0,
-        "y": -8.142207E-13,
+        "y": -8.142199E-13,
         "z": 1.2660365E-20
       },
       "scale": {
@@ -1896,7 +1896,7 @@
       },
       "rotation": {
         "x": 0.0,
-        "y": -8.1422076E-13,
+        "y": -8.142199E-13,
         "z": -7.174205E-20
       },
       "scale": {
@@ -2247,7 +2247,7 @@
       },
       "rotation": {
         "x": -90.0,
-        "y": 359.9998,
+        "y": -0.00020854812,
         "z": 0.0
       },
       "scale": {
@@ -2303,7 +2303,7 @@
       },
       "rotation": {
         "x": -46.04396,
-        "y": -1.7713826E-05,
+        "y": -1.7713828E-05,
         "z": -179.9999
       },
       "scale": {
@@ -2443,7 +2443,7 @@
       },
       "rotation": {
         "x": -90.0,
-        "y": 359.9998,
+        "y": -0.00020854812,
         "z": 0.0
       },
       "scale": {
@@ -2611,7 +2611,7 @@
       },
       "rotation": {
         "x": -90.0,
-        "y": 359.9998,
+        "y": -0.00020854812,
         "z": 0.0
       },
       "scale": {
@@ -2639,7 +2639,7 @@
       },
       "rotation": {
         "x": -90.0,
-        "y": -90.0,
+        "y": 270.0,
         "z": 0.0
       },
       "scale": {
@@ -2667,7 +2667,7 @@
       },
       "rotation": {
         "x": -90.0,
-        "y": 359.9998,
+        "y": -0.00020854812,
         "z": 0.0
       },
       "scale": {
@@ -2695,7 +2695,7 @@
       },
       "rotation": {
         "x": -90.0,
-        "y": 90.0,
+        "y": -270.0,
         "z": 0.0
       },
       "scale": {
@@ -3281,6 +3281,90 @@
       }
     ],
     "layer": "Level Geometry",
+    "enabled": true,
+    "prefabGuid": null,
+    "prefabLocalID": 0
+  },
+  {
+    "kind": "Entity",
+    "name": "Canvas",
+    "ID": 99,
+    "parent": 0,
+    "transform": {
+      "position": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      },
+      "rotation": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      },
+      "scale": {
+        "x": 1.0,
+        "y": 1.0,
+        "z": 1.0
+      }
+    },
+    "components": [
+      {
+        "type": "Staple.UICanvas",
+        "data": {
+          "resolution": {
+            "x": 1920.0,
+            "y": 1080.0
+          }
+        }
+      }
+    ],
+    "layer": "Default",
+    "enabled": true,
+    "prefabGuid": null,
+    "prefabLocalID": 0
+  },
+  {
+    "kind": "Entity",
+    "name": "FPS",
+    "ID": 100,
+    "parent": 99,
+    "transform": {
+      "position": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      },
+      "rotation": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      },
+      "scale": {
+        "x": 1.0,
+        "y": 1.0,
+        "z": 1.0
+      }
+    },
+    "components": [
+      {
+        "type": "Staple.UIText",
+        "data": {
+          "text": "FPS",
+          "fontSize": 32,
+          "textColor": "#FFFFFFFF",
+          "secondaryTextColor": "#27866AFF",
+          "borderSize": 2,
+          "borderColor": "#00000000",
+          "font": "784583f8-7d9b-43a1-bd73-b9a410c863d9",
+          "material": "1953e365-8dc0-409d-b9f6-33966f2c6963"
+        }
+      },
+      {
+        "type": "FPSCounterComponent",
+        "data": {}
+      }
+    ],
+    "layer": "Default",
     "enabled": true,
     "prefabGuid": null,
     "prefabLocalID": 0
