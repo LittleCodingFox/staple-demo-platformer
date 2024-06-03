@@ -3351,12 +3351,25 @@
         "data": {
           "text": "FPS",
           "fontSize": 32,
+          "autoSizeText": false,
+          "minFontSize": 14,
+          "maxFontSize": 30,
           "textColor": "#FFFFFFFF",
           "secondaryTextColor": "#27866AFF",
           "borderSize": 2,
           "borderColor": "#00000000",
           "font": "784583f8-7d9b-43a1-bd73-b9a410c863d9",
-          "material": "1953e365-8dc0-409d-b9f6-33966f2c6963"
+          "material": "1953e365-8dc0-409d-b9f6-33966f2c6963",
+          "alignment": "TopLeft",
+          "position": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "size": {
+            "x": 52.0,
+            "y": 32.0
+          },
+          "adjustToIntrinsicSize": true
         }
       },
       {
