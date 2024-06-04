@@ -3309,7 +3309,7 @@
     },
     "components": [
       {
-        "type": "Staple.UICanvas",
+        "type": "Staple.UI.UICanvas",
         "data": {
           "resolution": {
             "x": 1920.0,
@@ -3347,7 +3347,7 @@
     },
     "components": [
       {
-        "type": "Staple.UIText",
+        "type": "Staple.UI.UIText",
         "data": {
           "text": "FPS",
           "fontSize": 32,
