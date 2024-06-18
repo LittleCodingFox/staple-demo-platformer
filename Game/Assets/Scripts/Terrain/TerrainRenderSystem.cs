@@ -187,8 +187,6 @@ internal class TerrainRenderSystem : IRenderSystem
                     Indices = data.Item3,
                 };
 
-                Log.Debug($"RECREATE BODY");
-
                 Physics3D.Instance.RecreateBody(entity);
             }
         }
