@@ -52,7 +52,7 @@ class PlayerMovementSystem : IEntitySystem
 
             var yVelocity = rigidBody.Velocity.Y;
 
-            playerMovement.grounded = Physics.RayCast3D(new Ray(rigidBody.Position, new Vector3(0, -1.0f, 0)), out var hitBody, out _,
+            playerMovement.grounded = Physics.RayCast3D(new Ray(rigidBody.Position, new Vector3(0, -3.0f, 0)), out var hitBody, out _,
                 playerMovement.collisionMask);
 
             if (jumpPress && playerMovement.grounded)
@@ -89,13 +89,13 @@ class PlayerMovementSystem : IEntitySystem
         if (Input.GetGamepadCount() > 0)
         {
             movement = Input.GetGamepadLeftAxis(0);
-            jumpPress |= Input.GetGamepadButtonDown(0, GamepadButton.A);
+            jumpPress |= Input.GetGamepadButton(0, GamepadButton.A);
         }
         else
         {
             movement.X = Input.GetKey(KeyCode.A) ? -1 : Input.GetKey(KeyCode.D) ? 1 : 0;
             movement.Y = Input.GetKey(KeyCode.W) ? 1 : Input.GetKey(KeyCode.S) ? -1 : 0;
-            jumpPress |= Input.GetKeyDown(KeyCode.Space);
+            jumpPress |= Input.GetKey(KeyCode.Space);
         }
     }
 

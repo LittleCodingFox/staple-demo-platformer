@@ -68,7 +68,7 @@
     "transform": {
       "position": {
         "x": 0.0,
-        "y": 1.0,
+        "y": 16.842358,
         "z": 0.0
       },
       "rotation": {
@@ -236,7 +236,7 @@
         "data": {
           "position": {
             "x": 0.0,
-            "y": 1.0,
+            "y": 16.0,
             "z": 0.0
           }
         }
@@ -2887,340 +2887,12 @@
   },
   {
     "kind": "Entity",
-    "name": "Cube_Prototype_Large_A",
+    "name": "Terrain",
     "ID": 90,
     "parent": 0,
     "transform": {
       "position": {
         "x": 0.0,
-        "y": -3.0,
-        "z": 0.0
-      },
-      "rotation": {
-        "x": 0.0,
-        "y": 0.0,
-        "z": 0.0
-      },
-      "scale": {
-        "x": 1.0,
-        "y": 1.0,
-        "z": 1.0
-      }
-    },
-    "components": [
-      {
-        "type": "Staple.BoxCollider3D",
-        "data": {
-          "size": {
-            "x": 4.0,
-            "y": 4.0,
-            "z": 4.0
-          },
-          "position": {
-            "x": 0.0,
-            "y": 2.0,
-            "z": 0.0
-          },
-          "rotation": {
-            "x": 0.0,
-            "y": 0.0,
-            "z": 0.0,
-            "w": 1.0
-          }
-        }
-      },
-      {
-        "type": "Staple.RigidBody3D",
-        "data": {
-          "motionType": "Static",
-          "freezeRotationX": false,
-          "freezeRotationY": false,
-          "freezeRotationZ": false,
-          "is2DPlane": false,
-          "gravityFactor": 1.0,
-          "isTrigger": false,
-          "friction": 0.0,
-          "restitution": 0.0,
-          "mass": 1.0
-        }
-      }
-    ],
-    "layer": "Level Geometry",
-    "enabled": true,
-    "prefabGuid": "149c1f92-3d60-476e-83c8-bfb6109bc3df",
-    "prefabLocalID": 0
-  },
-  {
-    "kind": "Entity",
-    "name": "Cube_Prototype_Large_A",
-    "ID": 91,
-    "parent": 90,
-    "transform": {
-      "position": {
-        "x": 0.0,
-        "y": 0.0,
-        "z": 0.0
-      },
-      "rotation": {
-        "x": 0.0,
-        "y": 0.0,
-        "z": 0.0
-      },
-      "scale": {
-        "x": 1.0,
-        "y": 1.0,
-        "z": 1.0
-      }
-    },
-    "components": [],
-    "layer": "Default",
-    "enabled": true,
-    "prefabGuid": "149c1f92-3d60-476e-83c8-bfb6109bc3df",
-    "prefabLocalID": 1
-  },
-  {
-    "kind": "Entity",
-    "name": "Cube.16091",
-    "ID": 92,
-    "parent": 91,
-    "transform": {
-      "position": {
-        "x": 0.0,
-        "y": 0.0,
-        "z": 0.0
-      },
-      "rotation": {
-        "x": 0.0,
-        "y": 0.0,
-        "z": 0.0
-      },
-      "scale": {
-        "x": 1.0,
-        "y": 1.0,
-        "z": 1.0
-      }
-    },
-    "components": [
-      {
-        "type": "Staple.MeshRenderer",
-        "data": {
-          "mesh": "cac24a6e-ce3e-4b73-af69-d7c6decce076:0",
-          "materials": [
-            "41ea43b6-ce45-4931-8bd2-848e5f02bbb7"
-          ],
-          "enabled": true,
-          "forceRenderingOff": false,
-          "receiveShadows": true,
-          "sortingLayer": 0,
-          "sortingOrder": 0
-        }
-      }
-    ],
-    "layer": "Default",
-    "enabled": true,
-    "prefabGuid": "149c1f92-3d60-476e-83c8-bfb6109bc3df",
-    "prefabLocalID": 2
-  },
-  {
-    "kind": "Entity",
-    "name": "Cube_Prototype_Large_A",
-    "ID": 93,
-    "parent": 90,
-    "transform": {
-      "position": {
-        "x": 0.0,
-        "y": 0.0,
-        "z": 0.0
-      },
-      "rotation": {
-        "x": 0.0,
-        "y": 0.0,
-        "z": 0.0
-      },
-      "scale": {
-        "x": 1.0,
-        "y": 1.0,
-        "z": 1.0
-      }
-    },
-    "components": [],
-    "layer": "Default",
-    "enabled": true,
-    "prefabGuid": "149c1f92-3d60-476e-83c8-bfb6109bc3df",
-    "prefabLocalID": 3
-  },
-  {
-    "kind": "Entity",
-    "name": "Cube_Prototype_Large_A",
-    "ID": 94,
-    "parent": 0,
-    "transform": {
-      "position": {
-        "x": -5.519,
-        "y": -3.0,
-        "z": 2.381
-      },
-      "rotation": {
-        "x": 0.0,
-        "y": 0.0,
-        "z": 0.0
-      },
-      "scale": {
-        "x": 1.0,
-        "y": 1.0,
-        "z": 1.0
-      }
-    },
-    "components": [
-      {
-        "type": "Staple.BoxCollider3D",
-        "data": {
-          "size": {
-            "x": 4.0,
-            "y": 4.0,
-            "z": 4.0
-          },
-          "position": {
-            "x": 0.0,
-            "y": 2.0,
-            "z": 0.0
-          },
-          "rotation": {
-            "x": 0.0,
-            "y": 0.0,
-            "z": 0.0,
-            "w": 1.0
-          }
-        }
-      },
-      {
-        "type": "Staple.RigidBody3D",
-        "data": {
-          "motionType": "Static",
-          "freezeRotationX": false,
-          "freezeRotationY": false,
-          "freezeRotationZ": false,
-          "is2DPlane": false,
-          "gravityFactor": 1.0,
-          "isTrigger": false,
-          "friction": 0.0,
-          "restitution": 0.0,
-          "mass": 1.0
-        }
-      }
-    ],
-    "layer": "Level Geometry",
-    "enabled": true,
-    "prefabGuid": "149c1f92-3d60-476e-83c8-bfb6109bc3df",
-    "prefabLocalID": 0
-  },
-  {
-    "kind": "Entity",
-    "name": "Cube_Prototype_Large_A",
-    "ID": 95,
-    "parent": 94,
-    "transform": {
-      "position": {
-        "x": 0.0,
-        "y": 0.0,
-        "z": 0.0
-      },
-      "rotation": {
-        "x": 0.0,
-        "y": 0.0,
-        "z": 0.0
-      },
-      "scale": {
-        "x": 1.0,
-        "y": 1.0,
-        "z": 1.0
-      }
-    },
-    "components": [],
-    "layer": "Default",
-    "enabled": true,
-    "prefabGuid": "149c1f92-3d60-476e-83c8-bfb6109bc3df",
-    "prefabLocalID": 1
-  },
-  {
-    "kind": "Entity",
-    "name": "Cube.16091",
-    "ID": 96,
-    "parent": 95,
-    "transform": {
-      "position": {
-        "x": 0.0,
-        "y": 0.0,
-        "z": 0.0
-      },
-      "rotation": {
-        "x": 0.0,
-        "y": 0.0,
-        "z": 0.0
-      },
-      "scale": {
-        "x": 1.0,
-        "y": 1.0,
-        "z": 1.0
-      }
-    },
-    "components": [
-      {
-        "type": "Staple.MeshRenderer",
-        "data": {
-          "mesh": "cac24a6e-ce3e-4b73-af69-d7c6decce076:0",
-          "materials": [
-            "41ea43b6-ce45-4931-8bd2-848e5f02bbb7"
-          ],
-          "enabled": true,
-          "forceRenderingOff": false,
-          "receiveShadows": true,
-          "sortingLayer": 0,
-          "sortingOrder": 0
-        }
-      }
-    ],
-    "layer": "Default",
-    "enabled": true,
-    "prefabGuid": "149c1f92-3d60-476e-83c8-bfb6109bc3df",
-    "prefabLocalID": 2
-  },
-  {
-    "kind": "Entity",
-    "name": "Cube_Prototype_Large_A",
-    "ID": 97,
-    "parent": 94,
-    "transform": {
-      "position": {
-        "x": 0.0,
-        "y": 0.0,
-        "z": 0.0
-      },
-      "rotation": {
-        "x": 0.0,
-        "y": 0.0,
-        "z": 0.0
-      },
-      "scale": {
-        "x": 1.0,
-        "y": 1.0,
-        "z": 1.0
-      }
-    },
-    "components": [],
-    "layer": "Default",
-    "enabled": true,
-    "prefabGuid": "149c1f92-3d60-476e-83c8-bfb6109bc3df",
-    "prefabLocalID": 3
-  },
-  {
-    "kind": "Entity",
-    "name": "Terrain",
-    "ID": 98,
-    "parent": 0,
-    "transform": {
-      "position": {
-        "x": 4.922804,
         "y": 0.0,
         "z": 0.0
       },
@@ -3240,7 +2912,7 @@
         "type": "TerrainRenderer",
         "data": {
           "asset": "14281697-5088-48c8-a916-275a7eeb0817",
-          "material": "88428bcf-6adb-49e1-ace8-fb2cf71a2959",
+          "material": "1a3342aa-6ccf-4be5-8dfd-2f4a78302ee6",
           "enabled": true,
           "forceRenderingOff": false,
           "receiveShadows": true,
@@ -3288,7 +2960,7 @@
   {
     "kind": "Entity",
     "name": "Canvas",
-    "ID": 99,
+    "ID": 91,
     "parent": 0,
     "transform": {
       "position": {
@@ -3310,12 +2982,7 @@
     "components": [
       {
         "type": "Staple.UI.UICanvas",
-        "data": {
-          "resolution": {
-            "x": 1920.0,
-            "y": 1080.0
-          }
-        }
+        "data": {}
       }
     ],
     "layer": "Default",
@@ -3326,8 +2993,8 @@
   {
     "kind": "Entity",
     "name": "FPS",
-    "ID": 100,
-    "parent": 99,
+    "ID": 92,
+    "parent": 91,
     "transform": {
       "position": {
         "x": 0.0,
@@ -3349,7 +3016,7 @@
       {
         "type": "Staple.UI.UIText",
         "data": {
-          "text": "FPS",
+          "text": "FPSa",
           "fontSize": 32,
           "autoSizeText": false,
           "minFontSize": 14,
@@ -3360,13 +3027,13 @@
           "borderColor": "#00000000",
           "font": "784583f8-7d9b-43a1-bd73-b9a410c863d9",
           "material": "1953e365-8dc0-409d-b9f6-33966f2c6963",
-          "alignment": "TopLeft",
+          "alignment": "TopRight",
           "position": {
             "x": 0.0,
             "y": 0.0
           },
           "size": {
-            "x": 52.0,
+            "x": 71.0,
             "y": 32.0
           },
           "adjustToIntrinsicSize": true
@@ -3375,6 +3042,50 @@
       {
         "type": "FPSCounterComponent",
         "data": {}
+      }
+    ],
+    "layer": "Default",
+    "enabled": true,
+    "prefabGuid": null,
+    "prefabLocalID": 0
+  },
+  {
+    "kind": "Entity",
+    "name": "Container",
+    "ID": 93,
+    "parent": 91,
+    "transform": {
+      "position": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      },
+      "rotation": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      },
+      "scale": {
+        "x": 1.0,
+        "y": 1.0,
+        "z": 1.0
+      }
+    },
+    "components": [
+      {
+        "type": "Staple.UI.UIContainer",
+        "data": {
+          "alignment": "TopLeft",
+          "position": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "size": {
+            "x": 200.0,
+            "y": 100.0
+          },
+          "adjustToIntrinsicSize": false
+        }
       }
     ],
     "layer": "Default",

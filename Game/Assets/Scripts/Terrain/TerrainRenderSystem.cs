@@ -31,7 +31,7 @@ internal class TerrainRenderSystem : IRenderSystem
 
     private List<RenderInfo> renderers = new();
 
-    private Dictionary<Vector2Int, (TerrainVertex[], int[])> cachedTerrainSizes = new();
+    private Dictionary<Vector2Int, (TerrainVertex[], int[], int[])> cachedTerrainSizes = new();
 
     private void CacheTerrain(int width, int height)
     {
@@ -41,31 +41,38 @@ internal class TerrainRenderSystem : IRenderSystem
         }
 
         var newVertices = new TerrainVertex[width * height * 6];
-        var indices = Enumerable.Repeat(0, width * height * 6).Select((x, xIndex) => xIndex).ToArray();
+        var indices = new List<int>();
+        var collisionIndices = new List<int>();
 
         var vertexCounter = 0;
 
-        for(var y = 0; y < height; y++)
+        for(var i = 0; i < newVertices.Length; i++)
         {
-            for(var x = 0; x < width; x++)
+            newVertices[i].normal = new Vector3(0, 1, 0);
+        }
+
+        for(var y = -height / 2; y < height / 2 - 1; y++)
+        {
+            for(var x = -width / 2; x < width / 2 - 1; x++)
             {
+                indices.AddRange([vertexCounter + 3, vertexCounter + 2, vertexCounter + 1, vertexCounter + 1, vertexCounter, vertexCounter + 3]);
+                collisionIndices.AddRange([vertexCounter, vertexCounter + 1, vertexCounter + 2, vertexCounter + 2, vertexCounter + 3, vertexCounter]);
+
                 newVertices[vertexCounter++].position = new Vector3(x, 0, y);
                 newVertices[vertexCounter++].position = new Vector3(x, 0, y + 1);
                 newVertices[vertexCounter++].position = new Vector3(x + 1, 0, y + 1);
-                newVertices[vertexCounter++].position = new Vector3(x + 1, 0, y + 1);
                 newVertices[vertexCounter++].position = new Vector3(x + 1, 0, y);
-                newVertices[vertexCounter++].position = new Vector3(x, 0, y);
             }
         }
 
-        cachedTerrainSizes.Add(new Vector2Int(width, height), (newVertices, indices));
+        cachedTerrainSizes.Add(new Vector2Int(width, height), (newVertices, indices.ToArray(), collisionIndices.ToArray()));
     }
 
-    private (TerrainVertex[], int[]) GetCache(int width, int height)
+    private (TerrainVertex[], int[], int[]) GetCache(int width, int height)
     {
         CacheTerrain(width, height);
 
-        return cachedTerrainSizes.TryGetValue(new Vector2Int(width, height), out var value) ? value : ([], []);
+        return cachedTerrainSizes.TryGetValue(new Vector2Int(width, height), out var value) ? value : ([], [], []);
     }
 
     public void Destroy()
@@ -112,7 +119,54 @@ internal class TerrainRenderSystem : IRenderSystem
                 renderer.mesh.MarkDynamic();
             }
 
-            renderer.mesh.SetMeshData(data.Item1, new VertexLayoutBuilder()
+            var localMeshData = data.Item1;
+
+            var noise = new NoiseGenerator();
+
+            noise.frequency = 0.01f;
+            noise.fractalType = NoiseGenerator.FractalType.FBm;
+            noise.fractalGain = 10;
+
+            float GetHeight(int x, int y)
+            {
+                return noise.GetNoise(x, y);
+            }
+
+            var vertexCounter = 0;
+            var positions = new Vector3[localMeshData.Length];
+
+            for (var y = 0; y < renderer.asset.height - 1; y++)
+            {
+                for (var x = 0; x < renderer.asset.width - 1; x++)
+                {
+                    void SetHeight(float height)
+                    {
+                        localMeshData[vertexCounter].position.Y = height * renderer.asset.heightScale;
+                        localMeshData[vertexCounter].position.X *= renderer.asset.scale;
+                        localMeshData[vertexCounter].position.Z *= renderer.asset.scale;
+                        positions[vertexCounter] = localMeshData[vertexCounter].position;
+
+                        vertexCounter++;
+                    }
+
+                    SetHeight(GetHeight(x, y));
+                    SetHeight(GetHeight(x, y + 1));
+                    SetHeight(GetHeight(x + 1, y + 1));
+                    SetHeight(GetHeight(x + 1, y));
+                }
+            }
+
+            var normals = Mesh.GenerateNormals(positions, data.Item2, true);
+
+            if(normals.Length == localMeshData.Length)
+            {
+                for(var i = 0; i < localMeshData.Length; i++)
+                {
+                    localMeshData[i].normal = normals[i];
+                }
+            }
+
+            renderer.mesh.SetMeshData(localMeshData, new VertexLayoutBuilder()
                 .Add(Bgfx.bgfx.Attrib.Position, 3, Bgfx.bgfx.AttribType.Float)
                 .Add(Bgfx.bgfx.Attrib.Normal, 3, Bgfx.bgfx.AttribType.Float)
                 .Add(Bgfx.bgfx.Attrib.TexCoord0, 2, Bgfx.bgfx.AttribType.Float)
@@ -128,9 +182,12 @@ internal class TerrainRenderSystem : IRenderSystem
                 {
                     MeshTopology = MeshTopology.Triangles,
                     IndexFormat = MeshIndexFormat.UInt32,
-                    Vertices = data.Item1.Select(x => x.position).ToArray(),
-                    Indices = renderer.mesh.Indices,
+                    Vertices = localMeshData.Select(x => x.position).ToArray(),
+                    Normals = normals,
+                    Indices = data.Item3,
                 };
+
+                Log.Debug($"RECREATE BODY");
 
                 Physics3D.Instance.RecreateBody(entity);
             }
