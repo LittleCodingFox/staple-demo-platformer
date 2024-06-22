@@ -2,7 +2,6 @@ using Staple;
 using Staple.Internal;
 using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Numerics;
 using System.Runtime.InteropServices;
 
@@ -10,7 +9,7 @@ internal class TerrainRenderSystem : IRenderSystem
 {
     [Serializable]
     [StructLayout(LayoutKind.Sequential, Pack = 0)]
-    private struct TerrainVertex
+    internal struct TerrainVertex
     {
         public Vector3 position;
         public Vector3 normal;
@@ -31,7 +30,7 @@ internal class TerrainRenderSystem : IRenderSystem
 
     private List<RenderInfo> renderers = new();
 
-    private Dictionary<Vector2Int, (TerrainVertex[], int[], int[])> cachedTerrainSizes = new();
+    private Dictionary<Vector2Int, (TerrainVertex[], int[])> cachedTerrainSizes = new();
 
     private void CacheTerrain(int width, int height)
     {
@@ -40,9 +39,8 @@ internal class TerrainRenderSystem : IRenderSystem
             return;
         }
 
-        var newVertices = new TerrainVertex[width * height * 6];
+        var newVertices = new TerrainVertex[width * height * 4];
         var indices = new List<int>();
-        var collisionIndices = new List<int>();
 
         var vertexCounter = 0;
 
@@ -55,24 +53,23 @@ internal class TerrainRenderSystem : IRenderSystem
         {
             for(var x = -width / 2; x < width / 2 - 1; x++)
             {
-                indices.AddRange([vertexCounter + 3, vertexCounter + 2, vertexCounter + 1, vertexCounter + 1, vertexCounter, vertexCounter + 3]);
-                collisionIndices.AddRange([vertexCounter, vertexCounter + 1, vertexCounter + 2, vertexCounter + 2, vertexCounter + 3, vertexCounter]);
+                indices.AddRange([vertexCounter, vertexCounter + 1, vertexCounter + 2, vertexCounter + 2, vertexCounter + 3, vertexCounter]);
 
-                newVertices[vertexCounter++].position = new Vector3(x, 0, y);
-                newVertices[vertexCounter++].position = new Vector3(x, 0, y + 1);
-                newVertices[vertexCounter++].position = new Vector3(x + 1, 0, y + 1);
                 newVertices[vertexCounter++].position = new Vector3(x + 1, 0, y);
+                newVertices[vertexCounter++].position = new Vector3(x + 1, 0, y + 1);
+                newVertices[vertexCounter++].position = new Vector3(x, 0, y + 1);
+                newVertices[vertexCounter++].position = new Vector3(x, 0, y);
             }
         }
 
-        cachedTerrainSizes.Add(new Vector2Int(width, height), (newVertices, indices.ToArray(), collisionIndices.ToArray()));
+        cachedTerrainSizes.Add(new Vector2Int(width, height), (newVertices, indices.ToArray()));
     }
 
-    private (TerrainVertex[], int[], int[]) GetCache(int width, int height)
+    private (TerrainVertex[], int[]) GetCache(int width, int height)
     {
         CacheTerrain(width, height);
 
-        return cachedTerrainSizes.TryGetValue(new Vector2Int(width, height), out var value) ? value : ([], [], []);
+        return cachedTerrainSizes.TryGetValue(new Vector2Int(width, height), out var value) ? value : ([], []);
     }
 
     public void Destroy()
@@ -82,6 +79,71 @@ internal class TerrainRenderSystem : IRenderSystem
     public void Prepare()
     {
         renderers.Clear();
+    }
+
+    private void UpdateHeights(TerrainRenderer renderer)
+    {
+        var noise = new NoiseGenerator();
+
+        noise.frequency = 0.01f;
+        noise.fractalType = NoiseGenerator.FractalType.FBm;
+        noise.fractalGain = 10;
+
+        for (int y = 0, yIndex = 0; y < renderer.asset.height; y++, yIndex += renderer.asset.width)
+        {
+            for (var x = 0; x < renderer.asset.width; x++)
+            {
+                renderer.asset.heightData[x + yIndex] = noise.GetNoise(x, y);
+            }
+        }
+
+        renderer.needsUpdate = false;
+    }
+
+    private void UpdateMesh(TerrainRenderer renderer, int[] indices)
+    {
+        float GetHeight(int x, int y)
+        {
+            return renderer.asset.heightData[x + y * renderer.asset.width];
+        }
+
+        var vertexCounter = 0;
+        var positions = new Vector3[renderer.meshData.Length];
+
+        for (var y = 0; y < renderer.asset.height - 1; y++)
+        {
+            for (var x = 0; x < renderer.asset.width - 1; x++)
+            {
+                void SetHeight(float height)
+                {
+                    renderer.meshData[vertexCounter].position.Y = height * renderer.asset.scale;
+                    positions[vertexCounter] = renderer.meshData[vertexCounter].position;
+
+                    vertexCounter++;
+                }
+
+                SetHeight(GetHeight(x + 1, y));
+                SetHeight(GetHeight(x + 1, y + 1));
+                SetHeight(GetHeight(x, y + 1));
+                SetHeight(GetHeight(x, y));
+            }
+        }
+
+        var normals = Mesh.GenerateNormals(positions, indices);
+
+        if (normals.Length == renderer.meshData.Length)
+        {
+            for (var i = 0; i < renderer.meshData.Length; i++)
+            {
+                renderer.meshData[i].normal = normals[i];
+            }
+        }
+
+        renderer.mesh.SetMeshData(renderer.meshData, new VertexLayoutBuilder()
+            .Add(Bgfx.bgfx.Attrib.Position, 3, Bgfx.bgfx.AttribType.Float)
+            .Add(Bgfx.bgfx.Attrib.Normal, 3, Bgfx.bgfx.AttribType.Float)
+            .Add(Bgfx.bgfx.Attrib.TexCoord0, 2, Bgfx.bgfx.AttribType.Float)
+            .Build());
     }
 
     public void Preprocess(Entity entity, Transform transform, IComponent relatedComponent, Camera activeCamera, Transform activeCameraTransform)
@@ -98,97 +160,57 @@ internal class TerrainRenderSystem : IRenderSystem
             return;
         }
 
-        if(renderer.mesh == null ||
-            renderer.mesh.VertexCount != renderer.asset.width * renderer.asset.height * 6)
+        if (renderer.mesh == null ||
+            renderer.mesh.VertexCount != renderer.asset.width * renderer.asset.height * 4)
         {
             if(Platform.IsPlaying)
             {
                 renderer.mesh?.Clear();
             }
 
-            var data = GetCache(renderer.asset.width, renderer.asset.height);
-
-            renderer.mesh = new Mesh()
+            renderer.mesh ??= new Mesh()
             {
                 MeshTopology = MeshTopology.Triangles,
                 IndexFormat = MeshIndexFormat.UInt32,
             };
 
-            if(Platform.IsEditor)
+            if (Platform.IsEditor)
             {
                 renderer.mesh.MarkDynamic();
             }
 
-            var localMeshData = data.Item1;
+            var data = GetCache(renderer.asset.width, renderer.asset.height);
 
-            var noise = new NoiseGenerator();
+            renderer.meshData = data.Item1;
 
-            noise.frequency = 0.01f;
-            noise.fractalType = NoiseGenerator.FractalType.FBm;
-            noise.fractalGain = 10;
-
-            float GetHeight(int x, int y)
+            for(var i = 0; i < renderer.meshData.Length; i++)
             {
-                return noise.GetNoise(x, y);
+                renderer.meshData[i].position.X *= renderer.asset.scale;
+                renderer.meshData[i].position.Z *= renderer.asset.scale;
             }
 
-            var vertexCounter = 0;
-            var positions = new Vector3[localMeshData.Length];
-
-            for (var y = 0; y < renderer.asset.height - 1; y++)
-            {
-                for (var x = 0; x < renderer.asset.width - 1; x++)
-                {
-                    void SetHeight(float height)
-                    {
-                        localMeshData[vertexCounter].position.Y = height * renderer.asset.heightScale;
-                        localMeshData[vertexCounter].position.X *= renderer.asset.scale;
-                        localMeshData[vertexCounter].position.Z *= renderer.asset.scale;
-                        positions[vertexCounter] = localMeshData[vertexCounter].position;
-
-                        vertexCounter++;
-                    }
-
-                    SetHeight(GetHeight(x, y));
-                    SetHeight(GetHeight(x, y + 1));
-                    SetHeight(GetHeight(x + 1, y + 1));
-                    SetHeight(GetHeight(x + 1, y));
-                }
-            }
-
-            var normals = Mesh.GenerateNormals(positions, data.Item2, true);
-
-            if(normals.Length == localMeshData.Length)
-            {
-                for(var i = 0; i < localMeshData.Length; i++)
-                {
-                    localMeshData[i].normal = normals[i];
-                }
-            }
-
-            renderer.mesh.SetMeshData(localMeshData, new VertexLayoutBuilder()
-                .Add(Bgfx.bgfx.Attrib.Position, 3, Bgfx.bgfx.AttribType.Float)
-                .Add(Bgfx.bgfx.Attrib.Normal, 3, Bgfx.bgfx.AttribType.Float)
-                .Add(Bgfx.bgfx.Attrib.TexCoord0, 2, Bgfx.bgfx.AttribType.Float)
-                .Build());
+            UpdateMesh(renderer, data.Item2);
 
             renderer.mesh.Indices = data.Item2;
 
             renderer.mesh.UploadMeshData();
 
-            if(entity.TryGetComponent<MeshCollider3D>(out var meshCollider))
+            if(entity.TryGetComponent<HeightMapCollider3D>(out var collider))
             {
-                meshCollider.mesh = new Mesh()
-                {
-                    MeshTopology = MeshTopology.Triangles,
-                    IndexFormat = MeshIndexFormat.UInt32,
-                    Vertices = localMeshData.Select(x => x.position).ToArray(),
-                    Normals = normals,
-                    Indices = data.Item3,
-                };
+                collider.heights = renderer.asset.heightData;
+                collider.offset = new Vector3(-0.5f * renderer.asset.width * renderer.asset.scale, 0, -0.5f * renderer.asset.height * renderer.asset.scale);
+                collider.scale = Vector3.One * renderer.asset.scale;
 
                 Physics3D.Instance.RecreateBody(entity);
             }
+        }
+        else if(renderer.needsUpdate)
+        {
+            renderer.needsUpdate = false;
+
+            var data = GetCache(renderer.asset.width, renderer.asset.height);
+
+            UpdateMesh(renderer, data.Item2);
         }
     }
 

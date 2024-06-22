@@ -68,7 +68,7 @@
     "transform": {
       "position": {
         "x": 0.0,
-        "y": 16.842358,
+        "y": 43.8064,
         "z": 0.0
       },
       "rotation": {
@@ -994,7 +994,7 @@
       },
       "rotation": {
         "x": -90.0,
-        "y": -86.71615,
+        "y": 273.28384,
         "z": 0.0
       },
       "scale": {
@@ -1332,7 +1332,7 @@
       },
       "rotation": {
         "x": -90.0,
-        "y": 86.71615,
+        "y": -273.28384,
         "z": 0.0
       },
       "scale": {
@@ -2247,7 +2247,7 @@
       },
       "rotation": {
         "x": -90.0,
-        "y": -0.00020854812,
+        "y": 359.9998,
         "z": 0.0
       },
       "scale": {
@@ -2303,7 +2303,7 @@
       },
       "rotation": {
         "x": -46.04396,
-        "y": -1.7713828E-05,
+        "y": -1.7713826E-05,
         "z": -179.9999
       },
       "scale": {
@@ -2443,7 +2443,7 @@
       },
       "rotation": {
         "x": -90.0,
-        "y": -0.00020854812,
+        "y": 359.9998,
         "z": 0.0
       },
       "scale": {
@@ -2611,7 +2611,7 @@
       },
       "rotation": {
         "x": -90.0,
-        "y": -0.00020854812,
+        "y": 359.9998,
         "z": 0.0
       },
       "scale": {
@@ -2639,7 +2639,7 @@
       },
       "rotation": {
         "x": -90.0,
-        "y": 270.0,
+        "y": -90.0,
         "z": 0.0
       },
       "scale": {
@@ -2667,7 +2667,7 @@
       },
       "rotation": {
         "x": -90.0,
-        "y": -0.00020854812,
+        "y": 359.9998,
         "z": 0.0
       },
       "scale": {
@@ -2695,7 +2695,7 @@
       },
       "rotation": {
         "x": -90.0,
-        "y": -270.0,
+        "y": 90.0,
         "z": 0.0
       },
       "scale": {
@@ -2913,27 +2913,12 @@
         "data": {
           "asset": "14281697-5088-48c8-a916-275a7eeb0817",
           "material": "1a3342aa-6ccf-4be5-8dfd-2f4a78302ee6",
+          "needsUpdate": false,
           "enabled": true,
           "forceRenderingOff": false,
           "receiveShadows": true,
           "sortingLayer": 0,
           "sortingOrder": 0
-        }
-      },
-      {
-        "type": "Staple.MeshCollider3D",
-        "data": {
-          "position": {
-            "x": 0.0,
-            "y": 0.0,
-            "z": 0.0
-          },
-          "rotation": {
-            "x": 0.0,
-            "y": 0.0,
-            "z": 0.0,
-            "w": 1.0
-          }
         }
       },
       {
@@ -2949,6 +2934,58 @@
           "friction": 0.0,
           "restitution": 0.0,
           "mass": 1.0
+        }
+      },
+      {
+        "type": "Staple.HeightMapCollider3D",
+        "data": {
+          "offset": {
+            "x": -192.0,
+            "y": 0.0,
+            "z": -192.0
+          },
+          "scale": {
+            "x": 6.0,
+            "y": 6.0,
+            "z": 6.0
+          },
+          "position": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "rotation": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0,
+            "w": 1.0
+          }
+        }
+      },
+      {
+        "type": "TerrainGenerator",
+        "data": {
+          "asset": "14281697-5088-48c8-a916-275a7eeb0817",
+          "offset": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "heightScale": 5.0,
+          "seed": 1337,
+          "frequency": 0.01,
+          "noiseType": "OpenSimplex2",
+          "rotationType3D": "None",
+          "fractalType": "FBm",
+          "fractalOctaves": 3,
+          "fractalLacunarity": 2.0,
+          "fractalGain": 10.0,
+          "fractalWeightedStrength": 0.0,
+          "fractalPingPongStrength": 2.0,
+          "cellularDistanceFunction": "EuclideanSq",
+          "cellularReturnType": "Distance",
+          "cellularJitter": 1.0,
+          "domainWarpType": "OpenSimplex2",
+          "domainWarpAmp": 1.0
         }
       }
     ],
@@ -3085,6 +3122,60 @@
             "y": 100.0
           },
           "adjustToIntrinsicSize": false
+        }
+      }
+    ],
+    "layer": "Default",
+    "enabled": true,
+    "prefabGuid": null,
+    "prefabLocalID": 0
+  },
+  {
+    "kind": "Entity",
+    "name": "UI Image",
+    "ID": 94,
+    "parent": 91,
+    "transform": {
+      "position": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      },
+      "rotation": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      },
+      "scale": {
+        "x": 1.0,
+        "y": 1.0,
+        "z": 1.0
+      }
+    },
+    "components": [
+      {
+        "type": "Staple.UI.UIImage",
+        "data": {
+          "texture": "fe19196d-0c54-413a-a0fd-6ef91124007a",
+          "spriteIndex": 0,
+          "color": "#FFFFFFFF",
+          "material": "1953e365-8dc0-409d-b9f6-33966f2c6963",
+          "alignment": "TopLeft",
+          "position": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "size": {
+            "x": 50.0,
+            "y": 50.0
+          },
+          "adjustToIntrinsicSize": false
+        }
+      },
+      {
+        "type": "Staple.UI.UIButton",
+        "data": {
+          "onClick": ""
         }
       }
     ],
