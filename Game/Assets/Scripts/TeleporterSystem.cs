@@ -2,10 +2,8 @@ using Staple;
 
 namespace Platformer;
 
-class TeleporterSystem : IEntitySystem, IPhysicsReceiver3D
+class TeleporterSystem : IEntitySystemFixedUpdate, IPhysicsReceiver3D
 {
-    public EntitySubsystemType UpdateType => EntitySubsystemType.FixedUpdate;
-
     public void FixedUpdate(float deltaTime)
     {
     }

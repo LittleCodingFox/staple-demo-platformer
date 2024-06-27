@@ -2,10 +2,8 @@ using Staple;
 
 namespace Platformer;
 
-class SpinnerSystem : IEntitySystem
+class SpinnerSystem : IEntitySystemUpdate
 {
-    public EntitySubsystemType UpdateType => EntitySubsystemType.Update;
-
     public void Update(float deltaTime)
     {
         Scene.ForEach((Entity entity, ref Transform transform, ref SpinnerComponent spinner) =>
@@ -21,10 +19,6 @@ class SpinnerSystem : IEntitySystem
 
             transform.LocalRotation = Math.FromEulerAngles(eulerAngles);
         });
-    }
-
-    public void FixedUpdate(float deltaTime)
-    {
     }
 
     public void Shutdown()

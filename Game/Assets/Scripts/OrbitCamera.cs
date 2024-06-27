@@ -29,10 +29,11 @@ class OrbitCamera : IComponent
     [Range(0, 90)]
     public float alignSmoothRange = 45.0f;
 
-    internal Transform focus;
+    public Transform focus;
 
     internal Vector3 focusPoint;
     internal Vector3 previousFocusPoint;
     internal Vector2 orbitAngles = new Vector2(-45, 0);
     internal float lastManualRotationTime;
+    internal bool firstFrame = true;
 }

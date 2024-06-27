@@ -1,14 +1,8 @@
 ﻿using Staple;
 using Staple.UI;
 
-class FPSCounterSystem : IEntitySystem
+class FPSCounterSystem : IEntitySystemUpdate
 {
-    public EntitySubsystemType UpdateType => EntitySubsystemType.Update;
-
-    public void FixedUpdate(float deltaTime)
-    {
-    }
-
     public void Update(float deltaTime)
     {
         Scene.ForEach((Entity entity, ref UIText text, ref FPSCounterComponent component) =>

@@ -2,15 +2,9 @@ using Staple;
 
 namespace Platformer;
 
-class CoinSystem : IEntitySystem, IPhysicsReceiver3D
+class CoinSystem : IEntitySystemFixedUpdate, IPhysicsReceiver3D
 {
-    public EntitySubsystemType UpdateType => EntitySubsystemType.FixedUpdate;
-
     public void FixedUpdate(float deltaTime)
-    {
-    }
-
-    public void Update(float deltaTime)
     {
     }
 
@@ -34,14 +28,14 @@ class CoinSystem : IEntitySystem, IPhysicsReceiver3D
     {
         void Handle(Entity entity, CoinComponent coin)
         {
-            entity.Destroy();
-
             if (entity.TryGetComponent<AudioSource>(out var source) && coin.pickupClip != null)
             {
                 source.audioClip = coin.pickupClip;
 
                 source.Play();
             }
+
+            entity.Destroy();
         }
 
         if (self.Entity.TryGetComponent<CoinComponent>(out var coin))

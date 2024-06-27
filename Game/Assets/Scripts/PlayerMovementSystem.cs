@@ -3,10 +3,8 @@ using System.Numerics;
 
 namespace Platformer;
 
-class PlayerMovementSystem : IEntitySystem
+class PlayerMovementSystem : IEntitySystemUpdate, IEntitySystemFixedUpdate
 {
-    public EntitySubsystemType UpdateType => EntitySubsystemType.Both;
-
     private Vector2 movement;
     private bool jumpPress = false;
 

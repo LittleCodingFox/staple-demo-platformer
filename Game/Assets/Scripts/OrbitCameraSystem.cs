@@ -4,10 +4,8 @@ using System.Numerics;
 namespace Platformer;
 
 //Based on https://catlikecoding.com/unity/tutorials/movement/orbit-camera/
-class OrbitCameraSystem : IEntitySystem
+class OrbitCameraSystem : IEntitySystemUpdate
 {
-    public EntitySubsystemType UpdateType => EntitySubsystemType.Update;
-
     private void UpdateFocusPoint(OrbitCamera camera)
     {
         camera.previousFocusPoint = camera.focusPoint;
@@ -119,23 +117,12 @@ class OrbitCameraSystem : IEntitySystem
         }
     }
 
-    public void FixedUpdate(float deltaTime)
-    {
-    }
-
     public void Update(float deltaTime)
     {
         Scene.ForEach((Entity entity, ref Transform transform, ref OrbitCamera camera) =>
         {
-            if(camera.focus == null)
+            if(camera.firstFrame && camera.focus != null)
             {
-                camera.focus = Scene.FindEntity("Player").GetComponent<Transform>();
-
-                if (camera.focus == null)
-                {
-                    return;
-                }
-
                 camera.focusPoint = camera.focus.Position;
                 transform.LocalRotation = Math.FromEulerAngles(new Vector3(camera.orbitAngles.X, camera.orbitAngles.Y, 0));
             }
