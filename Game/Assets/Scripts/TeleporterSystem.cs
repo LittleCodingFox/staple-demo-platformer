@@ -8,10 +8,6 @@ class TeleporterSystem : IEntitySystemFixedUpdate, IPhysicsReceiver3D
     {
     }
 
-    public void Update(float deltaTime)
-    {
-    }
-
     public void Startup()
     {
     }

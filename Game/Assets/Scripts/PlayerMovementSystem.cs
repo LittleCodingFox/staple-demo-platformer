@@ -1,4 +1,5 @@
 ﻿using Staple;
+using System.Linq;
 using System.Numerics;
 
 namespace Platformer;
@@ -7,10 +8,14 @@ class PlayerMovementSystem : IEntitySystemUpdate, IEntitySystemFixedUpdate
 {
     private Vector2 movement;
     private bool jumpPress = false;
+    private int movementKey;
+    private int jumpKey;
 
     public void FixedUpdate(float deltaTime)
     {
-        Scene.ForEach((Entity entity, ref Transform transform, ref OrbitCamera camera) =>
+        var cameras = Scene.ForEach<Transform, OrbitCamera>();
+
+        foreach((Entity entity, Transform transform, OrbitCamera camera) in cameras)
         {
             if (camera.focus == null ||
                 camera.focus.entity.TryGetComponent<PlayerMovement>(out var playerMovement) == false ||
@@ -76,7 +81,7 @@ class PlayerMovementSystem : IEntitySystemUpdate, IEntitySystemFixedUpdate
 
             animator.animationController?.SetBoolParameter("Movement", movement != Vector2.Zero);
             animator.animationController?.SetBoolParameter("Jump", playerMovement.grounded == false);
-        });
+        }
     }
 
     public void Update(float deltaTime)
@@ -103,5 +108,66 @@ class PlayerMovementSystem : IEntitySystemUpdate, IEntitySystemFixedUpdate
 
     public void Startup()
     {
+        movementKey = Input.AddAction(new()
+        {
+            type = InputActionType.DualAxis,
+            devices = new InputAction.Device[]
+            {
+                new()
+                {
+                    device = InputDevice.Gamepad,
+                    gamepad = new()
+                    {
+                        firstAxis = GamepadAxis.LeftX,
+                        secondAxis = GamepadAxis.LeftY,
+                    }
+                },
+                new()
+                {
+                    device = InputDevice.Keyboard,
+                    keys = new()
+                    {
+                        secondPositive = KeyCode.W,
+                        secondNegative = KeyCode.S,
+                        firstNegative = KeyCode.A,
+                        firstPositive = KeyCode.D,
+                    }
+                }
+            }
+            .ToList(),
+        },
+        (InputActionContext context, Vector2 value) =>
+        {
+            movement = value;
+        });
+
+        jumpKey = Input.AddAction(new()
+        {
+            type = InputActionType.Press,
+            devices = new InputAction.Device[]
+            {
+                new()
+                {
+                    device = InputDevice.Gamepad,
+                    gamepad = new()
+                    {
+                        button = GamepadButton.A,
+                    }
+                },
+                new()
+                {
+                    device = InputDevice.Keyboard,
+                    keys = new()
+                    {
+                        Key = KeyCode.Space,
+                    }
+                }
+            }
+            .ToList(),
+        },
+        (InputActionContext context) =>
+        {
+            jumpPress = true;
+        });
     }
 }

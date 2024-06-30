@@ -1,4 +1,5 @@
 using Staple;
+using System.Linq;
 using System.Numerics;
 
 namespace Platformer;
@@ -6,6 +7,9 @@ namespace Platformer;
 //Based on https://catlikecoding.com/unity/tutorials/movement/orbit-camera/
 class OrbitCameraSystem : IEntitySystemUpdate
 {
+    private Vector2 movement;
+    private int movementKey;
+
     private void UpdateFocusPoint(OrbitCamera camera)
     {
         camera.previousFocusPoint = camera.focusPoint;
@@ -38,14 +42,9 @@ class OrbitCameraSystem : IEntitySystemUpdate
 
     private bool ManualRotation(OrbitCamera camera)
     {
-        var input = new Vector2(Input.MouseRelativePosition.Y, Input.MouseRelativePosition.X);
+        var input = new Vector2(movement.Y, -movement.X);
 
-        if(Input.GetGamepadCount() > 0)
-        {
-            input = Input.GetGamepadRightAxis(0);
-
-            (input.X, input.Y) = (-input.Y, -input.X);
-        }
+        movement = Vector2.Zero;
 
         var e = 0.001f;
 
@@ -119,7 +118,9 @@ class OrbitCameraSystem : IEntitySystemUpdate
 
     public void Update(float deltaTime)
     {
-        Scene.ForEach((Entity entity, ref Transform transform, ref OrbitCamera camera) =>
+        var cameras = Scene.ForEach<Transform, OrbitCamera>();
+
+        foreach((Entity entity, Transform transform, OrbitCamera camera) in cameras)
         {
             if(camera.firstFrame && camera.focus != null)
             {
@@ -148,7 +149,7 @@ class OrbitCameraSystem : IEntitySystemUpdate
 
             transform.LocalPosition = position;
             transform.LocalRotation = rotation;
-        });
+        }
     }
 
     public void Shutdown()
@@ -157,5 +158,37 @@ class OrbitCameraSystem : IEntitySystemUpdate
 
     public void Startup()
     {
+        movementKey = Input.AddAction(new()
+        {
+            type = InputActionType.DualAxis,
+            devices = new InputAction.Device[]
+            {
+                new()
+                {
+                    device = InputDevice.Gamepad,
+                    gamepad = new()
+                    {
+                        firstAxis = GamepadAxis.RightX,
+                        secondAxis = GamepadAxis.RightY,
+                    }
+                },
+                new()
+                {
+                    device = InputDevice.Mouse,
+                    mouse = new()
+                    {
+                        horizontal = true,
+                        vertical = true,
+                    }
+                }
+            }
+            .ToList(),
+        },
+        (InputActionContext context, Vector2 value) =>
+        {
+            Log.Debug(value.ToString());
+
+            movement = value;
+        });
     }
 }

@@ -6,7 +6,9 @@ class SpinnerSystem : IEntitySystemUpdate
 {
     public void Update(float deltaTime)
     {
-        Scene.ForEach((Entity entity, ref Transform transform, ref SpinnerComponent spinner) =>
+        var spinners = Scene.ForEach<Transform, SpinnerComponent>();
+
+        foreach((Entity entity, Transform transform, SpinnerComponent spinner) in spinners)
         {
             var eulerAngles = Math.ToEulerAngles(transform.LocalRotation);
 
@@ -18,7 +20,7 @@ class SpinnerSystem : IEntitySystemUpdate
             }
 
             transform.LocalRotation = Math.FromEulerAngles(eulerAngles);
-        });
+        }
     }
 
     public void Shutdown()
