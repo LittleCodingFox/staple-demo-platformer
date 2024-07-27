@@ -26,7 +26,7 @@ class CoinSystem : IEntitySystemFixedUpdate, IPhysicsReceiver3D
 
     public void OnContactAdded(IBody3D self, IBody3D other)
     {
-        void Handle(Entity entity, CoinComponent coin)
+        static void Handle(Entity entity, CoinComponent coin)
         {
             if (entity.TryGetComponent<AudioSource>(out var source) && coin.pickupClip != null)
             {

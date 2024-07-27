@@ -13,13 +13,14 @@ class PlayerMovementSystem : IEntitySystemUpdate, IEntitySystemFixedUpdate
 
     public void FixedUpdate(float deltaTime)
     {
-        var cameras = Scene.ForEach<Transform, OrbitCamera>();
+        var cameras = Scene.Query<Transform, OrbitCamera>();
 
-        foreach((Entity entity, Transform transform, OrbitCamera camera) in cameras)
+        foreach((_, Transform transform, OrbitCamera camera) in cameras)
         {
             if (camera.focus == null ||
                 camera.focus.entity.TryGetComponent<PlayerMovement>(out var playerMovement) == false ||
-                (camera.focus.GetChild(0)?.entity.TryGetComponent<SkinnedMeshAnimator>(out var animator) ?? false) == false)
+                (camera.focus.entity.TryGetComponent<SkinnedMeshAnimator>(out var animator) ||
+                (camera.focus.GetChild(0)?.entity.TryGetComponent(out animator) ?? false)) == false)
             {
                 return;
             }
@@ -111,8 +112,8 @@ class PlayerMovementSystem : IEntitySystemUpdate, IEntitySystemFixedUpdate
         movementKey = Input.AddAction(new()
         {
             type = InputActionType.DualAxis,
-            devices = new InputAction.Device[]
-            {
+            devices =
+            [
                 new()
                 {
                     device = InputDevice.Gamepad,
@@ -133,8 +134,7 @@ class PlayerMovementSystem : IEntitySystemUpdate, IEntitySystemFixedUpdate
                         firstPositive = KeyCode.D,
                     }
                 }
-            }
-            .ToList(),
+            ],
         },
         (InputActionContext context, Vector2 value) =>
         {
@@ -144,8 +144,8 @@ class PlayerMovementSystem : IEntitySystemUpdate, IEntitySystemFixedUpdate
         jumpKey = Input.AddAction(new()
         {
             type = InputActionType.Press,
-            devices = new InputAction.Device[]
-            {
+            devices =
+            [
                 new()
                 {
                     device = InputDevice.Gamepad,
@@ -162,8 +162,7 @@ class PlayerMovementSystem : IEntitySystemUpdate, IEntitySystemFixedUpdate
                         Key = KeyCode.Space,
                     }
                 }
-            }
-            .ToList(),
+            ],
         },
         (InputActionContext context) =>
         {

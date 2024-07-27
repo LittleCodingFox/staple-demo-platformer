@@ -26,7 +26,7 @@ class TeleporterSystem : IEntitySystemFixedUpdate, IPhysicsReceiver3D
 
     public void OnContactAdded(IBody3D A, IBody3D B)
     {
-        void Handle(IBody3D body, TeleporterComponent teleporter)
+        static void Handle(IBody3D body, TeleporterComponent teleporter)
         {
             body.Position = teleporter.position;
         }

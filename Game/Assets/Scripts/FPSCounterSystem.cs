@@ -5,9 +5,9 @@ class FPSCounterSystem : IEntitySystemUpdate
 {
     public void Update(float deltaTime)
     {
-        var counters = Scene.ForEach<UIText, FPSCounterComponent>();
+        var counters = Scene.Query<UIText, FPSCounterComponent>();
 
-        foreach((Entity entity, UIText text, FPSCounterComponent component) in counters)
+        foreach((_, UIText text, _) in counters)
         {
             text.text = $"FPS: {Time.FPS}";
         }

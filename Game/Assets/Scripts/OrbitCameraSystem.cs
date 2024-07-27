@@ -118,9 +118,9 @@ class OrbitCameraSystem : IEntitySystemUpdate
 
     public void Update(float deltaTime)
     {
-        var cameras = Scene.ForEach<Transform, OrbitCamera>();
+        var cameras = Scene.Query<Transform, OrbitCamera>();
 
-        foreach((Entity entity, Transform transform, OrbitCamera camera) in cameras)
+        foreach((_, Transform transform, OrbitCamera camera) in cameras)
         {
             if(camera.firstFrame && camera.focus != null)
             {
@@ -161,8 +161,8 @@ class OrbitCameraSystem : IEntitySystemUpdate
         movementKey = Input.AddAction(new()
         {
             type = InputActionType.DualAxis,
-            devices = new InputAction.Device[]
-            {
+            devices =
+            [
                 new()
                 {
                     device = InputDevice.Gamepad,
@@ -181,13 +181,10 @@ class OrbitCameraSystem : IEntitySystemUpdate
                         vertical = true,
                     }
                 }
-            }
-            .ToList(),
+            ],
         },
         (InputActionContext context, Vector2 value) =>
         {
-            Log.Debug(value.ToString());
-
             movement = value;
         });
     }
