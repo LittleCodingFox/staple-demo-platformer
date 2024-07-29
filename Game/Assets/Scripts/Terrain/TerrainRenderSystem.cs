@@ -129,7 +129,7 @@ internal class TerrainRenderSystem : IRenderSystem
             }
         }
 
-        var normals = Mesh.GenerateNormals(positions, indices);
+        var normals = Mesh.GenerateNormals(positions, indices, true);
 
         if (normals.Length == renderer.meshData.Length)
         {

@@ -2914,7 +2914,7 @@
         "type": "TerrainRenderer",
         "data": {
           "asset": "14281697-5088-48c8-a916-275a7eeb0817",
-          "material": "1a3342aa-6ccf-4be5-8dfd-2f4a78302ee6",
+          "material": "db3c6e30-0fce-4b1b-a9e7-9bf7dcbfec30",
           "needsUpdate": false,
           "enabled": true,
           "forceRenderingOff": false,
@@ -3178,6 +3178,50 @@
         "type": "Staple.UI.UIButton",
         "data": {
           "onClick": ""
+        }
+      }
+    ],
+    "layer": "Default",
+    "enabled": true,
+    "prefabGuid": null,
+    "prefabLocalID": 0
+  },
+  {
+    "kind": "Entity",
+    "name": "Light",
+    "ID": 95,
+    "parent": 0,
+    "transform": {
+      "position": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      },
+      "rotation": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      },
+      "scale": {
+        "x": 1.0,
+        "y": 1.0,
+        "z": 1.0
+      }
+    },
+    "components": [
+      {
+        "type": "Staple.Light",
+        "data": {
+          "type": "Directional",
+          "color": "#FFFFFFFF"
+        }
+      },
+      {
+        "type": "Platformer.Sun",
+        "data": {
+          "time": 10.0,
+          "startColor": "#FFFFFFFF",
+          "endColor": "#FFFFFFFF"
         }
       }
     ],
