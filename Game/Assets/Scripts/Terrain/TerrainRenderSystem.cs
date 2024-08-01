@@ -251,7 +251,7 @@ internal class TerrainRenderSystem : IRenderSystem
     {
         foreach(var renderer in renderers)
         {
-            MeshRenderSystem.DrawMesh(renderer.renderer.mesh, renderer.position, renderer.rotation, renderer.scale, renderer.material, renderer.viewID);
+            MeshRenderSystem.DrawMesh(renderer.renderer.mesh, renderer.position, renderer.rotation, renderer.scale, renderer.material, MeshLighting.Lit, renderer.viewID);
         }
     }
 }
