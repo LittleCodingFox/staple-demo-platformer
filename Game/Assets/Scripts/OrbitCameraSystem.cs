@@ -12,6 +12,11 @@ class OrbitCameraSystem : IEntitySystemUpdate
 
     private void UpdateFocusPoint(OrbitCamera camera)
     {
+        if(camera.focus == null)
+        {
+            return;
+        }
+
         camera.previousFocusPoint = camera.focusPoint;
 
         var target = camera.focus.Position;

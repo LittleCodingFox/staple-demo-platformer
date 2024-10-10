@@ -25,9 +25,9 @@ public class Sun : CallbackComponent
             return;
         }
 
-        timer += Time.deltaTime;
+        timer += Time.fixedDeltaTime;
 
-        if(timer >= time)
+        if (timer >= time)
         {
             timer = 0.0f;
         }
