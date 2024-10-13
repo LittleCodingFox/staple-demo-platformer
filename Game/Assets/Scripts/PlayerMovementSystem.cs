@@ -6,6 +6,7 @@ namespace Platformer;
 
 class PlayerMovementSystem : IEntitySystemUpdate, IEntitySystemFixedUpdate
 {
+    private readonly SceneQuery<Transform, OrbitCamera> cameras = new();
     private Vector2 movement;
     private bool jumpPress = false;
     private int movementKey;
@@ -13,8 +14,6 @@ class PlayerMovementSystem : IEntitySystemUpdate, IEntitySystemFixedUpdate
 
     public void FixedUpdate(float deltaTime)
     {
-        var cameras = Scene.Query<Transform, OrbitCamera>();
-
         foreach((_, Transform transform, OrbitCamera camera) in cameras)
         {
             if (camera.focus == null ||
@@ -89,18 +88,6 @@ class PlayerMovementSystem : IEntitySystemUpdate, IEntitySystemFixedUpdate
     {
         movement = Vector2.Zero;
         jumpPress = false;
-
-        if (Input.GetGamepadCount() > 0)
-        {
-            movement = Input.GetGamepadLeftAxis(0);
-            jumpPress |= Input.GetGamepadButton(0, GamepadButton.A);
-        }
-        else
-        {
-            movement.X = Input.GetKey(KeyCode.A) ? -1 : Input.GetKey(KeyCode.D) ? 1 : 0;
-            movement.Y = Input.GetKey(KeyCode.W) ? 1 : Input.GetKey(KeyCode.S) ? -1 : 0;
-            jumpPress |= Input.GetKey(KeyCode.Space);
-        }
     }
 
     public void Shutdown()

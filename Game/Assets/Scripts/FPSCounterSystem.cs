@@ -3,13 +3,15 @@ using Staple.UI;
 
 class FPSCounterSystem : IEntitySystemUpdate
 {
+    private readonly SceneQuery<UIText, FPSCounterComponent> counters = new();
+
     public void Update(float deltaTime)
     {
-        var counters = Scene.Query<UIText, FPSCounterComponent>();
+        var fps = $"FPS: {Time.FPS}";
 
-        foreach((_, UIText text, _) in counters)
+        foreach ((_, UIText text, _) in counters)
         {
-            text.text = $"FPS: {Time.FPS}";
+            text.text = fps;
         }
     }
 

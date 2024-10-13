@@ -9,6 +9,7 @@ class OrbitCameraSystem : IEntitySystemUpdate
 {
     private Vector2 movement;
     private int movementKey;
+    private readonly SceneQuery<Transform, OrbitCamera> cameras = new();
 
     private void UpdateFocusPoint(OrbitCamera camera)
     {
@@ -123,8 +124,6 @@ class OrbitCameraSystem : IEntitySystemUpdate
 
     public void Update(float deltaTime)
     {
-        var cameras = Scene.Query<Transform, OrbitCamera>();
-
         foreach((_, Transform transform, OrbitCamera camera) in cameras)
         {
             if(camera.firstFrame && camera.focus != null)
