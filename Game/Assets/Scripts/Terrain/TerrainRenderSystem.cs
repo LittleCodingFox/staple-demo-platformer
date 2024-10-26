@@ -140,9 +140,9 @@ internal class TerrainRenderSystem : IRenderSystem
         }
 
         renderer.mesh.SetMeshData(renderer.meshData, new VertexLayoutBuilder()
-            .Add(Bgfx.bgfx.Attrib.Position, 3, Bgfx.bgfx.AttribType.Float)
-            .Add(Bgfx.bgfx.Attrib.Normal, 3, Bgfx.bgfx.AttribType.Float)
-            .Add(Bgfx.bgfx.Attrib.TexCoord0, 2, Bgfx.bgfx.AttribType.Float)
+            .Add(VertexAttribute.Position, 3, VertexAttributeType.Float)
+            .Add(VertexAttribute.Normal, 3, VertexAttributeType.Float)
+            .Add(VertexAttribute.TexCoord0, 2, VertexAttributeType.Float)
             .Build());
     }
 
@@ -251,7 +251,8 @@ internal class TerrainRenderSystem : IRenderSystem
     {
         foreach(var renderer in renderers)
         {
-            MeshRenderSystem.DrawMesh(renderer.renderer.mesh, renderer.position, renderer.rotation, renderer.scale, renderer.material, MeshLighting.Lit, renderer.viewID);
+            MeshRenderSystem.RenderMesh(renderer.renderer.mesh, renderer.position, renderer.rotation, renderer.scale, renderer.material,
+                MaterialLighting.Lit, renderer.viewID);
         }
     }
 }
