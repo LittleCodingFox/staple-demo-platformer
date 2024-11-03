@@ -22,12 +22,4 @@ class SpinnerSystem : IEntitySystemUpdate
             transform.LocalRotation = Math.FromEulerAngles(eulerAngles);
         }
     }
-
-    public void Shutdown()
-    {
-    }
-
-    public void Startup()
-    {
-    }
 }

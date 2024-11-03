@@ -1,0 +1,70 @@
+{
+  "guid": "4f3434da-a04d-4a83-8c73-b6930d8a8b52",
+  "mainObject": {
+    "kind": "Entity",
+    "name": "Cube",
+    "ID": 0,
+    "parent": 0,
+    "transform": {
+      "position": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      },
+      "rotation": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      },
+      "scale": {
+        "x": 1.0,
+        "y": 1.0,
+        "z": 1.0
+      }
+    },
+    "components": [
+      {
+        "type": "Staple.MeshRenderer",
+        "data": {
+          "mesh": "Internal/Cube",
+          "materials": [
+            "88428bcf-6adb-49e1-ace8-fb2cf71a2959"
+          ],
+          "lighting": "Lit",
+          "enabled": true,
+          "forceRenderingOff": false,
+          "receiveShadows": true,
+          "sortingLayer": 0,
+          "sortingOrder": 0
+        }
+      },
+      {
+        "type": "Staple.BoxCollider3D",
+        "data": {
+          "size": {
+            "x": 1.0,
+            "y": 1.0,
+            "z": 1.0
+          },
+          "position": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "rotation": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0,
+            "w": 1.0
+          }
+        }
+      }
+    ],
+    "layer": "Default",
+    "enabled": true,
+    "prefabGuid": null,
+    "prefabLocalID": 0
+  },
+  "children": [],
+  "typeName": "Staple.Prefab"
+}

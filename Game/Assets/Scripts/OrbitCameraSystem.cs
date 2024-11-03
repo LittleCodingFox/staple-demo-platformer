@@ -5,7 +5,7 @@ using System.Numerics;
 namespace Platformer;
 
 //Based on https://catlikecoding.com/unity/tutorials/movement/orbit-camera/
-class OrbitCameraSystem : IEntitySystemUpdate
+class OrbitCameraSystem : IEntitySystemUpdate, IEntitySystemLifecycle
 {
     private Vector2 movement;
     private int movementKey;

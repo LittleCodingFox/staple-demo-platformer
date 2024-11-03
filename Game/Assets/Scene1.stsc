@@ -1,0 +1,179 @@
+[
+  {
+    "kind": "Entity",
+    "name": "Camera",
+    "ID": 1,
+    "parent": 0,
+    "transform": {
+      "position": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 10.0
+      },
+      "rotation": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      },
+      "scale": {
+        "x": 1.0,
+        "y": 1.0,
+        "z": 1.0
+      }
+    },
+    "components": [
+      {
+        "type": "Staple.Camera",
+        "data": {
+          "viewMode": "Default",
+          "clearMode": "SolidColor",
+          "cameraType": "Perspective",
+          "orthographicSize": 5.0,
+          "fov": 90.0,
+          "nearPlane": 0.01,
+          "farPlane": 1000.0,
+          "viewport": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 1.0,
+            "w": 1.0
+          },
+          "clearColor": "#007FFFFF",
+          "cullingLayers": 4294967295
+        }
+      }
+    ],
+    "layer": "Default",
+    "enabled": true,
+    "prefabGuid": null,
+    "prefabLocalID": 0
+  },
+  {
+    "kind": "Entity",
+    "name": "Directional Light",
+    "ID": 2,
+    "parent": 0,
+    "transform": {
+      "position": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      },
+      "rotation": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      },
+      "scale": {
+        "x": 1.0,
+        "y": 1.0,
+        "z": 1.0
+      }
+    },
+    "components": [
+      {
+        "type": "Staple.Light",
+        "data": {
+          "type": "Directional",
+          "color": "#FFFFFFFF"
+        }
+      }
+    ],
+    "layer": "Default",
+    "enabled": true,
+    "prefabGuid": null,
+    "prefabLocalID": 0
+  },
+  {
+    "kind": "Entity",
+    "name": "UI Canvas",
+    "ID": 3,
+    "parent": 0,
+    "transform": {
+      "position": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      },
+      "rotation": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      },
+      "scale": {
+        "x": 1.0,
+        "y": 1.0,
+        "z": 1.0
+      }
+    },
+    "components": [
+      {
+        "type": "Staple.UI.UICanvas",
+        "data": {}
+      }
+    ],
+    "layer": "Default",
+    "enabled": true,
+    "prefabGuid": null,
+    "prefabLocalID": 0
+  },
+  {
+    "kind": "Entity",
+    "name": "UI Text",
+    "ID": 4,
+    "parent": 3,
+    "transform": {
+      "position": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      },
+      "rotation": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      },
+      "scale": {
+        "x": 1.0,
+        "y": 1.0,
+        "z": 1.0
+      }
+    },
+    "components": [
+      {
+        "type": "Staple.UI.UIText",
+        "data": {
+          "text": "New Text",
+          "fontSize": 30,
+          "autoSizeText": false,
+          "minFontSize": 14,
+          "maxFontSize": 30,
+          "textColor": "#FFFFFFFF",
+          "secondaryTextColor": "#FFFFFFFF",
+          "borderSize": 1,
+          "borderColor": "#00000000",
+          "font": "784583f8-7d9b-43a1-bd73-b9a410c863d9",
+          "material": "1953e365-8dc0-409d-b9f6-33966f2c6963",
+          "alignment": "TopRight",
+          "position": {
+            "x": -30.0,
+            "y": 30.0
+          },
+          "size": {
+            "x": 147.0,
+            "y": 30.0
+          },
+          "adjustToIntrinsicSize": true
+        }
+      },
+      {
+        "type": "FPSCounterComponent",
+        "data": {}
+      }
+    ],
+    "layer": "Default",
+    "enabled": true,
+    "prefabGuid": null,
+    "prefabLocalID": 0
+  }
+]

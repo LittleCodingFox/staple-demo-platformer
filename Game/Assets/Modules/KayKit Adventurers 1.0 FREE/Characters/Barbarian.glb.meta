@@ -3,13 +3,16 @@
   "makeLeftHanded": false,
   "splitLargeMeshes": false,
   "preTransformVertices": false,
-  "limitBoneWeights": false,
   "flipUVs": true,
   "flipWindingOrder": true,
   "splitByBoneCount": false,
   "debone": false,
-  "typeName": "Staple.Mesh",
   "convertUnits": true,
+  "regenerateNormals": false,
+  "useSmoothNormals": false,
   "rotation": "None",
-  "scale": 1.0
+  "scale": 1.0,
+  "lighting": "Lit",
+  "frameRate": 60,
+  "typeName": "Staple.Mesh"
 }

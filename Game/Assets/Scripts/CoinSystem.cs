@@ -2,12 +2,8 @@ using Staple;
 
 namespace Platformer;
 
-class CoinSystem : IEntitySystemFixedUpdate, IPhysicsReceiver3D
+class CoinSystem : IEntitySystemLifecycle, IPhysicsReceiver3D
 {
-    public void FixedUpdate(float deltaTime)
-    {
-    }
-
     public void Shutdown()
     {
     }

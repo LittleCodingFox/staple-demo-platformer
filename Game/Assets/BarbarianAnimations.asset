@@ -54,7 +54,7 @@
                             },
                             "condition": {
                               "typeName": "Staple.SkinnedAnimationStateMachine+AnimationCondition",
-                              "value": 0
+                              "value": "Equal"
                             },
                             "boolValue": {
                               "typeName": "System.Boolean",
@@ -101,7 +101,7 @@
                             },
                             "condition": {
                               "typeName": "Staple.SkinnedAnimationStateMachine+AnimationCondition",
-                              "value": 0
+                              "value": "Equal"
                             },
                             "boolValue": {
                               "typeName": "System.Boolean",
@@ -170,7 +170,7 @@
                             },
                             "condition": {
                               "typeName": "Staple.SkinnedAnimationStateMachine+AnimationCondition",
-                              "value": 0
+                              "value": "Equal"
                             },
                             "boolValue": {
                               "typeName": "System.Boolean",
@@ -217,7 +217,7 @@
                             },
                             "condition": {
                               "typeName": "Staple.SkinnedAnimationStateMachine+AnimationCondition",
-                              "value": 0
+                              "value": "Equal"
                             },
                             "boolValue": {
                               "typeName": "System.Boolean",
@@ -286,7 +286,7 @@
                             },
                             "condition": {
                               "typeName": "Staple.SkinnedAnimationStateMachine+AnimationCondition",
-                              "value": 0
+                              "value": "Equal"
                             },
                             "boolValue": {
                               "typeName": "System.Boolean",
@@ -367,7 +367,7 @@
             },
             "parameterType": {
               "typeName": "Staple.SkinnedAnimationStateMachine+AnimationParameterType",
-              "value": 0
+              "value": "Bool"
             }
           }
         },
@@ -380,7 +380,7 @@
             },
             "parameterType": {
               "typeName": "Staple.SkinnedAnimationStateMachine+AnimationParameterType",
-              "value": 0
+              "value": "Bool"
             }
           }
         }

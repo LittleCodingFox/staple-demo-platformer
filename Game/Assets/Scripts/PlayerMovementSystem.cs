@@ -4,7 +4,7 @@ using System.Numerics;
 
 namespace Platformer;
 
-class PlayerMovementSystem : IEntitySystemUpdate, IEntitySystemFixedUpdate
+class PlayerMovementSystem : IEntitySystemUpdate, IEntitySystemFixedUpdate, IEntitySystemLifecycle
 {
     private readonly SceneQuery<Transform, OrbitCamera> cameras = new();
     private Vector2 movement;

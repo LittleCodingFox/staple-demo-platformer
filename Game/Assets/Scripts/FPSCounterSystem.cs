@@ -14,12 +14,4 @@ class FPSCounterSystem : IEntitySystemUpdate
             text.text = fps;
         }
     }
-
-    public void Shutdown()
-    {
-    }
-
-    public void Startup()
-    {
-    }
 }
