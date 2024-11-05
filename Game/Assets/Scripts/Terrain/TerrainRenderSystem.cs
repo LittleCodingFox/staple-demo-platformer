@@ -16,7 +16,7 @@ internal class TerrainRenderSystem : IRenderSystem
         public Vector2 uv;
     }
 
-    private class RenderInfo
+    private struct RenderInfo
     {
         public Entity entity;
         public TerrainAsset asset;
@@ -28,7 +28,9 @@ internal class TerrainRenderSystem : IRenderSystem
         public ushort viewID;
     }
 
-    private readonly ConcurrentExpandableArray<RenderInfo> renderers = new();
+    private RenderInfo[] renderers = [];
+
+    private int rendererCount = 0;
 
     private readonly Dictionary<Vector2Int, (TerrainVertex[], int[])> cachedTerrainSizes = [];
 
@@ -147,12 +149,8 @@ internal class TerrainRenderSystem : IRenderSystem
 
     public void Preprocess((Entity, Transform, IComponent)[] contents, Camera activeCamera, Transform activeCameraTransform)
     {
-        renderers.Length = contents.Length;
-
-        for(var i = 0; i < contents.Length; i++)
+        foreach(var (entity, transform, relatedComponent) in contents)
         {
-            var (entity, transform, relatedComponent) = contents[i];
-
             if (relatedComponent is not TerrainRenderer renderer ||
                 renderer.asset == null ||
                 renderer.material == null ||
@@ -162,8 +160,6 @@ internal class TerrainRenderSystem : IRenderSystem
                 renderer.asset.heightData == null ||
                 renderer.asset.heightData.Length != renderer.asset.width * renderer.asset.height)
             {
-                renderers.Length--;
-
                 continue;
             }
 
@@ -224,10 +220,15 @@ internal class TerrainRenderSystem : IRenderSystem
 
     public void Process((Entity, Transform, IComponent)[] contents, Camera activeCamera, Transform activeCameraTransform, ushort viewId)
     {
-        for (var i = 0; i < contents.Length; i++)
+        if (renderers.Length < contents.Length)
         {
-            var (entity, transform, relatedComponent) = contents[i];
+            Array.Resize(ref renderers, contents.Length);
+        }
 
+        var index = 0;
+
+        foreach(var (entity, transform, relatedComponent) in contents)
+        {
             if (relatedComponent is not TerrainRenderer renderer ||
                 renderer.asset == null ||
                 renderer.material == null ||
@@ -241,7 +242,7 @@ internal class TerrainRenderSystem : IRenderSystem
                 continue;
             }
 
-            renderers[i] = new()
+            renderers[index++] = new()
             {
                 asset = renderer.asset,
                 entity = entity,
@@ -253,6 +254,8 @@ internal class TerrainRenderSystem : IRenderSystem
                 viewID = viewId,
             };
         }
+
+        rendererCount = index;
     }
 
     public Type RelatedComponent()
@@ -262,8 +265,10 @@ internal class TerrainRenderSystem : IRenderSystem
 
     public void Submit()
     {
-        foreach(var renderer in renderers)
+        for(var i = 0; i < rendererCount; i++)
         {
+            var renderer = renderers[i];
+
             MeshRenderSystem.RenderMesh(renderer.renderer.mesh, renderer.position, renderer.rotation, renderer.scale, renderer.material,
                 MaterialLighting.Lit, renderer.viewID);
         }
