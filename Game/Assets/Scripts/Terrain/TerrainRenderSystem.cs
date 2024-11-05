@@ -28,9 +28,9 @@ internal class TerrainRenderSystem : IRenderSystem
         public ushort viewID;
     }
 
-    private List<RenderInfo> renderers = new();
+    private readonly ConcurrentExpandableArray<RenderInfo> renderers = new();
 
-    private Dictionary<Vector2Int, (TerrainVertex[], int[])> cachedTerrainSizes = new();
+    private readonly Dictionary<Vector2Int, (TerrainVertex[], int[])> cachedTerrainSizes = [];
 
     private void CacheTerrain(int width, int height)
     {
@@ -78,7 +78,6 @@ internal class TerrainRenderSystem : IRenderSystem
 
     public void Prepare()
     {
-        renderers.Clear();
     }
 
     private void UpdateHeights(TerrainRenderer renderer)
@@ -146,100 +145,114 @@ internal class TerrainRenderSystem : IRenderSystem
             .Build());
     }
 
-    public void Preprocess(Entity entity, Transform transform, IComponent relatedComponent, Camera activeCamera, Transform activeCameraTransform)
+    public void Preprocess((Entity, Transform, IComponent)[] contents, Camera activeCamera, Transform activeCameraTransform)
     {
-        if(relatedComponent is not TerrainRenderer renderer ||
-            renderer.asset == null ||
-            renderer.material == null ||
-            renderer.material.Disposed ||
-            renderer.asset.width <= 0 ||
-            renderer.asset.height <= 0 ||
-            renderer.asset.heightData == null ||
-            renderer.asset.heightData.Length != renderer.asset.width * renderer.asset.height)
+        renderers.Length = contents.Length;
+
+        for(var i = 0; i < contents.Length; i++)
         {
-            return;
-        }
+            var (entity, transform, relatedComponent) = contents[i];
 
-        if (renderer.mesh == null ||
-            renderer.mesh.VertexCount != renderer.asset.width * renderer.asset.height * 4)
-        {
-            if(Platform.IsPlaying)
+            if (relatedComponent is not TerrainRenderer renderer ||
+                renderer.asset == null ||
+                renderer.material == null ||
+                renderer.material.Disposed ||
+                renderer.asset.width <= 0 ||
+                renderer.asset.height <= 0 ||
+                renderer.asset.heightData == null ||
+                renderer.asset.heightData.Length != renderer.asset.width * renderer.asset.height)
             {
-                renderer.mesh?.Clear();
+                renderers.Length--;
+
+                continue;
             }
 
-            renderer.mesh ??= new Mesh()
+            if (renderer.mesh == null ||
+                renderer.mesh.VertexCount != renderer.asset.width * renderer.asset.height * 4)
             {
-                MeshTopology = MeshTopology.Triangles,
-                IndexFormat = MeshIndexFormat.UInt32,
-            };
+                if (Platform.IsPlaying)
+                {
+                    renderer.mesh?.Clear();
+                }
 
-            if (Platform.IsEditor)
-            {
-                renderer.mesh.MarkDynamic();
+                renderer.mesh ??= new Mesh()
+                {
+                    MeshTopology = MeshTopology.Triangles,
+                    IndexFormat = MeshIndexFormat.UInt32,
+                };
+
+                if (Platform.IsEditor)
+                {
+                    renderer.mesh.MarkDynamic();
+                }
+
+                var data = GetCache(renderer.asset.width, renderer.asset.height);
+
+                renderer.meshData = data.Item1;
+
+                for (var j = 0; j < renderer.meshData.Length; j++)
+                {
+                    renderer.meshData[j].position.X *= renderer.asset.scale;
+                    renderer.meshData[j].position.Z *= renderer.asset.scale;
+                }
+
+                UpdateMesh(renderer, data.Item2);
+
+                renderer.mesh.Indices = data.Item2;
+
+                renderer.mesh.UploadMeshData();
+
+                if (entity.TryGetComponent<HeightMapCollider3D>(out var collider))
+                {
+                    collider.heights = renderer.asset.heightData;
+                    collider.offset = new Vector3(-0.5f * renderer.asset.width * renderer.asset.scale, 0, -0.5f * renderer.asset.height * renderer.asset.scale);
+                    collider.scale = Vector3.One * renderer.asset.scale;
+
+                    Physics3D.Instance.RecreateBody(entity);
+                }
             }
-
-            var data = GetCache(renderer.asset.width, renderer.asset.height);
-
-            renderer.meshData = data.Item1;
-
-            for(var i = 0; i < renderer.meshData.Length; i++)
+            else if (renderer.needsUpdate)
             {
-                renderer.meshData[i].position.X *= renderer.asset.scale;
-                renderer.meshData[i].position.Z *= renderer.asset.scale;
+                renderer.needsUpdate = false;
+
+                var data = GetCache(renderer.asset.width, renderer.asset.height);
+
+                UpdateMesh(renderer, data.Item2);
             }
-
-            UpdateMesh(renderer, data.Item2);
-
-            renderer.mesh.Indices = data.Item2;
-
-            renderer.mesh.UploadMeshData();
-
-            if(entity.TryGetComponent<HeightMapCollider3D>(out var collider))
-            {
-                collider.heights = renderer.asset.heightData;
-                collider.offset = new Vector3(-0.5f * renderer.asset.width * renderer.asset.scale, 0, -0.5f * renderer.asset.height * renderer.asset.scale);
-                collider.scale = Vector3.One * renderer.asset.scale;
-
-                Physics3D.Instance.RecreateBody(entity);
-            }
-        }
-        else if(renderer.needsUpdate)
-        {
-            renderer.needsUpdate = false;
-
-            var data = GetCache(renderer.asset.width, renderer.asset.height);
-
-            UpdateMesh(renderer, data.Item2);
         }
     }
 
-    public void Process(Entity entity, Transform transform, IComponent relatedComponent, Camera activeCamera, Transform activeCameraTransform, ushort viewId)
+    public void Process((Entity, Transform, IComponent)[] contents, Camera activeCamera, Transform activeCameraTransform, ushort viewId)
     {
-        if (relatedComponent is not TerrainRenderer renderer ||
-            renderer.asset == null ||
-            renderer.material == null ||
-            renderer.material.Disposed ||
-            renderer.asset.width <= 0 ||
-            renderer.asset.height <= 0 ||
-            renderer.asset.heightData == null ||
-            renderer.asset.heightData.Length != renderer.asset.width * renderer.asset.height ||
-            renderer.mesh == null)
+        for (var i = 0; i < contents.Length; i++)
         {
-            return;
-        }
+            var (entity, transform, relatedComponent) = contents[i];
 
-        renderers.Add(new()
-        {
-            asset = renderer.asset,
-            entity = entity,
-            material = renderer.material,
-            renderer = renderer,
-            position = transform.Position,
-            rotation = transform.Rotation,
-            scale = transform.Scale,
-            viewID = viewId,
-        });
+            if (relatedComponent is not TerrainRenderer renderer ||
+                renderer.asset == null ||
+                renderer.material == null ||
+                renderer.material.Disposed ||
+                renderer.asset.width <= 0 ||
+                renderer.asset.height <= 0 ||
+                renderer.asset.heightData == null ||
+                renderer.asset.heightData.Length != renderer.asset.width * renderer.asset.height ||
+                renderer.mesh == null)
+            {
+                continue;
+            }
+
+            renderers[i] = new()
+            {
+                asset = renderer.asset,
+                entity = entity,
+                material = renderer.material,
+                renderer = renderer,
+                position = transform.Position,
+                rotation = transform.Rotation,
+                scale = transform.Scale,
+                viewID = viewId,
+            };
+        }
     }
 
     public Type RelatedComponent()
