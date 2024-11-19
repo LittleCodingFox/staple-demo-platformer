@@ -124,7 +124,7 @@ class OrbitCameraSystem : IEntitySystemUpdate, IEntitySystemLifecycle
 
     public void Update(float deltaTime)
     {
-        foreach((_, Transform transform, OrbitCamera camera) in cameras)
+        foreach((_, Transform transform, OrbitCamera camera) in cameras.Contents)
         {
             if(camera.firstFrame && camera.focus != null)
             {

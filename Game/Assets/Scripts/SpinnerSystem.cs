@@ -8,7 +8,7 @@ class SpinnerSystem : IEntitySystemUpdate
 
     public void Update(float deltaTime)
     {
-        foreach((_, Transform transform, SpinnerComponent spinner) in spinners)
+        foreach((_, Transform transform, SpinnerComponent spinner) in spinners.Contents)
         {
             var eulerAngles = Math.ToEulerAngles(transform.LocalRotation);
 

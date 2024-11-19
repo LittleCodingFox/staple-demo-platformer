@@ -9,7 +9,7 @@ class FPSCounterSystem : IEntitySystemUpdate
     {
         var fps = $"FPS: {Time.FPS}";
 
-        foreach ((_, UIText text, _) in counters)
+        foreach ((_, UIText text, _) in counters.Contents)
         {
             text.text = fps;
         }

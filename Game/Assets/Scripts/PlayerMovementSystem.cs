@@ -14,7 +14,7 @@ class PlayerMovementSystem : IEntitySystemUpdate, IEntitySystemFixedUpdate, IEnt
 
     public void FixedUpdate(float deltaTime)
     {
-        foreach((_, Transform transform, OrbitCamera camera) in cameras)
+        foreach((_, Transform transform, OrbitCamera camera) in cameras.Contents)
         {
             if (camera.focus == null ||
                 camera.focus.entity.TryGetComponent<PlayerMovement>(out var playerMovement) == false ||

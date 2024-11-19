@@ -74,7 +74,11 @@ internal class TerrainRenderSystem : IRenderSystem
         return cachedTerrainSizes.TryGetValue(new Vector2Int(width, height), out var value) ? value : ([], []);
     }
 
-    public void Destroy()
+    public void Startup()
+    {
+    }
+
+    public void Shutdown()
     {
     }
 
@@ -140,7 +144,7 @@ internal class TerrainRenderSystem : IRenderSystem
             }
         }
 
-        renderer.mesh.SetMeshData(renderer.meshData, new VertexLayoutBuilder()
+        renderer.mesh.SetMeshData(renderer.meshData.AsSpan(), new VertexLayoutBuilder()
             .Add(VertexAttribute.Position, 3, VertexAttributeType.Float)
             .Add(VertexAttribute.Normal, 3, VertexAttributeType.Float)
             .Add(VertexAttribute.TexCoord0, 2, VertexAttributeType.Float)
@@ -239,6 +243,8 @@ internal class TerrainRenderSystem : IRenderSystem
                 renderer.asset.heightData.Length != renderer.asset.width * renderer.asset.height ||
                 renderer.mesh == null)
             {
+                renderer = relatedComponent as TerrainRenderer;
+
                 continue;
             }
 
