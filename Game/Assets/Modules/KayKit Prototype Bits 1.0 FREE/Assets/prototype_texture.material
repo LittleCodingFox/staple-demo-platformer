@@ -7,8 +7,7 @@
         "r": 255,
         "g": 255,
         "b": 255,
-        "a": 255,
-        "HexValue": "FFFFFFFF"
+        "a": 255
       }
     },
     "diffuseColor": {
@@ -17,8 +16,7 @@
         "r": 255,
         "g": 255,
         "b": 255,
-        "a": 255,
-        "HexValue": "FFFFFFFF"
+        "a": 255
       }
     },
     "emissiveColor": {
@@ -27,8 +25,7 @@
         "r": 0,
         "g": 0,
         "b": 0,
-        "a": 255,
-        "HexValue": "000000FF"
+        "a": 255
       }
     },
     "reflectiveColor": {
@@ -37,8 +34,7 @@
         "r": 255,
         "g": 255,
         "b": 255,
-        "a": 255,
-        "HexValue": "FFFFFFFF"
+        "a": 255
       }
     },
     "specularColor": {
@@ -47,8 +43,7 @@
         "r": 255,
         "g": 255,
         "b": 255,
-        "a": 255,
-        "HexValue": "FFFFFFFF"
+        "a": 255
       }
     },
     "transparentColor": {
@@ -57,8 +52,7 @@
         "r": 255,
         "g": 255,
         "b": 255,
-        "a": 255,
-        "HexValue": "FFFFFFFF"
+        "a": 255
       }
     },
     "ambientTexture_UMapping": {
@@ -87,15 +81,15 @@
     },
     "diffuseTexture_UMapping": {
       "type": "TextureWrap",
-      "textureWrapValue": "Repeat"
+      "textureWrapValue": "Clamp"
     },
     "diffuseTexture_VMapping": {
       "type": "TextureWrap",
-      "textureWrapValue": "Repeat"
+      "textureWrapValue": "Clamp"
     },
     "diffuseTexture": {
       "type": "Texture",
-      "textureValue": "7d89428c-c604-4630-b19a-ec2552c36d8e"
+      "textureValue": ""
     },
     "displacementTexture_UMapping": {
       "type": "TextureWrap",
@@ -195,11 +189,11 @@
     },
     "baseColorTexture_UMapping": {
       "type": "TextureWrap",
-      "textureWrapValue": "Repeat"
+      "textureWrapValue": "Clamp"
     },
     "baseColorTexture_VMapping": {
       "type": "TextureWrap",
-      "textureWrapValue": "Repeat"
+      "textureWrapValue": "Clamp"
     },
     "baseColorTexture": {
       "type": "Texture",
@@ -253,5 +247,7 @@
       "type": "Texture",
       "textureValue": ""
     }
-  }
+  },
+  "enabledShaderVariants": [],
+  "cullingMode": "Back"
 }

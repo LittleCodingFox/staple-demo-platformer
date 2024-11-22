@@ -7,8 +7,7 @@
         "r": 255,
         "g": 255,
         "b": 255,
-        "a": 255,
-        "HexValue": "FFFFFFFF"
+        "a": 255
       }
     },
     "diffuseColor": {
@@ -17,8 +16,7 @@
         "r": 255,
         "g": 255,
         "b": 255,
-        "a": 255,
-        "HexValue": "FFFFFFFF"
+        "a": 255
       }
     },
     "emissiveColor": {
@@ -27,8 +25,7 @@
         "r": 0,
         "g": 0,
         "b": 0,
-        "a": 255,
-        "HexValue": "000000FF"
+        "a": 255
       }
     },
     "reflectiveColor": {
@@ -37,8 +34,7 @@
         "r": 255,
         "g": 255,
         "b": 255,
-        "a": 255,
-        "HexValue": "FFFFFFFF"
+        "a": 255
       }
     },
     "specularColor": {
@@ -47,8 +43,7 @@
         "r": 255,
         "g": 255,
         "b": 255,
-        "a": 255,
-        "HexValue": "FFFFFFFF"
+        "a": 255
       }
     },
     "transparentColor": {
@@ -57,8 +52,7 @@
         "r": 255,
         "g": 255,
         "b": 255,
-        "a": 255,
-        "HexValue": "FFFFFFFF"
+        "a": 255
       }
     },
     "ambientTexture_UMapping": {
@@ -95,7 +89,7 @@
     },
     "diffuseTexture": {
       "type": "Texture",
-      "textureValue": "04150aa7-ce48-428c-8244-a6dac8725b0e"
+      "textureValue": "Modules/KayKit Adventurers 1.0 FREE/Characters/rogue_texture.png"
     },
     "displacementTexture_UMapping": {
       "type": "TextureWrap",
@@ -203,7 +197,7 @@
     },
     "baseColorTexture": {
       "type": "Texture",
-      "textureValue": ""
+      "textureValue": "Modules/KayKit Adventurers 1.0 FREE/Characters/rogue_texture.png"
     },
     "roughnessTexture_UMapping": {
       "type": "TextureWrap",
@@ -253,5 +247,7 @@
       "type": "Texture",
       "textureValue": ""
     }
-  }
+  },
+  "enabledShaderVariants": [],
+  "cullingMode": "Back"
 }
