@@ -34,7 +34,7 @@
     },
     "diffuseTexture": {
       "type": "Texture",
-      "textureValue": "Modules/KayKit Adventurers 1.0 FREE/Characters/rogue_texture.png"
+      "textureValue": "707dda32-a3c0-4f6f-8ffc-d9590cb27545"
     },
     "displacementTexture": {
       "type": "Texture",

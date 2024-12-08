@@ -120,6 +120,14 @@ class PlayerMovementSystem : IEntitySystemUpdate, IEntitySystemFixedUpdate, IEnt
                         firstNegative = KeyCode.A,
                         firstPositive = KeyCode.D,
                     }
+                },
+                new()
+                {
+                    device = InputDevice.Touch,
+                    touch = new()
+                    {
+                        affectedArea = new(0, 0.5f, 0, 1),
+                    }
                 }
             ],
         },

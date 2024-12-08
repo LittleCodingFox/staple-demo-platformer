@@ -184,6 +184,14 @@ class OrbitCameraSystem : IEntitySystemUpdate, IEntitySystemLifecycle
                         horizontal = true,
                         vertical = true,
                     }
+                },
+                new()
+                {
+                    device = InputDevice.Touch,
+                    touch = new()
+                    {
+                        affectedArea = new(0.5f, 1, 0, 1),
+                    }
                 }
             ],
         },
@@ -191,5 +199,10 @@ class OrbitCameraSystem : IEntitySystemUpdate, IEntitySystemLifecycle
         {
             movement = value;
         });
+
+        if(Platform.IsDesktopPlatform)
+        {
+            Cursor.LockState = CursorLockMode.Locked;
+        }
     }
 }
