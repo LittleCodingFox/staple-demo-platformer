@@ -162,7 +162,7 @@ class OrbitCameraSystem : IEntitySystemUpdate, IEntitySystemLifecycle
 
     public void Startup()
     {
-        movementKey = Input.AddAction(new()
+        movementKey = Input.AddDualAxisAction(new()
         {
             type = InputActionType.DualAxis,
             devices =

@@ -96,7 +96,7 @@ class PlayerMovementSystem : IEntitySystemUpdate, IEntitySystemFixedUpdate, IEnt
 
     public void Startup()
     {
-        movementKey = Input.AddAction(new()
+        movementKey = Input.AddDualAxisAction(new()
         {
             type = InputActionType.DualAxis,
             devices =
@@ -136,7 +136,7 @@ class PlayerMovementSystem : IEntitySystemUpdate, IEntitySystemFixedUpdate, IEnt
             movement = value;
         });
 
-        jumpKey = Input.AddAction(new()
+        jumpKey = Input.AddPressedAction(new()
         {
             type = InputActionType.Press,
             devices =
