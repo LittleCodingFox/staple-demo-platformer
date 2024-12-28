@@ -1,5 +1,4 @@
 using Staple;
-using System;
 
 internal class TerrainRenderer : Renderable
 {
@@ -8,5 +7,5 @@ internal class TerrainRenderer : Renderable
     public bool needsUpdate = true;
 
     internal Mesh mesh;
-    internal TerrainRenderSystem.TerrainVertex[] meshData = Array.Empty<TerrainRenderSystem.TerrainVertex>();
+    internal TerrainRenderSystem.TerrainVertex[] meshData = [];
 }

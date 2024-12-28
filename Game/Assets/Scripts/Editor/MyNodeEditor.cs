@@ -40,7 +40,7 @@ public class MyNodeEditor : EditorWindow, INodeUIObserver
     {
         return (true, () =>
         {
-            EditorGUI.MenuItem("Delete", "DELETENODE", () =>
+            EditorGUI.MenuItem("Delete", "Delete.Node", () =>
             {
                 nodeUI.DeleteNode(node);
             });
@@ -51,7 +51,7 @@ public class MyNodeEditor : EditorWindow, INodeUIObserver
     {
         return (true, () =>
         {
-            EditorGUI.MenuItem("Delete", "DELETELINK", () =>
+            EditorGUI.MenuItem("Delete", "Delete.Link", () =>
             {
                 nodeUI.DeleteLink(link);
             });
@@ -63,7 +63,7 @@ public class MyNodeEditor : EditorWindow, INodeUIObserver
     {
         return (true, () =>
         {
-            EditorGUI.MenuItem("Create Node", "CREATENODE", () =>
+            EditorGUI.MenuItem("Create Node", "Create.Node", () =>
             {
                 nodeUI.CreateNode("New Node",
                     [
@@ -76,7 +76,6 @@ public class MyNodeEditor : EditorWindow, INodeUIObserver
                         EditorGUI.Label("This is my node from My Node Editor");
                     });
             });
-        }
-        );
+        });
     }
 }

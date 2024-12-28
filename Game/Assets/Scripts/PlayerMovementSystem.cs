@@ -17,11 +17,14 @@ class PlayerMovementSystem : IEntitySystemUpdate, IEntitySystemFixedUpdate, IEnt
         foreach((_, Transform transform, OrbitCamera camera) in cameras.Contents)
         {
             if (camera.focus == null ||
-                camera.focus.entity.TryGetComponent<PlayerMovement>(out var playerMovement) == false ||
-                (camera.focus.entity.TryGetComponent<SkinnedMeshAnimator>(out var animator) ||
-                (camera.focus.GetChild(0)?.entity.TryGetComponent(out animator) ?? false)) == false)
+                camera.focus.entity.TryGetComponent<PlayerMovement>(out var playerMovement) == false)
             {
                 return;
+            }
+
+            if(camera.focus.entity.TryGetComponent<SkinnedMeshAnimator>(out var animator) == false)
+            {
+                camera.focus.GetChild(0)?.entity.TryGetComponent(out animator);
             }
 
             var rigidBody = Physics.GetBody3D(camera.focus.entity);
@@ -79,8 +82,8 @@ class PlayerMovementSystem : IEntitySystemUpdate, IEntitySystemFixedUpdate, IEnt
                 rigidBody.Rotation = Quaternion.Slerp(rigidBody.Rotation, playerMovement.targetRotation, Time.fixedDeltaTime * playerMovement.turnSpeed);
             }
 
-            animator.animationController?.SetBoolParameter("Movement", movement != Vector2.Zero);
-            animator.animationController?.SetBoolParameter("Jump", playerMovement.grounded == false);
+            animator?.animationController?.SetBoolParameter("Movement", movement != Vector2.Zero);
+            animator?.animationController?.SetBoolParameter("Jump", playerMovement.grounded == false);
         }
     }
 
