@@ -1,5 +1,5 @@
 {
-  "guid": "97273fa4-4d93-4199-9f47-a154b9c506fd",
+  "guid": "d607a251-f72b-4afc-b6f4-aedd801f4459",
   "mainObject": {
     "kind": "Entity",
     "name": "Player (Clone)",
@@ -24,21 +24,6 @@
     },
     "components": [
       {
-        "type": "Staple.RigidBody3D",
-        "data": {
-          "motionType": "Dynamic",
-          "freezeRotationX": true,
-          "freezeRotationY": true,
-          "freezeRotationZ": true,
-          "is2DPlane": false,
-          "gravityFactor": 3.0,
-          "isTrigger": false,
-          "friction": 0.0,
-          "restitution": 0.0,
-          "mass": 1.0
-        }
-      },
-      {
         "type": "Staple.BoxCollider3D",
         "data": {
           "size": {
@@ -55,7 +40,21 @@
             "x": 0.0,
             "y": 0.0,
             "z": 0.0,
-            "w": 0.0
+            "w": 1.0
+          }
+        }
+      },
+      {
+        "type": "Staple.Character3D",
+        "data": {
+          "gravityFactor": 1.0,
+          "friction": 0.2,
+          "mass": 80.0,
+          "maxSlopeAngle": 50.0,
+          "upDirection": {
+            "x": 0.0,
+            "y": 1.0,
+            "z": 0.0
           }
         }
       }
@@ -106,7 +105,7 @@
     },
     {
       "kind": "Entity",
-      "name": "Barbarian_ArmLeft",
+      "name": "Rig",
       "ID": 2,
       "parent": 1,
       "transform": {
@@ -134,9 +133,37 @@
     },
     {
       "kind": "Entity",
-      "name": "Cube.160",
+      "name": "Barbarian_ArmLeft",
       "ID": 3,
       "parent": 2,
+      "transform": {
+        "position": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "rotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "scale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        }
+      },
+      "components": [],
+      "layer": "Default",
+      "enabled": true,
+      "prefabGuid": null,
+      "prefabLocalID": 0
+    },
+    {
+      "kind": "Entity",
+      "name": "Cube.160",
+      "ID": 4,
+      "parent": 3,
       "transform": {
         "position": {
           "x": 0.0,
@@ -179,8 +206,8 @@
     {
       "kind": "Entity",
       "name": "Barbarian_ArmRight",
-      "ID": 4,
-      "parent": 1,
+      "ID": 5,
+      "parent": 2,
       "transform": {
         "position": {
           "x": 0.0,
@@ -207,8 +234,8 @@
     {
       "kind": "Entity",
       "name": "Cube.161",
-      "ID": 5,
-      "parent": 4,
+      "ID": 6,
+      "parent": 5,
       "transform": {
         "position": {
           "x": 0.0,
@@ -251,8 +278,8 @@
     {
       "kind": "Entity",
       "name": "Barbarian_Body",
-      "ID": 6,
-      "parent": 1,
+      "ID": 7,
+      "parent": 2,
       "transform": {
         "position": {
           "x": 0.0,
@@ -279,8 +306,8 @@
     {
       "kind": "Entity",
       "name": "PrototypePete_body.022",
-      "ID": 7,
-      "parent": 6,
+      "ID": 8,
+      "parent": 7,
       "transform": {
         "position": {
           "x": 0.0,
@@ -323,8 +350,8 @@
     {
       "kind": "Entity",
       "name": "Barbarian_Head",
-      "ID": 8,
-      "parent": 1,
+      "ID": 9,
+      "parent": 2,
       "transform": {
         "position": {
           "x": 0.0,
@@ -351,8 +378,8 @@
     {
       "kind": "Entity",
       "name": "Cube.167",
-      "ID": 9,
-      "parent": 8,
+      "ID": 10,
+      "parent": 9,
       "transform": {
         "position": {
           "x": 0.0,
@@ -395,8 +422,8 @@
     {
       "kind": "Entity",
       "name": "Barbarian_LegLeft",
-      "ID": 10,
-      "parent": 1,
+      "ID": 11,
+      "parent": 2,
       "transform": {
         "position": {
           "x": 0.0,
@@ -423,8 +450,8 @@
     {
       "kind": "Entity",
       "name": "Cube.165",
-      "ID": 11,
-      "parent": 10,
+      "ID": 12,
+      "parent": 11,
       "transform": {
         "position": {
           "x": 0.0,
@@ -467,8 +494,8 @@
     {
       "kind": "Entity",
       "name": "Barbarian_LegRight",
-      "ID": 12,
-      "parent": 1,
+      "ID": 13,
+      "parent": 2,
       "transform": {
         "position": {
           "x": 0.0,
@@ -495,8 +522,8 @@
     {
       "kind": "Entity",
       "name": "Cube.163",
-      "ID": 13,
-      "parent": 12,
+      "ID": 14,
+      "parent": 13,
       "transform": {
         "position": {
           "x": 0.0,
@@ -538,24 +565,304 @@
     },
     {
       "kind": "Entity",
-      "name": "1H_Axe_Offhand",
-      "ID": 14,
-      "parent": 1,
+      "name": "Rig",
+      "ID": 15,
+      "parent": 2,
       "transform": {
         "position": {
-          "x": 0.88313246,
-          "y": 1.0492607,
-          "z": 0.03330864
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "rotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "scale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        }
+      },
+      "components": [],
+      "layer": "Default",
+      "enabled": true,
+      "prefabGuid": null,
+      "prefabLocalID": 0
+    },
+    {
+      "kind": "Entity",
+      "name": "root",
+      "ID": 16,
+      "parent": 15,
+      "transform": {
+        "position": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "rotation": {
+          "x": 0.0,
+          "y": 1.3660375E-05,
+          "z": 0.0
+        },
+        "scale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        }
+      },
+      "components": [],
+      "layer": "Default",
+      "enabled": true,
+      "prefabGuid": null,
+      "prefabLocalID": 0
+    },
+    {
+      "kind": "Entity",
+      "name": "hips",
+      "ID": 17,
+      "parent": 16,
+      "transform": {
+        "position": {
+          "x": 0.0,
+          "y": 0.40566343,
+          "z": 0.0
+        },
+        "rotation": {
+          "x": 0.0,
+          "y": -1.3660375E-05,
+          "z": 0.0
+        },
+        "scale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        }
+      },
+      "components": [],
+      "layer": "Default",
+      "enabled": true,
+      "prefabGuid": null,
+      "prefabLocalID": 0
+    },
+    {
+      "kind": "Entity",
+      "name": "spine",
+      "ID": 18,
+      "parent": 17,
+      "transform": {
+        "position": {
+          "x": 0.0,
+          "y": 0.1919775,
+          "z": 0.0
+        },
+        "rotation": {
+          "x": 0.0,
+          "y": 8.142219E-13,
+          "z": 0.0
+        },
+        "scale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        }
+      },
+      "components": [],
+      "layer": "Default",
+      "enabled": true,
+      "prefabGuid": null,
+      "prefabLocalID": 0
+    },
+    {
+      "kind": "Entity",
+      "name": "chest",
+      "ID": 19,
+      "parent": 18,
+      "transform": {
+        "position": {
+          "x": 0.0,
+          "y": 0.37498796,
+          "z": 0.0
+        },
+        "rotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "scale": {
+          "x": 1.0,
+          "y": 0.99999994,
+          "z": 1.0
+        }
+      },
+      "components": [],
+      "layer": "Default",
+      "enabled": true,
+      "prefabGuid": null,
+      "prefabLocalID": 0
+    },
+    {
+      "kind": "Entity",
+      "name": "upperarm.l",
+      "ID": 20,
+      "parent": 19,
+      "transform": {
+        "position": {
+          "x": 0.21200737,
+          "y": 0.13413215,
+          "z": 8.402462E-08
         },
         "rotation": {
           "x": -90.0,
-          "y": -180.0,
+          "y": 273.28387,
           "z": 0.0
         },
         "scale": {
           "x": 0.99999934,
-          "y": 0.9999992,
-          "z": 0.99999905
+          "y": 0.9999998,
+          "z": 0.99999934
+        }
+      },
+      "components": [],
+      "layer": "Default",
+      "enabled": true,
+      "prefabGuid": null,
+      "prefabLocalID": 0
+    },
+    {
+      "kind": "Entity",
+      "name": "lowerarm.l",
+      "ID": 21,
+      "parent": 20,
+      "transform": {
+        "position": {
+          "x": -3.219665E-09,
+          "y": 0.2418973,
+          "z": -1.1940561E-07
+        },
+        "rotation": {
+          "x": -1.8840656E-07,
+          "y": -6.8186264E-06,
+          "z": -6.3384876
+        },
+        "scale": {
+          "x": 1.0000002,
+          "y": 0.9999999,
+          "z": 0.99999994
+        }
+      },
+      "components": [],
+      "layer": "Default",
+      "enabled": true,
+      "prefabGuid": null,
+      "prefabLocalID": 0
+    },
+    {
+      "kind": "Entity",
+      "name": "wrist.l",
+      "ID": 22,
+      "parent": 21,
+      "transform": {
+        "position": {
+          "x": 8.719292E-09,
+          "y": 0.26004383,
+          "z": -1.5019518E-10
+        },
+        "rotation": {
+          "x": -1.0243113E-08,
+          "y": -3.4483694E-08,
+          "z": 3.0551555
+        },
+        "scale": {
+          "x": 0.9999998,
+          "y": 0.9999998,
+          "z": 0.99999994
+        }
+      },
+      "components": [],
+      "layer": "Default",
+      "enabled": true,
+      "prefabGuid": null,
+      "prefabLocalID": 0
+    },
+    {
+      "kind": "Entity",
+      "name": "hand.l",
+      "ID": 23,
+      "parent": 22,
+      "transform": {
+        "position": {
+          "x": 9.0816243E-13,
+          "y": 0.073825836,
+          "z": 2.220446E-16
+        },
+        "rotation": {
+          "x": 1.3761358E-07,
+          "y": 1.5252346E-05,
+          "z": -0.0006251193
+        },
+        "scale": {
+          "x": 1.0,
+          "y": 0.99999994,
+          "z": 0.99999994
+        }
+      },
+      "components": [],
+      "layer": "Default",
+      "enabled": true,
+      "prefabGuid": null,
+      "prefabLocalID": 0
+    },
+    {
+      "kind": "Entity",
+      "name": "handslot.l",
+      "ID": 24,
+      "parent": 23,
+      "transform": {
+        "position": {
+          "x": 8.348149E-10,
+          "y": 0.09612507,
+          "z": -0.057500124
+        },
+        "rotation": {
+          "x": 2.608716E-07,
+          "y": -1.2722218E-14,
+          "z": -90.00001
+        },
+        "scale": {
+          "x": 0.9999999,
+          "y": 0.9999998,
+          "z": 0.99999994
+        }
+      },
+      "components": [],
+      "layer": "Default",
+      "enabled": true,
+      "prefabGuid": null,
+      "prefabLocalID": 0
+    },
+    {
+      "kind": "Entity",
+      "name": "1H_Axe_Offhand",
+      "ID": 25,
+      "parent": 24,
+      "transform": {
+        "position": {
+          "x": 0.0,
+          "y": 0.03330898,
+          "z": -1.5062571E-09
+        },
+        "rotation": {
+          "x": 2.8135278E-12,
+          "y": -3.2590586E-05,
+          "z": 1.6051232E-05
+        },
+        "scale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
         }
       },
       "components": [],
@@ -567,8 +874,8 @@
     {
       "kind": "Entity",
       "name": "Cube.001",
-      "ID": 15,
-      "parent": 14,
+      "ID": 26,
+      "parent": 25,
       "transform": {
         "position": {
           "x": 0.0,
@@ -611,23 +918,23 @@
     {
       "kind": "Entity",
       "name": "Barbarian_Round_Shield",
-      "ID": 16,
-      "parent": 1,
+      "ID": 27,
+      "parent": 24,
       "transform": {
         "position": {
-          "x": 0.8831325,
-          "y": 1.205146,
-          "z": 0.017011492
+          "x": 0.0,
+          "y": 0.017011786,
+          "z": 0.15588534
         },
         "rotation": {
-          "x": -90.0,
-          "y": -179.9999,
-          "z": 0.0
+          "x": -1.18392045E-05,
+          "y": 1.9312572E-05,
+          "z": 0.00016046228
         },
         "scale": {
-          "x": 0.99999934,
-          "y": 0.9999992,
-          "z": 0.99999905
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
         }
       },
       "components": [],
@@ -639,8 +946,8 @@
     {
       "kind": "Entity",
       "name": "Cylinder.404",
-      "ID": 17,
-      "parent": 16,
+      "ID": 28,
+      "parent": 27,
       "transform": {
         "position": {
           "x": 0.0,
@@ -682,24 +989,164 @@
     },
     {
       "kind": "Entity",
-      "name": "1H_Axe",
-      "ID": 18,
-      "parent": 1,
+      "name": "upperarm.r",
+      "ID": 29,
+      "parent": 19,
       "transform": {
         "position": {
-          "x": -0.8831324,
-          "y": 1.0492606,
-          "z": 0.03330898
+          "x": -0.21200737,
+          "y": 0.13413215,
+          "z": 8.402462E-08
         },
         "rotation": {
-          "x": 90.0,
-          "y": 3.513535E-05,
+          "x": -90.0,
+          "y": -273.28387,
           "z": 0.0
         },
         "scale": {
-          "x": 0.9999992,
-          "y": 0.9999992,
-          "z": 0.99999905
+          "x": 0.99999934,
+          "y": 0.9999997,
+          "z": 0.99999934
+        }
+      },
+      "components": [],
+      "layer": "Default",
+      "enabled": true,
+      "prefabGuid": null,
+      "prefabLocalID": 0
+    },
+    {
+      "kind": "Entity",
+      "name": "lowerarm.r",
+      "ID": 30,
+      "parent": 29,
+      "transform": {
+        "position": {
+          "x": -7.1218566E-11,
+          "y": 0.24189733,
+          "z": -1.1940561E-07
+        },
+        "rotation": {
+          "x": -1.8840663E-07,
+          "y": 6.8186273E-06,
+          "z": 6.3384876
+        },
+        "scale": {
+          "x": 1.0000002,
+          "y": 0.9999999,
+          "z": 0.99999994
+        }
+      },
+      "components": [],
+      "layer": "Default",
+      "enabled": true,
+      "prefabGuid": null,
+      "prefabLocalID": 0
+    },
+    {
+      "kind": "Entity",
+      "name": "wrist.r",
+      "ID": 31,
+      "parent": 30,
+      "transform": {
+        "position": {
+          "x": -8.718383E-09,
+          "y": 0.26004383,
+          "z": -1.5019518E-10
+        },
+        "rotation": {
+          "x": -1.0243113E-08,
+          "y": 3.4483694E-08,
+          "z": -3.0551555
+        },
+        "scale": {
+          "x": 0.9999998,
+          "y": 0.9999998,
+          "z": 0.99999994
+        }
+      },
+      "components": [],
+      "layer": "Default",
+      "enabled": true,
+      "prefabGuid": null,
+      "prefabLocalID": 0
+    },
+    {
+      "kind": "Entity",
+      "name": "hand.r",
+      "ID": 32,
+      "parent": 31,
+      "transform": {
+        "position": {
+          "x": 1.3322676E-15,
+          "y": 0.073825836,
+          "z": 2.220446E-16
+        },
+        "rotation": {
+          "x": 1.3755785E-07,
+          "y": -1.0235154E-05,
+          "z": 0.0006251193
+        },
+        "scale": {
+          "x": 1.0,
+          "y": 0.99999994,
+          "z": 0.99999994
+        }
+      },
+      "components": [],
+      "layer": "Default",
+      "enabled": true,
+      "prefabGuid": null,
+      "prefabLocalID": 0
+    },
+    {
+      "kind": "Entity",
+      "name": "handslot.r",
+      "ID": 33,
+      "parent": 32,
+      "transform": {
+        "position": {
+          "x": -8.348149E-10,
+          "y": 0.09612507,
+          "z": -0.057500124
+        },
+        "rotation": {
+          "x": 2.6086838E-07,
+          "y": -1.2722218E-14,
+          "z": 90.00001
+        },
+        "scale": {
+          "x": 0.9999999,
+          "y": 0.9999998,
+          "z": 0.99999994
+        }
+      },
+      "components": [],
+      "layer": "Default",
+      "enabled": true,
+      "prefabGuid": null,
+      "prefabLocalID": 0
+    },
+    {
+      "kind": "Entity",
+      "name": "1H_Axe",
+      "ID": 34,
+      "parent": 33,
+      "transform": {
+        "position": {
+          "x": 0.0,
+          "y": 0.033309307,
+          "z": -1.2071547E-07
+        },
+        "rotation": {
+          "x": 1.1839143E-05,
+          "y": 179.99998,
+          "z": 1.605123E-05
+        },
+        "scale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
         }
       },
       "components": [],
@@ -711,8 +1158,8 @@
     {
       "kind": "Entity",
       "name": "Cube.001",
-      "ID": 19,
-      "parent": 18,
+      "ID": 35,
+      "parent": 34,
       "transform": {
         "position": {
           "x": 0.0,
@@ -755,23 +1202,23 @@
     {
       "kind": "Entity",
       "name": "$MergedNode_0",
-      "ID": 20,
-      "parent": 1,
+      "ID": 36,
+      "parent": 33,
       "transform": {
         "position": {
-          "x": -0.8831324,
-          "y": 1.0492606,
-          "z": 0.03330898
+          "x": 0.0,
+          "y": 0.033309307,
+          "z": -1.2071547E-07
         },
         "rotation": {
-          "x": 90.0,
-          "y": 3.513535E-05,
-          "z": 0.0
+          "x": 1.1839143E-05,
+          "y": 179.99998,
+          "z": 1.605123E-05
         },
         "scale": {
-          "x": 0.9999992,
-          "y": 0.9999992,
-          "z": 0.99999905
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
         }
       },
       "components": [],
@@ -783,8 +1230,8 @@
     {
       "kind": "Entity",
       "name": "Cylinder.061.Cube.222",
-      "ID": 21,
-      "parent": 20,
+      "ID": 37,
+      "parent": 36,
       "transform": {
         "position": {
           "x": 0.0,
@@ -826,23 +1273,51 @@
     },
     {
       "kind": "Entity",
-      "name": "Barbarian_Hat",
-      "ID": 22,
-      "parent": 1,
+      "name": "head",
+      "ID": 38,
+      "parent": 19,
       "transform": {
         "position": {
-          "x": 1.1782118E-28,
-          "y": 1.2158736,
+          "x": 0.0,
+          "y": 0.26879656,
+          "z": 0.0
+        },
+        "rotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "scale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        }
+      },
+      "components": [],
+      "layer": "Default",
+      "enabled": true,
+      "prefabGuid": null,
+      "prefabLocalID": 0
+    },
+    {
+      "kind": "Entity",
+      "name": "Barbarian_Hat",
+      "ID": 39,
+      "parent": 38,
+      "transform": {
+        "position": {
+          "x": 1.9767114E-21,
+          "y": -0.025551852,
           "z": -1.390987E-07
         },
         "rotation": {
-          "x": -4.82E-43,
-          "y": 9.706282E-20,
+          "x": 0.0,
+          "y": -8.142218E-13,
           "z": 1.2660365E-20
         },
         "scale": {
           "x": 1.0,
-          "y": 0.99999994,
+          "y": 1.0,
           "z": 1.0
         }
       },
@@ -855,8 +1330,8 @@
     {
       "kind": "Entity",
       "name": "Cube.166",
-      "ID": 23,
-      "parent": 22,
+      "ID": 40,
+      "parent": 39,
       "transform": {
         "position": {
           "x": 0.0,
@@ -899,22 +1374,22 @@
     {
       "kind": "Entity",
       "name": "Barbarian_Cape",
-      "ID": 24,
-      "parent": 1,
+      "ID": 41,
+      "parent": 19,
       "transform": {
         "position": {
           "x": -1.9073486E-06,
-          "y": 1.2158737,
+          "y": 0.24324484,
           "z": -1.3909872E-07
         },
         "rotation": {
           "x": 0.0,
-          "y": 0.0,
+          "y": -8.142219E-13,
           "z": -7.174207E-20
         },
         "scale": {
           "x": 1.0,
-          "y": 0.99999994,
+          "y": 1.0,
           "z": 1.0
         }
       },
@@ -927,8 +1402,8 @@
     {
       "kind": "Entity",
       "name": "Plane.006",
-      "ID": 25,
-      "parent": 24,
+      "ID": 42,
+      "parent": 41,
       "transform": {
         "position": {
           "x": 0.0,
@@ -963,6 +1438,734 @@
           }
         }
       ],
+      "layer": "Default",
+      "enabled": true,
+      "prefabGuid": null,
+      "prefabLocalID": 0
+    },
+    {
+      "kind": "Entity",
+      "name": "upperleg.l",
+      "ID": 43,
+      "parent": 17,
+      "transform": {
+        "position": {
+          "x": 0.17094506,
+          "y": 0.11358726,
+          "z": 1.3923272E-08
+        },
+        "rotation": {
+          "x": 1.9909207,
+          "y": 179.99998,
+          "z": -179.99997
+        },
+        "scale": {
+          "x": 1.0,
+          "y": 0.9999997,
+          "z": 1.0000012
+        }
+      },
+      "components": [],
+      "layer": "Default",
+      "enabled": true,
+      "prefabGuid": null,
+      "prefabLocalID": 0
+    },
+    {
+      "kind": "Entity",
+      "name": "lowerleg.l",
+      "ID": 44,
+      "parent": 43,
+      "transform": {
+        "position": {
+          "x": 3.5798182E-09,
+          "y": 0.2270775,
+          "z": -6.1398597E-09
+        },
+        "rotation": {
+          "x": 12.195513,
+          "y": 7.0844426E-06,
+          "z": -7.744678E-06
+        },
+        "scale": {
+          "x": 1.0,
+          "y": 1.0000005,
+          "z": 1.0000001
+        }
+      },
+      "components": [],
+      "layer": "Default",
+      "enabled": true,
+      "prefabGuid": null,
+      "prefabLocalID": 0
+    },
+    {
+      "kind": "Entity",
+      "name": "foot.l",
+      "ID": 45,
+      "parent": 44,
+      "transform": {
+        "position": {
+          "x": 1.832223E-10,
+          "y": 0.14943703,
+          "z": 9.665366E-10
+        },
+        "rotation": {
+          "x": -54.16063,
+          "y": 5.8834553E-06,
+          "z": -7.4299332E-06
+        },
+        "scale": {
+          "x": 1.0,
+          "y": 0.9999995,
+          "z": 1.0000001
+        }
+      },
+      "components": [],
+      "layer": "Default",
+      "enabled": true,
+      "prefabGuid": null,
+      "prefabLocalID": 0
+    },
+    {
+      "kind": "Entity",
+      "name": "toes.l",
+      "ID": 46,
+      "parent": 45,
+      "transform": {
+        "position": {
+          "x": -2.1305965E-10,
+          "y": 0.16565003,
+          "z": 5.171735E-09
+        },
+        "rotation": {
+          "x": 46.043987,
+          "y": 179.99997,
+          "z": -9.1173915E-06
+        },
+        "scale": {
+          "x": 1.0,
+          "y": 0.9999999,
+          "z": 0.9999999
+        }
+      },
+      "components": [],
+      "layer": "Default",
+      "enabled": true,
+      "prefabGuid": null,
+      "prefabLocalID": 0
+    },
+    {
+      "kind": "Entity",
+      "name": "upperleg.r",
+      "ID": 47,
+      "parent": 17,
+      "transform": {
+        "position": {
+          "x": -0.17094506,
+          "y": 0.11358726,
+          "z": 1.3923272E-08
+        },
+        "rotation": {
+          "x": 1.9909207,
+          "y": -179.99997,
+          "z": 179.99997
+        },
+        "scale": {
+          "x": 1.0,
+          "y": 0.9999997,
+          "z": 1.0000012
+        }
+      },
+      "components": [],
+      "layer": "Default",
+      "enabled": true,
+      "prefabGuid": null,
+      "prefabLocalID": 0
+    },
+    {
+      "kind": "Entity",
+      "name": "lowerleg.r",
+      "ID": 48,
+      "parent": 47,
+      "transform": {
+        "position": {
+          "x": -3.5798182E-09,
+          "y": 0.2270775,
+          "z": -6.1398597E-09
+        },
+        "rotation": {
+          "x": 12.195513,
+          "y": -7.0844444E-06,
+          "z": 7.744678E-06
+        },
+        "scale": {
+          "x": 1.0,
+          "y": 1.0000005,
+          "z": 1.0000001
+        }
+      },
+      "components": [],
+      "layer": "Default",
+      "enabled": true,
+      "prefabGuid": null,
+      "prefabLocalID": 0
+    },
+    {
+      "kind": "Entity",
+      "name": "foot.r",
+      "ID": 49,
+      "parent": 48,
+      "transform": {
+        "position": {
+          "x": -1.8322102E-10,
+          "y": 0.14943703,
+          "z": 9.665415E-10
+        },
+        "rotation": {
+          "x": -54.16063,
+          "y": 2.872267E-05,
+          "z": -1.4395981E-05
+        },
+        "scale": {
+          "x": 1.0,
+          "y": 0.9999995,
+          "z": 1.0000001
+        }
+      },
+      "components": [],
+      "layer": "Default",
+      "enabled": true,
+      "prefabGuid": null,
+      "prefabLocalID": 0
+    },
+    {
+      "kind": "Entity",
+      "name": "toes.r",
+      "ID": 50,
+      "parent": 49,
+      "transform": {
+        "position": {
+          "x": 2.1305768E-10,
+          "y": 0.16565003,
+          "z": 5.1717395E-09
+        },
+        "rotation": {
+          "x": 46.043987,
+          "y": -179.99997,
+          "z": 9.117392E-06
+        },
+        "scale": {
+          "x": 1.0,
+          "y": 0.9999999,
+          "z": 0.9999999
+        }
+      },
+      "components": [],
+      "layer": "Default",
+      "enabled": true,
+      "prefabGuid": null,
+      "prefabLocalID": 0
+    },
+    {
+      "kind": "Entity",
+      "name": "kneeIK.l",
+      "ID": 51,
+      "parent": 16,
+      "transform": {
+        "position": {
+          "x": 0.17094491,
+          "y": 0.29231027,
+          "z": 0.57581246
+        },
+        "rotation": {
+          "x": 90.0,
+          "y": -3.7160033E-05,
+          "z": 0.0
+        },
+        "scale": {
+          "x": 1.0,
+          "y": 0.99999994,
+          "z": 0.99999994
+        }
+      },
+      "components": [],
+      "layer": "Default",
+      "enabled": true,
+      "prefabGuid": null,
+      "prefabLocalID": 0
+    },
+    {
+      "kind": "Entity",
+      "name": "control-toe-roll.l",
+      "ID": 52,
+      "parent": 16,
+      "transform": {
+        "position": {
+          "x": 0.17094497,
+          "y": 0.025990263,
+          "z": 0.24578938
+        },
+        "rotation": {
+          "x": -90.0,
+          "y": 359.99994,
+          "z": 0.0
+        },
+        "scale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        }
+      },
+      "components": [],
+      "layer": "Default",
+      "enabled": true,
+      "prefabGuid": null,
+      "prefabLocalID": 0
+    },
+    {
+      "kind": "Entity",
+      "name": "control-heel-roll.l",
+      "ID": 53,
+      "parent": 52,
+      "transform": {
+        "position": {
+          "x": 1.945811E-08,
+          "y": 0.36283267,
+          "z": -2.4286129E-15
+        },
+        "rotation": {
+          "x": 1.5850438E-20,
+          "y": 8.1422304E-13,
+          "z": 179.99998
+        },
+        "scale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        }
+      },
+      "components": [],
+      "layer": "Default",
+      "enabled": true,
+      "prefabGuid": null,
+      "prefabLocalID": 0
+    },
+    {
+      "kind": "Entity",
+      "name": "control-foot-roll.l",
+      "ID": 54,
+      "parent": 53,
+      "transform": {
+        "position": {
+          "x": -1.1148217E-08,
+          "y": 0.21343614,
+          "z": -2.5094198E-15
+        },
+        "rotation": {
+          "x": -46.04397,
+          "y": -1.7713824E-05,
+          "z": -179.99997
+        },
+        "scale": {
+          "x": 1.0,
+          "y": 0.9999999,
+          "z": 0.9999999
+        }
+      },
+      "components": [],
+      "layer": "Default",
+      "enabled": true,
+      "prefabGuid": null,
+      "prefabLocalID": 0
+    },
+    {
+      "kind": "Entity",
+      "name": "heelIK.l",
+      "ID": 55,
+      "parent": 54,
+      "transform": {
+        "position": {
+          "x": 8.589882E-09,
+          "y": 0.16565004,
+          "z": -5.0913656E-09
+        },
+        "rotation": {
+          "x": -46.04397,
+          "y": -6.2239856E-06,
+          "z": -5.5265614E-06
+        },
+        "scale": {
+          "x": 1.0,
+          "y": 0.9999999,
+          "z": 0.9999999
+        }
+      },
+      "components": [],
+      "layer": "Default",
+      "enabled": true,
+      "prefabGuid": null,
+      "prefabLocalID": 0
+    },
+    {
+      "kind": "Entity",
+      "name": "IK-foot.l",
+      "ID": 56,
+      "parent": 54,
+      "transform": {
+        "position": {
+          "x": 8.589882E-09,
+          "y": 0.16565004,
+          "z": -5.0913656E-09
+        },
+        "rotation": {
+          "x": 0.0,
+          "y": 179.99995,
+          "z": 179.99998
+        },
+        "scale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 0.99999994
+        }
+      },
+      "components": [],
+      "layer": "Default",
+      "enabled": true,
+      "prefabGuid": null,
+      "prefabLocalID": 0
+    },
+    {
+      "kind": "Entity",
+      "name": "IK-toe.l",
+      "ID": 57,
+      "parent": 53,
+      "transform": {
+        "position": {
+          "x": -4.556949E-09,
+          "y": -7.950292E-10,
+          "z": -1.8626451E-09
+        },
+        "rotation": {
+          "x": 1.554965E-20,
+          "y": -7.724591E-15,
+          "z": -2.230746E-06
+        },
+        "scale": {
+          "x": 1.0,
+          "y": 0.99999994,
+          "z": 1.0
+        }
+      },
+      "components": [],
+      "layer": "Default",
+      "enabled": true,
+      "prefabGuid": null,
+      "prefabLocalID": 0
+    },
+    {
+      "kind": "Entity",
+      "name": "kneeIK.r",
+      "ID": 58,
+      "parent": 16,
+      "transform": {
+        "position": {
+          "x": -0.17094518,
+          "y": 0.29231027,
+          "z": 0.57581234
+        },
+        "rotation": {
+          "x": 90.0,
+          "y": -6.196814E-06,
+          "z": 0.0
+        },
+        "scale": {
+          "x": 1.0,
+          "y": 0.99999994,
+          "z": 0.99999994
+        }
+      },
+      "components": [],
+      "layer": "Default",
+      "enabled": true,
+      "prefabGuid": null,
+      "prefabLocalID": 0
+    },
+    {
+      "kind": "Entity",
+      "name": "control-toe-roll.r",
+      "ID": 59,
+      "parent": 16,
+      "transform": {
+        "position": {
+          "x": -0.1709451,
+          "y": 0.025990263,
+          "z": 0.24578929
+        },
+        "rotation": {
+          "x": -90.0,
+          "y": 359.99994,
+          "z": 0.0
+        },
+        "scale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        }
+      },
+      "components": [],
+      "layer": "Default",
+      "enabled": true,
+      "prefabGuid": null,
+      "prefabLocalID": 0
+    },
+    {
+      "kind": "Entity",
+      "name": "control-heel-roll.r",
+      "ID": 60,
+      "parent": 59,
+      "transform": {
+        "position": {
+          "x": 1.9458106E-08,
+          "y": 0.36283267,
+          "z": 2.4286129E-15
+        },
+        "rotation": {
+          "x": 1.5850425E-20,
+          "y": 8.1422304E-13,
+          "z": 179.99998
+        },
+        "scale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        }
+      },
+      "components": [],
+      "layer": "Default",
+      "enabled": true,
+      "prefabGuid": null,
+      "prefabLocalID": 0
+    },
+    {
+      "kind": "Entity",
+      "name": "control-foot-roll.r",
+      "ID": 61,
+      "parent": 60,
+      "transform": {
+        "position": {
+          "x": 3.7529415E-09,
+          "y": 0.21343614,
+          "z": 0.0
+        },
+        "rotation": {
+          "x": -46.04397,
+          "y": -1.7713824E-05,
+          "z": -179.99997
+        },
+        "scale": {
+          "x": 1.0,
+          "y": 0.9999999,
+          "z": 0.9999999
+        }
+      },
+      "components": [],
+      "layer": "Default",
+      "enabled": true,
+      "prefabGuid": null,
+      "prefabLocalID": 0
+    },
+    {
+      "kind": "Entity",
+      "name": "heelIK.r",
+      "ID": 62,
+      "parent": 61,
+      "transform": {
+        "position": {
+          "x": -6.311275E-09,
+          "y": 0.16565004,
+          "z": 1.3660824E-09
+        },
+        "rotation": {
+          "x": -46.04397,
+          "y": -6.22399E-06,
+          "z": -5.526558E-06
+        },
+        "scale": {
+          "x": 1.0,
+          "y": 0.9999999,
+          "z": 0.9999999
+        }
+      },
+      "components": [],
+      "layer": "Default",
+      "enabled": true,
+      "prefabGuid": null,
+      "prefabLocalID": 0
+    },
+    {
+      "kind": "Entity",
+      "name": "IK-foot.r",
+      "ID": 63,
+      "parent": 61,
+      "transform": {
+        "position": {
+          "x": -2.1212436E-08,
+          "y": 0.16565004,
+          "z": 1.3660766E-09
+        },
+        "rotation": {
+          "x": 9.706282E-20,
+          "y": 179.99995,
+          "z": -179.99998
+        },
+        "scale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 0.99999994
+        }
+      },
+      "components": [],
+      "layer": "Default",
+      "enabled": true,
+      "prefabGuid": null,
+      "prefabLocalID": 0
+    },
+    {
+      "kind": "Entity",
+      "name": "IK-toe.r",
+      "ID": 64,
+      "parent": 60,
+      "transform": {
+        "position": {
+          "x": -4.5569455E-09,
+          "y": 7.950362E-10,
+          "z": -1.8626451E-09
+        },
+        "rotation": {
+          "x": 1.5549642E-20,
+          "y": -7.724602E-15,
+          "z": -2.2307447E-06
+        },
+        "scale": {
+          "x": 1.0,
+          "y": 0.99999994,
+          "z": 1.0
+        }
+      },
+      "components": [],
+      "layer": "Default",
+      "enabled": true,
+      "prefabGuid": null,
+      "prefabLocalID": 0
+    },
+    {
+      "kind": "Entity",
+      "name": "elbowIK.l",
+      "ID": 65,
+      "parent": 16,
+      "transform": {
+        "position": {
+          "x": 0.45350748,
+          "y": 1.1067611,
+          "z": -0.5888594
+        },
+        "rotation": {
+          "x": -90.0,
+          "y": 359.99994,
+          "z": 0.0
+        },
+        "scale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        }
+      },
+      "components": [],
+      "layer": "Default",
+      "enabled": true,
+      "prefabGuid": null,
+      "prefabLocalID": 0
+    },
+    {
+      "kind": "Entity",
+      "name": "handIK.l",
+      "ID": 66,
+      "parent": 16,
+      "transform": {
+        "position": {
+          "x": 0.7131815,
+          "y": 1.1067611,
+          "z": 2.5491414E-07
+        },
+        "rotation": {
+          "x": -90.0,
+          "y": 270.0,
+          "z": 0.0
+        },
+        "scale": {
+          "x": 0.99999964,
+          "y": 0.9999998,
+          "z": 0.99999976
+        }
+      },
+      "components": [],
+      "layer": "Default",
+      "enabled": true,
+      "prefabGuid": null,
+      "prefabLocalID": 0
+    },
+    {
+      "kind": "Entity",
+      "name": "elbowIK.r",
+      "ID": 67,
+      "parent": 16,
+      "transform": {
+        "position": {
+          "x": -0.45350718,
+          "y": 1.1067611,
+          "z": -0.5888596
+        },
+        "rotation": {
+          "x": -90.0,
+          "y": 359.99994,
+          "z": 0.0
+        },
+        "scale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        }
+      },
+      "components": [],
+      "layer": "Default",
+      "enabled": true,
+      "prefabGuid": null,
+      "prefabLocalID": 0
+    },
+    {
+      "kind": "Entity",
+      "name": "handIK.r",
+      "ID": 68,
+      "parent": 16,
+      "transform": {
+        "position": {
+          "x": -0.71318156,
+          "y": 1.1067611,
+          "z": -8.515731E-08
+        },
+        "rotation": {
+          "x": -90.0,
+          "y": -270.0,
+          "z": 0.0
+        },
+        "scale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        }
+      },
+      "components": [],
       "layer": "Default",
       "enabled": true,
       "prefabGuid": null,
