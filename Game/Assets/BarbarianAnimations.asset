@@ -385,6 +385,71 @@
           }
         }
       ]
+    },
+    "editorData": {
+      "typeName": "Staple.SkinnedAnimationStateMachine+EditorData",
+      "value": {
+        "typeName": "Staple.SkinnedAnimationStateMachine+EditorData",
+        "parameters": {
+          "nodePositions": {
+            "typeName": "Staple.SkinnedAnimationStateMachine+NodePosition[]",
+            "value": [
+              {
+                "typeName": "Staple.SkinnedAnimationStateMachine+NodePosition",
+                "parameters": {
+                  "x": {
+                    "typeName": "System.Single",
+                    "value": 170.0
+                  },
+                  "y": {
+                    "typeName": "System.Single",
+                    "value": 239.0
+                  }
+                }
+              },
+              {
+                "typeName": "Staple.SkinnedAnimationStateMachine+NodePosition",
+                "parameters": {
+                  "x": {
+                    "typeName": "System.Single",
+                    "value": 373.0
+                  },
+                  "y": {
+                    "typeName": "System.Single",
+                    "value": 219.0
+                  }
+                }
+              },
+              {
+                "typeName": "Staple.SkinnedAnimationStateMachine+NodePosition",
+                "parameters": {
+                  "x": {
+                    "typeName": "System.Single",
+                    "value": 558.0
+                  },
+                  "y": {
+                    "typeName": "System.Single",
+                    "value": 136.0
+                  }
+                }
+              },
+              {
+                "typeName": "Staple.SkinnedAnimationStateMachine+NodePosition",
+                "parameters": {
+                  "x": {
+                    "typeName": "System.Single",
+                    "value": 770.0
+                  },
+                  "y": {
+                    "typeName": "System.Single",
+                    "value": 131.0
+                  }
+                }
+              }
+            ]
+          }
+        }
+      }
     }
   }
 }

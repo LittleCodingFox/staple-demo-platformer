@@ -1,4 +1,5 @@
-﻿using Staple.Editor;
+﻿using Staple;
+using Staple.Editor;
 using System;
 
 public class MyNodeEditor : EditorWindow, INodeUIObserver
@@ -21,9 +22,7 @@ public class MyNodeEditor : EditorWindow, INodeUIObserver
 
     public override void OnGUI()
     {
-        base.OnGUI();
-
-        nodeUI?.Draw();
+        nodeUI?.DoLayout();
     }
 
     public bool ValidateConnection(NodeUI nodeUI, NodeUI.NodeSocket from, NodeUI.NodeSocket to)
@@ -36,46 +35,65 @@ public class MyNodeEditor : EditorWindow, INodeUIObserver
         return true;
     }
 
-    public (bool, Action) OnNodeRightClick(NodeUI nodeUI, NodeUI.Node node)
+    public (bool, Action) OnNodeClick(NodeUI nodeUI, NodeUI.Node node, MouseButton button)
     {
-        return (true, () =>
+        switch(button)
         {
-            EditorGUI.MenuItem("Delete", "Delete.Node", () =>
-            {
-                nodeUI.DeleteNode(node);
-            });
-        });
-    }
+            case MouseButton.Right:
 
-    public (bool, Action) OnLinkRightClick(NodeUI nodeUI, (NodeUI.NodeSocket, NodeUI.NodeSocket) link)
-    {
-        return (true, () =>
-        {
-            EditorGUI.MenuItem("Delete", "Delete.Link", () =>
-            {
-                nodeUI.DeleteLink(link);
-            });
-        }
-        );
-    }
-
-    public (bool, Action) OnWorkspaceRightClick(NodeUI nodeUI)
-    {
-        return (true, () =>
-        {
-            EditorGUI.MenuItem("Create Node", "Create.Node", () =>
-            {
-                nodeUI.CreateNode("New Node",
-                    [
-                        new NodeUI.Connector("Input 1", NodeUI.PinShape.Circle),
-                        new NodeUI.Connector("Input 2", NodeUI.PinShape.Quad)
-                    ],
-                    [new NodeUI.Connector("Output", NodeUI.PinShape.CircleFilled)],
-                    (node) =>
+                return (true, () =>
+                {
+                    EditorGUI.MenuItem("Delete", "Delete.Node", () =>
                     {
-                        EditorGUI.Label("This is my node from My Node Editor");
+                        nodeUI.DeleteNode(node);
                     });
-            });
-        });
+                });
+        }
+
+        return (false, null);
+    }
+
+    public (bool, Action) OnLinkClick(NodeUI nodeUI, NodeUI.NodeSocket from, NodeUI.NodeSocket to, MouseButton button)
+    {
+        switch(button)
+        {
+            case MouseButton.Right:
+
+                return (true, () =>
+                {
+                    EditorGUI.MenuItem("Delete", "Delete.Link", () =>
+                    {
+                        nodeUI.DeleteLink(from, to);
+                    });
+                });
+        }
+
+        return (false, null);
+    }
+
+    public (bool, Action) OnWorkspaceClick(NodeUI nodeUI, MouseButton button)
+    {
+        switch(button)
+        {
+            case MouseButton.Right:
+                return (true, () =>
+                {
+                    EditorGUI.MenuItem("Create Node", "Create.Node", () =>
+                    {
+                        nodeUI.CreateNode("New Node",
+                            [
+                                new NodeUI.Connector("Input 1", NodeUI.PinShape.Circle),
+                        new NodeUI.Connector("Input 2", NodeUI.PinShape.Quad)
+                            ],
+                            [new NodeUI.Connector("Output", NodeUI.PinShape.CircleFilled)],
+                            (node) =>
+                            {
+                                EditorGUI.Label("This is my node from My Node Editor");
+                            });
+                    });
+                });
+        }
+
+        return (false, null);
     }
 }
