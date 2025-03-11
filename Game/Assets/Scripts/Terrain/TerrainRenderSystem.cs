@@ -34,6 +34,14 @@ internal class TerrainRenderSystem : IRenderSystem
 
     private readonly Dictionary<Vector2Int, (TerrainVertex[], int[])> cachedTerrainSizes = [];
 
+    private readonly Lazy<VertexLayout> vertexLayout = new(() => new VertexLayoutBuilder()
+        .Add(VertexAttribute.Position, 3, VertexAttributeType.Float)
+        .Add(VertexAttribute.Normal, 3, VertexAttributeType.Float)
+        .Add(VertexAttribute.TexCoord0, 2, VertexAttributeType.Float)
+        .Build());
+
+    public bool NeedsUpdate { get; set; }
+
     private void CacheTerrain(int width, int height)
     {
         if(cachedTerrainSizes.ContainsKey(new Vector2Int(width, height)))
@@ -144,11 +152,7 @@ internal class TerrainRenderSystem : IRenderSystem
             }
         }
 
-        renderer.mesh.SetMeshData(renderer.meshData.AsSpan(), new VertexLayoutBuilder()
-            .Add(VertexAttribute.Position, 3, VertexAttributeType.Float)
-            .Add(VertexAttribute.Normal, 3, VertexAttributeType.Float)
-            .Add(VertexAttribute.TexCoord0, 2, VertexAttributeType.Float)
-            .Build());
+        renderer.mesh.SetMeshData(renderer.meshData.AsSpan(), vertexLayout.Value);
     }
 
     public void Preprocess((Entity, Transform, IComponent)[] contents, Camera activeCamera, Transform activeCameraTransform)
@@ -188,7 +192,9 @@ internal class TerrainRenderSystem : IRenderSystem
 
                 var data = GetCache(renderer.asset.width, renderer.asset.height);
 
-                renderer.meshData = data.Item1;
+                renderer.meshData = new TerrainVertex[data.Item1.Length];
+
+                Array.Copy(data.Item1, renderer.meshData, data.Item1.Length);
 
                 for (var j = 0; j < renderer.meshData.Length; j++)
                 {

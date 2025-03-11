@@ -1,6 +1,6 @@
 using Staple;
 
-internal class TerrainRenderer : Renderable
+internal class TerrainRenderer : Renderable, IComponentDisposable
 {
     public TerrainAsset asset;
     public Material material;
@@ -8,4 +8,9 @@ internal class TerrainRenderer : Renderable
 
     internal Mesh mesh;
     internal TerrainRenderSystem.TerrainVertex[] meshData = [];
+
+    public void DisposeComponent()
+    {
+        mesh?.Destroy();
+    }
 }

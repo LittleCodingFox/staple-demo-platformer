@@ -10,8 +10,7 @@
       "typeName": "System.Collections.Generic.List`1[[Staple.SkinnedAnimationStateMachine+AnimationState, StapleCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
       "value": [
         {
-          "typeName": "Staple.SkinnedAnimationStateMachine+AnimationState",
-          "parameters": {
+          "fields": {
             "name": {
               "typeName": "System.String",
               "value": "Idle"
@@ -28,8 +27,7 @@
               "typeName": "System.Collections.Generic.List`1[[Staple.SkinnedAnimationStateMachine+AnimationStateConnection, StapleCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
               "value": [
                 {
-                  "typeName": "Staple.SkinnedAnimationStateMachine+AnimationStateConnection",
-                  "parameters": {
+                  "fields": {
                     "name": {
                       "typeName": "System.String",
                       "value": "Walk"
@@ -46,8 +44,7 @@
                       "typeName": "System.Collections.Generic.List`1[[Staple.SkinnedAnimationStateMachine+AnimationConditionParameter, StapleCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
                       "value": [
                         {
-                          "typeName": "Staple.SkinnedAnimationStateMachine+AnimationConditionParameter",
-                          "parameters": {
+                          "fields": {
                             "name": {
                               "typeName": "System.String",
                               "value": "Movement"
@@ -68,15 +65,16 @@
                               "typeName": "System.Single",
                               "value": 0.0
                             }
-                          }
+                          },
+                          "typeName": "Staple.SkinnedAnimationStateMachine+AnimationConditionParameter"
                         }
                       ]
                     }
-                  }
+                  },
+                  "typeName": "Staple.SkinnedAnimationStateMachine+AnimationStateConnection"
                 },
                 {
-                  "typeName": "Staple.SkinnedAnimationStateMachine+AnimationStateConnection",
-                  "parameters": {
+                  "fields": {
                     "name": {
                       "typeName": "System.String",
                       "value": "Jump Start"
@@ -93,8 +91,7 @@
                       "typeName": "System.Collections.Generic.List`1[[Staple.SkinnedAnimationStateMachine+AnimationConditionParameter, StapleCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
                       "value": [
                         {
-                          "typeName": "Staple.SkinnedAnimationStateMachine+AnimationConditionParameter",
-                          "parameters": {
+                          "fields": {
                             "name": {
                               "typeName": "System.String",
                               "value": "Jump"
@@ -115,19 +112,21 @@
                               "typeName": "System.Single",
                               "value": 0.0
                             }
-                          }
+                          },
+                          "typeName": "Staple.SkinnedAnimationStateMachine+AnimationConditionParameter"
                         }
                       ]
                     }
-                  }
+                  },
+                  "typeName": "Staple.SkinnedAnimationStateMachine+AnimationStateConnection"
                 }
               ]
             }
-          }
+          },
+          "typeName": "Staple.SkinnedAnimationStateMachine+AnimationState"
         },
         {
-          "typeName": "Staple.SkinnedAnimationStateMachine+AnimationState",
-          "parameters": {
+          "fields": {
             "name": {
               "typeName": "System.String",
               "value": "Walk"
@@ -144,8 +143,7 @@
               "typeName": "System.Collections.Generic.List`1[[Staple.SkinnedAnimationStateMachine+AnimationStateConnection, StapleCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
               "value": [
                 {
-                  "typeName": "Staple.SkinnedAnimationStateMachine+AnimationStateConnection",
-                  "parameters": {
+                  "fields": {
                     "name": {
                       "typeName": "System.String",
                       "value": "Idle"
@@ -162,8 +160,7 @@
                       "typeName": "System.Collections.Generic.List`1[[Staple.SkinnedAnimationStateMachine+AnimationConditionParameter, StapleCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
                       "value": [
                         {
-                          "typeName": "Staple.SkinnedAnimationStateMachine+AnimationConditionParameter",
-                          "parameters": {
+                          "fields": {
                             "name": {
                               "typeName": "System.String",
                               "value": "Movement"
@@ -184,15 +181,16 @@
                               "typeName": "System.Single",
                               "value": 0.0
                             }
-                          }
+                          },
+                          "typeName": "Staple.SkinnedAnimationStateMachine+AnimationConditionParameter"
                         }
                       ]
                     }
-                  }
+                  },
+                  "typeName": "Staple.SkinnedAnimationStateMachine+AnimationStateConnection"
                 },
                 {
-                  "typeName": "Staple.SkinnedAnimationStateMachine+AnimationStateConnection",
-                  "parameters": {
+                  "fields": {
                     "name": {
                       "typeName": "System.String",
                       "value": "Jump Start"
@@ -209,8 +207,7 @@
                       "typeName": "System.Collections.Generic.List`1[[Staple.SkinnedAnimationStateMachine+AnimationConditionParameter, StapleCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
                       "value": [
                         {
-                          "typeName": "Staple.SkinnedAnimationStateMachine+AnimationConditionParameter",
-                          "parameters": {
+                          "fields": {
                             "name": {
                               "typeName": "System.String",
                               "value": "Jump"
@@ -231,19 +228,21 @@
                               "typeName": "System.Single",
                               "value": 0.0
                             }
-                          }
+                          },
+                          "typeName": "Staple.SkinnedAnimationStateMachine+AnimationConditionParameter"
                         }
                       ]
                     }
-                  }
+                  },
+                  "typeName": "Staple.SkinnedAnimationStateMachine+AnimationStateConnection"
                 }
               ]
             }
-          }
+          },
+          "typeName": "Staple.SkinnedAnimationStateMachine+AnimationState"
         },
         {
-          "typeName": "Staple.SkinnedAnimationStateMachine+AnimationState",
-          "parameters": {
+          "fields": {
             "name": {
               "typeName": "System.String",
               "value": "Jump Start"
@@ -260,8 +259,7 @@
               "typeName": "System.Collections.Generic.List`1[[Staple.SkinnedAnimationStateMachine+AnimationStateConnection, StapleCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
               "value": [
                 {
-                  "typeName": "Staple.SkinnedAnimationStateMachine+AnimationStateConnection",
-                  "parameters": {
+                  "fields": {
                     "name": {
                       "typeName": "System.String",
                       "value": "Jump Land"
@@ -278,8 +276,7 @@
                       "typeName": "System.Collections.Generic.List`1[[Staple.SkinnedAnimationStateMachine+AnimationConditionParameter, StapleCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
                       "value": [
                         {
-                          "typeName": "Staple.SkinnedAnimationStateMachine+AnimationConditionParameter",
-                          "parameters": {
+                          "fields": {
                             "name": {
                               "typeName": "System.String",
                               "value": "Jump"
@@ -300,19 +297,21 @@
                               "typeName": "System.Single",
                               "value": 0.0
                             }
-                          }
+                          },
+                          "typeName": "Staple.SkinnedAnimationStateMachine+AnimationConditionParameter"
                         }
                       ]
                     }
-                  }
+                  },
+                  "typeName": "Staple.SkinnedAnimationStateMachine+AnimationStateConnection"
                 }
               ]
             }
-          }
+          },
+          "typeName": "Staple.SkinnedAnimationStateMachine+AnimationState"
         },
         {
-          "typeName": "Staple.SkinnedAnimationStateMachine+AnimationState",
-          "parameters": {
+          "fields": {
             "name": {
               "typeName": "System.String",
               "value": "Jump Land"
@@ -329,8 +328,7 @@
               "typeName": "System.Collections.Generic.List`1[[Staple.SkinnedAnimationStateMachine+AnimationStateConnection, StapleCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
               "value": [
                 {
-                  "typeName": "Staple.SkinnedAnimationStateMachine+AnimationStateConnection",
-                  "parameters": {
+                  "fields": {
                     "name": {
                       "typeName": "System.String",
                       "value": "Walk"
@@ -347,11 +345,13 @@
                       "typeName": "System.Collections.Generic.List`1[[Staple.SkinnedAnimationStateMachine+AnimationConditionParameter, StapleCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
                       "value": []
                     }
-                  }
+                  },
+                  "typeName": "Staple.SkinnedAnimationStateMachine+AnimationStateConnection"
                 }
               ]
             }
-          }
+          },
+          "typeName": "Staple.SkinnedAnimationStateMachine+AnimationState"
         }
       ]
     },
@@ -359,8 +359,7 @@
       "typeName": "System.Collections.Generic.List`1[[Staple.SkinnedAnimationStateMachine+AnimationParameter, StapleCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
       "value": [
         {
-          "typeName": "Staple.SkinnedAnimationStateMachine+AnimationParameter",
-          "parameters": {
+          "fields": {
             "name": {
               "typeName": "System.String",
               "value": "Movement"
@@ -369,11 +368,11 @@
               "typeName": "Staple.SkinnedAnimationStateMachine+AnimationParameterType",
               "value": "Bool"
             }
-          }
+          },
+          "typeName": "Staple.SkinnedAnimationStateMachine+AnimationParameter"
         },
         {
-          "typeName": "Staple.SkinnedAnimationStateMachine+AnimationParameter",
-          "parameters": {
+          "fields": {
             "name": {
               "typeName": "System.String",
               "value": "Jump"
@@ -382,7 +381,8 @@
               "typeName": "Staple.SkinnedAnimationStateMachine+AnimationParameterType",
               "value": "Bool"
             }
-          }
+          },
+          "typeName": "Staple.SkinnedAnimationStateMachine+AnimationParameter"
         }
       ]
     },
@@ -390,61 +390,61 @@
       "typeName": "Staple.SkinnedAnimationStateMachine+EditorData",
       "value": {
         "typeName": "Staple.SkinnedAnimationStateMachine+EditorData",
-        "parameters": {
+        "fields": {
           "nodePositions": {
             "typeName": "Staple.SkinnedAnimationStateMachine+NodePosition[]",
             "value": [
               {
-                "typeName": "Staple.SkinnedAnimationStateMachine+NodePosition",
-                "parameters": {
+                "fields": {
                   "x": {
                     "typeName": "System.Single",
-                    "value": 170.0
+                    "value": 88.0
                   },
                   "y": {
                     "typeName": "System.Single",
-                    "value": 239.0
+                    "value": 159.0
                   }
-                }
+                },
+                "typeName": "Staple.SkinnedAnimationStateMachine+NodePosition"
               },
               {
-                "typeName": "Staple.SkinnedAnimationStateMachine+NodePosition",
-                "parameters": {
+                "fields": {
                   "x": {
                     "typeName": "System.Single",
-                    "value": 373.0
+                    "value": 371.0
                   },
                   "y": {
                     "typeName": "System.Single",
-                    "value": 219.0
+                    "value": 161.0
                   }
-                }
+                },
+                "typeName": "Staple.SkinnedAnimationStateMachine+NodePosition"
               },
               {
-                "typeName": "Staple.SkinnedAnimationStateMachine+NodePosition",
-                "parameters": {
+                "fields": {
                   "x": {
                     "typeName": "System.Single",
-                    "value": 558.0
+                    "value": 626.0
                   },
                   "y": {
                     "typeName": "System.Single",
-                    "value": 136.0
+                    "value": 168.0
                   }
-                }
+                },
+                "typeName": "Staple.SkinnedAnimationStateMachine+NodePosition"
               },
               {
-                "typeName": "Staple.SkinnedAnimationStateMachine+NodePosition",
-                "parameters": {
+                "fields": {
                   "x": {
                     "typeName": "System.Single",
-                    "value": 770.0
+                    "value": 993.0
                   },
                   "y": {
                     "typeName": "System.Single",
-                    "value": 131.0
+                    "value": 180.0
                   }
-                }
+                },
+                "typeName": "Staple.SkinnedAnimationStateMachine+NodePosition"
               }
             ]
           }
