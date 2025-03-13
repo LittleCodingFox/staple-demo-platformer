@@ -1,5 +1,4 @@
-﻿using Staple;
-using Staple.Editor;
+﻿using Staple.Editor;
 
 [CustomEditor(typeof(TerrainGenerator))]
 public class TerrainGeneratorEditor : Editor
@@ -12,43 +11,14 @@ public class TerrainGeneratorEditor : Editor
         {
             if(target is not TerrainGenerator generator ||
                 generator.asset == null ||
-                generator.asset.heightData == null ||
-                generator.asset.heightData.Length != generator.asset.width * generator.asset.height)
+                generator.noiseSettings == null)
             {
                 return;
             }
 
-            var noiseGenerator = new NoiseGenerator();
+            generator.asset.heightData = new float[generator.asset.width * generator.asset.height];
 
-            noiseGenerator.seed = generator.seed;
-
-            noiseGenerator.frequency = generator.frequency;
-
-            noiseGenerator.noiseType = generator.noiseType;
-
-            noiseGenerator.rotationType3D = generator.rotationType3D;
-
-            noiseGenerator.fractalType = generator.fractalType;
-
-            noiseGenerator.fractalOctaves = generator.fractalOctaves;
-
-            noiseGenerator.fractalLacunarity = generator.fractalLacunarity;
-
-            noiseGenerator.fractalGain = generator.fractalGain;
-
-            noiseGenerator.fractalWeightedStrength = generator.fractalWeightedStrength;
-
-            noiseGenerator.fractalPingPongStrength = generator.fractalPingPongStrength;
-
-            noiseGenerator.cellularDistanceFunction = generator.cellularDistanceFunction;
-
-            noiseGenerator.cellularReturnType = generator.cellularReturnType;
-
-            noiseGenerator.cellularJitter = generator.cellularJitter;
-
-            noiseGenerator.domainWarpType = generator.domainWarpType;
-
-            noiseGenerator.domainWarpAmp = generator.domainWarpAmp;
+            var noiseGenerator = generator.noiseSettings.MakeGenerator();
 
             for (int y = 0, yIndex = 0; y < generator.asset.height; y++, yIndex += generator.asset.width)
             {

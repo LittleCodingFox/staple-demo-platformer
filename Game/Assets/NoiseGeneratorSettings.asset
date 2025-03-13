@@ -1,0 +1,66 @@
+{
+  "guid": "47f8bf78-be69-4ebf-ba01-a2c17ac1976b",
+  "typeName": "Staple.NoiseGeneratorSettings",
+  "parameters": {
+    "seed": {
+      "typeName": "System.Int32",
+      "value": 1337
+    },
+    "frequency": {
+      "typeName": "System.Single",
+      "value": 0.01
+    },
+    "noiseType": {
+      "typeName": "Staple.NoiseGenerator+NoiseType",
+      "value": "OpenSimplex2"
+    },
+    "rotationType3D": {
+      "typeName": "Staple.NoiseGenerator+RotationType3D",
+      "value": "None"
+    },
+    "fractalType": {
+      "typeName": "Staple.NoiseGenerator+FractalType",
+      "value": "FBm"
+    },
+    "fractalOctaves": {
+      "typeName": "System.Int32",
+      "value": 3
+    },
+    "fractalLacunarity": {
+      "typeName": "System.Single",
+      "value": 2.0
+    },
+    "fractalGain": {
+      "typeName": "System.Single",
+      "value": 10.0
+    },
+    "fractalWeightedStrength": {
+      "typeName": "System.Single",
+      "value": 0.0
+    },
+    "fractalPingPongStrength": {
+      "typeName": "System.Single",
+      "value": 2.0
+    },
+    "cellularDistanceFunction": {
+      "typeName": "Staple.NoiseGenerator+CellularDistanceFunction",
+      "value": "EuclideanSq"
+    },
+    "cellularReturnType": {
+      "typeName": "Staple.NoiseGenerator+CellularReturnType",
+      "value": "Distance"
+    },
+    "cellularJitter": {
+      "typeName": "System.Single",
+      "value": 1.0
+    },
+    "domainWarpType": {
+      "typeName": "Staple.NoiseGenerator+DomainWarpType",
+      "value": "OpenSimplex2"
+    },
+    "domainWarpAmp": {
+      "typeName": "System.Single",
+      "value": 1.0
+    }
+  }
+}
