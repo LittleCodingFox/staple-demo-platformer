@@ -1,6 +1,6 @@
 using Staple;
 
-internal class TerrainRenderer : Renderable, IComponentDisposable
+public class TerrainRenderer : Renderable, IComponentDisposable
 {
     public TerrainAsset asset;
     public Material material;

@@ -1,0 +1,10 @@
+{
+  "anyPlatform": true,
+  "platforms": [],
+  "excludedPlatforms": [],
+  "allowUnsafeCode": false,
+  "autoReferenced": true,
+  "referencedAssemblies": [
+    "b7b96723-2ae4-447a-8f0c-f2ad6e54bf2e"
+  ]
+}

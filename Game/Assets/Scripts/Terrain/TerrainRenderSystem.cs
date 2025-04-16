@@ -5,7 +5,7 @@ using System.Collections.Generic;
 using System.Numerics;
 using System.Runtime.InteropServices;
 
-internal class TerrainRenderSystem : IRenderSystem
+public class TerrainRenderSystem : IRenderSystem
 {
     [Serializable]
     [StructLayout(LayoutKind.Sequential, Pack = 0)]
