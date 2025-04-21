@@ -1,11 +1,11 @@
 {
   "dependencies": {
-    "com.staple.openal": {
+    "com.staple.joltphysics": {
       "version": "1.0.0",
       "source": "Builtin",
       "dependencies": {}
     },
-    "com.staple.joltphysics": {
+    "com.staple.openal": {
       "version": "1.0.0",
       "source": "Builtin",
       "dependencies": {}

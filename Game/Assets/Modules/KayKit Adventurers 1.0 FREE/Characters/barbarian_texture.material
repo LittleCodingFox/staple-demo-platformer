@@ -34,7 +34,7 @@
     },
     "diffuseTexture": {
       "type": "Texture",
-      "textureValue": "Modules/KayKit Adventurers 1.0 FREE/Characters/barbarian_texture.png"
+      "textureValue": "1df3243d-45c9-4a72-8b9f-c58ff99f4e2b"
     },
     "displacementTexture": {
       "type": "Texture",

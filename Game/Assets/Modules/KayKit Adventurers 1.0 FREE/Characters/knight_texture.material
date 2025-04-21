@@ -34,7 +34,7 @@
     },
     "diffuseTexture": {
       "type": "Texture",
-      "textureValue": "Modules/KayKit Adventurers 1.0 FREE/Characters/knight_texture.png"
+      "textureValue": "b24d7fd6-c8af-4d9f-ad34-f1df1d65873a"
     },
     "displacementTexture": {
       "type": "Texture",
