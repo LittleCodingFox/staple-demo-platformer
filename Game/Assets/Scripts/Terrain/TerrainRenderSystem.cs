@@ -25,12 +25,9 @@ public class TerrainRenderSystem : IRenderSystem
         public Vector3 position;
         public Quaternion rotation;
         public Vector3 scale;
-        public ushort viewID;
     }
 
-    private RenderInfo[] renderers = [];
-
-    private int rendererCount = 0;
+    private readonly Dictionary<ushort, RenderInfo[]> renderers = [];
 
     private readonly Dictionary<Vector2Int, (TerrainVertex[], int[])> cachedTerrainSizes = [];
 
@@ -41,6 +38,8 @@ public class TerrainRenderSystem : IRenderSystem
         .Build());
 
     public bool NeedsUpdate { get; set; }
+
+    public bool UsesOwnRenderProcess => false;
 
     private void CacheTerrain(int width, int height)
     {
@@ -95,6 +94,11 @@ public class TerrainRenderSystem : IRenderSystem
 
     public void Shutdown()
     {
+    }
+
+    public void ClearRenderData(ushort viewID)
+    {
+        renderers.Remove(viewID);
     }
 
     public void Prepare()
@@ -237,11 +241,20 @@ public class TerrainRenderSystem : IRenderSystem
         }
     }
 
-    public void Process((Entity, Transform, IComponent)[] contents, Camera activeCamera, Transform activeCameraTransform, ushort viewId)
+    public void Process((Entity, Transform, IComponent)[] contents, Camera activeCamera, Transform activeCameraTransform, ushort viewID)
     {
-        if (renderers.Length < contents.Length)
+        if(renderers.TryGetValue(viewID, out var container) == false)
         {
-            Array.Resize(ref renderers, contents.Length);
+            container = [];
+
+            renderers.Add(viewID, container);
+        }
+
+        if (container.Length < contents.Length)
+        {
+            Array.Resize(ref container, contents.Length);
+
+            renderers[viewID] = container;
         }
 
         var index = 0;
@@ -265,7 +278,7 @@ public class TerrainRenderSystem : IRenderSystem
                 continue;
             }
 
-            renderers[index++] = new()
+            container[index++] = new()
             {
                 asset = renderer.asset,
                 entity = entity,
@@ -274,11 +287,8 @@ public class TerrainRenderSystem : IRenderSystem
                 position = transform.Position,
                 rotation = transform.Rotation,
                 scale = transform.Scale,
-                viewID = viewId,
             };
         }
-
-        rendererCount = index;
     }
 
     public Type RelatedComponent()
@@ -286,14 +296,21 @@ public class TerrainRenderSystem : IRenderSystem
         return typeof(TerrainRenderer);
     }
 
-    public void Submit()
+    public void Submit(ushort viewID)
     {
-        for(var i = 0; i < rendererCount; i++)
+        if(renderers.TryGetValue(viewID, out var containers) == false)
         {
-            var renderer = renderers[i];
+            return;
+        }
+
+        var length = containers.Length;
+
+        for (var i = 0; i < length; i++)
+        {
+            var renderer = containers[i];
 
             MeshRenderSystem.RenderMesh(renderer.renderer.mesh, renderer.position, renderer.rotation, renderer.scale, renderer.material,
-                MaterialLighting.Lit, renderer.viewID);
+                MaterialLighting.Lit, viewID);
         }
     }
 }

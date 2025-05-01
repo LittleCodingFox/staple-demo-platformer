@@ -48,7 +48,7 @@
         "type": "Staple.Character3D",
         "data": {
           "gravityFactor": 1.0,
-          "friction": 0.2,
+          "friction": 1.0,
           "mass": 80.0,
           "maxSlopeAngle": 50.0,
           "upDirection": {
