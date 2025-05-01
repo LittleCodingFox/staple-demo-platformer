@@ -30,12 +30,13 @@
           "materials": [
             "88428bcf-6adb-49e1-ace8-fb2cf71a2959"
           ],
-          "lighting": "Lit",
           "enabled": true,
           "forceRenderingOff": false,
           "receiveShadows": true,
           "sortingLayer": 0,
-          "sortingOrder": 0
+          "sortingOrder": 0,
+          "overrideLighting": false,
+          "lighting": "Lit"
         }
       },
       {
