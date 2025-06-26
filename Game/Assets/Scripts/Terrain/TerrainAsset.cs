@@ -6,7 +6,7 @@ public class TerrainAsset : IStapleAsset, IGuidAsset
     public int height;
     public float scale = 1;
 
-    [SerializeAsBase64]
+    [SerializeAsHex]
     public float[] heightData;
 
     private readonly GuidHasher guidHasher = new();

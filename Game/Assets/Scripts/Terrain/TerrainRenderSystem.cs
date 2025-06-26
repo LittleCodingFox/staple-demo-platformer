@@ -309,6 +309,11 @@ public class TerrainRenderSystem : IRenderSystem
         {
             var renderer = containers[i];
 
+            if(renderer.renderer == null)
+            {
+                continue;
+            }
+
             MeshRenderSystem.RenderMesh(renderer.renderer.mesh, renderer.position, renderer.rotation, renderer.scale, renderer.material,
                 MaterialLighting.Lit, viewID);
         }
