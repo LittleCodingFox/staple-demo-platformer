@@ -96,6 +96,14 @@
             "repeat": true,
             "stateMachine": "dd8767a6-62bc-440b-9d7a-d087211be124"
           }
+        },
+        {
+          "type": "Staple.SkinnedMeshInstance",
+          "data": {}
+        },
+        {
+          "type": "Staple.CullingVolume",
+          "data": {}
         }
       ],
       "layer": "Default",
