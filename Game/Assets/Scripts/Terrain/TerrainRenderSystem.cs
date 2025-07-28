@@ -37,9 +37,9 @@ public class TerrainRenderSystem : IRenderSystem
         .Add(VertexAttribute.TexCoord0, 2, VertexAttributeType.Float)
         .Build());
 
-    public bool NeedsUpdate { get; set; }
-
     public bool UsesOwnRenderProcess => false;
+
+    public Type RelatedComponent => typeof(TerrainRenderer);
 
     private void CacheTerrain(int width, int height)
     {
@@ -289,11 +289,6 @@ public class TerrainRenderSystem : IRenderSystem
                 scale = transform.Scale,
             };
         }
-    }
-
-    public Type RelatedComponent()
-    {
-        return typeof(TerrainRenderer);
     }
 
     public void Submit(ushort viewID)
