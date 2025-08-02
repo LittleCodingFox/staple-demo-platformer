@@ -1,0 +1,18 @@
+{
+	"data": {
+		"Main": {
+			"FPS": {
+				"control": "UIFPSCounter",
+				"wide": "200",
+				"tall": "40",
+				"properties": {
+					"textColor": "#3366FF",
+					"secondaryTextColor": "#6633FF",
+					"fontSize": 30,
+					"borderSize": 2,
+					"borderColor": "#000000"
+				}
+			}
+		}
+	}
+}
