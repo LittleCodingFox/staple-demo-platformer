@@ -166,7 +166,19 @@ public class TerrainRenderSystem : IRenderSystem
         renderer.mesh.SetMeshData(renderer.meshData.AsSpan(), vertexLayout.Value);
     }
 
-    public void Preprocess((Entity, Transform, IComponent)[] contents, Camera activeCamera, Transform activeCameraTransform)
+    private void UpdateMeshBounds(TerrainRenderer renderer)
+    {
+        var points = new Vector3[renderer.meshData.Length];
+
+        for(var i = 0; i < renderer.meshData.Length; i++)
+        {
+            points[i] = renderer.meshData[i].position;
+        }
+
+        renderer.localBounds = AABB.CreateFromPoints(points);
+    }
+
+    public void Preprocess(Span<(Entity, Transform, IComponent)> contents, Camera activeCamera, Transform activeCameraTransform)
     {
         foreach(var (entity, transform, relatedComponent) in contents)
         {
@@ -221,6 +233,8 @@ public class TerrainRenderSystem : IRenderSystem
 
                 renderer.mesh.UploadMeshData();
 
+                UpdateMeshBounds(renderer);
+
                 if (entity.TryGetComponent<HeightMapCollider3D>(out var collider))
                 {
                     collider.heights = renderer.asset.heightData;
@@ -237,11 +251,16 @@ public class TerrainRenderSystem : IRenderSystem
                 var data = GetCache(renderer.asset.width, renderer.asset.height);
 
                 UpdateMesh(renderer, data.Item2);
+
+                UpdateMeshBounds(renderer);
             }
+
+            renderer.bounds = new(renderer.localBounds.center * transform.Scale + transform.Position,
+                renderer.localBounds.size * transform.Scale);
         }
     }
 
-    public void Process((Entity, Transform, IComponent)[] contents, Camera activeCamera, Transform activeCameraTransform, ushort viewID)
+    public void Process(Span<(Entity, Transform, IComponent)> contents, Camera activeCamera, Transform activeCameraTransform, ushort viewID)
     {
         if(renderers.TryGetValue(viewID, out var container) == false)
         {
