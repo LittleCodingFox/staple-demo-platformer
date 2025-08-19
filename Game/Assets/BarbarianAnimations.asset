@@ -7,7 +7,7 @@
       "value": "a0b56adb-c2b1-4f89-9ba2-06586936916f:0"
     },
     "states": {
-      "typeName": "System.Collections.Generic.List`1[[Staple.SkinnedAnimationStateMachine+AnimationState, Staple.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+      "typeName": "System.Collections.Generic.List`1[Staple.SkinnedAnimationStateMachine+AnimationState]",
       "value": [
         {
           "fields": {
@@ -24,7 +24,7 @@
               "value": true
             },
             "connections": {
-              "typeName": "System.Collections.Generic.List`1[[Staple.SkinnedAnimationStateMachine+AnimationStateConnection, Staple.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+              "typeName": "System.Collections.Generic.List`1[Staple.SkinnedAnimationStateMachine+AnimationStateConnection]",
               "value": [
                 {
                   "fields": {
@@ -41,7 +41,7 @@
                       "value": false
                     },
                     "parameters": {
-                      "typeName": "System.Collections.Generic.List`1[[Staple.SkinnedAnimationStateMachine+AnimationConditionParameter, Staple.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+                      "typeName": "System.Collections.Generic.List`1[Staple.SkinnedAnimationStateMachine+AnimationConditionParameter]",
                       "value": [
                         {
                           "fields": {
@@ -88,7 +88,7 @@
                       "value": false
                     },
                     "parameters": {
-                      "typeName": "System.Collections.Generic.List`1[[Staple.SkinnedAnimationStateMachine+AnimationConditionParameter, Staple.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+                      "typeName": "System.Collections.Generic.List`1[Staple.SkinnedAnimationStateMachine+AnimationConditionParameter]",
                       "value": [
                         {
                           "fields": {
@@ -140,7 +140,7 @@
               "value": true
             },
             "connections": {
-              "typeName": "System.Collections.Generic.List`1[[Staple.SkinnedAnimationStateMachine+AnimationStateConnection, Staple.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+              "typeName": "System.Collections.Generic.List`1[Staple.SkinnedAnimationStateMachine+AnimationStateConnection]",
               "value": [
                 {
                   "fields": {
@@ -157,7 +157,7 @@
                       "value": false
                     },
                     "parameters": {
-                      "typeName": "System.Collections.Generic.List`1[[Staple.SkinnedAnimationStateMachine+AnimationConditionParameter, Staple.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+                      "typeName": "System.Collections.Generic.List`1[Staple.SkinnedAnimationStateMachine+AnimationConditionParameter]",
                       "value": [
                         {
                           "fields": {
@@ -204,7 +204,7 @@
                       "value": false
                     },
                     "parameters": {
-                      "typeName": "System.Collections.Generic.List`1[[Staple.SkinnedAnimationStateMachine+AnimationConditionParameter, Staple.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+                      "typeName": "System.Collections.Generic.List`1[Staple.SkinnedAnimationStateMachine+AnimationConditionParameter]",
                       "value": [
                         {
                           "fields": {
@@ -256,7 +256,7 @@
               "value": false
             },
             "connections": {
-              "typeName": "System.Collections.Generic.List`1[[Staple.SkinnedAnimationStateMachine+AnimationStateConnection, Staple.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+              "typeName": "System.Collections.Generic.List`1[Staple.SkinnedAnimationStateMachine+AnimationStateConnection]",
               "value": [
                 {
                   "fields": {
@@ -273,7 +273,7 @@
                       "value": false
                     },
                     "parameters": {
-                      "typeName": "System.Collections.Generic.List`1[[Staple.SkinnedAnimationStateMachine+AnimationConditionParameter, Staple.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+                      "typeName": "System.Collections.Generic.List`1[Staple.SkinnedAnimationStateMachine+AnimationConditionParameter]",
                       "value": [
                         {
                           "fields": {
@@ -325,7 +325,7 @@
               "value": false
             },
             "connections": {
-              "typeName": "System.Collections.Generic.List`1[[Staple.SkinnedAnimationStateMachine+AnimationStateConnection, Staple.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+              "typeName": "System.Collections.Generic.List`1[Staple.SkinnedAnimationStateMachine+AnimationStateConnection]",
               "value": [
                 {
                   "fields": {
@@ -342,7 +342,7 @@
                       "value": true
                     },
                     "parameters": {
-                      "typeName": "System.Collections.Generic.List`1[[Staple.SkinnedAnimationStateMachine+AnimationConditionParameter, Staple.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+                      "typeName": "System.Collections.Generic.List`1[Staple.SkinnedAnimationStateMachine+AnimationConditionParameter]",
                       "value": []
                     }
                   },
@@ -356,7 +356,7 @@
       ]
     },
     "parameters": {
-      "typeName": "System.Collections.Generic.List`1[[Staple.SkinnedAnimationStateMachine+AnimationParameter, Staple.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+      "typeName": "System.Collections.Generic.List`1[Staple.SkinnedAnimationStateMachine+AnimationParameter]",
       "value": [
         {
           "fields": {
