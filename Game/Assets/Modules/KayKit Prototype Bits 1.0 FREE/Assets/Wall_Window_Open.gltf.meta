@@ -1,15 +1,16 @@
 {
-  "guid": "3802429e-f7d6-4353-b72a-d7cb86f13a0f",
-  "makeLeftHanded": false,
-  "splitLargeMeshes": false,
-  "preTransformVertices": false,
-  "limitBoneWeights": false,
-  "flipUVs": true,
-  "flipWindingOrder": true,
-  "splitByBoneCount": false,
-  "debone": false,
-  "typeName": "Staple.Mesh",
-  "convertUnits": true,
+  "guid": "2459b273-384e-4921-800e-3536b13e8b06",
+  "flipUVs": false,
+  "flipWindingOrder": false,
+  "regenerateNormals": false,
+  "useSmoothNormals": false,
+  "lighting": "Lit",
   "rotation": "None",
-  "scale": 1.0
+  "scale": 1.0,
+  "combineSimilarMeshes": false,
+  "frameRate": 60,
+  "syncAnimationToRefreshRate": false,
+  "simplify": "None",
+  "targetPolyCount": 1000,
+  "typeName": "Staple.Mesh"
 }

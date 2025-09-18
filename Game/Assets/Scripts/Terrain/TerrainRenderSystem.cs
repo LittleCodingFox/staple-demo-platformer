@@ -64,17 +64,17 @@ public class TerrainRenderSystem : IRenderSystem
             {
                 indices.AddRange([vertexCounter, vertexCounter + 1, vertexCounter + 2, vertexCounter + 2, vertexCounter + 3, vertexCounter]);
 
-                newVertices[vertexCounter++].position = new Vector3(x + 1, 0, y);
-                newVertices[vertexCounter - 1].uv = new Vector2(1, 0);
-
-                newVertices[vertexCounter++].position = new Vector3(x + 1, 0, y + 1);
-                newVertices[vertexCounter - 1].uv = new Vector2(1, 1);
+                newVertices[vertexCounter++].position = new Vector3(x, 0, y);
+                newVertices[vertexCounter - 1].uv = Vector2.Zero;
 
                 newVertices[vertexCounter++].position = new Vector3(x, 0, y + 1);
                 newVertices[vertexCounter - 1].uv = new Vector2(0, 1);
 
-                newVertices[vertexCounter++].position = new Vector3(x, 0, y);
-                newVertices[vertexCounter - 1].uv = Vector2.Zero;
+                newVertices[vertexCounter++].position = new Vector3(x + 1, 0, y + 1);
+                newVertices[vertexCounter - 1].uv = new Vector2(1, 1);
+
+                newVertices[vertexCounter++].position = new Vector3(x + 1, 0, y);
+                newVertices[vertexCounter - 1].uv = new Vector2(1, 0);
             }
         }
 
@@ -146,10 +146,10 @@ public class TerrainRenderSystem : IRenderSystem
                     vertexCounter++;
                 }
 
-                SetHeight(GetHeight(x + 1, y));
-                SetHeight(GetHeight(x + 1, y + 1));
-                SetHeight(GetHeight(x, y + 1));
                 SetHeight(GetHeight(x, y));
+                SetHeight(GetHeight(x, y + 1));
+                SetHeight(GetHeight(x + 1, y + 1));
+                SetHeight(GetHeight(x + 1, y));
             }
         }
 

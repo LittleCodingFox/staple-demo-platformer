@@ -13,6 +13,7 @@
   "isLinear": true,
   "spritePixelsPerUnit": 100,
   "readBack": false,
+  "keepOnCPU": false,
   "spriteTextureMethod": "Single",
   "spriteTextureGridSize": {
     "X": 0,
@@ -22,6 +23,12 @@
   "shouldPack": false,
   "padding": 0,
   "trimDuplicates": false,
+  "border": {
+    "left": 0,
+    "right": 0,
+    "top": 0,
+    "bottom": 0
+  },
   "overrides": {
     "iOS": {
       "shouldOverride": true,
@@ -33,6 +40,13 @@
     "Android": {
       "shouldOverride": true,
       "format": "ASTC4x4",
+      "quality": "Default",
+      "maxSize": 2048,
+      "premultiplyAlpha": false
+    },
+    "Windows": {
+      "shouldOverride": false,
+      "format": "RGBA8",
       "quality": "Default",
       "maxSize": 2048,
       "premultiplyAlpha": false

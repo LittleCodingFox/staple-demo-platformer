@@ -48,7 +48,7 @@ class OrbitCameraSystem : IEntitySystemUpdate, IEntitySystemLifecycle
 
     private bool ManualRotation(OrbitCamera camera)
     {
-        var input = new Vector2(movement.Y, -movement.X);
+        var input = new Vector2(-movement.Y, movement.X);
 
         movement = Vector2.Zero;
 
@@ -147,7 +147,7 @@ class OrbitCameraSystem : IEntitySystemUpdate, IEntitySystemLifecycle
                 rotation = transform.LocalRotation;
             }
 
-            var direction = Vector3.Transform(new Vector3(0, 0, -1), rotation);
+            var direction = Vector3.Transform(new Vector3(0, 0, 1), rotation);
 
             var position = camera.focusPoint - direction * camera.distance;
 

@@ -17,17 +17,17 @@ class PlayerMovementSystem : IEntitySystemUpdate, IEntitySystemFixedUpdate, IEnt
         foreach((_, Transform transform, OrbitCamera camera) in cameras.Contents)
         {
             if (camera.focus == null ||
-                camera.focus.entity.TryGetComponent<PlayerMovement>(out var playerMovement) == false)
+                camera.focus.Entity.TryGetComponent<PlayerMovement>(out var playerMovement) == false)
             {
                 return;
             }
 
-            if(camera.focus.entity.TryGetComponent<SkinnedMeshAnimator>(out var animator) == false)
+            if(camera.focus.Entity.TryGetComponent<SkinnedMeshAnimator>(out var animator) == false)
             {
-                camera.focus.GetChild(0)?.entity.TryGetComponent(out animator);
+                camera.focus.GetChild(0)?.Entity.TryGetComponent(out animator);
             }
 
-            var rigidBody = Physics.GetBody3D(camera.focus.entity);
+            var rigidBody = Physics.GetBody3D(camera.focus.Entity);
 
             if (rigidBody == null)
             {

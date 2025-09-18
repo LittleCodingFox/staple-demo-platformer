@@ -62,7 +62,8 @@
     "layer": "Default",
     "enabled": true,
     "prefabGuid": null,
-    "prefabLocalID": 0
+    "prefabLocalID": 0,
+    "hierarchyVisibility": "None"
   },
   "children": [
     {
@@ -89,12 +90,14 @@
       },
       "components": [
         {
-          "type": "Staple.SkinnedMeshAnimator",
+          "type": "Staple.CullingVolume",
           "data": {
-            "mesh": "a0b56adb-c2b1-4f89-9ba2-06586936916f",
-            "animation": "1H_Melee_Attack_Chop",
-            "repeat": true,
-            "stateMachine": "dd8767a6-62bc-440b-9d7a-d087211be124"
+            "type": "Renderers",
+            "bounds": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0
+            }
           }
         },
         {
@@ -102,14 +105,20 @@
           "data": {}
         },
         {
-          "type": "Staple.CullingVolume",
-          "data": {}
+          "type": "Staple.SkinnedMeshAnimator",
+          "data": {
+            "mesh": "1b25a4e0-6a3c-4c33-8a63-56f5f8ff6fa0",
+            "animation": "1H_Melee_Attack_Chop",
+            "repeat": true,
+            "stateMachine": "dd8767a6-62bc-440b-9d7a-d087211be124"
+          }
         }
       ],
       "layer": "Default",
       "enabled": true,
       "prefabGuid": null,
-      "prefabLocalID": 0
+      "prefabLocalID": 0,
+      "hierarchyVisibility": "None"
     },
     {
       "kind": "Entity",
@@ -137,11 +146,12 @@
       "layer": "Default",
       "enabled": true,
       "prefabGuid": null,
-      "prefabLocalID": 0
+      "prefabLocalID": 0,
+      "hierarchyVisibility": "None"
     },
     {
       "kind": "Entity",
-      "name": "root",
+      "name": "Barbarian_ArmLeft",
       "ID": 3,
       "parent": 2,
       "transform": {
@@ -165,17 +175,18 @@
       "layer": "Default",
       "enabled": true,
       "prefabGuid": null,
-      "prefabLocalID": 0
+      "prefabLocalID": 0,
+      "hierarchyVisibility": "None"
     },
     {
       "kind": "Entity",
-      "name": "hips",
+      "name": "Barbarian_ArmRight",
       "ID": 4,
-      "parent": 3,
+      "parent": 2,
       "transform": {
         "position": {
           "x": 0.0,
-          "y": 0.4057,
+          "y": 0.0,
           "z": 0.0
         },
         "rotation": {
@@ -193,13 +204,188 @@
       "layer": "Default",
       "enabled": true,
       "prefabGuid": null,
-      "prefabLocalID": 0
+      "prefabLocalID": 0,
+      "hierarchyVisibility": "None"
+    },
+    {
+      "kind": "Entity",
+      "name": "Barbarian_Body",
+      "ID": 5,
+      "parent": 2,
+      "transform": {
+        "position": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "rotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "scale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        }
+      },
+      "components": [],
+      "layer": "Default",
+      "enabled": true,
+      "prefabGuid": null,
+      "prefabLocalID": 0,
+      "hierarchyVisibility": "None"
+    },
+    {
+      "kind": "Entity",
+      "name": "Barbarian_Head",
+      "ID": 6,
+      "parent": 2,
+      "transform": {
+        "position": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "rotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "scale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        }
+      },
+      "components": [],
+      "layer": "Default",
+      "enabled": true,
+      "prefabGuid": null,
+      "prefabLocalID": 0,
+      "hierarchyVisibility": "None"
+    },
+    {
+      "kind": "Entity",
+      "name": "Barbarian_LegLeft",
+      "ID": 7,
+      "parent": 2,
+      "transform": {
+        "position": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "rotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "scale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        }
+      },
+      "components": [],
+      "layer": "Default",
+      "enabled": true,
+      "prefabGuid": null,
+      "prefabLocalID": 0,
+      "hierarchyVisibility": "None"
+    },
+    {
+      "kind": "Entity",
+      "name": "Barbarian_LegRight",
+      "ID": 8,
+      "parent": 2,
+      "transform": {
+        "position": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "rotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "scale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        }
+      },
+      "components": [],
+      "layer": "Default",
+      "enabled": true,
+      "prefabGuid": null,
+      "prefabLocalID": 0,
+      "hierarchyVisibility": "None"
+    },
+    {
+      "kind": "Entity",
+      "name": "root",
+      "ID": 9,
+      "parent": 2,
+      "transform": {
+        "position": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "rotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "scale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        }
+      },
+      "components": [],
+      "layer": "Default",
+      "enabled": true,
+      "prefabGuid": null,
+      "prefabLocalID": 0,
+      "hierarchyVisibility": "None"
+    },
+    {
+      "kind": "Entity",
+      "name": "hips",
+      "ID": 10,
+      "parent": 9,
+      "transform": {
+        "position": {
+          "x": 0.0,
+          "y": 0.4057,
+          "z": 0.0
+        },
+        "rotation": {
+          "x": 0.0,
+          "y": -0.0,
+          "z": 0.0
+        },
+        "scale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        }
+      },
+      "components": [],
+      "layer": "Default",
+      "enabled": true,
+      "prefabGuid": null,
+      "prefabLocalID": 0,
+      "hierarchyVisibility": "None"
     },
     {
       "kind": "Entity",
       "name": "spine",
-      "ID": 5,
-      "parent": 4,
+      "ID": 11,
+      "parent": 10,
       "transform": {
         "position": {
           "x": 0.0,
@@ -221,13 +407,14 @@
       "layer": "Default",
       "enabled": true,
       "prefabGuid": null,
-      "prefabLocalID": 0
+      "prefabLocalID": 0,
+      "hierarchyVisibility": "None"
     },
     {
       "kind": "Entity",
       "name": "chest",
-      "ID": 6,
-      "parent": 5,
+      "ID": 12,
+      "parent": 11,
       "transform": {
         "position": {
           "x": 0.0,
@@ -249,13 +436,14 @@
       "layer": "Default",
       "enabled": true,
       "prefabGuid": null,
-      "prefabLocalID": 0
+      "prefabLocalID": 0,
+      "hierarchyVisibility": "None"
     },
     {
       "kind": "Entity",
       "name": "upperarm.l",
-      "ID": 7,
-      "parent": 6,
+      "ID": 13,
+      "parent": 12,
       "transform": {
         "position": {
           "x": 0.212,
@@ -264,7 +452,7 @@
         },
         "rotation": {
           "x": -90.0,
-          "y": -86.7161,
+          "y": 273.2839,
           "z": 0.0
         },
         "scale": {
@@ -277,13 +465,14 @@
       "layer": "Default",
       "enabled": true,
       "prefabGuid": null,
-      "prefabLocalID": 0
+      "prefabLocalID": 0,
+      "hierarchyVisibility": "None"
     },
     {
       "kind": "Entity",
       "name": "lowerarm.l",
-      "ID": 8,
-      "parent": 7,
+      "ID": 14,
+      "parent": 13,
       "transform": {
         "position": {
           "x": -0.0,
@@ -291,7 +480,7 @@
           "z": -0.0
         },
         "rotation": {
-          "x": 0.0,
+          "x": -0.0,
           "y": -0.0,
           "z": -6.3385
         },
@@ -305,13 +494,14 @@
       "layer": "Default",
       "enabled": true,
       "prefabGuid": null,
-      "prefabLocalID": 0
+      "prefabLocalID": 0,
+      "hierarchyVisibility": "None"
     },
     {
       "kind": "Entity",
       "name": "wrist.l",
-      "ID": 9,
-      "parent": 8,
+      "ID": 15,
+      "parent": 14,
       "transform": {
         "position": {
           "x": 0.0,
@@ -320,7 +510,7 @@
         },
         "rotation": {
           "x": -0.0,
-          "y": 0.0,
+          "y": -0.0,
           "z": 3.0552
         },
         "scale": {
@@ -333,13 +523,14 @@
       "layer": "Default",
       "enabled": true,
       "prefabGuid": null,
-      "prefabLocalID": 0
+      "prefabLocalID": 0,
+      "hierarchyVisibility": "None"
     },
     {
       "kind": "Entity",
       "name": "hand.l",
-      "ID": 10,
-      "parent": 9,
+      "ID": 16,
+      "parent": 15,
       "transform": {
         "position": {
           "x": 0.0,
@@ -361,13 +552,14 @@
       "layer": "Default",
       "enabled": true,
       "prefabGuid": null,
-      "prefabLocalID": 0
+      "prefabLocalID": 0,
+      "hierarchyVisibility": "None"
     },
     {
       "kind": "Entity",
       "name": "handslot.l",
-      "ID": 11,
-      "parent": 10,
+      "ID": 17,
+      "parent": 16,
       "transform": {
         "position": {
           "x": 0.0,
@@ -376,7 +568,7 @@
         },
         "rotation": {
           "x": 0.0,
-          "y": 0.0,
+          "y": -0.0,
           "z": -90.0
         },
         "scale": {
@@ -389,13 +581,14 @@
       "layer": "Default",
       "enabled": true,
       "prefabGuid": null,
-      "prefabLocalID": 0
+      "prefabLocalID": 0,
+      "hierarchyVisibility": "None"
     },
     {
       "kind": "Entity",
       "name": "1H_Axe_Offhand",
-      "ID": 12,
-      "parent": 11,
+      "ID": 18,
+      "parent": 17,
       "transform": {
         "position": {
           "x": 0.0,
@@ -404,7 +597,7 @@
         },
         "rotation": {
           "x": 0.0,
-          "y": 0.0,
+          "y": -0.0,
           "z": 0.0
         },
         "scale": {
@@ -417,13 +610,14 @@
       "layer": "Default",
       "enabled": true,
       "prefabGuid": null,
-      "prefabLocalID": 0
+      "prefabLocalID": 0,
+      "hierarchyVisibility": "None"
     },
     {
       "kind": "Entity",
       "name": "Cube.001 0",
-      "ID": 13,
-      "parent": 12,
+      "ID": 19,
+      "parent": 18,
       "transform": {
         "position": {
           "x": 0.0,
@@ -445,7 +639,7 @@
         {
           "type": "Staple.MeshRenderer",
           "data": {
-            "mesh": "a0b56adb-c2b1-4f89-9ba2-06586936916f:6",
+            "mesh": "1b25a4e0-6a3c-4c33-8a63-56f5f8ff6fa0:6",
             "materials": [
               "f0438960-6b2c-4a68-bec8-1f8f592ab9e1"
             ],
@@ -462,13 +656,14 @@
       "layer": "Default",
       "enabled": true,
       "prefabGuid": null,
-      "prefabLocalID": 0
+      "prefabLocalID": 0,
+      "hierarchyVisibility": "None"
     },
     {
       "kind": "Entity",
       "name": "Barbarian_Round_Shield",
-      "ID": 14,
-      "parent": 11,
+      "ID": 20,
+      "parent": 17,
       "transform": {
         "position": {
           "x": 0.0,
@@ -476,7 +671,7 @@
           "z": 0.1559
         },
         "rotation": {
-          "x": 0.0,
+          "x": -0.0,
           "y": 0.0,
           "z": 0.0002
         },
@@ -490,13 +685,14 @@
       "layer": "Default",
       "enabled": true,
       "prefabGuid": null,
-      "prefabLocalID": 0
+      "prefabLocalID": 0,
+      "hierarchyVisibility": "None"
     },
     {
       "kind": "Entity",
       "name": "Cylinder.404 0",
-      "ID": 15,
-      "parent": 14,
+      "ID": 21,
+      "parent": 20,
       "transform": {
         "position": {
           "x": 0.0,
@@ -518,7 +714,7 @@
         {
           "type": "Staple.MeshRenderer",
           "data": {
-            "mesh": "a0b56adb-c2b1-4f89-9ba2-06586936916f:7",
+            "mesh": "1b25a4e0-6a3c-4c33-8a63-56f5f8ff6fa0:7",
             "materials": [
               "f0438960-6b2c-4a68-bec8-1f8f592ab9e1"
             ],
@@ -535,13 +731,14 @@
       "layer": "Default",
       "enabled": true,
       "prefabGuid": null,
-      "prefabLocalID": 0
+      "prefabLocalID": 0,
+      "hierarchyVisibility": "None"
     },
     {
       "kind": "Entity",
       "name": "upperarm.r",
-      "ID": 16,
-      "parent": 6,
+      "ID": 22,
+      "parent": 12,
       "transform": {
         "position": {
           "x": -0.212,
@@ -550,7 +747,7 @@
         },
         "rotation": {
           "x": -90.0,
-          "y": 86.7161,
+          "y": -273.2839,
           "z": 0.0
         },
         "scale": {
@@ -563,13 +760,14 @@
       "layer": "Default",
       "enabled": true,
       "prefabGuid": null,
-      "prefabLocalID": 0
+      "prefabLocalID": 0,
+      "hierarchyVisibility": "None"
     },
     {
       "kind": "Entity",
       "name": "lowerarm.r",
-      "ID": 17,
-      "parent": 16,
+      "ID": 23,
+      "parent": 22,
       "transform": {
         "position": {
           "x": -0.0,
@@ -577,7 +775,7 @@
           "z": -0.0
         },
         "rotation": {
-          "x": 0.0,
+          "x": -0.0,
           "y": 0.0,
           "z": 6.3385
         },
@@ -591,13 +789,14 @@
       "layer": "Default",
       "enabled": true,
       "prefabGuid": null,
-      "prefabLocalID": 0
+      "prefabLocalID": 0,
+      "hierarchyVisibility": "None"
     },
     {
       "kind": "Entity",
       "name": "wrist.r",
-      "ID": 18,
-      "parent": 17,
+      "ID": 24,
+      "parent": 23,
       "transform": {
         "position": {
           "x": -0.0,
@@ -605,7 +804,7 @@
           "z": -0.0
         },
         "rotation": {
-          "x": 0.0,
+          "x": -0.0,
           "y": 0.0,
           "z": -3.0552
         },
@@ -619,13 +818,14 @@
       "layer": "Default",
       "enabled": true,
       "prefabGuid": null,
-      "prefabLocalID": 0
+      "prefabLocalID": 0,
+      "hierarchyVisibility": "None"
     },
     {
       "kind": "Entity",
       "name": "hand.r",
-      "ID": 19,
-      "parent": 18,
+      "ID": 25,
+      "parent": 24,
       "transform": {
         "position": {
           "x": 0.0,
@@ -634,7 +834,7 @@
         },
         "rotation": {
           "x": 0.0,
-          "y": 0.0,
+          "y": -0.0,
           "z": 0.0006
         },
         "scale": {
@@ -647,13 +847,14 @@
       "layer": "Default",
       "enabled": true,
       "prefabGuid": null,
-      "prefabLocalID": 0
+      "prefabLocalID": 0,
+      "hierarchyVisibility": "None"
     },
     {
       "kind": "Entity",
       "name": "handslot.r",
-      "ID": 20,
-      "parent": 19,
+      "ID": 26,
+      "parent": 25,
       "transform": {
         "position": {
           "x": -0.0,
@@ -662,7 +863,7 @@
         },
         "rotation": {
           "x": 0.0,
-          "y": 0.0,
+          "y": -0.0,
           "z": 90.0
         },
         "scale": {
@@ -675,13 +876,14 @@
       "layer": "Default",
       "enabled": true,
       "prefabGuid": null,
-      "prefabLocalID": 0
+      "prefabLocalID": 0,
+      "hierarchyVisibility": "None"
     },
     {
       "kind": "Entity",
       "name": "1H_Axe",
-      "ID": 21,
-      "parent": 20,
+      "ID": 27,
+      "parent": 26,
       "transform": {
         "position": {
           "x": 0.0,
@@ -690,7 +892,7 @@
         },
         "rotation": {
           "x": 0.0,
-          "y": -180.0,
+          "y": 180.0,
           "z": 0.0
         },
         "scale": {
@@ -703,13 +905,14 @@
       "layer": "Default",
       "enabled": true,
       "prefabGuid": null,
-      "prefabLocalID": 0
+      "prefabLocalID": 0,
+      "hierarchyVisibility": "None"
     },
     {
       "kind": "Entity",
       "name": "Cube.12900 0",
-      "ID": 22,
-      "parent": 21,
+      "ID": 28,
+      "parent": 27,
       "transform": {
         "position": {
           "x": 0.0,
@@ -731,7 +934,7 @@
         {
           "type": "Staple.MeshRenderer",
           "data": {
-            "mesh": "a0b56adb-c2b1-4f89-9ba2-06586936916f:8",
+            "mesh": "1b25a4e0-6a3c-4c33-8a63-56f5f8ff6fa0:8",
             "materials": [
               "f0438960-6b2c-4a68-bec8-1f8f592ab9e1"
             ],
@@ -748,13 +951,14 @@
       "layer": "Default",
       "enabled": true,
       "prefabGuid": null,
-      "prefabLocalID": 0
+      "prefabLocalID": 0,
+      "hierarchyVisibility": "None"
     },
     {
       "kind": "Entity",
       "name": "2H_Axe",
-      "ID": 23,
-      "parent": 20,
+      "ID": 29,
+      "parent": 26,
       "transform": {
         "position": {
           "x": 0.0,
@@ -763,7 +967,7 @@
         },
         "rotation": {
           "x": 0.0,
-          "y": -180.0,
+          "y": 180.0,
           "z": 0.0
         },
         "scale": {
@@ -776,13 +980,14 @@
       "layer": "Default",
       "enabled": true,
       "prefabGuid": null,
-      "prefabLocalID": 0
+      "prefabLocalID": 0,
+      "hierarchyVisibility": "None"
     },
     {
       "kind": "Entity",
       "name": "Cube.222 0",
-      "ID": 24,
-      "parent": 23,
+      "ID": 30,
+      "parent": 29,
       "transform": {
         "position": {
           "x": 0.0,
@@ -804,7 +1009,7 @@
         {
           "type": "Staple.MeshRenderer",
           "data": {
-            "mesh": "a0b56adb-c2b1-4f89-9ba2-06586936916f:9",
+            "mesh": "1b25a4e0-6a3c-4c33-8a63-56f5f8ff6fa0:9",
             "materials": [
               "f0438960-6b2c-4a68-bec8-1f8f592ab9e1"
             ],
@@ -821,13 +1026,14 @@
       "layer": "Default",
       "enabled": true,
       "prefabGuid": null,
-      "prefabLocalID": 0
+      "prefabLocalID": 0,
+      "hierarchyVisibility": "None"
     },
     {
       "kind": "Entity",
       "name": "Mug",
-      "ID": 25,
-      "parent": 20,
+      "ID": 31,
+      "parent": 26,
       "transform": {
         "position": {
           "x": 0.3006,
@@ -836,7 +1042,7 @@
         },
         "rotation": {
           "x": 0.0,
-          "y": -180.0,
+          "y": 180.0,
           "z": 0.0
         },
         "scale": {
@@ -849,13 +1055,14 @@
       "layer": "Default",
       "enabled": true,
       "prefabGuid": null,
-      "prefabLocalID": 0
+      "prefabLocalID": 0,
+      "hierarchyVisibility": "None"
     },
     {
       "kind": "Entity",
       "name": "Cylinder.061 0",
-      "ID": 26,
-      "parent": 25,
+      "ID": 32,
+      "parent": 31,
       "transform": {
         "position": {
           "x": 0.0,
@@ -877,7 +1084,7 @@
         {
           "type": "Staple.MeshRenderer",
           "data": {
-            "mesh": "a0b56adb-c2b1-4f89-9ba2-06586936916f:10",
+            "mesh": "1b25a4e0-6a3c-4c33-8a63-56f5f8ff6fa0:10",
             "materials": [
               "f0438960-6b2c-4a68-bec8-1f8f592ab9e1"
             ],
@@ -894,13 +1101,14 @@
       "layer": "Default",
       "enabled": true,
       "prefabGuid": null,
-      "prefabLocalID": 0
+      "prefabLocalID": 0,
+      "hierarchyVisibility": "None"
     },
     {
       "kind": "Entity",
       "name": "head",
-      "ID": 27,
-      "parent": 6,
+      "ID": 33,
+      "parent": 12,
       "transform": {
         "position": {
           "x": 0.0,
@@ -922,13 +1130,14 @@
       "layer": "Default",
       "enabled": true,
       "prefabGuid": null,
-      "prefabLocalID": 0
+      "prefabLocalID": 0,
+      "hierarchyVisibility": "None"
     },
     {
       "kind": "Entity",
       "name": "Barbarian_Hat",
-      "ID": 28,
-      "parent": 27,
+      "ID": 34,
+      "parent": 33,
       "transform": {
         "position": {
           "x": 0.0,
@@ -937,7 +1146,7 @@
         },
         "rotation": {
           "x": 0.0,
-          "y": 0.0,
+          "y": -0.0,
           "z": 0.0
         },
         "scale": {
@@ -950,13 +1159,14 @@
       "layer": "Default",
       "enabled": true,
       "prefabGuid": null,
-      "prefabLocalID": 0
+      "prefabLocalID": 0,
+      "hierarchyVisibility": "None"
     },
     {
       "kind": "Entity",
       "name": "Cube.166 0",
-      "ID": 29,
-      "parent": 28,
+      "ID": 35,
+      "parent": 34,
       "transform": {
         "position": {
           "x": 0.0,
@@ -978,7 +1188,7 @@
         {
           "type": "Staple.MeshRenderer",
           "data": {
-            "mesh": "a0b56adb-c2b1-4f89-9ba2-06586936916f:11",
+            "mesh": "1b25a4e0-6a3c-4c33-8a63-56f5f8ff6fa0:11",
             "materials": [
               "f0438960-6b2c-4a68-bec8-1f8f592ab9e1"
             ],
@@ -995,13 +1205,14 @@
       "layer": "Default",
       "enabled": true,
       "prefabGuid": null,
-      "prefabLocalID": 0
+      "prefabLocalID": 0,
+      "hierarchyVisibility": "None"
     },
     {
       "kind": "Entity",
       "name": "Barbarian_Cape",
-      "ID": 30,
-      "parent": 6,
+      "ID": 36,
+      "parent": 12,
       "transform": {
         "position": {
           "x": -0.0,
@@ -1010,8 +1221,8 @@
         },
         "rotation": {
           "x": 0.0,
-          "y": 0.0,
-          "z": 0.0
+          "y": -0.0,
+          "z": -0.0
         },
         "scale": {
           "x": 1.0,
@@ -1023,13 +1234,14 @@
       "layer": "Default",
       "enabled": true,
       "prefabGuid": null,
-      "prefabLocalID": 0
+      "prefabLocalID": 0,
+      "hierarchyVisibility": "None"
     },
     {
       "kind": "Entity",
       "name": "Plane.006 0",
-      "ID": 31,
-      "parent": 30,
+      "ID": 37,
+      "parent": 36,
       "transform": {
         "position": {
           "x": 0.0,
@@ -1051,7 +1263,7 @@
         {
           "type": "Staple.MeshRenderer",
           "data": {
-            "mesh": "a0b56adb-c2b1-4f89-9ba2-06586936916f:12",
+            "mesh": "1b25a4e0-6a3c-4c33-8a63-56f5f8ff6fa0:12",
             "materials": [
               "f0438960-6b2c-4a68-bec8-1f8f592ab9e1"
             ],
@@ -1068,128 +1280,17 @@
       "layer": "Default",
       "enabled": true,
       "prefabGuid": null,
-      "prefabLocalID": 0
+      "prefabLocalID": 0,
+      "hierarchyVisibility": "None"
     },
     {
       "kind": "Entity",
       "name": "upperleg.l",
-      "ID": 32,
-      "parent": 4,
+      "ID": 38,
+      "parent": 10,
       "transform": {
         "position": {
           "x": 0.1709,
-          "y": 0.1136,
-          "z": 0.0
-        },
-        "rotation": {
-          "x": 1.9909,
-          "y": -180.0,
-          "z": 180.0
-        },
-        "scale": {
-          "x": 1.0,
-          "y": 1.0,
-          "z": 1.0
-        }
-      },
-      "components": [],
-      "layer": "Default",
-      "enabled": true,
-      "prefabGuid": null,
-      "prefabLocalID": 0
-    },
-    {
-      "kind": "Entity",
-      "name": "lowerleg.l",
-      "ID": 33,
-      "parent": 32,
-      "transform": {
-        "position": {
-          "x": 0.0,
-          "y": 0.2271,
-          "z": -0.0
-        },
-        "rotation": {
-          "x": 12.1955,
-          "y": 0.0,
-          "z": 0.0
-        },
-        "scale": {
-          "x": 1.0,
-          "y": 1.0,
-          "z": 1.0
-        }
-      },
-      "components": [],
-      "layer": "Default",
-      "enabled": true,
-      "prefabGuid": null,
-      "prefabLocalID": 0
-    },
-    {
-      "kind": "Entity",
-      "name": "foot.l",
-      "ID": 34,
-      "parent": 33,
-      "transform": {
-        "position": {
-          "x": 0.0,
-          "y": 0.1494,
-          "z": 0.0
-        },
-        "rotation": {
-          "x": -54.1606,
-          "y": 0.0,
-          "z": 0.0
-        },
-        "scale": {
-          "x": 1.0,
-          "y": 1.0,
-          "z": 1.0
-        }
-      },
-      "components": [],
-      "layer": "Default",
-      "enabled": true,
-      "prefabGuid": null,
-      "prefabLocalID": 0
-    },
-    {
-      "kind": "Entity",
-      "name": "toes.l",
-      "ID": 35,
-      "parent": 34,
-      "transform": {
-        "position": {
-          "x": -0.0,
-          "y": 0.1657,
-          "z": 0.0
-        },
-        "rotation": {
-          "x": 46.044,
-          "y": -180.0,
-          "z": 0.0
-        },
-        "scale": {
-          "x": 1.0,
-          "y": 1.0,
-          "z": 1.0
-        }
-      },
-      "components": [],
-      "layer": "Default",
-      "enabled": true,
-      "prefabGuid": null,
-      "prefabLocalID": 0
-    },
-    {
-      "kind": "Entity",
-      "name": "upperleg.r",
-      "ID": 36,
-      "parent": 4,
-      "transform": {
-        "position": {
-          "x": -0.1709,
           "y": 0.1136,
           "z": 0.0
         },
@@ -1208,163 +1309,111 @@
       "layer": "Default",
       "enabled": true,
       "prefabGuid": null,
-      "prefabLocalID": 0
+      "prefabLocalID": 0,
+      "hierarchyVisibility": "None"
     },
     {
       "kind": "Entity",
-      "name": "lowerleg.r",
-      "ID": 37,
-      "parent": 36,
-      "transform": {
-        "position": {
-          "x": -0.0,
-          "y": 0.2271,
-          "z": -0.0
-        },
-        "rotation": {
-          "x": 12.1955,
-          "y": 0.0,
-          "z": 0.0
-        },
-        "scale": {
-          "x": 1.0,
-          "y": 1.0,
-          "z": 1.0
-        }
-      },
-      "components": [],
-      "layer": "Default",
-      "enabled": true,
-      "prefabGuid": null,
-      "prefabLocalID": 0
-    },
-    {
-      "kind": "Entity",
-      "name": "foot.r",
-      "ID": 38,
-      "parent": 37,
-      "transform": {
-        "position": {
-          "x": -0.0,
-          "y": 0.1494,
-          "z": 0.0
-        },
-        "rotation": {
-          "x": -54.1606,
-          "y": 0.0,
-          "z": 0.0
-        },
-        "scale": {
-          "x": 1.0,
-          "y": 1.0,
-          "z": 1.0
-        }
-      },
-      "components": [],
-      "layer": "Default",
-      "enabled": true,
-      "prefabGuid": null,
-      "prefabLocalID": 0
-    },
-    {
-      "kind": "Entity",
-      "name": "toes.r",
+      "name": "lowerleg.l",
       "ID": 39,
       "parent": 38,
       "transform": {
         "position": {
           "x": 0.0,
+          "y": 0.2271,
+          "z": -0.0
+        },
+        "rotation": {
+          "x": 12.1955,
+          "y": 0.0,
+          "z": -0.0
+        },
+        "scale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        }
+      },
+      "components": [],
+      "layer": "Default",
+      "enabled": true,
+      "prefabGuid": null,
+      "prefabLocalID": 0,
+      "hierarchyVisibility": "None"
+    },
+    {
+      "kind": "Entity",
+      "name": "foot.l",
+      "ID": 40,
+      "parent": 39,
+      "transform": {
+        "position": {
+          "x": 0.0,
+          "y": 0.1494,
+          "z": 0.0
+        },
+        "rotation": {
+          "x": -54.1606,
+          "y": 0.0,
+          "z": -0.0
+        },
+        "scale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        }
+      },
+      "components": [],
+      "layer": "Default",
+      "enabled": true,
+      "prefabGuid": null,
+      "prefabLocalID": 0,
+      "hierarchyVisibility": "None"
+    },
+    {
+      "kind": "Entity",
+      "name": "toes.l",
+      "ID": 41,
+      "parent": 40,
+      "transform": {
+        "position": {
+          "x": -0.0,
           "y": 0.1657,
           "z": 0.0
         },
         "rotation": {
           "x": 46.044,
           "y": 180.0,
-          "z": 0.0
-        },
-        "scale": {
-          "x": 1.0,
-          "y": 1.0,
-          "z": 1.0
-        }
-      },
-      "components": [],
-      "layer": "Default",
-      "enabled": true,
-      "prefabGuid": null,
-      "prefabLocalID": 0
-    },
-    {
-      "kind": "Entity",
-      "name": "kneeIK.l",
-      "ID": 40,
-      "parent": 3,
-      "transform": {
-        "position": {
-          "x": 0.1709,
-          "y": 0.2923,
-          "z": 0.5758
-        },
-        "rotation": {
-          "x": 90.0,
-          "y": -0.0,
-          "z": 0.0
-        },
-        "scale": {
-          "x": 1.0,
-          "y": 1.0,
-          "z": 1.0
-        }
-      },
-      "components": [],
-      "layer": "Default",
-      "enabled": true,
-      "prefabGuid": null,
-      "prefabLocalID": 0
-    },
-    {
-      "kind": "Entity",
-      "name": "control-toe-roll.l",
-      "ID": 41,
-      "parent": 3,
-      "transform": {
-        "position": {
-          "x": 0.1709,
-          "y": 0.026,
-          "z": 0.2458
-        },
-        "rotation": {
-          "x": -90.0,
-          "y": -0.0001,
-          "z": 0.0
-        },
-        "scale": {
-          "x": 1.0,
-          "y": 1.0,
-          "z": 1.0
-        }
-      },
-      "components": [],
-      "layer": "Default",
-      "enabled": true,
-      "prefabGuid": null,
-      "prefabLocalID": 0
-    },
-    {
-      "kind": "Entity",
-      "name": "control-heel-roll.l",
-      "ID": 42,
-      "parent": 41,
-      "transform": {
-        "position": {
-          "x": 0.0,
-          "y": 0.3628,
           "z": -0.0
         },
+        "scale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        }
+      },
+      "components": [],
+      "layer": "Default",
+      "enabled": true,
+      "prefabGuid": null,
+      "prefabLocalID": 0,
+      "hierarchyVisibility": "None"
+    },
+    {
+      "kind": "Entity",
+      "name": "upperleg.r",
+      "ID": 42,
+      "parent": 10,
+      "transform": {
+        "position": {
+          "x": -0.1709,
+          "y": 0.1136,
+          "z": 0.0
+        },
         "rotation": {
-          "x": 0.0,
-          "y": 0.0,
-          "z": -180.0
+          "x": 1.9909,
+          "y": -180.0,
+          "z": 180.0
         },
         "scale": {
           "x": 1.0,
@@ -1376,21 +1425,167 @@
       "layer": "Default",
       "enabled": true,
       "prefabGuid": null,
-      "prefabLocalID": 0
+      "prefabLocalID": 0,
+      "hierarchyVisibility": "None"
     },
     {
       "kind": "Entity",
-      "name": "control-foot-roll.l",
+      "name": "lowerleg.r",
       "ID": 43,
       "parent": 42,
       "transform": {
         "position": {
           "x": -0.0,
-          "y": 0.2134,
+          "y": 0.2271,
           "z": -0.0
         },
         "rotation": {
-          "x": -46.044,
+          "x": 12.1955,
+          "y": -0.0,
+          "z": 0.0
+        },
+        "scale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        }
+      },
+      "components": [],
+      "layer": "Default",
+      "enabled": true,
+      "prefabGuid": null,
+      "prefabLocalID": 0,
+      "hierarchyVisibility": "None"
+    },
+    {
+      "kind": "Entity",
+      "name": "foot.r",
+      "ID": 44,
+      "parent": 43,
+      "transform": {
+        "position": {
+          "x": -0.0,
+          "y": 0.1494,
+          "z": 0.0
+        },
+        "rotation": {
+          "x": -54.1606,
+          "y": 0.0,
+          "z": -0.0
+        },
+        "scale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        }
+      },
+      "components": [],
+      "layer": "Default",
+      "enabled": true,
+      "prefabGuid": null,
+      "prefabLocalID": 0,
+      "hierarchyVisibility": "None"
+    },
+    {
+      "kind": "Entity",
+      "name": "toes.r",
+      "ID": 45,
+      "parent": 44,
+      "transform": {
+        "position": {
+          "x": 0.0,
+          "y": 0.1657,
+          "z": 0.0
+        },
+        "rotation": {
+          "x": 46.044,
+          "y": -180.0,
+          "z": 0.0
+        },
+        "scale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        }
+      },
+      "components": [],
+      "layer": "Default",
+      "enabled": true,
+      "prefabGuid": null,
+      "prefabLocalID": 0,
+      "hierarchyVisibility": "None"
+    },
+    {
+      "kind": "Entity",
+      "name": "kneeIK.l",
+      "ID": 46,
+      "parent": 9,
+      "transform": {
+        "position": {
+          "x": 0.1709,
+          "y": 0.2923,
+          "z": 0.5758
+        },
+        "rotation": {
+          "x": 90.0,
+          "y": -0.0,
+          "z": 0.0
+        },
+        "scale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        }
+      },
+      "components": [],
+      "layer": "Default",
+      "enabled": true,
+      "prefabGuid": null,
+      "prefabLocalID": 0,
+      "hierarchyVisibility": "None"
+    },
+    {
+      "kind": "Entity",
+      "name": "control-toe-roll.l",
+      "ID": 47,
+      "parent": 9,
+      "transform": {
+        "position": {
+          "x": 0.1709,
+          "y": 0.026,
+          "z": 0.2458
+        },
+        "rotation": {
+          "x": -90.0,
+          "y": 359.9999,
+          "z": 0.0
+        },
+        "scale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        }
+      },
+      "components": [],
+      "layer": "Default",
+      "enabled": true,
+      "prefabGuid": null,
+      "prefabLocalID": 0,
+      "hierarchyVisibility": "None"
+    },
+    {
+      "kind": "Entity",
+      "name": "control-heel-roll.l",
+      "ID": 48,
+      "parent": 47,
+      "transform": {
+        "position": {
+          "x": 0.0,
+          "y": 0.3628,
+          "z": -0.0
+        },
+        "rotation": {
+          "x": 0.0,
           "y": 0.0,
           "z": 180.0
         },
@@ -1404,50 +1599,23 @@
       "layer": "Default",
       "enabled": true,
       "prefabGuid": null,
-      "prefabLocalID": 0
+      "prefabLocalID": 0,
+      "hierarchyVisibility": "None"
     },
     {
       "kind": "Entity",
-      "name": "heelIK.l",
-      "ID": 44,
-      "parent": 43,
+      "name": "control-foot-roll.l",
+      "ID": 49,
+      "parent": 48,
       "transform": {
         "position": {
-          "x": 0.0,
-          "y": 0.1657,
+          "x": -0.0,
+          "y": 0.2134,
           "z": -0.0
         },
         "rotation": {
           "x": -46.044,
-          "y": 0.0,
-          "z": 0.0
-        },
-        "scale": {
-          "x": 1.0,
-          "y": 1.0,
-          "z": 1.0
-        }
-      },
-      "components": [],
-      "layer": "Default",
-      "enabled": true,
-      "prefabGuid": null,
-      "prefabLocalID": 0
-    },
-    {
-      "kind": "Entity",
-      "name": "IK-foot.l",
-      "ID": 45,
-      "parent": 43,
-      "transform": {
-        "position": {
-          "x": 0.0,
-          "y": 0.1657,
-          "z": -0.0
-        },
-        "rotation": {
-          "x": 0.0,
-          "y": -180.0,
+          "y": -0.0,
           "z": -180.0
         },
         "scale": {
@@ -1460,23 +1628,24 @@
       "layer": "Default",
       "enabled": true,
       "prefabGuid": null,
-      "prefabLocalID": 0
+      "prefabLocalID": 0,
+      "hierarchyVisibility": "None"
     },
     {
       "kind": "Entity",
-      "name": "IK-toe.l",
-      "ID": 46,
-      "parent": 42,
+      "name": "heelIK.l",
+      "ID": 50,
+      "parent": 49,
       "transform": {
         "position": {
-          "x": -0.0,
-          "y": -0.0,
+          "x": 0.0,
+          "y": 0.1657,
           "z": -0.0
         },
         "rotation": {
-          "x": 0.0,
-          "y": 0.0,
-          "z": 0.0
+          "x": -46.044,
+          "y": -0.0,
+          "z": -0.0
         },
         "scale": {
           "x": 1.0,
@@ -1488,13 +1657,72 @@
       "layer": "Default",
       "enabled": true,
       "prefabGuid": null,
-      "prefabLocalID": 0
+      "prefabLocalID": 0,
+      "hierarchyVisibility": "None"
+    },
+    {
+      "kind": "Entity",
+      "name": "IK-foot.l",
+      "ID": 51,
+      "parent": 49,
+      "transform": {
+        "position": {
+          "x": 0.0,
+          "y": 0.1657,
+          "z": -0.0
+        },
+        "rotation": {
+          "x": 0.0,
+          "y": 180.0,
+          "z": 180.0
+        },
+        "scale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        }
+      },
+      "components": [],
+      "layer": "Default",
+      "enabled": true,
+      "prefabGuid": null,
+      "prefabLocalID": 0,
+      "hierarchyVisibility": "None"
+    },
+    {
+      "kind": "Entity",
+      "name": "IK-toe.l",
+      "ID": 52,
+      "parent": 48,
+      "transform": {
+        "position": {
+          "x": -0.0,
+          "y": -0.0,
+          "z": -0.0
+        },
+        "rotation": {
+          "x": 0.0,
+          "y": -0.0,
+          "z": -0.0
+        },
+        "scale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        }
+      },
+      "components": [],
+      "layer": "Default",
+      "enabled": true,
+      "prefabGuid": null,
+      "prefabLocalID": 0,
+      "hierarchyVisibility": "None"
     },
     {
       "kind": "Entity",
       "name": "kneeIK.r",
-      "ID": 47,
-      "parent": 3,
+      "ID": 53,
+      "parent": 9,
       "transform": {
         "position": {
           "x": -0.1709,
@@ -1516,13 +1744,14 @@
       "layer": "Default",
       "enabled": true,
       "prefabGuid": null,
-      "prefabLocalID": 0
+      "prefabLocalID": 0,
+      "hierarchyVisibility": "None"
     },
     {
       "kind": "Entity",
       "name": "control-toe-roll.r",
-      "ID": 48,
-      "parent": 3,
+      "ID": 54,
+      "parent": 9,
       "transform": {
         "position": {
           "x": -0.1709,
@@ -1531,7 +1760,7 @@
         },
         "rotation": {
           "x": -90.0,
-          "y": -0.0001,
+          "y": 359.9999,
           "z": 0.0
         },
         "scale": {
@@ -1544,13 +1773,14 @@
       "layer": "Default",
       "enabled": true,
       "prefabGuid": null,
-      "prefabLocalID": 0
+      "prefabLocalID": 0,
+      "hierarchyVisibility": "None"
     },
     {
       "kind": "Entity",
       "name": "control-heel-roll.r",
-      "ID": 49,
-      "parent": 48,
+      "ID": 55,
+      "parent": 54,
       "transform": {
         "position": {
           "x": 0.0,
@@ -1560,6 +1790,35 @@
         "rotation": {
           "x": 0.0,
           "y": 0.0,
+          "z": 180.0
+        },
+        "scale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        }
+      },
+      "components": [],
+      "layer": "Default",
+      "enabled": true,
+      "prefabGuid": null,
+      "prefabLocalID": 0,
+      "hierarchyVisibility": "None"
+    },
+    {
+      "kind": "Entity",
+      "name": "control-foot-roll.r",
+      "ID": 56,
+      "parent": 55,
+      "transform": {
+        "position": {
+          "x": 0.0,
+          "y": 0.2134,
+          "z": 0.0
+        },
+        "rotation": {
+          "x": -46.044,
+          "y": -0.0,
           "z": -180.0
         },
         "scale": {
@@ -1572,41 +1831,14 @@
       "layer": "Default",
       "enabled": true,
       "prefabGuid": null,
-      "prefabLocalID": 0
-    },
-    {
-      "kind": "Entity",
-      "name": "control-foot-roll.r",
-      "ID": 50,
-      "parent": 49,
-      "transform": {
-        "position": {
-          "x": 0.0,
-          "y": 0.2134,
-          "z": 0.0
-        },
-        "rotation": {
-          "x": -46.044,
-          "y": 0.0,
-          "z": 180.0
-        },
-        "scale": {
-          "x": 1.0,
-          "y": 1.0,
-          "z": 1.0
-        }
-      },
-      "components": [],
-      "layer": "Default",
-      "enabled": true,
-      "prefabGuid": null,
-      "prefabLocalID": 0
+      "prefabLocalID": 0,
+      "hierarchyVisibility": "None"
     },
     {
       "kind": "Entity",
       "name": "heelIK.r",
-      "ID": 51,
-      "parent": 50,
+      "ID": 57,
+      "parent": 56,
       "transform": {
         "position": {
           "x": -0.0,
@@ -1615,8 +1847,8 @@
         },
         "rotation": {
           "x": -46.044,
-          "y": 0.0,
-          "z": 0.0
+          "y": -0.0,
+          "z": -0.0
         },
         "scale": {
           "x": 1.0,
@@ -1628,13 +1860,14 @@
       "layer": "Default",
       "enabled": true,
       "prefabGuid": null,
-      "prefabLocalID": 0
+      "prefabLocalID": 0,
+      "hierarchyVisibility": "None"
     },
     {
       "kind": "Entity",
       "name": "IK-foot.r",
-      "ID": 52,
-      "parent": 50,
+      "ID": 58,
+      "parent": 56,
       "transform": {
         "position": {
           "x": -0.0,
@@ -1643,8 +1876,8 @@
         },
         "rotation": {
           "x": 0.0,
-          "y": -180.0,
-          "z": 180.0
+          "y": 180.0,
+          "z": -180.0
         },
         "scale": {
           "x": 1.0,
@@ -1656,13 +1889,14 @@
       "layer": "Default",
       "enabled": true,
       "prefabGuid": null,
-      "prefabLocalID": 0
+      "prefabLocalID": 0,
+      "hierarchyVisibility": "None"
     },
     {
       "kind": "Entity",
       "name": "IK-toe.r",
-      "ID": 53,
-      "parent": 49,
+      "ID": 59,
+      "parent": 55,
       "transform": {
         "position": {
           "x": -0.0,
@@ -1671,8 +1905,8 @@
         },
         "rotation": {
           "x": 0.0,
-          "y": 0.0,
-          "z": 0.0
+          "y": -0.0,
+          "z": -0.0
         },
         "scale": {
           "x": 1.0,
@@ -1684,13 +1918,14 @@
       "layer": "Default",
       "enabled": true,
       "prefabGuid": null,
-      "prefabLocalID": 0
+      "prefabLocalID": 0,
+      "hierarchyVisibility": "None"
     },
     {
       "kind": "Entity",
       "name": "elbowIK.l",
-      "ID": 54,
-      "parent": 3,
+      "ID": 60,
+      "parent": 9,
       "transform": {
         "position": {
           "x": 0.4535,
@@ -1699,7 +1934,7 @@
         },
         "rotation": {
           "x": -90.0,
-          "y": -0.0001,
+          "y": 359.9999,
           "z": 0.0
         },
         "scale": {
@@ -1712,13 +1947,14 @@
       "layer": "Default",
       "enabled": true,
       "prefabGuid": null,
-      "prefabLocalID": 0
+      "prefabLocalID": 0,
+      "hierarchyVisibility": "None"
     },
     {
       "kind": "Entity",
       "name": "handIK.l",
-      "ID": 55,
-      "parent": 3,
+      "ID": 61,
+      "parent": 9,
       "transform": {
         "position": {
           "x": 0.7132,
@@ -1727,7 +1963,7 @@
         },
         "rotation": {
           "x": -90.0,
-          "y": 270.0,
+          "y": -90.0,
           "z": 0.0
         },
         "scale": {
@@ -1740,13 +1976,14 @@
       "layer": "Default",
       "enabled": true,
       "prefabGuid": null,
-      "prefabLocalID": 0
+      "prefabLocalID": 0,
+      "hierarchyVisibility": "None"
     },
     {
       "kind": "Entity",
       "name": "elbowIK.r",
-      "ID": 56,
-      "parent": 3,
+      "ID": 62,
+      "parent": 9,
       "transform": {
         "position": {
           "x": -0.4535,
@@ -1755,7 +1992,7 @@
         },
         "rotation": {
           "x": -90.0,
-          "y": -0.0001,
+          "y": 359.9999,
           "z": 0.0
         },
         "scale": {
@@ -1768,13 +2005,14 @@
       "layer": "Default",
       "enabled": true,
       "prefabGuid": null,
-      "prefabLocalID": 0
+      "prefabLocalID": 0,
+      "hierarchyVisibility": "None"
     },
     {
       "kind": "Entity",
       "name": "handIK.r",
-      "ID": 57,
-      "parent": 3,
+      "ID": 63,
+      "parent": 9,
       "transform": {
         "position": {
           "x": -0.7132,
@@ -1783,7 +2021,7 @@
         },
         "rotation": {
           "x": -90.0,
-          "y": 90.0,
+          "y": -270.0,
           "z": 0.0
         },
         "scale": {
@@ -1796,230 +2034,12 @@
       "layer": "Default",
       "enabled": true,
       "prefabGuid": null,
-      "prefabLocalID": 0
-    },
-    {
-      "kind": "Entity",
-      "name": "Barbarian_ArmLeft",
-      "ID": 58,
-      "parent": 1,
-      "transform": {
-        "position": {
-          "x": 0.0,
-          "y": 0.0,
-          "z": 0.0
-        },
-        "rotation": {
-          "x": 0.0,
-          "y": 0.0,
-          "z": 0.0
-        },
-        "scale": {
-          "x": 1.0,
-          "y": 1.0,
-          "z": 1.0
-        }
-      },
-      "components": [],
-      "layer": "Default",
-      "enabled": true,
-      "prefabGuid": null,
-      "prefabLocalID": 0
+      "prefabLocalID": 0,
+      "hierarchyVisibility": "None"
     },
     {
       "kind": "Entity",
       "name": "Cube.160 0",
-      "ID": 59,
-      "parent": 58,
-      "transform": {
-        "position": {
-          "x": 0.0,
-          "y": 0.0,
-          "z": 0.0
-        },
-        "rotation": {
-          "x": 0.0,
-          "y": 0.0,
-          "z": 0.0
-        },
-        "scale": {
-          "x": 1.0,
-          "y": 1.0,
-          "z": 1.0
-        }
-      },
-      "components": [
-        {
-          "type": "Staple.SkinnedMeshRenderer",
-          "data": {
-            "mesh": "a0b56adb-c2b1-4f89-9ba2-06586936916f:0",
-            "materials": [
-              "f0438960-6b2c-4a68-bec8-1f8f592ab9e1"
-            ],
-            "enabled": true,
-            "forceRenderingOff": false,
-            "receiveShadows": true,
-            "sortingLayer": 0,
-            "sortingOrder": 0,
-            "overrideLighting": false,
-            "lighting": "Lit"
-          }
-        }
-      ],
-      "layer": "Default",
-      "enabled": true,
-      "prefabGuid": null,
-      "prefabLocalID": 0
-    },
-    {
-      "kind": "Entity",
-      "name": "Barbarian_ArmRight",
-      "ID": 60,
-      "parent": 1,
-      "transform": {
-        "position": {
-          "x": 0.0,
-          "y": 0.0,
-          "z": 0.0
-        },
-        "rotation": {
-          "x": 0.0,
-          "y": 0.0,
-          "z": 0.0
-        },
-        "scale": {
-          "x": 1.0,
-          "y": 1.0,
-          "z": 1.0
-        }
-      },
-      "components": [],
-      "layer": "Default",
-      "enabled": true,
-      "prefabGuid": null,
-      "prefabLocalID": 0
-    },
-    {
-      "kind": "Entity",
-      "name": "Cube.161 0",
-      "ID": 61,
-      "parent": 60,
-      "transform": {
-        "position": {
-          "x": 0.0,
-          "y": 0.0,
-          "z": 0.0
-        },
-        "rotation": {
-          "x": 0.0,
-          "y": 0.0,
-          "z": 0.0
-        },
-        "scale": {
-          "x": 1.0,
-          "y": 1.0,
-          "z": 1.0
-        }
-      },
-      "components": [
-        {
-          "type": "Staple.SkinnedMeshRenderer",
-          "data": {
-            "mesh": "a0b56adb-c2b1-4f89-9ba2-06586936916f:1",
-            "materials": [
-              "f0438960-6b2c-4a68-bec8-1f8f592ab9e1"
-            ],
-            "enabled": true,
-            "forceRenderingOff": false,
-            "receiveShadows": true,
-            "sortingLayer": 0,
-            "sortingOrder": 0,
-            "overrideLighting": false,
-            "lighting": "Lit"
-          }
-        }
-      ],
-      "layer": "Default",
-      "enabled": true,
-      "prefabGuid": null,
-      "prefabLocalID": 0
-    },
-    {
-      "kind": "Entity",
-      "name": "Barbarian_Body",
-      "ID": 62,
-      "parent": 1,
-      "transform": {
-        "position": {
-          "x": 0.0,
-          "y": 0.0,
-          "z": 0.0
-        },
-        "rotation": {
-          "x": 0.0,
-          "y": 0.0,
-          "z": 0.0
-        },
-        "scale": {
-          "x": 1.0,
-          "y": 1.0,
-          "z": 1.0
-        }
-      },
-      "components": [],
-      "layer": "Default",
-      "enabled": true,
-      "prefabGuid": null,
-      "prefabLocalID": 0
-    },
-    {
-      "kind": "Entity",
-      "name": "PrototypePete_body.022 0",
-      "ID": 63,
-      "parent": 62,
-      "transform": {
-        "position": {
-          "x": 0.0,
-          "y": 0.0,
-          "z": 0.0
-        },
-        "rotation": {
-          "x": 0.0,
-          "y": 0.0,
-          "z": 0.0
-        },
-        "scale": {
-          "x": 1.0,
-          "y": 1.0,
-          "z": 1.0
-        }
-      },
-      "components": [
-        {
-          "type": "Staple.SkinnedMeshRenderer",
-          "data": {
-            "mesh": "a0b56adb-c2b1-4f89-9ba2-06586936916f:2",
-            "materials": [
-              "f0438960-6b2c-4a68-bec8-1f8f592ab9e1"
-            ],
-            "enabled": true,
-            "forceRenderingOff": false,
-            "receiveShadows": true,
-            "sortingLayer": 0,
-            "sortingOrder": 0,
-            "overrideLighting": false,
-            "lighting": "Lit"
-          }
-        }
-      ],
-      "layer": "Default",
-      "enabled": true,
-      "prefabGuid": null,
-      "prefabLocalID": 0
-    },
-    {
-      "kind": "Entity",
-      "name": "Barbarian_Head",
       "ID": 64,
       "parent": 1,
       "transform": {
@@ -2039,17 +2059,35 @@
           "z": 1.0
         }
       },
-      "components": [],
+      "components": [
+        {
+          "type": "Staple.SkinnedMeshRenderer",
+          "data": {
+            "mesh": "1b25a4e0-6a3c-4c33-8a63-56f5f8ff6fa0:0",
+            "materials": [
+              "f0438960-6b2c-4a68-bec8-1f8f592ab9e1"
+            ],
+            "enabled": true,
+            "forceRenderingOff": false,
+            "receiveShadows": true,
+            "sortingLayer": 0,
+            "sortingOrder": 0,
+            "overrideLighting": false,
+            "lighting": "Lit"
+          }
+        }
+      ],
       "layer": "Default",
       "enabled": true,
       "prefabGuid": null,
-      "prefabLocalID": 0
+      "prefabLocalID": 0,
+      "hierarchyVisibility": "None"
     },
     {
       "kind": "Entity",
-      "name": "Cube.167 0",
+      "name": "Cube.161 0",
       "ID": 65,
-      "parent": 64,
+      "parent": 1,
       "transform": {
         "position": {
           "x": 0.0,
@@ -2071,7 +2109,7 @@
         {
           "type": "Staple.SkinnedMeshRenderer",
           "data": {
-            "mesh": "a0b56adb-c2b1-4f89-9ba2-06586936916f:3",
+            "mesh": "1b25a4e0-6a3c-4c33-8a63-56f5f8ff6fa0:1",
             "materials": [
               "f0438960-6b2c-4a68-bec8-1f8f592ab9e1"
             ],
@@ -2088,11 +2126,12 @@
       "layer": "Default",
       "enabled": true,
       "prefabGuid": null,
-      "prefabLocalID": 0
+      "prefabLocalID": 0,
+      "hierarchyVisibility": "None"
     },
     {
       "kind": "Entity",
-      "name": "Barbarian_LegLeft",
+      "name": "PrototypePete_body.022 0",
       "ID": 66,
       "parent": 1,
       "transform": {
@@ -2112,17 +2151,35 @@
           "z": 1.0
         }
       },
-      "components": [],
+      "components": [
+        {
+          "type": "Staple.SkinnedMeshRenderer",
+          "data": {
+            "mesh": "1b25a4e0-6a3c-4c33-8a63-56f5f8ff6fa0:2",
+            "materials": [
+              "f0438960-6b2c-4a68-bec8-1f8f592ab9e1"
+            ],
+            "enabled": true,
+            "forceRenderingOff": false,
+            "receiveShadows": true,
+            "sortingLayer": 0,
+            "sortingOrder": 0,
+            "overrideLighting": false,
+            "lighting": "Lit"
+          }
+        }
+      ],
       "layer": "Default",
       "enabled": true,
       "prefabGuid": null,
-      "prefabLocalID": 0
+      "prefabLocalID": 0,
+      "hierarchyVisibility": "None"
     },
     {
       "kind": "Entity",
-      "name": "Cube.165 0",
+      "name": "Cube.167 0",
       "ID": 67,
-      "parent": 66,
+      "parent": 1,
       "transform": {
         "position": {
           "x": 0.0,
@@ -2144,7 +2201,7 @@
         {
           "type": "Staple.SkinnedMeshRenderer",
           "data": {
-            "mesh": "a0b56adb-c2b1-4f89-9ba2-06586936916f:4",
+            "mesh": "1b25a4e0-6a3c-4c33-8a63-56f5f8ff6fa0:3",
             "materials": [
               "f0438960-6b2c-4a68-bec8-1f8f592ab9e1"
             ],
@@ -2161,11 +2218,12 @@
       "layer": "Default",
       "enabled": true,
       "prefabGuid": null,
-      "prefabLocalID": 0
+      "prefabLocalID": 0,
+      "hierarchyVisibility": "None"
     },
     {
       "kind": "Entity",
-      "name": "Barbarian_LegRight",
+      "name": "Cube.165 0",
       "ID": 68,
       "parent": 1,
       "transform": {
@@ -2185,17 +2243,35 @@
           "z": 1.0
         }
       },
-      "components": [],
+      "components": [
+        {
+          "type": "Staple.SkinnedMeshRenderer",
+          "data": {
+            "mesh": "1b25a4e0-6a3c-4c33-8a63-56f5f8ff6fa0:4",
+            "materials": [
+              "f0438960-6b2c-4a68-bec8-1f8f592ab9e1"
+            ],
+            "enabled": true,
+            "forceRenderingOff": false,
+            "receiveShadows": true,
+            "sortingLayer": 0,
+            "sortingOrder": 0,
+            "overrideLighting": false,
+            "lighting": "Lit"
+          }
+        }
+      ],
       "layer": "Default",
       "enabled": true,
       "prefabGuid": null,
-      "prefabLocalID": 0
+      "prefabLocalID": 0,
+      "hierarchyVisibility": "None"
     },
     {
       "kind": "Entity",
       "name": "Cube.163 0",
       "ID": 69,
-      "parent": 68,
+      "parent": 1,
       "transform": {
         "position": {
           "x": 0.0,
@@ -2217,7 +2293,7 @@
         {
           "type": "Staple.SkinnedMeshRenderer",
           "data": {
-            "mesh": "a0b56adb-c2b1-4f89-9ba2-06586936916f:5",
+            "mesh": "1b25a4e0-6a3c-4c33-8a63-56f5f8ff6fa0:5",
             "materials": [
               "f0438960-6b2c-4a68-bec8-1f8f592ab9e1"
             ],
@@ -2234,7 +2310,8 @@
       "layer": "Default",
       "enabled": true,
       "prefabGuid": null,
-      "prefabLocalID": 0
+      "prefabLocalID": 0,
+      "hierarchyVisibility": "None"
     }
   ],
   "typeName": "Staple.Prefab"
