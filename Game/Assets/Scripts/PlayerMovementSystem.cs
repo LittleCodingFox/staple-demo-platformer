@@ -72,7 +72,7 @@ class PlayerMovementSystem : IEntitySystemUpdate, IEntitySystemFixedUpdate, IEnt
 
             if(movement != Vector2.Zero)
             {
-                var rotation = Math.LookAt(Vector3.Normalize(direction), new Vector3(0, 1, 0));
+                var rotation = Quaternion.LookAt(Vector3.Normalize(direction), new Vector3(0, 1, 0));
 
                 playerMovement.targetRotation = rotation;
             }

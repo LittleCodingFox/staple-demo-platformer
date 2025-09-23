@@ -1,5 +1,4 @@
 using Staple;
-using System.Linq;
 using System.Numerics;
 
 namespace Platformer;
@@ -129,7 +128,7 @@ class OrbitCameraSystem : IEntitySystemUpdate, IEntitySystemLifecycle
             if(camera.firstFrame && camera.focus != null)
             {
                 camera.focusPoint = camera.focus.Position;
-                transform.LocalRotation = Math.FromEulerAngles(new Vector3(camera.orbitAngles.X, camera.orbitAngles.Y, 0));
+                transform.LocalRotation = Quaternion.Euler(new Vector3(camera.orbitAngles.X, camera.orbitAngles.Y, 0));
             }
 
             UpdateFocusPoint(camera);
@@ -140,7 +139,7 @@ class OrbitCameraSystem : IEntitySystemUpdate, IEntitySystemLifecycle
             {
                 ConstrainAngles(camera);
 
-                rotation = Math.FromEulerAngles(new Vector3(camera.orbitAngles.X, camera.orbitAngles.Y, 0));
+                rotation = Quaternion.Euler(new Vector3(camera.orbitAngles.X, camera.orbitAngles.Y, 0));
             }
             else
             {

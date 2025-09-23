@@ -1,4 +1,5 @@
 ﻿using Staple;
+using System.Numerics;
 
 public class Rotater : CallbackComponent
 {
@@ -17,6 +18,6 @@ public class Rotater : CallbackComponent
     {
         timer += Time.deltaTime;
 
-        transform.LocalRotation = Math.FromEulerAngles(new(0, timer * speed + offset, 0));
+        transform.LocalRotation = Quaternion.Euler(new(0, timer * speed + offset, 0));
     }
 }

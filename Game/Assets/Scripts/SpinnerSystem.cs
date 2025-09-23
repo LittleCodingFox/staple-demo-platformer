@@ -1,4 +1,5 @@
 using Staple;
+using System.Numerics;
 
 namespace Platformer;
 
@@ -10,7 +11,7 @@ class SpinnerSystem : IEntitySystemUpdate
     {
         foreach((_, Transform transform, SpinnerComponent spinner) in spinners.Contents)
         {
-            var eulerAngles = Math.ToEulerAngles(transform.LocalRotation);
+            var eulerAngles = transform.LocalRotation.ToEulerAngles();
 
             eulerAngles.Y += deltaTime * spinner.speed;
 
@@ -19,7 +20,7 @@ class SpinnerSystem : IEntitySystemUpdate
                 eulerAngles.Y = 360;
             }
 
-            transform.LocalRotation = Math.FromEulerAngles(eulerAngles);
+            transform.LocalRotation = Quaternion.Euler(eulerAngles);
         }
     }
 }

@@ -1,4 +1,5 @@
 ﻿using Staple;
+using System.Numerics;
 
 namespace Platformer;
 
@@ -34,7 +35,7 @@ public class Sun : CallbackComponent
 
         var t = timer / time;
 
-        var rotation = Math.FromEulerAngles(new(t * 360, 0, 0));
+        var rotation = Quaternion.Euler(new(t * 360, 0, 0));
 
         transform.LocalRotation = rotation;
     }
