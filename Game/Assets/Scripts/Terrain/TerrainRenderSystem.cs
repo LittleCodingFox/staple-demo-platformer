@@ -7,15 +7,6 @@ using System.Runtime.InteropServices;
 
 public class TerrainRenderSystem : IRenderSystem
 {
-    [Serializable]
-    [StructLayout(LayoutKind.Sequential, Pack = 0)]
-    internal struct TerrainVertex
-    {
-        public Vector3 position;
-        public Vector3 normal;
-        public Vector2 uv;
-    }
-
     private struct RenderInfo
     {
         public Entity entity;
@@ -27,15 +18,11 @@ public class TerrainRenderSystem : IRenderSystem
         public Vector3 scale;
     }
 
-    private readonly Dictionary<ushort, RenderInfo[]> renderers = [];
+    private RenderInfo[] renderers = [];
 
-    private readonly Dictionary<Vector2Int, (TerrainVertex[], int[])> cachedTerrainSizes = [];
+    private Texture defaultTexture;
 
-    private readonly Lazy<VertexLayout> vertexLayout = new(() => new VertexLayoutBuilder()
-        .Add(VertexAttribute.Position, 3, VertexAttributeType.Float)
-        .Add(VertexAttribute.Normal, 3, VertexAttributeType.Float)
-        .Add(VertexAttribute.TexCoord0, 2, VertexAttributeType.Float)
-        .Build());
+    private readonly Dictionary<Vector2Int, (Mesh.StandardVertex[], int[])> cachedTerrainSizes = [];
 
     public bool UsesOwnRenderProcess => false;
 
@@ -48,7 +35,7 @@ public class TerrainRenderSystem : IRenderSystem
             return;
         }
 
-        var newVertices = new TerrainVertex[width * height * 4];
+        var newVertices = new Mesh.StandardVertex[width * height * 4];
         var indices = new List<int>();
 
         var vertexCounter = 0;
@@ -81,7 +68,7 @@ public class TerrainRenderSystem : IRenderSystem
         cachedTerrainSizes.Add(new Vector2Int(width, height), (newVertices, indices.ToArray()));
     }
 
-    private (TerrainVertex[], int[]) GetCache(int width, int height)
+    private (Mesh.StandardVertex[], int[]) GetCache(int width, int height)
     {
         CacheTerrain(width, height);
 
@@ -96,13 +83,9 @@ public class TerrainRenderSystem : IRenderSystem
     {
     }
 
-    public void ClearRenderData(ushort viewID)
-    {
-        renderers.Remove(viewID);
-    }
-
     public void Prepare()
     {
+        defaultTexture ??= Resources.Load<Texture>("Hidden/Textures/Sprites/DefaultSprite.png");
     }
 
     private void UpdateHeights(TerrainRenderer renderer)
@@ -163,7 +146,7 @@ public class TerrainRenderSystem : IRenderSystem
             }
         }
 
-        renderer.mesh.SetMeshData(renderer.meshData.AsSpan(), vertexLayout.Value);
+        renderer.mesh.SetMeshData(renderer.meshData.AsSpan(), Mesh.StandardVertexLayout.Value);
     }
 
     private void UpdateMeshBounds(TerrainRenderer renderer)
@@ -217,7 +200,7 @@ public class TerrainRenderSystem : IRenderSystem
 
                 var data = GetCache(renderer.asset.width, renderer.asset.height);
 
-                renderer.meshData = new TerrainVertex[data.Item1.Length];
+                renderer.meshData = new Mesh.StandardVertex[data.Item1.Length];
 
                 Array.Copy(data.Item1, renderer.meshData, data.Item1.Length);
 
@@ -230,8 +213,6 @@ public class TerrainRenderSystem : IRenderSystem
                 UpdateMesh(renderer, data.Item2);
 
                 renderer.mesh.Indices = data.Item2;
-
-                renderer.mesh.UploadMeshData();
 
                 UpdateMeshBounds(renderer);
 
@@ -260,20 +241,11 @@ public class TerrainRenderSystem : IRenderSystem
         }
     }
 
-    public void Process(Span<(Entity, Transform, IComponent)> contents, Camera activeCamera, Transform activeCameraTransform, ushort viewID)
+    public void Process(Span<(Entity, Transform, IComponent)> contents, Camera activeCamera, Transform activeCameraTransform)
     {
-        if(renderers.TryGetValue(viewID, out var container) == false)
+        if (renderers.Length < contents.Length)
         {
-            container = [];
-
-            renderers.Add(viewID, container);
-        }
-
-        if (container.Length < contents.Length)
-        {
-            Array.Resize(ref container, contents.Length);
-
-            renderers[viewID] = container;
+            Array.Resize(ref renderers, contents.Length);
         }
 
         var index = 0;
@@ -297,7 +269,7 @@ public class TerrainRenderSystem : IRenderSystem
                 continue;
             }
 
-            container[index++] = new()
+            renderers[index++] = new()
             {
                 asset = renderer.asset,
                 entity = entity,
@@ -310,26 +282,23 @@ public class TerrainRenderSystem : IRenderSystem
         }
     }
 
-    public void Submit(ushort viewID)
+    public void Submit()
     {
-        if(renderers.TryGetValue(viewID, out var containers) == false)
-        {
-            return;
-        }
-
-        var length = containers.Length;
+        var length = renderers.Length;
 
         for (var i = 0; i < length; i++)
         {
-            var renderer = containers[i];
+            var renderer = renderers[i];
 
             if(renderer.renderer == null)
             {
                 continue;
             }
 
+            renderer.material.MainTexture = defaultTexture;
+
             MeshRenderSystem.RenderMesh(renderer.renderer.mesh, renderer.position, renderer.rotation, renderer.scale, renderer.material,
-                MaterialLighting.Lit, viewID);
+                MaterialLighting.Lit);
         }
     }
 }

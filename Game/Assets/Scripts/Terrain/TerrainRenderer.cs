@@ -7,7 +7,7 @@ public class TerrainRenderer : Renderable, IComponentDisposable
     public bool needsUpdate = true;
 
     internal Mesh mesh;
-    internal TerrainRenderSystem.TerrainVertex[] meshData = [];
+    internal Mesh.StandardVertex[] meshData = [];
 
     public void DisposeComponent()
     {
