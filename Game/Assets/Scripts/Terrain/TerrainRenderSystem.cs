@@ -3,7 +3,6 @@ using Staple.Internal;
 using System;
 using System.Collections.Generic;
 using System.Numerics;
-using System.Runtime.InteropServices;
 
 public class TerrainRenderSystem : IRenderSystem
 {
@@ -161,11 +160,11 @@ public class TerrainRenderSystem : IRenderSystem
         renderer.localBounds = AABB.CreateFromPoints(points);
     }
 
-    public void Preprocess(Span<(Entity, Transform, IComponent)> contents, Camera activeCamera, Transform activeCameraTransform)
+    public void Preprocess(Span<RenderEntry> contents, Camera activeCamera, Transform activeCameraTransform)
     {
-        foreach(var (entity, transform, relatedComponent) in contents)
+        foreach(var entry in contents)
         {
-            if (relatedComponent is not TerrainRenderer renderer ||
+            if (entry.component is not TerrainRenderer renderer ||
                 renderer.enabled == false ||
                 renderer.forceRenderingOff ||
                 renderer.asset == null ||
@@ -216,13 +215,13 @@ public class TerrainRenderSystem : IRenderSystem
 
                 UpdateMeshBounds(renderer);
 
-                if (entity.TryGetComponent<HeightMapCollider3D>(out var collider))
+                if (entry.entity.TryGetComponent<HeightMapCollider3D>(out var collider))
                 {
                     collider.heights = renderer.asset.heightData;
                     collider.offset = new Vector3(-0.5f * renderer.asset.width * renderer.asset.scale, 0, -0.5f * renderer.asset.height * renderer.asset.scale);
                     collider.scale = Vector3.One * renderer.asset.scale;
 
-                    Physics3D.Instance.RecreateBody(entity);
+                    Physics3D.Instance.RecreateBody(entry.entity);
                 }
             }
             else if (renderer.needsUpdate)
@@ -236,12 +235,12 @@ public class TerrainRenderSystem : IRenderSystem
                 UpdateMeshBounds(renderer);
             }
 
-            renderer.bounds = new(renderer.localBounds.center * transform.Scale + transform.Position,
-                renderer.localBounds.size * transform.Scale);
+            renderer.bounds = new(renderer.localBounds.center * entry.transform.Scale + entry.transform.Position,
+                renderer.localBounds.size * entry.transform.Scale);
         }
     }
 
-    public void Process(Span<(Entity, Transform, IComponent)> contents, Camera activeCamera, Transform activeCameraTransform)
+    public void Process(Span<RenderEntry> contents, Camera activeCamera, Transform activeCameraTransform)
     {
         if (renderers.Length < contents.Length)
         {
@@ -250,9 +249,9 @@ public class TerrainRenderSystem : IRenderSystem
 
         var index = 0;
 
-        foreach(var (entity, transform, relatedComponent) in contents)
+        foreach(var entry in contents)
         {
-            if (relatedComponent is not TerrainRenderer renderer ||
+            if (entry.component is not TerrainRenderer renderer ||
                 renderer.enabled == false ||
                 renderer.forceRenderingOff ||
                 renderer.asset == null ||
@@ -264,20 +263,18 @@ public class TerrainRenderSystem : IRenderSystem
                 renderer.asset.heightData.Length != renderer.asset.width * renderer.asset.height ||
                 renderer.mesh == null)
             {
-                renderer = relatedComponent as TerrainRenderer;
-
                 continue;
             }
 
             renderers[index++] = new()
             {
                 asset = renderer.asset,
-                entity = entity,
+                entity = entry.entity,
                 material = renderer.material,
                 renderer = renderer,
-                position = transform.Position,
-                rotation = transform.Rotation,
-                scale = transform.Scale,
+                position = entry.transform.Position,
+                rotation = entry.transform.Rotation,
+                scale = entry.transform.Scale,
             };
         }
     }
@@ -294,8 +291,6 @@ public class TerrainRenderSystem : IRenderSystem
             {
                 continue;
             }
-
-            renderer.material.MainTexture = defaultTexture;
 
             MeshRenderSystem.RenderMesh(renderer.renderer.mesh, renderer.position, renderer.rotation, renderer.scale, renderer.material,
                 MaterialLighting.Lit);
