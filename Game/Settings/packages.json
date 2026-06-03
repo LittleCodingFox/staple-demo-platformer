@@ -1,6 +1,7 @@
 {
   "dependencies": {
     "com.staple.joltphysics": "1.0.0",
-    "com.staple.openal": "1.0.0"
+    "com.staple.openal": "1.0.0",
+    "com.staple.ui": "1.0.0"
   }
 }

@@ -9,6 +9,11 @@
       "version": "1.0.0",
       "source": "Builtin",
       "dependencies": {}
+    },
+    "com.staple.ui": {
+      "version": "1.0.0",
+      "source": "Builtin",
+      "dependencies": {}
     }
   }
 }
