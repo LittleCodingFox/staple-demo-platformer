@@ -3,7 +3,7 @@
 		"Main": {
 			"FPS": {
 				"control": "UIFPSCounter",
-				"wide": "200",
+				"wide": "600",
 				"tall": "40",
 				"properties": {
 					"textColor": "#FFFFFF",

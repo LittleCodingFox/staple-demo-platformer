@@ -17,7 +17,7 @@ public class TerrainRenderSystem : IRenderSystem
         public Vector3 scale;
     }
 
-    private RenderInfo[] renderers = [];
+    private readonly ExpandableContainer<RenderInfo> renderers = new();
 
     private Texture defaultTexture;
 
@@ -26,6 +26,8 @@ public class TerrainRenderSystem : IRenderSystem
     public bool UsesOwnRenderProcess => false;
 
     public Type RelatedComponent => typeof(TerrainRenderer);
+
+    public IRenderQueue CreateRenderQueue() => new GenericRenderQueue<TerrainRenderer>();
 
     private void CacheTerrain(int width, int height)
     {
@@ -160,9 +162,16 @@ public class TerrainRenderSystem : IRenderSystem
         renderer.localBounds = AABB.CreateFromPoints(points);
     }
 
-    public void Preprocess(Span<RenderEntry> contents, Camera activeCamera, Transform activeCameraTransform)
+    public void Preprocess(IRenderQueue renderQueue, Camera activeCamera, Transform activeCameraTransform)
     {
-        foreach(var entry in contents)
+        if(renderQueue is not GenericRenderQueue<TerrainRenderer> queue)
+        {
+            return;
+        }
+
+        var items = queue.Items;
+
+        foreach(var entry in items)
         {
             if (entry.component is not TerrainRenderer renderer ||
                 renderer.enabled == false ||
@@ -240,16 +249,18 @@ public class TerrainRenderSystem : IRenderSystem
         }
     }
 
-    public void Process(Span<RenderEntry> contents, Camera activeCamera, Transform activeCameraTransform)
+    public void Process(IRenderQueue renderQueue, Camera activeCamera, Transform activeCameraTransform)
     {
-        if (renderers.Length < contents.Length)
+        renderers.Clear();
+
+        if (renderQueue is not GenericRenderQueue<TerrainRenderer> queue)
         {
-            Array.Resize(ref renderers, contents.Length);
+            return;
         }
 
-        var index = 0;
+        var items = queue.Items;
 
-        foreach(var entry in contents)
+        foreach (var entry in items)
         {
             if (entry.component is not TerrainRenderer renderer ||
                 renderer.enabled == false ||
@@ -266,7 +277,7 @@ public class TerrainRenderSystem : IRenderSystem
                 continue;
             }
 
-            renderers[index++] = new()
+            renderers.Add(new()
             {
                 asset = renderer.asset,
                 entity = entry.entity,
@@ -275,7 +286,7 @@ public class TerrainRenderSystem : IRenderSystem
                 position = entry.transform.Position,
                 rotation = entry.transform.Rotation,
                 scale = entry.transform.Scale,
-            };
+            });
         }
     }
 
@@ -283,9 +294,11 @@ public class TerrainRenderSystem : IRenderSystem
     {
         var length = renderers.Length;
 
+        var items = renderers.Contents;
+
         for (var i = 0; i < length; i++)
         {
-            var renderer = renderers[i];
+            var renderer = items[i];
 
             if(renderer.renderer == null)
             {
