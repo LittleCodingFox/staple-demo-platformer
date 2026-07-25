@@ -4,7 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Numerics;
 
-public class TerrainRenderSystem : IRenderSystem
+public class TerrainRenderSystem : RenderSystemBase
 {
     private struct RenderInfo
     {
@@ -17,17 +17,17 @@ public class TerrainRenderSystem : IRenderSystem
         public Vector3 scale;
     }
 
-    private readonly ExpandableContainer<RenderInfo> renderers = new();
+    private readonly Dictionary<int, ExpandableContainer<RenderInfo>> renderers = [];
 
     private Texture defaultTexture;
 
     private readonly Dictionary<Vector2Int, (Mesh.StandardVertex[], int[])> cachedTerrainSizes = [];
 
-    public bool UsesOwnRenderProcess => false;
+    public TerrainRenderSystem() : base(false, typeof(TerrainRenderer), typeof(GenericRenderQueue<TerrainRenderer>))
+    {
+    }
 
-    public Type RelatedComponent => typeof(TerrainRenderer);
-
-    public IRenderQueue CreateRenderQueue() => new GenericRenderQueue<TerrainRenderer>();
+    public override IRenderQueue CreateRenderQueue() => new GenericRenderQueue<TerrainRenderer>();
 
     private void CacheTerrain(int width, int height)
     {
@@ -76,17 +76,22 @@ public class TerrainRenderSystem : IRenderSystem
         return cachedTerrainSizes.TryGetValue(new Vector2Int(width, height), out var value) ? value : ([], []);
     }
 
-    public void Startup()
+    public override void Startup()
     {
     }
 
-    public void Shutdown()
+    public override void Shutdown()
     {
     }
 
-    public void Prepare()
+    public override void Prepare()
     {
         defaultTexture ??= Resources.Load<Texture>("Hidden/Textures/Sprites/DefaultSprite.png");
+
+        foreach(var pair in renderers)
+        {
+            pair.Value.Clear();
+        }
     }
 
     private void UpdateHeights(TerrainRenderer renderer)
@@ -162,7 +167,7 @@ public class TerrainRenderSystem : IRenderSystem
         renderer.localBounds = AABB.CreateFromPoints(points);
     }
 
-    public void Preprocess(IRenderQueue renderQueue, Camera activeCamera, Transform activeCameraTransform)
+    public override void Preprocess(IRenderQueue renderQueue)
     {
         if(renderQueue is not GenericRenderQueue<TerrainRenderer> queue)
         {
@@ -177,8 +182,8 @@ public class TerrainRenderSystem : IRenderSystem
                 renderer.enabled == false ||
                 renderer.forceRenderingOff ||
                 renderer.asset == null ||
-                renderer.material == null ||
-                renderer.material.Disposed ||
+                renderer.materials == null ||
+                renderer.materials.Count != 1 ||
                 renderer.asset.width <= 0 ||
                 renderer.asset.height <= 0 ||
                 renderer.asset.heightData == null ||
@@ -249,13 +254,18 @@ public class TerrainRenderSystem : IRenderSystem
         }
     }
 
-    public void Process(IRenderQueue renderQueue, Camera activeCamera, Transform activeCameraTransform)
+    public override void Process(IRenderQueue renderQueue, Camera activeCamera, Transform activeCameraTransform, int renderIndex)
     {
-        renderers.Clear();
-
         if (renderQueue is not GenericRenderQueue<TerrainRenderer> queue)
         {
             return;
+        }
+
+        if (!renderers.TryGetValue(renderIndex, out var renderData))
+        {
+            renderData = new();
+
+            renderers.AddOrSetKey(renderIndex, renderData);
         }
 
         var items = queue.Items;
@@ -266,22 +276,23 @@ public class TerrainRenderSystem : IRenderSystem
                 renderer.enabled == false ||
                 renderer.forceRenderingOff ||
                 renderer.asset == null ||
-                renderer.material == null ||
-                renderer.material.Disposed ||
+                renderer.materials == null ||
+                renderer.materials.Count != 1 ||
                 renderer.asset.width <= 0 ||
                 renderer.asset.height <= 0 ||
                 renderer.asset.heightData == null ||
                 renderer.asset.heightData.Length != renderer.asset.width * renderer.asset.height ||
-                renderer.mesh == null)
+                renderer.mesh == null ||
+                !IsValidMaterial(renderer.materials[0], renderIndex))
             {
                 continue;
             }
 
-            renderers.Add(new()
+            renderData.Add(new()
             {
                 asset = renderer.asset,
                 entity = entry.entity,
-                material = renderer.material,
+                material = renderer.materials[0],
                 renderer = renderer,
                 position = entry.transform.Position,
                 rotation = entry.transform.Rotation,
@@ -290,23 +301,26 @@ public class TerrainRenderSystem : IRenderSystem
         }
     }
 
-    public void Submit()
+    public override void Submit()
     {
-        var length = renderers.Length;
-
-        var items = renderers.Contents;
-
-        for (var i = 0; i < length; i++)
+        foreach(var (renderIndex, queue) in renderers)
         {
-            var renderer = items[i];
+            var length = queue.Length;
 
-            if(renderer.renderer == null)
+            var items = queue.Contents;
+
+            for (var i = 0; i < length; i++)
             {
-                continue;
-            }
+                var renderer = items[i];
 
-            MeshRenderSystem.RenderMesh(renderer.renderer.mesh, renderer.position, renderer.rotation, renderer.scale, renderer.material,
-                MaterialLighting.Lit);
+                if (renderer.renderer == null)
+                {
+                    continue;
+                }
+
+                MeshRenderSystem.RenderMesh(renderer.renderer.mesh, renderer.position, renderer.rotation, renderer.scale, renderer.material,
+                    MaterialLighting.Lit);
+            }
         }
     }
 }

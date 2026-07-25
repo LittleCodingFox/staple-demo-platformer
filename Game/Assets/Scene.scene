@@ -272,7 +272,7 @@
     "kind": "Entity",
     "name": "Rig",
     "ID": 5,
-    "parent": 3,
+    "parent": 77,
     "transform": {
       "position": {
         "x": 0.0,
@@ -330,7 +330,7 @@
     "kind": "Entity",
     "name": "Cube.160 0",
     "ID": 7,
-    "parent": 3,
+    "parent": 77,
     "transform": {
       "position": {
         "x": 0.0,
@@ -353,16 +353,17 @@
         "type": "Staple.SkinnedMeshRenderer",
         "data": {
           "mesh": "1b25a4e0-6a3c-4c33-8a63-56f5f8ff6fa0:0",
-          "materials": [
-            "f0438960-6b2c-4a68-bec8-1f8f592ab9e1"
-          ],
+          "disableSkinning": false,
           "enabled": true,
           "forceRenderingOff": false,
           "receiveShadows": true,
           "sortingLayer": 0,
           "sortingOrder": 0,
           "overrideLighting": false,
-          "lighting": "Lit"
+          "lighting": "Lit",
+          "materials": [
+            "f0438960-6b2c-4a68-bec8-1f8f592ab9e1"
+          ]
         }
       }
     ],
@@ -405,7 +406,7 @@
     "kind": "Entity",
     "name": "Cube.161 0",
     "ID": 9,
-    "parent": 3,
+    "parent": 77,
     "transform": {
       "position": {
         "x": 0.0,
@@ -428,16 +429,17 @@
         "type": "Staple.SkinnedMeshRenderer",
         "data": {
           "mesh": "1b25a4e0-6a3c-4c33-8a63-56f5f8ff6fa0:1",
-          "materials": [
-            "f0438960-6b2c-4a68-bec8-1f8f592ab9e1"
-          ],
+          "disableSkinning": false,
           "enabled": true,
           "forceRenderingOff": false,
           "receiveShadows": true,
           "sortingLayer": 0,
           "sortingOrder": 0,
           "overrideLighting": false,
-          "lighting": "Lit"
+          "lighting": "Lit",
+          "materials": [
+            "f0438960-6b2c-4a68-bec8-1f8f592ab9e1"
+          ]
         }
       }
     ],
@@ -480,7 +482,7 @@
     "kind": "Entity",
     "name": "PrototypePete_body.022 0",
     "ID": 11,
-    "parent": 3,
+    "parent": 77,
     "transform": {
       "position": {
         "x": 0.0,
@@ -503,16 +505,17 @@
         "type": "Staple.SkinnedMeshRenderer",
         "data": {
           "mesh": "1b25a4e0-6a3c-4c33-8a63-56f5f8ff6fa0:2",
-          "materials": [
-            "f0438960-6b2c-4a68-bec8-1f8f592ab9e1"
-          ],
+          "disableSkinning": false,
           "enabled": true,
           "forceRenderingOff": false,
           "receiveShadows": true,
           "sortingLayer": 0,
           "sortingOrder": 0,
           "overrideLighting": false,
-          "lighting": "Lit"
+          "lighting": "Lit",
+          "materials": [
+            "f0438960-6b2c-4a68-bec8-1f8f592ab9e1"
+          ]
         }
       }
     ],
@@ -555,7 +558,7 @@
     "kind": "Entity",
     "name": "Cube.167 0",
     "ID": 13,
-    "parent": 3,
+    "parent": 77,
     "transform": {
       "position": {
         "x": 0.0,
@@ -578,16 +581,17 @@
         "type": "Staple.SkinnedMeshRenderer",
         "data": {
           "mesh": "1b25a4e0-6a3c-4c33-8a63-56f5f8ff6fa0:3",
-          "materials": [
-            "f0438960-6b2c-4a68-bec8-1f8f592ab9e1"
-          ],
+          "disableSkinning": false,
           "enabled": true,
           "forceRenderingOff": false,
           "receiveShadows": true,
           "sortingLayer": 0,
           "sortingOrder": 0,
           "overrideLighting": false,
-          "lighting": "Lit"
+          "lighting": "Lit",
+          "materials": [
+            "f0438960-6b2c-4a68-bec8-1f8f592ab9e1"
+          ]
         }
       }
     ],
@@ -630,7 +634,7 @@
     "kind": "Entity",
     "name": "Cube.165 0",
     "ID": 15,
-    "parent": 3,
+    "parent": 77,
     "transform": {
       "position": {
         "x": 0.0,
@@ -653,16 +657,17 @@
         "type": "Staple.SkinnedMeshRenderer",
         "data": {
           "mesh": "1b25a4e0-6a3c-4c33-8a63-56f5f8ff6fa0:4",
-          "materials": [
-            "f0438960-6b2c-4a68-bec8-1f8f592ab9e1"
-          ],
+          "disableSkinning": false,
           "enabled": true,
           "forceRenderingOff": false,
           "receiveShadows": true,
           "sortingLayer": 0,
           "sortingOrder": 0,
           "overrideLighting": false,
-          "lighting": "Lit"
+          "lighting": "Lit",
+          "materials": [
+            "f0438960-6b2c-4a68-bec8-1f8f592ab9e1"
+          ]
         }
       }
     ],
@@ -705,7 +710,7 @@
     "kind": "Entity",
     "name": "Cube.163 0",
     "ID": 17,
-    "parent": 3,
+    "parent": 77,
     "transform": {
       "position": {
         "x": 0.0,
@@ -728,16 +733,17 @@
         "type": "Staple.SkinnedMeshRenderer",
         "data": {
           "mesh": "1b25a4e0-6a3c-4c33-8a63-56f5f8ff6fa0:5",
-          "materials": [
-            "f0438960-6b2c-4a68-bec8-1f8f592ab9e1"
-          ],
+          "disableSkinning": false,
           "enabled": true,
           "forceRenderingOff": false,
           "receiveShadows": true,
           "sortingLayer": 0,
           "sortingOrder": 0,
           "overrideLighting": false,
-          "lighting": "Lit"
+          "lighting": "Lit",
+          "materials": [
+            "f0438960-6b2c-4a68-bec8-1f8f592ab9e1"
+          ]
         }
       }
     ],
@@ -789,7 +795,7 @@
       },
       "rotation": {
         "x": 0.0,
-        "y": 0.0,
+        "y": -0.0,
         "z": 0.0
       },
       "scale": {
@@ -904,8 +910,8 @@
         "z": -0.0
       },
       "rotation": {
-        "x": 0.0,
-        "y": 0.0,
+        "x": -0.0,
+        "y": -0.0,
         "z": -6.3385
       },
       "scale": {
@@ -933,8 +939,8 @@
         "z": -0.0
       },
       "rotation": {
-        "x": 0.0,
-        "y": 0.0,
+        "x": -0.0,
+        "y": -0.0,
         "z": 3.0552
       },
       "scale": {
@@ -992,7 +998,7 @@
       },
       "rotation": {
         "x": 0.0,
-        "y": 0.0,
+        "y": -0.0,
         "z": -90.0
       },
       "scale": {
@@ -1021,7 +1027,7 @@
       },
       "rotation": {
         "x": 0.0,
-        "y": 0.0,
+        "y": -0.0,
         "z": 0.0
       },
       "scale": {
@@ -1064,16 +1070,16 @@
         "type": "Staple.MeshRenderer",
         "data": {
           "mesh": "1b25a4e0-6a3c-4c33-8a63-56f5f8ff6fa0:6",
-          "materials": [
-            "f0438960-6b2c-4a68-bec8-1f8f592ab9e1"
-          ],
           "enabled": true,
           "forceRenderingOff": false,
           "receiveShadows": true,
           "sortingLayer": 0,
           "sortingOrder": 0,
           "overrideLighting": false,
-          "lighting": "Lit"
+          "lighting": "Lit",
+          "materials": [
+            "f0438960-6b2c-4a68-bec8-1f8f592ab9e1"
+          ]
         }
       }
     ],
@@ -1148,7 +1154,6 @@
         "type": "TerrainRenderer",
         "data": {
           "asset": "14281697-5088-48c8-a916-275a7eeb0817",
-          "material": "db3c6e30-0fce-4b1b-a9e7-9bf7dcbfec30",
           "needsUpdate": false,
           "enabled": true,
           "forceRenderingOff": false,
@@ -1156,7 +1161,10 @@
           "sortingLayer": 0,
           "sortingOrder": 0,
           "overrideLighting": false,
-          "lighting": "Unlit"
+          "lighting": "Unlit",
+          "materials": [
+            "db3c6e30-0fce-4b1b-a9e7-9bf7dcbfec30"
+          ]
         }
       },
       {
@@ -1312,7 +1320,7 @@
         "z": 0.1559
       },
       "rotation": {
-        "x": 0.0,
+        "x": -0.0,
         "y": 0.0,
         "z": 0.0002
       },
@@ -1356,16 +1364,16 @@
         "type": "Staple.MeshRenderer",
         "data": {
           "mesh": "1b25a4e0-6a3c-4c33-8a63-56f5f8ff6fa0:7",
-          "materials": [
-            "f0438960-6b2c-4a68-bec8-1f8f592ab9e1"
-          ],
           "enabled": true,
           "forceRenderingOff": false,
           "receiveShadows": true,
           "sortingLayer": 0,
           "sortingOrder": 0,
           "overrideLighting": false,
-          "lighting": "Lit"
+          "lighting": "Lit",
+          "materials": [
+            "f0438960-6b2c-4a68-bec8-1f8f592ab9e1"
+          ]
         }
       }
     ],
@@ -1416,7 +1424,7 @@
         "z": -0.0
       },
       "rotation": {
-        "x": 0.0,
+        "x": -0.0,
         "y": 0.0,
         "z": 6.3385
       },
@@ -1445,7 +1453,7 @@
         "z": -0.0
       },
       "rotation": {
-        "x": 0.0,
+        "x": -0.0,
         "y": 0.0,
         "z": -3.0552
       },
@@ -1475,7 +1483,7 @@
       },
       "rotation": {
         "x": 0.0,
-        "y": 0.0,
+        "y": -0.0,
         "z": 0.0006
       },
       "scale": {
@@ -1504,7 +1512,7 @@
       },
       "rotation": {
         "x": 0.0,
-        "y": 0.0,
+        "y": -0.0,
         "z": 90.0
       },
       "scale": {
@@ -1576,16 +1584,16 @@
         "type": "Staple.MeshRenderer",
         "data": {
           "mesh": "1b25a4e0-6a3c-4c33-8a63-56f5f8ff6fa0:8",
-          "materials": [
-            "f0438960-6b2c-4a68-bec8-1f8f592ab9e1"
-          ],
           "enabled": true,
           "forceRenderingOff": false,
           "receiveShadows": true,
           "sortingLayer": 0,
           "sortingOrder": 0,
           "overrideLighting": false,
-          "lighting": "Lit"
+          "lighting": "Lit",
+          "materials": [
+            "f0438960-6b2c-4a68-bec8-1f8f592ab9e1"
+          ]
         }
       }
     ],
@@ -1651,16 +1659,16 @@
         "type": "Staple.MeshRenderer",
         "data": {
           "mesh": "1b25a4e0-6a3c-4c33-8a63-56f5f8ff6fa0:9",
-          "materials": [
-            "f0438960-6b2c-4a68-bec8-1f8f592ab9e1"
-          ],
           "enabled": true,
           "forceRenderingOff": false,
           "receiveShadows": true,
           "sortingLayer": 0,
           "sortingOrder": 0,
           "overrideLighting": false,
-          "lighting": "Lit"
+          "lighting": "Lit",
+          "materials": [
+            "f0438960-6b2c-4a68-bec8-1f8f592ab9e1"
+          ]
         }
       }
     ],
@@ -1726,16 +1734,16 @@
         "type": "Staple.MeshRenderer",
         "data": {
           "mesh": "1b25a4e0-6a3c-4c33-8a63-56f5f8ff6fa0:10",
-          "materials": [
-            "f0438960-6b2c-4a68-bec8-1f8f592ab9e1"
-          ],
           "enabled": true,
           "forceRenderingOff": false,
           "receiveShadows": true,
           "sortingLayer": 0,
           "sortingOrder": 0,
           "overrideLighting": false,
-          "lighting": "Lit"
+          "lighting": "Lit",
+          "materials": [
+            "f0438960-6b2c-4a68-bec8-1f8f592ab9e1"
+          ]
         }
       }
     ],
@@ -1787,7 +1795,7 @@
       },
       "rotation": {
         "x": 0.0,
-        "y": 0.0,
+        "y": -0.0,
         "z": 0.0
       },
       "scale": {
@@ -1830,16 +1838,16 @@
         "type": "Staple.MeshRenderer",
         "data": {
           "mesh": "1b25a4e0-6a3c-4c33-8a63-56f5f8ff6fa0:11",
-          "materials": [
-            "f0438960-6b2c-4a68-bec8-1f8f592ab9e1"
-          ],
           "enabled": true,
           "forceRenderingOff": false,
           "receiveShadows": true,
           "sortingLayer": 0,
           "sortingOrder": 0,
           "overrideLighting": false,
-          "lighting": "Lit"
+          "lighting": "Lit",
+          "materials": [
+            "f0438960-6b2c-4a68-bec8-1f8f592ab9e1"
+          ]
         }
       }
     ],
@@ -1862,8 +1870,8 @@
       },
       "rotation": {
         "x": 0.0,
-        "y": 0.0,
-        "z": 0.0
+        "y": -0.0,
+        "z": -0.0
       },
       "scale": {
         "x": 1.0,
@@ -1905,16 +1913,16 @@
         "type": "Staple.MeshRenderer",
         "data": {
           "mesh": "1b25a4e0-6a3c-4c33-8a63-56f5f8ff6fa0:12",
-          "materials": [
-            "f0438960-6b2c-4a68-bec8-1f8f592ab9e1"
-          ],
           "enabled": true,
           "forceRenderingOff": false,
           "receiveShadows": true,
           "sortingLayer": 0,
           "sortingOrder": 0,
           "overrideLighting": false,
-          "lighting": "Lit"
+          "lighting": "Lit",
+          "materials": [
+            "f0438960-6b2c-4a68-bec8-1f8f592ab9e1"
+          ]
         }
       }
     ],
@@ -1967,7 +1975,7 @@
       "rotation": {
         "x": 12.1955,
         "y": 0.0,
-        "z": 0.0
+        "z": -0.0
       },
       "scale": {
         "x": 1.0,
@@ -1996,7 +2004,7 @@
       "rotation": {
         "x": -54.1606,
         "y": 0.0,
-        "z": 0.0
+        "z": -0.0
       },
       "scale": {
         "x": 1.0,
@@ -2025,7 +2033,7 @@
       "rotation": {
         "x": 46.044,
         "y": 180.0,
-        "z": 0.0
+        "z": -0.0
       },
       "scale": {
         "x": 1.0,
@@ -2082,7 +2090,7 @@
       },
       "rotation": {
         "x": 12.1955,
-        "y": 0.0,
+        "y": -0.0,
         "z": 0.0
       },
       "scale": {
@@ -2112,7 +2120,7 @@
       "rotation": {
         "x": -54.1606,
         "y": 0.0,
-        "z": 0.0
+        "z": -0.0
       },
       "scale": {
         "x": 1.0,
@@ -2256,7 +2264,7 @@
       },
       "rotation": {
         "x": -46.044,
-        "y": 0.0,
+        "y": -0.0,
         "z": -180.0
       },
       "scale": {
@@ -2285,8 +2293,8 @@
       },
       "rotation": {
         "x": -46.044,
-        "y": 0.0,
-        "z": 0.0
+        "y": -0.0,
+        "z": -0.0
       },
       "scale": {
         "x": 1.0,
@@ -2343,8 +2351,8 @@
       },
       "rotation": {
         "x": 0.0,
-        "y": 0.0,
-        "z": 0.0
+        "y": -0.0,
+        "z": -0.0
       },
       "scale": {
         "x": 1.0,
@@ -2459,7 +2467,7 @@
       },
       "rotation": {
         "x": -46.044,
-        "y": 0.0,
+        "y": -0.0,
         "z": -180.0
       },
       "scale": {
@@ -2488,8 +2496,8 @@
       },
       "rotation": {
         "x": -46.044,
-        "y": 0.0,
-        "z": 0.0
+        "y": -0.0,
+        "z": -0.0
       },
       "scale": {
         "x": 1.0,
@@ -2546,8 +2554,8 @@
       },
       "rotation": {
         "x": 0.0,
-        "y": 0.0,
-        "z": 0.0
+        "y": -0.0,
+        "z": -0.0
       },
       "scale": {
         "x": 1.0,
@@ -2669,6 +2677,35 @@
         "x": 1.0,
         "y": 1.0,
         "z": 1.0
+      }
+    },
+    "components": [],
+    "layer": "Default",
+    "enabled": true,
+    "prefabGuid": null,
+    "prefabLocalID": 0,
+    "hierarchyVisibility": "None"
+  },
+  {
+    "kind": "Entity",
+    "name": "StapleAdjustment",
+    "ID": 77,
+    "parent": 3,
+    "transform": {
+      "position": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      },
+      "rotation": {
+        "x": 0.0,
+        "y": -180.0,
+        "z": 0.0
+      },
+      "scale": {
+        "x": 1.0,
+        "y": 1.0,
+        "z": -1.0
       }
     },
     "components": [],
