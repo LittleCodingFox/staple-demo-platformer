@@ -16,7 +16,7 @@
 			"Stats": {
 				"control": "UIRenderStats",
 				"wide": "600",
-				"tall": "100",
+				"tall": "300",
 				"y": "50",
 				"properties": {
 					"textColor": "#FFFFFF",
