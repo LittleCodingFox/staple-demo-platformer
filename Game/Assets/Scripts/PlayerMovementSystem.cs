@@ -58,7 +58,7 @@ class PlayerMovementSystem : IEntitySystemUpdate, IEntitySystemFixedUpdate, IEnt
 
             var yVelocity = rigidBody.Velocity.Y;
 
-            playerMovement.grounded = Physics.RayCast3D(new Ray(rigidBody.Position, new Vector3(0, -3.0f, 0)), out var hitBody, out _,
+            playerMovement.grounded = Physics.RayCast3D(new Ray(rigidBody.Position, new Vector3(0, -3.0f, 0)), out var hit,
                 playerMovement.collisionMask);
 
             if (jumpPress && playerMovement.grounded)
