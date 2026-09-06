@@ -37,6 +37,6 @@ public class Spawner : CallbackComponent
             body.Position += new Vector3((Randomizer.Default.RandomNormalized() - 0.5f) * radius, 0, (Randomizer.Default.RandomNormalized() - 0.5f) * radius);
 		}
 
-		entity.Destroy();
+		Entity.Destroy();
 	}
 }

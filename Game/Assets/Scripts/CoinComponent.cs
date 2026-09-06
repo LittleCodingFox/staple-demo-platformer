@@ -2,7 +2,7 @@ using Staple;
 
 namespace Platformer;
 
-class CoinComponent : IComponent
+class CoinComponent : Component
 {
     public AudioClip pickupClip;
 }

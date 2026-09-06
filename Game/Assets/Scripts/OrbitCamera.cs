@@ -3,7 +3,7 @@ using System.Numerics;
 
 namespace Platformer;
 
-class OrbitCamera : IComponent
+class OrbitCamera : Component
 {
     [Range(1.0f, 20.0f)]
     public float distance = 5.0f;

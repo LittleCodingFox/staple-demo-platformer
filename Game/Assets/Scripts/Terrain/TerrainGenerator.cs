@@ -1,7 +1,7 @@
 ﻿using Staple;
 using System.Numerics;
 
-public class TerrainGenerator: IComponent
+public class TerrainGenerator : Component
 {
     public TerrainAsset asset;
 

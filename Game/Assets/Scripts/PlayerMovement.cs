@@ -3,7 +3,7 @@ using System.Numerics;
 
 namespace Platformer;
 
-class PlayerMovement : IComponent
+class PlayerMovement : Component
 {
     [Min(0)]
     public float movementSpeed = 5;

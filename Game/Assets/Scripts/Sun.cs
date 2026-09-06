@@ -9,14 +9,12 @@ public class Sun : CallbackComponent
     public Color startColor = Color.White;
     public Color endColor = Color.White;
 
-    private Transform transform;
     private Light light;
     private float timer = 0.0f;
 
     public override void Awake()
     {
-        transform = entity.GetComponent<Transform>();
-        light = entity.GetComponent<Light>();
+        light = Entity.GetComponent<Light>();
     }
 
     public override void FixedUpdate()
@@ -37,6 +35,6 @@ public class Sun : CallbackComponent
 
         var rotation = Quaternion.Euler(new(t * 360, 0, 0));
 
-        transform.LocalRotation = rotation;
+        Transform.LocalRotation = rotation;
     }
 }

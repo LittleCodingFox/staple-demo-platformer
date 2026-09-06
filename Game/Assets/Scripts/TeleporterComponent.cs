@@ -3,7 +3,7 @@ using System.Numerics;
 
 namespace Platformer;
 
-class TeleporterComponent : IComponent
+class TeleporterComponent : Component
 {
     public Vector3 position;
 }
