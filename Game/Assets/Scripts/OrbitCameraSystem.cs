@@ -8,9 +8,9 @@ class OrbitCameraSystem : IEntitySystemUpdate, IEntitySystemLifecycle
 {
     private Vector2 movement;
     private int movementKey;
-    private readonly SceneQuery<Transform, OrbitCamera> cameras = new();
+    private readonly SceneQuery<OrbitCamera> cameras = new();
 
-    private void UpdateFocusPoint(OrbitCamera camera)
+    private static void UpdateFocusPoint(OrbitCamera camera)
     {
         if(camera.focus == null)
         {
@@ -123,12 +123,12 @@ class OrbitCameraSystem : IEntitySystemUpdate, IEntitySystemLifecycle
 
     public void Update(float deltaTime)
     {
-        foreach((_, Transform transform, OrbitCamera camera) in cameras.Contents)
+        foreach(var camera in cameras.Contents)
         {
             if(camera.firstFrame && camera.focus != null)
             {
                 camera.focusPoint = camera.focus.Position;
-                transform.LocalRotation = Quaternion.Euler(new Vector3(camera.orbitAngles.X, camera.orbitAngles.Y, 0));
+                camera.Transform.LocalRotation = Quaternion.Euler(new Vector3(camera.orbitAngles.X, camera.orbitAngles.Y, 0));
             }
 
             UpdateFocusPoint(camera);
@@ -143,15 +143,15 @@ class OrbitCameraSystem : IEntitySystemUpdate, IEntitySystemLifecycle
             }
             else
             {
-                rotation = transform.LocalRotation;
+                rotation = camera.Transform.LocalRotation;
             }
 
             var direction = Vector3.Transform(new Vector3(0, 0, 1), rotation);
 
             var position = camera.focusPoint - direction * camera.distance;
 
-            transform.LocalPosition = position;
-            transform.LocalRotation = rotation;
+            camera.Transform.LocalPosition = position;
+            camera.Transform.LocalRotation = rotation;
         }
     }
 

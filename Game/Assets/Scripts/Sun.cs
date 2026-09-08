@@ -3,6 +3,7 @@ using System.Numerics;
 
 namespace Platformer;
 
+[RequireComponent(typeof(Light), nameof(light))]
 public class Sun : CallbackComponent
 {
     public float time = 10.0f;
@@ -14,7 +15,7 @@ public class Sun : CallbackComponent
 
     public override void Awake()
     {
-        light = Entity.GetComponent<Light>();
+        Log.Debug(light);
     }
 
     public override void FixedUpdate()

@@ -179,7 +179,7 @@ public class TerrainRenderSystem : RenderSystemBase
         foreach(var entry in items)
         {
             if (entry.component is not TerrainRenderer renderer ||
-                renderer.enabled == false ||
+                renderer.Enabled == false ||
                 renderer.forceRenderingOff ||
                 renderer.asset == null ||
                 renderer.materials == null ||
@@ -273,7 +273,7 @@ public class TerrainRenderSystem : RenderSystemBase
         foreach (var entry in items)
         {
             if (entry.component is not TerrainRenderer renderer ||
-                renderer.enabled == false ||
+                renderer.Enabled == false ||
                 renderer.forceRenderingOff ||
                 renderer.asset == null ||
                 renderer.materials == null ||

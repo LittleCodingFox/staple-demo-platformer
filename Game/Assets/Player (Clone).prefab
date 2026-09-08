@@ -41,7 +41,8 @@
             "y": 0.0,
             "z": 0.0,
             "w": 1.0
-          }
+          },
+          "Enabled": true
         }
       },
       {
@@ -55,7 +56,8 @@
             "x": 0.0,
             "y": 1.0,
             "z": 0.0
-          }
+          },
+          "Enabled": true
         }
       }
     ],
@@ -97,12 +99,15 @@
               "x": 1.0,
               "y": 1.0,
               "z": 1.0
-            }
+            },
+            "Enabled": true
           }
         },
         {
           "type": "Staple.SkinnedMeshInstance",
-          "data": {}
+          "data": {
+            "Enabled": true
+          }
         },
         {
           "type": "Staple.SkinnedMeshAnimator",
@@ -110,7 +115,8 @@
             "mesh": "1b25a4e0-6a3c-4c33-8a63-56f5f8ff6fa0",
             "animation": "1H_Melee_Attack_Chop",
             "repeat": true,
-            "stateMachine": "dd8767a6-62bc-440b-9d7a-d087211be124"
+            "stateMachine": "dd8767a6-62bc-440b-9d7a-d087211be124",
+            "Enabled": true
           }
         }
       ],
@@ -133,7 +139,7 @@
         },
         "rotation": {
           "x": 0.0,
-          "y": -180.0,
+          "y": 180.0,
           "z": 0.0
         },
         "scale": {
@@ -481,7 +487,7 @@
         },
         "rotation": {
           "x": -90.0,
-          "y": 273.2839,
+          "y": -86.7161,
           "z": 0.0
         },
         "scale": {
@@ -669,7 +675,6 @@
           "type": "Staple.MeshRenderer",
           "data": {
             "mesh": "1b25a4e0-6a3c-4c33-8a63-56f5f8ff6fa0:6",
-            "enabled": true,
             "forceRenderingOff": false,
             "receiveShadows": true,
             "sortingLayer": 0,
@@ -678,7 +683,8 @@
             "lighting": "Lit",
             "materials": [
               "f0438960-6b2c-4a68-bec8-1f8f592ab9e1"
-            ]
+            ],
+            "Enabled": true
           }
         }
       ],
@@ -744,7 +750,6 @@
           "type": "Staple.MeshRenderer",
           "data": {
             "mesh": "1b25a4e0-6a3c-4c33-8a63-56f5f8ff6fa0:7",
-            "enabled": true,
             "forceRenderingOff": false,
             "receiveShadows": true,
             "sortingLayer": 0,
@@ -753,7 +758,8 @@
             "lighting": "Lit",
             "materials": [
               "f0438960-6b2c-4a68-bec8-1f8f592ab9e1"
-            ]
+            ],
+            "Enabled": true
           }
         }
       ],
@@ -776,7 +782,7 @@
         },
         "rotation": {
           "x": -90.0,
-          "y": -273.2839,
+          "y": 86.7161,
           "z": 0.0
         },
         "scale": {
@@ -921,7 +927,7 @@
         },
         "rotation": {
           "x": 0.0,
-          "y": 180.0,
+          "y": -180.0,
           "z": 0.0
         },
         "scale": {
@@ -964,7 +970,6 @@
           "type": "Staple.MeshRenderer",
           "data": {
             "mesh": "1b25a4e0-6a3c-4c33-8a63-56f5f8ff6fa0:8",
-            "enabled": true,
             "forceRenderingOff": false,
             "receiveShadows": true,
             "sortingLayer": 0,
@@ -973,7 +978,8 @@
             "lighting": "Lit",
             "materials": [
               "f0438960-6b2c-4a68-bec8-1f8f592ab9e1"
-            ]
+            ],
+            "Enabled": true
           }
         }
       ],
@@ -996,7 +1002,7 @@
         },
         "rotation": {
           "x": 0.0,
-          "y": 180.0,
+          "y": -180.0,
           "z": 0.0
         },
         "scale": {
@@ -1039,7 +1045,6 @@
           "type": "Staple.MeshRenderer",
           "data": {
             "mesh": "1b25a4e0-6a3c-4c33-8a63-56f5f8ff6fa0:9",
-            "enabled": true,
             "forceRenderingOff": false,
             "receiveShadows": true,
             "sortingLayer": 0,
@@ -1048,7 +1053,8 @@
             "lighting": "Lit",
             "materials": [
               "f0438960-6b2c-4a68-bec8-1f8f592ab9e1"
-            ]
+            ],
+            "Enabled": true
           }
         }
       ],
@@ -1071,7 +1077,7 @@
         },
         "rotation": {
           "x": 0.0,
-          "y": 180.0,
+          "y": -180.0,
           "z": 0.0
         },
         "scale": {
@@ -1114,7 +1120,6 @@
           "type": "Staple.MeshRenderer",
           "data": {
             "mesh": "1b25a4e0-6a3c-4c33-8a63-56f5f8ff6fa0:10",
-            "enabled": true,
             "forceRenderingOff": false,
             "receiveShadows": true,
             "sortingLayer": 0,
@@ -1123,7 +1128,8 @@
             "lighting": "Lit",
             "materials": [
               "f0438960-6b2c-4a68-bec8-1f8f592ab9e1"
-            ]
+            ],
+            "Enabled": true
           }
         }
       ],
@@ -1218,7 +1224,6 @@
           "type": "Staple.MeshRenderer",
           "data": {
             "mesh": "1b25a4e0-6a3c-4c33-8a63-56f5f8ff6fa0:11",
-            "enabled": true,
             "forceRenderingOff": false,
             "receiveShadows": true,
             "sortingLayer": 0,
@@ -1227,7 +1232,8 @@
             "lighting": "Lit",
             "materials": [
               "f0438960-6b2c-4a68-bec8-1f8f592ab9e1"
-            ]
+            ],
+            "Enabled": true
           }
         }
       ],
@@ -1293,7 +1299,6 @@
           "type": "Staple.MeshRenderer",
           "data": {
             "mesh": "1b25a4e0-6a3c-4c33-8a63-56f5f8ff6fa0:12",
-            "enabled": true,
             "forceRenderingOff": false,
             "receiveShadows": true,
             "sortingLayer": 0,
@@ -1302,7 +1307,8 @@
             "lighting": "Lit",
             "materials": [
               "f0438960-6b2c-4a68-bec8-1f8f592ab9e1"
-            ]
+            ],
+            "Enabled": true
           }
         }
       ],
@@ -1325,8 +1331,8 @@
         },
         "rotation": {
           "x": 1.9909,
-          "y": 180.0,
-          "z": -180.0
+          "y": -180.0,
+          "z": 180.0
         },
         "scale": {
           "x": 1.0,
@@ -1412,7 +1418,7 @@
         },
         "rotation": {
           "x": 46.044,
-          "y": 180.0,
+          "y": -180.0,
           "z": 0.0
         },
         "scale": {
@@ -1441,8 +1447,8 @@
         },
         "rotation": {
           "x": 1.9909,
-          "y": -180.0,
-          "z": 180.0
+          "y": 180.0,
+          "z": -180.0
         },
         "scale": {
           "x": 1.0,
@@ -1528,7 +1534,7 @@
         },
         "rotation": {
           "x": 46.044,
-          "y": -180.0,
+          "y": 180.0,
           "z": 0.0
         },
         "scale": {
@@ -1586,7 +1592,7 @@
         },
         "rotation": {
           "x": -90.0,
-          "y": 359.9999,
+          "y": -0.0001,
           "z": 0.0
         },
         "scale": {
@@ -1616,7 +1622,7 @@
         "rotation": {
           "x": 0.0,
           "y": 0.0,
-          "z": 180.0
+          "z": -180.0
         },
         "scale": {
           "x": 1.0,
@@ -1645,7 +1651,7 @@
         "rotation": {
           "x": -46.044,
           "y": 0.0,
-          "z": -180.0
+          "z": 180.0
         },
         "scale": {
           "x": 1.0,
@@ -1702,8 +1708,8 @@
         },
         "rotation": {
           "x": 0.0,
-          "y": 180.0,
-          "z": 180.0
+          "y": -180.0,
+          "z": -180.0
         },
         "scale": {
           "x": 1.0,
@@ -1789,7 +1795,7 @@
         },
         "rotation": {
           "x": -90.0,
-          "y": 359.9999,
+          "y": -0.0001,
           "z": 0.0
         },
         "scale": {
@@ -1819,7 +1825,7 @@
         "rotation": {
           "x": 0.0,
           "y": 0.0,
-          "z": 180.0
+          "z": -180.0
         },
         "scale": {
           "x": 1.0,
@@ -1848,7 +1854,7 @@
         "rotation": {
           "x": -46.044,
           "y": 0.0,
-          "z": -180.0
+          "z": 180.0
         },
         "scale": {
           "x": 1.0,
@@ -1905,8 +1911,8 @@
         },
         "rotation": {
           "x": 0.0,
-          "y": 180.0,
-          "z": -180.0
+          "y": -180.0,
+          "z": 180.0
         },
         "scale": {
           "x": 1.0,
@@ -1963,7 +1969,7 @@
         },
         "rotation": {
           "x": -90.0,
-          "y": 359.9999,
+          "y": -0.0001,
           "z": 0.0
         },
         "scale": {
@@ -1992,7 +1998,7 @@
         },
         "rotation": {
           "x": -90.0,
-          "y": -90.0,
+          "y": 270.0,
           "z": 0.0
         },
         "scale": {
@@ -2021,7 +2027,7 @@
         },
         "rotation": {
           "x": -90.0,
-          "y": 359.9999,
+          "y": -0.0001,
           "z": 0.0
         },
         "scale": {
@@ -2050,7 +2056,7 @@
         },
         "rotation": {
           "x": -90.0,
-          "y": -270.0,
+          "y": 90.0,
           "z": 0.0
         },
         "scale": {
@@ -2093,8 +2099,8 @@
           "type": "Staple.SkinnedMeshRenderer",
           "data": {
             "mesh": "1b25a4e0-6a3c-4c33-8a63-56f5f8ff6fa0:0",
-            "disableSkinning": false,
-            "enabled": true,
+            "disableSkinning": true,
+            "blendShapeWeights": [],
             "forceRenderingOff": false,
             "receiveShadows": true,
             "sortingLayer": 0,
@@ -2103,7 +2109,8 @@
             "lighting": "Lit",
             "materials": [
               "f0438960-6b2c-4a68-bec8-1f8f592ab9e1"
-            ]
+            ],
+            "Enabled": true
           }
         }
       ],
@@ -2140,8 +2147,8 @@
           "type": "Staple.SkinnedMeshRenderer",
           "data": {
             "mesh": "1b25a4e0-6a3c-4c33-8a63-56f5f8ff6fa0:1",
-            "disableSkinning": false,
-            "enabled": true,
+            "disableSkinning": true,
+            "blendShapeWeights": [],
             "forceRenderingOff": false,
             "receiveShadows": true,
             "sortingLayer": 0,
@@ -2150,7 +2157,8 @@
             "lighting": "Lit",
             "materials": [
               "f0438960-6b2c-4a68-bec8-1f8f592ab9e1"
-            ]
+            ],
+            "Enabled": true
           }
         }
       ],
@@ -2187,8 +2195,8 @@
           "type": "Staple.SkinnedMeshRenderer",
           "data": {
             "mesh": "1b25a4e0-6a3c-4c33-8a63-56f5f8ff6fa0:2",
-            "disableSkinning": false,
-            "enabled": true,
+            "disableSkinning": true,
+            "blendShapeWeights": [],
             "forceRenderingOff": false,
             "receiveShadows": true,
             "sortingLayer": 0,
@@ -2197,7 +2205,8 @@
             "lighting": "Lit",
             "materials": [
               "f0438960-6b2c-4a68-bec8-1f8f592ab9e1"
-            ]
+            ],
+            "Enabled": true
           }
         }
       ],
@@ -2234,8 +2243,8 @@
           "type": "Staple.SkinnedMeshRenderer",
           "data": {
             "mesh": "1b25a4e0-6a3c-4c33-8a63-56f5f8ff6fa0:3",
-            "disableSkinning": false,
-            "enabled": true,
+            "disableSkinning": true,
+            "blendShapeWeights": [],
             "forceRenderingOff": false,
             "receiveShadows": true,
             "sortingLayer": 0,
@@ -2244,7 +2253,8 @@
             "lighting": "Lit",
             "materials": [
               "f0438960-6b2c-4a68-bec8-1f8f592ab9e1"
-            ]
+            ],
+            "Enabled": true
           }
         }
       ],
@@ -2281,8 +2291,8 @@
           "type": "Staple.SkinnedMeshRenderer",
           "data": {
             "mesh": "1b25a4e0-6a3c-4c33-8a63-56f5f8ff6fa0:4",
-            "disableSkinning": false,
-            "enabled": true,
+            "disableSkinning": true,
+            "blendShapeWeights": [],
             "forceRenderingOff": false,
             "receiveShadows": true,
             "sortingLayer": 0,
@@ -2291,7 +2301,8 @@
             "lighting": "Lit",
             "materials": [
               "f0438960-6b2c-4a68-bec8-1f8f592ab9e1"
-            ]
+            ],
+            "Enabled": true
           }
         }
       ],
@@ -2328,8 +2339,8 @@
           "type": "Staple.SkinnedMeshRenderer",
           "data": {
             "mesh": "1b25a4e0-6a3c-4c33-8a63-56f5f8ff6fa0:5",
-            "disableSkinning": false,
-            "enabled": true,
+            "disableSkinning": true,
+            "blendShapeWeights": [],
             "forceRenderingOff": false,
             "receiveShadows": true,
             "sortingLayer": 0,
@@ -2338,7 +2349,8 @@
             "lighting": "Lit",
             "materials": [
               "f0438960-6b2c-4a68-bec8-1f8f592ab9e1"
-            ]
+            ],
+            "Enabled": true
           }
         }
       ],

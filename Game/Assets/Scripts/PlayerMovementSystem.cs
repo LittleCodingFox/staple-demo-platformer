@@ -6,7 +6,7 @@ namespace Platformer;
 
 class PlayerMovementSystem : IEntitySystemUpdate, IEntitySystemFixedUpdate, IEntitySystemLifecycle
 {
-    private readonly SceneQuery<Transform, OrbitCamera> cameras = new();
+    private readonly SceneQuery<OrbitCamera> cameras = new();
     private Vector2 movement;
     private bool jumpPress = false;
     private int movementKey;
@@ -14,7 +14,7 @@ class PlayerMovementSystem : IEntitySystemUpdate, IEntitySystemFixedUpdate, IEnt
 
     public void FixedUpdate(float deltaTime)
     {
-        foreach((_, Transform transform, OrbitCamera camera) in cameras.Contents)
+        foreach(var camera in cameras.Contents)
         {
             if (camera.focus == null ||
                 camera.focus.Entity.TryGetComponent<PlayerMovement>(out var playerMovement) == false)
@@ -34,7 +34,7 @@ class PlayerMovementSystem : IEntitySystemUpdate, IEntitySystemFixedUpdate, IEnt
                 return;
             }
 
-            var forward = transform.Forward;
+            var forward = camera.Transform.Forward;
 
             forward.Y = 0.0f;
 
@@ -43,7 +43,7 @@ class PlayerMovementSystem : IEntitySystemUpdate, IEntitySystemFixedUpdate, IEnt
                 forward = Vector3.Normalize(forward);
             }
 
-            var right = transform.Right;
+            var right = camera.Transform.Right;
 
             right.Y = 0.0f;
 
