@@ -365,7 +365,7 @@
         "type": "Staple.SkinnedMeshRenderer",
         "data": {
           "mesh": "1b25a4e0-6a3c-4c33-8a63-56f5f8ff6fa0:0",
-          "disableSkinning": true,
+          "disableSkinning": false,
           "blendShapeWeights": [],
           "forceRenderingOff": false,
           "receiveShadows": true,
@@ -442,7 +442,7 @@
         "type": "Staple.SkinnedMeshRenderer",
         "data": {
           "mesh": "1b25a4e0-6a3c-4c33-8a63-56f5f8ff6fa0:1",
-          "disableSkinning": true,
+          "disableSkinning": false,
           "blendShapeWeights": [],
           "forceRenderingOff": false,
           "receiveShadows": true,
@@ -519,7 +519,7 @@
         "type": "Staple.SkinnedMeshRenderer",
         "data": {
           "mesh": "1b25a4e0-6a3c-4c33-8a63-56f5f8ff6fa0:2",
-          "disableSkinning": true,
+          "disableSkinning": false,
           "blendShapeWeights": [],
           "forceRenderingOff": false,
           "receiveShadows": true,
@@ -596,7 +596,7 @@
         "type": "Staple.SkinnedMeshRenderer",
         "data": {
           "mesh": "1b25a4e0-6a3c-4c33-8a63-56f5f8ff6fa0:3",
-          "disableSkinning": true,
+          "disableSkinning": false,
           "blendShapeWeights": [],
           "forceRenderingOff": false,
           "receiveShadows": true,
@@ -673,7 +673,7 @@
         "type": "Staple.SkinnedMeshRenderer",
         "data": {
           "mesh": "1b25a4e0-6a3c-4c33-8a63-56f5f8ff6fa0:4",
-          "disableSkinning": true,
+          "disableSkinning": false,
           "blendShapeWeights": [],
           "forceRenderingOff": false,
           "receiveShadows": true,
@@ -750,7 +750,7 @@
         "type": "Staple.SkinnedMeshRenderer",
         "data": {
           "mesh": "1b25a4e0-6a3c-4c33-8a63-56f5f8ff6fa0:5",
-          "disableSkinning": true,
+          "disableSkinning": false,
           "blendShapeWeights": [],
           "forceRenderingOff": false,
           "receiveShadows": true,
@@ -813,7 +813,7 @@
       },
       "rotation": {
         "x": 0.0,
-        "y": -0.0,
+        "y": 0.0,
         "z": 0.0
       },
       "scale": {
@@ -928,8 +928,8 @@
         "z": -0.0
       },
       "rotation": {
-        "x": -0.0,
-        "y": -0.0,
+        "x": 0.0,
+        "y": 0.0,
         "z": -6.3385
       },
       "scale": {
@@ -957,8 +957,8 @@
         "z": -0.0
       },
       "rotation": {
-        "x": -0.0,
-        "y": -0.0,
+        "x": 0.0,
+        "y": 0.0,
         "z": 3.0552
       },
       "scale": {
@@ -1016,7 +1016,7 @@
       },
       "rotation": {
         "x": 0.0,
-        "y": -0.0,
+        "y": 0.0,
         "z": -90.0
       },
       "scale": {
@@ -1045,7 +1045,7 @@
       },
       "rotation": {
         "x": 0.0,
-        "y": -0.0,
+        "y": 0.0,
         "z": 0.0
       },
       "scale": {
@@ -1345,7 +1345,7 @@
         "z": 0.1559
       },
       "rotation": {
-        "x": -0.0,
+        "x": 0.0,
         "y": 0.0,
         "z": 0.0002
       },
@@ -1449,7 +1449,7 @@
         "z": -0.0
       },
       "rotation": {
-        "x": -0.0,
+        "x": 0.0,
         "y": 0.0,
         "z": 6.3385
       },
@@ -1478,7 +1478,7 @@
         "z": -0.0
       },
       "rotation": {
-        "x": -0.0,
+        "x": 0.0,
         "y": 0.0,
         "z": -3.0552
       },
@@ -1508,7 +1508,7 @@
       },
       "rotation": {
         "x": 0.0,
-        "y": -0.0,
+        "y": 0.0,
         "z": 0.0006
       },
       "scale": {
@@ -1537,7 +1537,7 @@
       },
       "rotation": {
         "x": 0.0,
-        "y": -0.0,
+        "y": 0.0,
         "z": 90.0
       },
       "scale": {
@@ -1820,7 +1820,7 @@
       },
       "rotation": {
         "x": 0.0,
-        "y": -0.0,
+        "y": 0.0,
         "z": 0.0
       },
       "scale": {
@@ -1895,8 +1895,8 @@
       },
       "rotation": {
         "x": 0.0,
-        "y": -0.0,
-        "z": -0.0
+        "y": 0.0,
+        "z": 0.0
       },
       "scale": {
         "x": 1.0,
@@ -2000,7 +2000,7 @@
       "rotation": {
         "x": 12.1955,
         "y": 0.0,
-        "z": -0.0
+        "z": 0.0
       },
       "scale": {
         "x": 1.0,
@@ -2029,7 +2029,7 @@
       "rotation": {
         "x": -54.1606,
         "y": 0.0,
-        "z": -0.0
+        "z": 0.0
       },
       "scale": {
         "x": 1.0,
@@ -2058,7 +2058,7 @@
       "rotation": {
         "x": 46.044,
         "y": 180.0,
-        "z": -0.0
+        "z": 0.0
       },
       "scale": {
         "x": 1.0,
@@ -2115,7 +2115,7 @@
       },
       "rotation": {
         "x": 12.1955,
-        "y": -0.0,
+        "y": 0.0,
         "z": 0.0
       },
       "scale": {
@@ -2145,7 +2145,7 @@
       "rotation": {
         "x": -54.1606,
         "y": 0.0,
-        "z": -0.0
+        "z": 0.0
       },
       "scale": {
         "x": 1.0,
@@ -2289,7 +2289,7 @@
       },
       "rotation": {
         "x": -46.044,
-        "y": -0.0,
+        "y": 0.0,
         "z": -180.0
       },
       "scale": {
@@ -2318,8 +2318,8 @@
       },
       "rotation": {
         "x": -46.044,
-        "y": -0.0,
-        "z": -0.0
+        "y": 0.0,
+        "z": 0.0
       },
       "scale": {
         "x": 1.0,
@@ -2376,8 +2376,8 @@
       },
       "rotation": {
         "x": 0.0,
-        "y": -0.0,
-        "z": -0.0
+        "y": 0.0,
+        "z": 0.0
       },
       "scale": {
         "x": 1.0,
@@ -2492,7 +2492,7 @@
       },
       "rotation": {
         "x": -46.044,
-        "y": -0.0,
+        "y": 0.0,
         "z": -180.0
       },
       "scale": {
@@ -2521,8 +2521,8 @@
       },
       "rotation": {
         "x": -46.044,
-        "y": -0.0,
-        "z": -0.0
+        "y": 0.0,
+        "z": 0.0
       },
       "scale": {
         "x": 1.0,
@@ -2579,8 +2579,8 @@
       },
       "rotation": {
         "x": 0.0,
-        "y": -0.0,
-        "z": -0.0
+        "y": 0.0,
+        "z": 0.0
       },
       "scale": {
         "x": 1.0,
