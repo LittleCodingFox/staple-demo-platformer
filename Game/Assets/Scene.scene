@@ -371,8 +371,6 @@
           "receiveShadows": true,
           "sortingLayer": 0,
           "sortingOrder": 0,
-          "overrideLighting": false,
-          "lighting": "Lit",
           "materials": [
             "f0438960-6b2c-4a68-bec8-1f8f592ab9e1"
           ],
@@ -448,8 +446,6 @@
           "receiveShadows": true,
           "sortingLayer": 0,
           "sortingOrder": 0,
-          "overrideLighting": false,
-          "lighting": "Lit",
           "materials": [
             "f0438960-6b2c-4a68-bec8-1f8f592ab9e1"
           ],
@@ -525,8 +521,6 @@
           "receiveShadows": true,
           "sortingLayer": 0,
           "sortingOrder": 0,
-          "overrideLighting": false,
-          "lighting": "Lit",
           "materials": [
             "f0438960-6b2c-4a68-bec8-1f8f592ab9e1"
           ],
@@ -602,8 +596,6 @@
           "receiveShadows": true,
           "sortingLayer": 0,
           "sortingOrder": 0,
-          "overrideLighting": false,
-          "lighting": "Lit",
           "materials": [
             "f0438960-6b2c-4a68-bec8-1f8f592ab9e1"
           ],
@@ -679,8 +671,6 @@
           "receiveShadows": true,
           "sortingLayer": 0,
           "sortingOrder": 0,
-          "overrideLighting": false,
-          "lighting": "Lit",
           "materials": [
             "f0438960-6b2c-4a68-bec8-1f8f592ab9e1"
           ],
@@ -756,8 +746,6 @@
           "receiveShadows": true,
           "sortingLayer": 0,
           "sortingOrder": 0,
-          "overrideLighting": false,
-          "lighting": "Lit",
           "materials": [
             "f0438960-6b2c-4a68-bec8-1f8f592ab9e1"
           ],
@@ -900,7 +888,7 @@
       },
       "rotation": {
         "x": -90.0,
-        "y": 273.2839,
+        "y": -86.7161,
         "z": 0.0
       },
       "scale": {
@@ -1092,8 +1080,6 @@
           "receiveShadows": true,
           "sortingLayer": 0,
           "sortingOrder": 0,
-          "overrideLighting": false,
-          "lighting": "Lit",
           "materials": [
             "f0438960-6b2c-4a68-bec8-1f8f592ab9e1"
           ],
@@ -1178,10 +1164,8 @@
           "receiveShadows": true,
           "sortingLayer": 0,
           "sortingOrder": 0,
-          "overrideLighting": false,
-          "lighting": "Unlit",
           "materials": [
-            "db3c6e30-0fce-4b1b-a9e7-9bf7dcbfec30"
+            "a05d439b-d248-42ac-9a49-1970defd48f4"
           ],
           "Enabled": true
         }
@@ -1393,8 +1377,6 @@
           "receiveShadows": true,
           "sortingLayer": 0,
           "sortingOrder": 0,
-          "overrideLighting": false,
-          "lighting": "Lit",
           "materials": [
             "f0438960-6b2c-4a68-bec8-1f8f592ab9e1"
           ],
@@ -1421,7 +1403,7 @@
       },
       "rotation": {
         "x": -90.0,
-        "y": -273.2839,
+        "y": 86.7161,
         "z": 0.0
       },
       "scale": {
@@ -1566,7 +1548,7 @@
       },
       "rotation": {
         "x": 0.0,
-        "y": 180.0,
+        "y": -180.0,
         "z": 0.0
       },
       "scale": {
@@ -1613,8 +1595,6 @@
           "receiveShadows": true,
           "sortingLayer": 0,
           "sortingOrder": 0,
-          "overrideLighting": false,
-          "lighting": "Lit",
           "materials": [
             "f0438960-6b2c-4a68-bec8-1f8f592ab9e1"
           ],
@@ -1641,7 +1621,7 @@
       },
       "rotation": {
         "x": 0.0,
-        "y": 180.0,
+        "y": -180.0,
         "z": 0.0
       },
       "scale": {
@@ -1688,8 +1668,6 @@
           "receiveShadows": true,
           "sortingLayer": 0,
           "sortingOrder": 0,
-          "overrideLighting": false,
-          "lighting": "Lit",
           "materials": [
             "f0438960-6b2c-4a68-bec8-1f8f592ab9e1"
           ],
@@ -1716,7 +1694,7 @@
       },
       "rotation": {
         "x": 0.0,
-        "y": 180.0,
+        "y": -180.0,
         "z": 0.0
       },
       "scale": {
@@ -1763,8 +1741,6 @@
           "receiveShadows": true,
           "sortingLayer": 0,
           "sortingOrder": 0,
-          "overrideLighting": false,
-          "lighting": "Lit",
           "materials": [
             "f0438960-6b2c-4a68-bec8-1f8f592ab9e1"
           ],
@@ -1867,8 +1843,6 @@
           "receiveShadows": true,
           "sortingLayer": 0,
           "sortingOrder": 0,
-          "overrideLighting": false,
-          "lighting": "Lit",
           "materials": [
             "f0438960-6b2c-4a68-bec8-1f8f592ab9e1"
           ],
@@ -1942,8 +1916,6 @@
           "receiveShadows": true,
           "sortingLayer": 0,
           "sortingOrder": 0,
-          "overrideLighting": false,
-          "lighting": "Lit",
           "materials": [
             "f0438960-6b2c-4a68-bec8-1f8f592ab9e1"
           ],
@@ -1970,8 +1942,8 @@
       },
       "rotation": {
         "x": 1.9909,
-        "y": 180.0,
-        "z": -180.0
+        "y": -180.0,
+        "z": 180.0
       },
       "scale": {
         "x": 1.0,
@@ -2057,7 +2029,7 @@
       },
       "rotation": {
         "x": 46.044,
-        "y": 180.0,
+        "y": -180.0,
         "z": 0.0
       },
       "scale": {
@@ -2086,8 +2058,8 @@
       },
       "rotation": {
         "x": 1.9909,
-        "y": -180.0,
-        "z": 180.0
+        "y": 180.0,
+        "z": -180.0
       },
       "scale": {
         "x": 1.0,
@@ -2173,7 +2145,7 @@
       },
       "rotation": {
         "x": 46.044,
-        "y": -180.0,
+        "y": 180.0,
         "z": 0.0
       },
       "scale": {
@@ -2231,7 +2203,7 @@
       },
       "rotation": {
         "x": -90.0,
-        "y": 359.9999,
+        "y": -0.0001,
         "z": 0.0
       },
       "scale": {
@@ -2261,7 +2233,7 @@
       "rotation": {
         "x": 0.0,
         "y": 0.0,
-        "z": 180.0
+        "z": -180.0
       },
       "scale": {
         "x": 1.0,
@@ -2290,7 +2262,7 @@
       "rotation": {
         "x": -46.044,
         "y": 0.0,
-        "z": -180.0
+        "z": 180.0
       },
       "scale": {
         "x": 1.0,
@@ -2347,8 +2319,8 @@
       },
       "rotation": {
         "x": 0.0,
-        "y": 180.0,
-        "z": 180.0
+        "y": -180.0,
+        "z": -180.0
       },
       "scale": {
         "x": 1.0,
@@ -2434,7 +2406,7 @@
       },
       "rotation": {
         "x": -90.0,
-        "y": 359.9999,
+        "y": -0.0001,
         "z": 0.0
       },
       "scale": {
@@ -2464,7 +2436,7 @@
       "rotation": {
         "x": 0.0,
         "y": 0.0,
-        "z": 180.0
+        "z": -180.0
       },
       "scale": {
         "x": 1.0,
@@ -2493,7 +2465,7 @@
       "rotation": {
         "x": -46.044,
         "y": 0.0,
-        "z": -180.0
+        "z": 180.0
       },
       "scale": {
         "x": 1.0,
@@ -2550,8 +2522,8 @@
       },
       "rotation": {
         "x": 0.0,
-        "y": 180.0,
-        "z": -180.0
+        "y": -180.0,
+        "z": 180.0
       },
       "scale": {
         "x": 1.0,
@@ -2608,7 +2580,7 @@
       },
       "rotation": {
         "x": -90.0,
-        "y": 359.9999,
+        "y": -0.0001,
         "z": 0.0
       },
       "scale": {
@@ -2637,7 +2609,7 @@
       },
       "rotation": {
         "x": -90.0,
-        "y": -90.0,
+        "y": 270.0,
         "z": 0.0
       },
       "scale": {
@@ -2666,7 +2638,7 @@
       },
       "rotation": {
         "x": -90.0,
-        "y": 359.9999,
+        "y": -0.0001,
         "z": 0.0
       },
       "scale": {
@@ -2695,7 +2667,7 @@
       },
       "rotation": {
         "x": -90.0,
-        "y": -270.0,
+        "y": 90.0,
         "z": 0.0
       },
       "scale": {
@@ -2724,7 +2696,7 @@
       },
       "rotation": {
         "x": 0.0,
-        "y": -180.0,
+        "y": 180.0,
         "z": 0.0
       },
       "scale": {

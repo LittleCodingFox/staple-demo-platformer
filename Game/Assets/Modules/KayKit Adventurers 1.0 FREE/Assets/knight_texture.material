@@ -1,6 +1,41 @@
 {
-  "shader": "1ca9a72c-161e-44db-ad76-bf0ae432f78b",
+  "shader": "fe579704-4144-4a46-bf72-d6cdbb6f29d8",
   "parameters": {
+    "ambientOcclusionTexture": {
+      "type": "Texture",
+      "textureValue": "",
+      "source": "Uniform"
+    },
+    "diffuseTexture": {
+      "type": "Texture",
+      "textureValue": "b24d7fd6-c8af-4d9f-ad34-f1df1d65873a",
+      "source": "Uniform"
+    },
+    "normalTexture": {
+      "type": "Texture",
+      "textureValue": "",
+      "source": "Uniform"
+    },
+    "displacementTexture": {
+      "type": "Texture",
+      "textureValue": "",
+      "source": "Uniform"
+    },
+    "emissiveTexture": {
+      "type": "Texture",
+      "textureValue": "",
+      "source": "Uniform"
+    },
+    "heightTexture": {
+      "type": "Texture",
+      "textureValue": "",
+      "source": "Uniform"
+    },
+    "specularTexture": {
+      "type": "Texture",
+      "textureValue": "",
+      "source": "Uniform"
+    },
     "diffuseColor": {
       "type": "Color",
       "colorValue": {
@@ -8,7 +43,8 @@
         "g": 255,
         "b": 255,
         "a": 255
-      }
+      },
+      "source": "Uniform"
     },
     "emissiveColor": {
       "type": "Color",
@@ -17,7 +53,8 @@
         "g": 0,
         "b": 0,
         "a": 255
-      }
+      },
+      "source": "Uniform"
     },
     "specularColor": {
       "type": "Color",
@@ -26,37 +63,18 @@
         "g": 255,
         "b": 255,
         "a": 255
-      }
+      },
+      "source": "Uniform"
     },
-    "ambientOcclusionTexture": {
-      "type": "Texture",
-      "textureValue": ""
-    },
-    "diffuseTexture": {
-      "type": "Texture",
-      "textureValue": "b24d7fd6-c8af-4d9f-ad34-f1df1d65873a"
-    },
-    "displacementTexture": {
-      "type": "Texture",
-      "textureValue": ""
-    },
-    "emissiveTexture": {
-      "type": "Texture",
-      "textureValue": ""
-    },
-    "heightTexture": {
-      "type": "Texture",
-      "textureValue": ""
-    },
-    "normalTexture": {
-      "type": "Texture",
-      "textureValue": ""
-    },
-    "specularTexture": {
-      "type": "Texture",
-      "textureValue": ""
+    "alphaThreshold": {
+      "type": "Float",
+      "floatValue": 0.25,
+      "source": "Uniform"
     }
   },
   "enabledShaderVariants": [],
-  "cullingMode": "Back"
+  "cullingMode": "Back",
+  "overrideShaderRenderQueue": false,
+  "renderQueue": "Opaque",
+  "renderQueueOffset": 0
 }

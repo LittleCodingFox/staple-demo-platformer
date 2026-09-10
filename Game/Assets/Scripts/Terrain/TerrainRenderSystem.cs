@@ -303,7 +303,7 @@ public class TerrainRenderSystem : RenderSystemBase
 
     public override void Submit()
     {
-        foreach(var (renderIndex, queue) in renderers)
+        foreach(var (_, queue) in renderers)
         {
             var length = queue.Length;
 
@@ -318,8 +318,7 @@ public class TerrainRenderSystem : RenderSystemBase
                     continue;
                 }
 
-                MeshRenderSystem.RenderMesh(renderer.renderer.mesh, renderer.position, renderer.rotation, renderer.scale, renderer.material,
-                    MaterialLighting.Lit);
+                MeshRenderSystem.RenderMesh(renderer.renderer.mesh, renderer.position, renderer.rotation, renderer.scale, renderer.material, false);
             }
         }
     }
